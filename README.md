@@ -14,6 +14,8 @@ the best methodology for publishing it to the domain: bravegrumpy.com
 ## Change-Log
 ### 2022
 #### November 23<sup>rd</sup>
+- [x] https://main.d2iwpeusbkmdwv.amplifyapp.com/ **should** be the published location, 
+  - [ ] however, it seems to be missing the Project 6 Files.
 - [x] Deleted template files that were used in flask.
 - [ ] Create a framework for Project 6
 - [x] Deleted all python files

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 	<head>
+		<meta encoding="utf-8">
 		<title>Test Portfolio</title>
 		<link rel="stylesheet" href="helloWorld_css.css"/>
 		<script src="helloWorld_js.js"></script>
@@ -35,8 +36,10 @@
 					<p class="note-text">Note that you must enter an idea before pressing submit.</p>
 					<form action="Form-Redirect1.html">
 						<div class="interactive" id="sec2-1-1">
-							Required Field:<input id="input1" type="text" name="title" placeholder="Idea title: not optional" required><br>
-							Optional Field: <input type="text" placeholder="Optional Information"><br><br>
+							Required Field:<label for="input1">Required Field</label><input id="input1" type="text" name="title" placeholder="Idea title: not optional" required><br>
+							Optional Field: <label>
+							<input type="text" placeholder="Optional Information">
+						</label><br><br>
 						</div>
 						<div class="interactive" id="sec2-1-2">
 							Choose your favorite option:<br>
@@ -54,17 +57,17 @@
 								<input id="ice-cream" type="checkbox" name="food" value="ice-cream"> Ice Cream
 							</label><br>
 							<label for="pizza">
-								<input id="pizza"type="checkbox" name="food" value="pizza">Pizza
+								<input id="pizza" type="checkbox" name="food" value="pizza">Pizza
 							</label><br>
 							<label for="sushi">
-								<input id="sushi"type="checkbox" name="food" value="sushi">Sushi
+								<input id="sushi" type="checkbox" name="food" value="sushi">Sushi
 							</label><br>
 							<label for="onions">
-								<input id="onions"type="checkbox" name="food" value="onions">Onions
+								<input id="onions" type="checkbox" name="food" value="onions">Onions
 							</label><br><br>
 							<p class="sidebar">Uncheck this box if you want to continue:
 							<label for="consent">
-								<input id="consent"type="checkbox" name="continue" value="consent" checked>
+								<input id="consent" type="checkbox" name="continue" value="consent" checked>
 							</label></p><br>
 						</div>
 						<button type="submit">ENTER</button>
