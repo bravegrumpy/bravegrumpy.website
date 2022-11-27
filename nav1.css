@@ -1,0 +1,17 @@
+/** Navigation Menu**/
+.navbar {
+    overflow: hidden;
+    background-color: var(--second-bg);
+}
+
+/** Navigation Links **/
+.navbar a {
+    float: left;
+    font-size: 1.3em;
+    color: var(--text-color);
+    text-align: center;
+    padding: 1.167em, 1.33em;
+    text-decoration: none;
+}
+
+/** Subnavigation Menu**/

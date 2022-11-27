@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Fredoka&family=Sacramento&display=swap');
+
+:root{
+    --main-bg: white;
+    /*--main-bg: #d2c8ff;*/
+    --second-bg: lightgrey;
+    /*--second-bg: #d1dcff*/
+    --emp-color: midnightblue;
+    /*--emp-color: #146414;*/
+    --text-color: black;
+    /*--text-color: /*#000000;*/
+    --title-font: 'Bookman Old Style', 'Times New Roman', serif;
+    /*--title-font: 'El Messiri', Courier, serif;*/
+    --text-font: 'Helvetica', 'Arial', sans-serif;
+    /*--text-font: 'Fredoka', 'Helvetica', sans-serif;*/
+    --emp-font: 'Century Gothic', 'Brush Script', 'Arial Black', cursive;
+    /*--emp-font: 'Sacramento', cursive;*/
+}
+    body {
+        background-color: var(--main-bg);
+        color: var(--text-color);
+        font-family: var(--text-font);
+    }
+    h1{
+        font-family: var(--title-font);
+    }
+    h2{
+        font-family: var(--emp-font);
+    }
+
+
+.menu .parent {
+	display: block;
+	position: relative;
+	float: left;
+	line-height: 30px;
+	background-color: var(--second-bg);
+	border-right: var(--emp-color) 1px solid;
+}
+
+.menu .parent a {
+	margin: 10px;
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.menu .parent:hover>ul {
+	display: block;
+	position: absolute;
+}
+
+.menu .child {
+	display: none;
+}
+
+.menu .child li {
+	background-color: var(--second-bg);
+	line-height: 30px;
+	border-bottom: var(--emp-color) 1px solid;
+	border-right: var(--emp-color) 1px solid;
+	width: 100%;
+}
+
+.menu .child li a {
+	color: var(--text-color)
+}
+
+.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0px;
+	min-width: 10em;
+}
+
+.menu ul ul ul {
+	left: 100%;
+	top: 0;
+	margin-left: 1px;
+}
+
+.menu li:hover {
+	background-color: whitesmoke;
+}
+
+.menu .parent li:hover {
+	background-color: #F0F0F0;
+}
+
+.menu .expand {
+	font-size: 12px;
+	float: right;
+	margin-right: 5px;
+}
