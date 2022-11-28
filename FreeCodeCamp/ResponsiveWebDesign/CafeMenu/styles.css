@@ -83,6 +83,11 @@ hr {
     text-decoration: none;
 }
 
+h2 a {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 /* FOOTER */
 footer {
     font-size: 14px;
