@@ -85,3 +85,6 @@ footer a {
 footer a:visited {
     color: grey;
 }
+footer a:hover{
+    color: brown;
+}
