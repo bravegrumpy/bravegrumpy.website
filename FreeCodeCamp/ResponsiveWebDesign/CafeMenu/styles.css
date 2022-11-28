@@ -88,3 +88,6 @@ footer a:visited {
 footer a:hover{
     color: brown;
 }
+footer a:active {
+    color: white;
+}
