@@ -1,92 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Fredoka&family=Sacramento&display=swap');
-
 :root{
     --main-bg: white;
-    /*--main-bg: #d2c8ff;*/
-    --second-bg: lightgrey;
-    /*--second-bg: #d1dcff*/
+    --second-bg: wheat;
     --emp-color: midnightblue;
-    /*--emp-color: #146414;*/
     --text-color: black;
-    /*--text-color: /*#000000;*/
-    --title-font: 'Bookman Old Style', 'Times New Roman', serif;
-    /*--title-font: 'El Messiri', Courier, serif;*/
-    --text-font: 'Helvetica', 'Arial', sans-serif;
-    /*--text-font: 'Fredoka', 'Helvetica', sans-serif;*/
-    --emp-font: 'Century Gothic', 'Brush Script', 'Arial Black', cursive;
-    /*--emp-font: 'Sacramento', cursive;*/
+    --title-font: 'Courier', serif;
+    --text-font: 'Times New Roman', serif;
+    --emp-font: 'Bookman Old Style', serif;
 }
-    body {
-        background-color: var(--main-bg);
-        color: var(--text-color);
-        font-family: var(--text-font);
-    }
-    h1{
-        font-family: var(--title-font);
-    }
-    h2{
-        font-family: var(--emp-font);
-    }
 
-
-.menu .parent {
+.navbar .parent {
 	display: block;
 	position: relative;
 	float: left;
 	line-height: 30px;
-	background-color: var(--second-bg);
-	border-right: var(--emp-color) 1px solid;
+	background-color: #4FA0D8;
+	border-right: #CCC 1px solid;
 }
 
-.menu .parent a {
+.navbar .parent a {
 	margin: 10px;
-	color: var(--text-color);
+	color: #FFFFFF;
 	text-decoration: none;
 }
 
-.menu .parent:hover>ul {
+.navbar .parent:hover>ul {
 	display: block;
 	position: absolute;
 }
 
-.menu .child {
+.navbar .child {
 	display: none;
 }
 
-.menu .child li {
-	background-color: var(--second-bg);
+.navbar .child li {
+	background-color: #E4EFF7;
 	line-height: 30px;
-	border-bottom: var(--emp-color) 1px solid;
-	border-right: var(--emp-color) 1px solid;
+	border-bottom: #CCC 1px solid;
+	border-right: #CCC 1px solid;
 	width: 100%;
 }
 
-.menu .child li a {
-	color: var(--text-color)
+.navbar .child li a {
+	color: #000000;
 }
 
-.menu ul {
+.navbar ul {
 	list-style: none;
 	margin: 0;
 	padding: 0px;
 	min-width: 10em;
 }
 
-.menu ul ul ul {
+.navbar ul ul ul {
 	left: 100%;
 	top: 0;
 	margin-left: 1px;
 }
 
-.menu li:hover {
-	background-color: whitesmoke;
+.navbar li:hover {
+	background-color: #95B4CA;
 }
 
-.menu .parent li:hover {
+.navbar .parent li:hover {
 	background-color: #F0F0F0;
 }
 
-.menu .expand {
+.navbar .expand {
 	font-size: 12px;
 	float: right;
 	margin-right: 5px;
