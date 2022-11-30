@@ -22,9 +22,7 @@ h1 {
     width: 6.875rem;
     height: 1.5rem;
     background-color: rgba(255, 255, 255, 50%);
-    border-left-width: 0.625rem;
-    border-left-style: solid;
-    border-left-color: rgb(0, 0, 0);
+    border-left: 0.625rem solid black;
 }
 
 .cap, .sleeve {
