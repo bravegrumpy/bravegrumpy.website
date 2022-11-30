@@ -1,0 +1,9 @@
+:root {
+    --nc1: var(--second-gb);
+    --nc2: var(--emp-color);
+    --nc3: var(-text-color);
+    --nc4: var(--main-bg);
+    --nc5: var(--main-bg);
+    --nc6: medium-aquamarine;
+    --nc7: medium-aquamarine;
+}

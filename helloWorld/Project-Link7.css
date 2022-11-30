@@ -1,25 +1,48 @@
 :root{
     --main-bg: white;
-    --second-bg: wheat;
+    --second-bg: lightgray;
     --emp-color: midnightblue;
     --text-color: black;
     --title-font: 'Courier', serif;
     --text-font: 'Times New Roman', serif;
     --emp-font: 'Bookman Old Style', serif;
+    --nc1: var(--second-bg);
+    --nc2: var(--emp-color);
+    --nc3: var(--text-color);
+    --nc4: var(--main-bg);
+    --nc5: cyan;
+    --nc6: mediumaquamarine;
+    --nc7: mediumaquamarine;
 }
+    body {
+        background-color: var(--main-bg);
+        font-family: var(--text-font);
+    }
+    h1, h2 {
+        font-family: var(--title-font);
+    }
+.active .parent {
+    background-color: pink;
+    color: greenyellow;
+}
+.navbar {
+    font-family: var(--emp-font);
+} 
 
 .navbar .parent {
 	display: block;
 	position: relative;
 	float: left;
 	line-height: 30px;
-	background-color: #4FA0D8;
-	border-right: #CCC 1px solid;
+	background-color: var(--nc1);
+	border-right: var(--nc2) 1px solid;
+    box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .navbar .parent a {
 	margin: 10px;
-	color: #FFFFFF;
+	color: var(--nc3);
 	text-decoration: none;
 }
 
@@ -33,15 +56,17 @@
 }
 
 .navbar .child li {
-	background-color: #E4EFF7;
+	background-color: var(--nc4);
 	line-height: 30px;
-	border-bottom: #CCC 1px solid;
-	border-right: #CCC 1px solid;
+	border-bottom: var(--nc2) 1px solid;
+	border-right: var(--nc2) 1px solid;
 	width: 100%;
+    box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .navbar .child li a {
-	color: #000000;
+	color: var(nc5);
 }
 
 .navbar ul {
@@ -58,11 +83,11 @@
 }
 
 .navbar li:hover {
-	background-color: #95B4CA;
+	background-color: var(--nc6);
 }
 
 .navbar .parent li:hover {
-	background-color: #F0F0F0;
+	background-color: var(--nc7);
 }
 
 .navbar .expand {
