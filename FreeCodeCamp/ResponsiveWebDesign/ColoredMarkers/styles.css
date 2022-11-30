@@ -17,7 +17,7 @@ h1 {
 }
 
 .green {
-    background: rgb(0, 127, 0)
+    background: linear-gradient(180deg);
 }
 
 .blue {
