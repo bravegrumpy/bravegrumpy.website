@@ -17,6 +17,7 @@ h1 {
     width: 6.875rem;
     height: 1.563rem;
     background-color: white;
+    opacity: 0.5;
 }
 
 .red {
