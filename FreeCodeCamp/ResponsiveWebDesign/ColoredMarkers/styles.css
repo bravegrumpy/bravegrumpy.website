@@ -13,10 +13,19 @@ h1 {
     margin: 0.625rem auto;
 }
 
+.cap {
+    width: 3.75rem;
+    height: 1.563rem;
+}
+
 .sleeve {
     width: 6.875rem;
     height: 1.563rem;
     background-color: rgba(255, 255, 255, 50%);
+}
+
+.cap, .sleeve {
+    display: inline-block;
 }
 
 .red {
