@@ -31,13 +31,15 @@ h1 {
 
 .red {
     background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
-    box-shadow: 0.313rem 0.313rem red;
+    box-shadow: -0.313rem -0.313rem red;
 }
 
 .green {
     background: linear-gradient(#55680D, #71f53e, #116c31);
+    box-shadow: 0.313rem 0.313rem 0.313rem green;
 }
 
 .blue {
     background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0px 0px 0px 5px blue;
 }
