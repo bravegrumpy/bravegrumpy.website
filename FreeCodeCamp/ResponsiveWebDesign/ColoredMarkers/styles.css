@@ -36,7 +36,7 @@ h1 {
 
 .green {
     background: linear-gradient(#55680D, #71f53e, #116c31);
-    box-shadow: 0 0 1.25rem 0 rgba(0, 255, 0, 0.8)
+    box-shadow: 0 0 1.25rem 0 #3b7e20cc;
 }
 
 .blue {
