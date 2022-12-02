@@ -1,0 +1,63 @@
+:root {
+    --nav_color1: hsl(240, 20%, 60%);
+    --nav_color2: hsl(240, 20%, 90%);
+    --nav_color3: var(--nav_color2);
+    --nav_color4: hsl(240, 20%, 70%);
+    --nav_color5: hsl(240, 20%, 15%);
+}
+    /*body {
+        background-color:hsl(240, 20%, 99%);
+    }*/
+    h1 {
+        display: block;
+    }
+.navbar {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /*
+    display: block;
+    width: 400rem;
+    height: 2rem;
+    margin: 1.25rem auto;
+    */
+}
+
+.navbar .parent {
+    width: 200px;
+    height: 4rem;
+    color: var(--nav_color2);
+    display: block;
+    position: relative;
+    float: left;
+    line-height: 30px;
+    background-color: var(--nav_color1);
+    border-right: var(--nav_color2) 1px solid;
+    box-shadow: 0px 8px 16px 0 rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+.navbar .parent a {
+    display: block;
+    margin: 10px auto;
+    color: var(--nav_color3);
+    text-decoration:  none;
+}
+
+.navbar .parent:hover>ul {
+    color: var(--nav_color5);
+    display: block;
+    position: absolute;
+}
+
+.navbar .child {
+    display: none;
+    color: var(--nav_color5);
+}
+
+.navbar .child li {
+    width: fit-content;
+    background-color: var(--nav_color4);
+    color: var(--nav_color5);
+    border-bottom: var(--nav_color5) 1px solid;
+    border-bottom: var(--nav_color5) 1px solid;
+    width: 100%;
+}
