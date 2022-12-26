@@ -64,12 +64,13 @@ html {
 }
 
 .navbar .horizontal ul {
-    list-style-type: square;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 .navbar .horizontal li {
+    margin-left: 2px;
     padding: 10px;
     text-decoration: none;
     margin-bottom: 10px;
@@ -150,7 +151,7 @@ p.construction {
 /************************************/
 /* aside */
 .aside {
-    margin-bottom: 15px;
+    margin-bottom: 3rem;
     background-color: #a7bcff;
     padding: 15px;
     color: #000000;
