@@ -150,6 +150,7 @@ p.construction {
 /************************************/
 /* aside */
 .aside {
+    margin-bottom: 15px;
     background-color: #a7bcff;
     padding: 15px;
     color: #000000;
