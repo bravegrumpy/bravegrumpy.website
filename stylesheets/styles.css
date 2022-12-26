@@ -196,7 +196,7 @@ p.construction {
     [class*='col-'] {
         width: 100%;
         /* Uncomment the below line to see blocking guides*/
-        border: 1px solid orange;
+        /*border: 1px solid orange;*/
     }
 }
 
@@ -207,10 +207,14 @@ p.construction {
 @media only screen and (max-width: 600px) {
     /* xs */
 
-    /* Uncomment the below line to see blocking guides*/
+    
     [class*="col-"] {
-        border: 1px solid rgb(255, 0, 0);
+        width: 100%;
+        /* Uncomment the below line to see blocking guides*/
+        /*border: 1px solid rgb(255, 0, 0);*/
     }
+    /* Uncomment the code block below to enable specific widths for xs screens*/
+    /*
     .col-xs-1 {width: 8.33%;}
     .col-xs-2 {width: 16.66%;}
     .col-xs-3 {width: 25%;}
@@ -223,6 +227,7 @@ p.construction {
     .col-xs-10 {width: 83.33%;}
     .col-xs-11 {width: 91.66%;}
     .col-xs-12 {width: 100%;}
+    */
 }
 /*************************************************/
 
@@ -232,9 +237,10 @@ p.construction {
     /* s */
     /* For tablets */
 
-    /* Uncomment the below line to see blocking guides*/
+    
     [class*='col-'] {
-        border: 1px solid rgb(0, 255, 0);
+        /* Uncomment the below line to see blocking guides*/
+        /*border: 1px solid rgb(0, 255, 0);*/
     }
 
     .col-s-1 {width: 8.33%;}
@@ -258,9 +264,10 @@ p.construction {
     /* m */
     /* For desktop */
 
-    /* Uncomment the below line to see blocking guides*/
+    
     [class*='col-'] {
-        border: 1px solid rgb(0, 0, 255);
+        /* Uncomment the below line to see blocking guides*/
+        /*border: 1px solid rgb(0, 0, 255);*/
     }
 
     .col-m-1 {width: 8.33%;}
@@ -283,9 +290,10 @@ p.construction {
 @media only screen and (min-width: 992px) {
     /* l */
 
-    /* Uncomment the below line to see blocking guides*/
+    
     [class*="col-"] {
-        border: 1px solid rgb(0, 255, 255);
+        /* Uncomment the below line to see blocking guides*/
+        /*border: 1px solid rgb(0, 255, 255);*/
     }
     
     .col-l-1 {width: 8.33%;}
@@ -308,9 +316,10 @@ p.construction {
 @media only screen and (min-width: 1200px) {
     /* xl */
 
-    /* Uncomment the below line to see blocking guides*/
+    
     [class*="col-"] {
-        border: 1px solid rgb(255, 0, 255);
+        /* Uncomment the below line to see blocking guides*/
+        /*border: 1px solid rgb(255, 0, 255);*/
     }
 
     .col-xl-1 {width: 8.33%;}
@@ -332,9 +341,10 @@ p.construction {
 /* Extra-extra large devices (High res displays 1870 px and up) */
 @media only screen and (min-width: 1870px) {
     /*xxl*/
-    /* Uncomment the below line to see blocking guides*/
+    
     [class*="col-"] {
-        border: 1px solid rgb(255, 255, 0);
+        /* Uncomment the below line to see blocking guides*/
+        /*border: 1px solid rgb(255, 255, 0)*/;
     }
 
     /* comment out this code block if you want the navbar to display */
