@@ -55,8 +55,10 @@ html {
 /*.row>.header>.left.spacer {
     background-image: url("../Huetopia/assets/images/map01_001_d.png");
 }*/
+/************************************/
 
 /************************************/
+/* navbar */
 .navbar .horizontal{
     background-color: #ff00ff;
 }
@@ -78,9 +80,11 @@ html {
 
 .navbar .horizontal li a {
     color: #144614;
-    background-color: #beb4ff;
+    background-color: #ffff00;
     text-decoration: none;
 }
+/************************************/
+
 /************************************/
 /* menu */
 .menu {
