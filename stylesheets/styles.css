@@ -237,11 +237,10 @@ p.construction {
     /* s */
     /* For tablets */
 
-    
-    [class*='col-'] {
-        /* Uncomment the below line to see blocking guides*/
-        /*border: 1px solid rgb(0, 255, 0);*/
-    }
+    /* Uncomment the below line to see blocking guides*/
+    /*[class*='col-'] {
+        border: 1px solid rgb(0, 255, 0);
+    }*/
 
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
@@ -264,11 +263,10 @@ p.construction {
     /* m */
     /* For desktop */
 
-    
-    [class*='col-'] {
-        /* Uncomment the below line to see blocking guides*/
-        /*border: 1px solid rgb(0, 0, 255);*/
-    }
+    /* Uncomment the below line to see blocking guides*/
+    /*[class*='col-'] {
+        border: 1px solid rgb(0, 0, 255);
+    }*/
 
     .col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}
@@ -290,11 +288,10 @@ p.construction {
 @media only screen and (min-width: 992px) {
     /* l */
 
-    
-    [class*="col-"] {
-        /* Uncomment the below line to see blocking guides*/
-        /*border: 1px solid rgb(0, 255, 255);*/
-    }
+    /* Uncomment the below line to see blocking guides*/
+    /*[class*="col-"] {
+        border: 1px solid rgb(0, 255, 255);
+    }*/
     
     .col-l-1 {width: 8.33%;}
     .col-l-2 {width: 16.66%;}
@@ -316,11 +313,10 @@ p.construction {
 @media only screen and (min-width: 1200px) {
     /* xl */
 
-    
-    [class*="col-"] {
-        /* Uncomment the below line to see blocking guides*/
-        /*border: 1px solid rgb(255, 0, 255);*/
-    }
+    /* Uncomment the below line to see blocking guides*/
+    /*[class*="col-"] {
+        border: 1px solid rgb(255, 0, 255);
+    }*/
 
     .col-xl-1 {width: 8.33%;}
     .col-xl-2 {width: 16.66%;}
@@ -341,11 +337,11 @@ p.construction {
 /* Extra-extra large devices (High res displays 1870 px and up) */
 @media only screen and (min-width: 1870px) {
     /*xxl*/
-    
-    [class*="col-"] {
-        /* Uncomment the below line to see blocking guides*/
-        /*border: 1px solid rgb(255, 255, 0)*/;
-    }
+
+    /* Uncomment the below line to see blocking guides*/
+    /*[class*="col-"] {
+        border: 1px solid rgb(255, 255, 0);
+    }*/
 
     /* comment out this code block if you want the navbar to display */
     div.xl-only {
