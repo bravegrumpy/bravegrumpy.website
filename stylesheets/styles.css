@@ -59,9 +59,6 @@ html {
 
 /************************************/
 /* navbar */
-.navbar .horizontal{
-    background-color: #ff00ff;
-}
 
 .navbar .horizontal ul {
     list-style-type: none;
@@ -80,9 +77,11 @@ html {
 }
 
 .navbar .horizontal li a {
-    color: #144614;
-    background-color: #ffff00;
     text-decoration: none;
+}
+
+.navbar li:hover{
+    background-color: #a7bcff;
 }
 /************************************/
 
