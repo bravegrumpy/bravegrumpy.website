@@ -1,5 +1,0 @@
-﻿{
-  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
-  "Domain": "bravegrumpy.com",
-  "Id": "debd0d8f-d446-4e57-bf48-f404f3efc64b"
-}
