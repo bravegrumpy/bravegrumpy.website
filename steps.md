@@ -24,4 +24,6 @@
 There is this thing called a submodule. This allows you to ehrm.... save your work in a different repo.
 Basically, I am able to reference [bravegrumpy.website.ruby.blog](https://github.com/bravegrumpy/bravegrumpy.website.ruby.blog), which is where the blog repository is *actually* stored, within this repository. And somehowe it all works. 
 
-This is pretty cool. 
+This is pretty cool.
+
+I am curious to see how this will work with Amplify.
