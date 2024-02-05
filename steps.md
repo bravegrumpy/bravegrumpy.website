@@ -21,9 +21,19 @@
     - Ruby is alsy a DRY language. It also use the MVC model. So ultimately it should feel suuuuuper similar to Django. 
 
 ## Git source control
+
 There is this thing called a submodule. This allows you to ehrm.... save your work in a different repo.
-Basically, I am able to reference [bravegrumpy.website.ruby.blog](https://github.com/bravegrumpy/bravegrumpy.website.ruby.blog), which is where the blog repository is *actually* stored, within this repository. And somehowe it all works. 
+Basically, I am able to reference [bravegrumpy.website.ruby.blog](https://github.com/bravegrumpy/bravegrumpy.website.ruby.blog), which is where the blog repository is *actually* stored, within this repository. And somehowe it all works.
 
 This is pretty cool.
 
 I am curious to see how this will work with Amplify.
+
+### More notes abot git and branching
+
+I'm trying this new thing called Graphite. It's a thing that basically goes on top of github, and creates branches after changes are made, rather than before. I wonder what it is going to make of my 16 branch monstrosity.
+
+Again, I have a lot of stuff in branches that are.... there so that I can see why I did them.
+This now is not a monorepo, as ruby-on-rails showed me how sub-modules work. 
+
+However, this is a playground, so it is edited ad-hoc. 
