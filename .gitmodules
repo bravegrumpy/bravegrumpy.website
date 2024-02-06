@@ -1,0 +1,3 @@
+[submodule "ruby.blog"]
+	path = ruby.blog
+	url = https://github.com/bravegrumpy/bravegrumpy.website.ruby.blog
