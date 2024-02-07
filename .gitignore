@@ -7,3 +7,8 @@ tools/
 .notes/
 
 **/experimental/
+
+**scratch**
+
+pip/**
+**/site-packages/**
