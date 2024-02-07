@@ -1,6 +1,9 @@
 tools/
-.*lint.json
+.*lint.*
 
 .idea/
-.vscode
-.vs
+.vscode/
+.vs/
+.notes/
+
+**/experimental/
