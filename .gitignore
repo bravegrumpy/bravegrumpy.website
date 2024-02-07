@@ -1,6 +1,6 @@
 tools/
 .*lint.json
 
-.idea
+.idea/
 .vscode
 .vs
