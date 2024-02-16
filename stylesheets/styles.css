@@ -167,6 +167,7 @@ html {
 /************************************/
 /* center (body) */
 div.construction {
+    display: none;
     background-color: var(--dark0);
     font-size: 5rem;
     text-align: center;
@@ -178,6 +179,7 @@ div.construction {
 }
 
 p.construction {
+    display: none;
     background-color: var(--dark0);
     font-size: 1rem;
     text-align: center;
