@@ -1,2 +1,9 @@
 tools/
-.*lint.json
+.*lint.json/
+.idea/
+.vscode/
+.vs/
+.notes/
+venvs/**
+
+*scratch*
