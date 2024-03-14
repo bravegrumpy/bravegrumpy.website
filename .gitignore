@@ -1,1 +1,5 @@
-*/.vs*/
+# Removing VSCode settings files
+**/.vs*/
+
+**/*scratch.*
+*.cmd
