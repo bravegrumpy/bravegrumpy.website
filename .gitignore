@@ -5,3 +5,10 @@
 # scratch files
 **/**scratch**.*
 **/**scratch**/
+
+
+# Legacy
+tools/
+.*lint.json/
+.notes/
+venvs/**
