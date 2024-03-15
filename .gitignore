@@ -1,9 +1,14 @@
+# IDE specific config
+**/.vs*/
+**/.idea/
+
+# scratch files
+**/**scratch**.*
+**/**scratch**/
+
+
+# Legacy
 tools/
 .*lint.json/
-.idea/
-.vscode/
-.vs/
 .notes/
 venvs/**
-
-*scratch*
