@@ -33,14 +33,9 @@
             <section>
                 <h2>PHP testing/practice</h2>
                 <article>
-                    <h3>This the html page. </h3>
                     <?php
-                        echo "This was created inside a php tag";
+                        echo "This was created inside a  php tag";
                     ?>
-                </article>
-                <article>
-                    <p>This was me trying to figure out if php works when inside of an html file. </p>
-                    <p>I have an exact copy of this page, but saved as a php file instead. This </p>
                 </article>
             </section>
         </main>
