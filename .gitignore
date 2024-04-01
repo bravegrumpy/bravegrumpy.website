@@ -1,5 +1,7 @@
-# Removing VSCode settings files
+# IDE specific config
 **/.vs*/
+**/.idea/
 
-**/*scratch.*
-*.cmd
+# scratch files
+**/**scratch**.*
+**/**scratch**/
