@@ -13,6 +13,8 @@
     <body>
         <header>
             <h1>Welcome to the Experimental Homepage</h1>
+            <p>HTML Edition</p>
+            <p>Go check out the <a href="dev.php">PHP Edition</a></p>
         </header>
         <main>
             <section>
@@ -32,15 +34,25 @@
             </section>
             <section>
                 <h2>PHP testing/practice</h2>
+                <p>This page is <code>.html</code></p>
                 <article>
-                    <h3>This the html page. </h3>
                     <?php
                         echo "This was created inside a php tag";
                     ?>
                 </article>
                 <article>
-                    <p>This was me trying to figure out if php works when inside of an html file. </p>
-                    <p>I have an exact copy of this page, but saved as a php file instead. This </p>
+                    <div>
+                        <p>Above, I placed the following:</p>
+                        <pre>
+    &lt;?php
+        echo "This was created inside a php tag";
+    ?&gt;
+                        </pre>
+                    </div>
+                    <p>It did not render. This is because the <code>.php</code> file suffix is necessary, and does not exist here. This is true unless I can figure out how to tell the server to treat a <code>.html</code> file as php.</p>
+                    <p>This was me trying to figure out if php works when inside of an <code>.html</code> file. </p>
+                    <p>I do not feel like doing that.</p>
+                    <p>An exact copy of this page exists as a <code>.php</code> file. This is to show where PHP does and does not work. </p>
                 </article>
             </section>
         </main>
