@@ -6,7 +6,7 @@
         <meta name="description" content="BraveGrumpy Content">
         <meta name="author" content="Brave Grumpy Content">
         <meta name="keywords" content="Art, Writing, Photography, Personal Website">
-        <title>BraveGrumpy Homepage</title>
+        <title>Dev BraveGrumpy Homepage</title>
         <link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="icon" href="assets/images/BG_logo.png">
     </head>
