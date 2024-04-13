@@ -6,6 +6,8 @@
 **/**scratch**.*
 **/**scratch**/
 
+# Enviornments
+**/**.env*
 
 # Legacy
 tools/
