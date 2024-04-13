@@ -41,6 +41,7 @@
   --cyan: #2aa198;
   --green: #859900;
 
+  /*
   background-color: var(--base03);
   color: var(--base0);
 
@@ -51,6 +52,7 @@
   a::visited {
     color: var(--violet);
   }
+  */
 }
 /************************************/
 
