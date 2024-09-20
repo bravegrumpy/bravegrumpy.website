@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/items": {
+      "name": "/items",
+      "lambdaFunction": "bravegrumpywebsite7540fb53",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

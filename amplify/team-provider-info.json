@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bravegrumpywebsite-dev-36830-authRole",
+      "UnauthRoleArn": "arn:aws:iam::238711285920:role/amplify-bravegrumpywebsite-dev-36830-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::238711285920:role/amplify-bravegrumpywebsite-dev-36830-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-bravegrumpywebsite-dev-36830-deployment",
+      "UnauthRoleName": "amplify-bravegrumpywebsite-dev-36830-unauthRole",
+      "StackName": "amplify-bravegrumpywebsite-dev-36830",
+      "StackId": "arn:aws:cloudformation:us-east-1:238711285920:stack/amplify-bravegrumpywebsite-dev-36830/9a082ed0-7719-11ef-99e9-0eb822dc6593",
+      "AmplifyAppId": "d2preoq7fjgbkm"
+    },
+    "categories": {
+      "function": {
+        "bravegrumpywebsite7540fb53": {}
+      }
+    }
+  }
+}
