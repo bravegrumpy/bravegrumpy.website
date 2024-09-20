@@ -1,12 +1,6 @@
-node_modules/
-
 # IDE specific config
 **/.vs*/
 **/.idea/
-
-# scratch files
-**/**scratch**.*
-**/**scratch**/
 
 # build files 
 dist
@@ -20,3 +14,11 @@ dist
 .amplify
 amplify_outputs*
 amplifyconfiguration*
+amplify
+.amplify/
+amplify/
+
+# scratch files
+**/**scratch**.*
+**/**scratch**/
+node_modules/
