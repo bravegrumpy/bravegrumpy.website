@@ -2,11 +2,23 @@
 **/.vs*/
 **/.idea/
 
+# build files 
+dist
+.np
+.np/**.*
+# Env
+.env
+.env.*
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
+amplify
+.amplify/
+amplify/
+
 # scratch files
 **/**scratch**.*
 **/**scratch**/
-node_modules
-
-amplify/
-
-.amplify/
+node_modules/

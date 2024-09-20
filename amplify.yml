@@ -1,0 +1,20 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - 'npm ci --cache .np --prefer-offline'
+    build:
+      commands:
+        - 'npm run build'
+        - 'cd build/compute/default/'
+        - 'npm i --production'
+  
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  
+  cache:
+    paths:
+      - '.npm/**/*'
