@@ -1,12 +1,20 @@
 {
-  "name": "bravegrumpy.website",
-  "version": "1.0.0",
-  "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "bravegrumpy.website",
+    "build": {
+        
+    },
+    "devDependencies": {
+        "@aws-amplify/backend": "^1.2.2",
+        "@aws-amplify/backend-cli": "^1.2.7",
+        "typescript": "^5.6.2"
+    },
+    "dependencies": {
+        "@aws-amplify/cli": "^12.12.6",
+        "@sveltejs/vite-plugin-svelte": "^3.1.2",
+        "amplify-adapter": "^0.1.2",
+        "svelte": "^4.2.19",
+        "svelte-loader": "^3.2.3",
+        "svelte-preprocess": "^6.0.2",
+        "vite": "^5.4.7"
+    }
 }

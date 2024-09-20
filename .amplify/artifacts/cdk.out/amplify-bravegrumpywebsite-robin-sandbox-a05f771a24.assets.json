@@ -1,0 +1,19 @@
+{
+  "version": "36.3.0",
+  "files": {
+    "4383817c80664366b679855804a2cc2e2453bb23e78642815795f66254e1787f": {
+      "source": {
+        "path": "amplify-bravegrumpywebsite-robin-sandbox-a05f771a24.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "4383817c80664366b679855804a2cc2e2453bb23e78642815795f66254e1787f.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
