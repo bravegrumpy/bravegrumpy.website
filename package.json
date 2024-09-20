@@ -1,25 +1,9 @@
 {
     "name": "bravegrumpy.website",
     "version": "0.1.2",
-    "scripts": {
-        "dev": "vite dev",
-        "build": "vite build",
-        "serve": "vite serve",
-        "preview": "vite preview"
-    },
-    "devDependencies": {
-        "@aws-amplify/backend": "^1.2.2",
-        "@aws-amplify/backend-cli": "^1.2.7",
-        "typescript": "^5.6.2"
-    },
-    "dependencies": {
-        "@aws-amplify/cli": "^12.12.6",
-        "@sveltejs/vite-plugin-svelte": "^3.1.2",
-        "amplify-adapter": "^0.1.2",
-        "svelte": "^4.2.19",
-        "svelte-loader": "^3.2.3",
-        "svelte-preprocess": "^6.0.2",
-        "vite": "^5.4.7"
-    },
+    "scripts": {},
+    "devDependencies": {},
+    "dependencies": {},
+
     "type": "module"
 }
