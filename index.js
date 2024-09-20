@@ -1,1 +1,5 @@
-alert("This is index.js");
+document.write('\
+    <article>\
+        <p>This paragraph is sourced from index.js</p>\
+    </article>\
+    ');

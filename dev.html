@@ -11,16 +11,18 @@
         <link rel="icon" href="assets/images/BG_logo.png">
     </head>
     <body>
-        <header>
-            <h1>Welcome to the Experimental Homepage</h1>
-            <p>HTML Edition</p>
+        <header class="row col-s-12 col-m-12 col-l-12 header row">
+            <div class="col-m-4"></div>
+            <div class="col-m-4 title">
+                <h1>Welcome to the Experimental Homepage</h1>
+                <p><span class="subtitle">HTML Edition</span></p>
+            </div>
             <!--p>Go check out the <a href="dev.php">PHP Edition</a></p-->
         </header>
-        <main>
-            <section>
+        <main class="row">
+            <section class="col-s-12 col-m-12 navbar">
                 <h2>Helpful Links</h2>
                 <article><a href="index.html">Go back to the real, non-experimental homepage.</a></article>
-
                 <div class="navbar"></div>
             </section>
             <section>
@@ -32,6 +34,7 @@
                 <h2>Including Basic JS functionality</h2>
                 <script src="script.js"></script>
                 <script src="index.js"></script>
+                <script scr="main.js"></script>
             </section>
             <section>
                 <h2>Progresively adding some react</h2>
@@ -52,6 +55,8 @@
                 </article>
             </section>
         </main>
-        <footer>This is the footer</footer>
+        <div class="row col-s-12 footer">
+            <footer>This is the footer</footer>
+        </div>
     </body>
 </html>
