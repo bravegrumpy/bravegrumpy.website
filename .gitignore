@@ -8,6 +8,9 @@ node_modules/
 **/**scratch**.*
 **/**scratch**/
 
+# build files 
+dist
+
 
 
 # Env

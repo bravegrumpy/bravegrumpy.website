@@ -19,6 +19,7 @@
     },
     "type": "module",
     "dependencies": {
+        "amplify-adapter": "^0.1.2",
         "aws-amplify": "^6.6.2",
         "svelte": "^4.2.19",
         "vite": "^5.4.7"
