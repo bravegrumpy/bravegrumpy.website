@@ -1,5 +1,12 @@
-node_modules
+node_modules/
 
+# IDE specific config
+**/.vs*/
+**/.idea/
+
+# scratch files
+**/**scratch**.*
+**/**scratch**/
 
 
 
