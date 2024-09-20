@@ -5,3 +5,8 @@
 # scratch files
 **/**scratch**.*
 **/**scratch**/
+node_modules
+
+amplify/
+
+.amplify/
