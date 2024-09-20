@@ -1,7 +1,11 @@
 {
     "name": "bravegrumpy.website",
-    "build": {
-        
+    "version": "0.1.2",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "serve": "vite serve",
+        "preview": "vite preview"
     },
     "devDependencies": {
         "@aws-amplify/backend": "^1.2.2",
@@ -16,5 +20,6 @@
         "svelte-loader": "^3.2.3",
         "svelte-preprocess": "^6.0.2",
         "vite": "^5.4.7"
-    }
+    },
+    "type": "module"
 }
