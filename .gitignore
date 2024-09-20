@@ -11,9 +11,7 @@ node_modules/
 # build files 
 dist
 .np
-
-
-
+.np/**.*
 # Env
 .env
 .env.*
