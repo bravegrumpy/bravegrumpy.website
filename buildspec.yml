@@ -2,4 +2,4 @@ version: 0.2
 phases:
   install:
     commands:
-      - npm install -g @aws-amplify/cli@latest  # or specify a stable version like 12.12.6
+      - npm install -g @aws-amplify/cli@latest
