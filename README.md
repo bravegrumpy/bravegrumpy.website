@@ -14,6 +14,10 @@ the best methodology for publishing it to the domain: bravegrumpy.com
 
 ## Change-Log
 
+### 2024
+
+#### September 20 <sup>th</sup>
+
 ### 2022
 
 #### December 29<sup>th</sup>
