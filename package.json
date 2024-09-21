@@ -1,7 +1,9 @@
 {
 	"name": "bravegrumpy.website",
 	"version": "0.1.2",
-	"scripts": {},
+	"scripts": {
+        "start": "node server.js"
+    },
 	"devDependencies": {},
 	"dependencies": {},
 	"type": "module",
