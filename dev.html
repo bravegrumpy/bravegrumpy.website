@@ -9,7 +9,6 @@
         <title>Dev BraveGrumpy Homepage</title>
         <link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="icon" href="assets/images/BG_logo.png">
-	<script src="./main.js"></script>
     </head>
     <body>
         <header class="row col-s-12 col-m-12 col-l-12 header row">
@@ -33,8 +32,10 @@
             </section>
             <section>
                 <h2>Including Basic JS functionality</h2>
-                <script src="script.js"></script>
-                <script src="index.js"></script>
+                <script type="text/javascript">
+                    console.log("something happened");
+                    document.write("This is some basic javascript");
+                </script>
             </section>
             <section>
                 <h2>Progresively adding some react</h2>

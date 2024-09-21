@@ -1,8 +1,9 @@
 {
-    "name": "bravegrumpy.website",
-    "version": "0.1.2",
-    "scripts": {},
-    "devDependencies": {},
-    "dependencies": {},
-    "type": "module"
+	"name": "bravegrumpy.website",
+	"version": "0.1.2",
+	"scripts": {},
+	"devDependencies": {},
+	"dependencies": {},
+	"type": "module",
+    "license": "SEE LICENSE IN LICENSE"
 }
