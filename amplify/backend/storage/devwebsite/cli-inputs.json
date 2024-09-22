@@ -1,0 +1,14 @@
+{
+  "resourceName": "devwebsite",
+  "policyUUID": "23698c0f",
+  "bucketName": "devwebsite65b0454339394eb5b6ba26a6eb6fae1e",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
