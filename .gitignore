@@ -12,3 +12,8 @@ scratchy.*
 **/scratch**
 **/scratch/**
 **/scratch/**.*
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
