@@ -15,10 +15,8 @@ const root = '/';
 
 app.disable('x-powered-by');
 
-app.use(
-    helmet();
-    express.static(path.join(__dirname, root))
-);
+app.use(helmet());
+app.use(express.static(path.join(__dirname, root)));
 
 app.get(root, (res, req) => {
     res.sendFile(path.join(__dirname, root, 'index.html'));
