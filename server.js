@@ -13,8 +13,6 @@ const port = 3000;
 
 const root = '/';
 
-app.disable('x-powered-by');
-
 app.use(helmet());
 app.use(express.static(path.join(__dirname, root)));
 
