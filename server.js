@@ -1,54 +1,22 @@
-import http from 'http';
-import { readFile } from 'fs/promises';
+import express from 'express';
 import path from 'path';
-import { URL } from 'url';
+import { fileURLToPath } from 'url';
 
-const PORT = 8000;
-const HOST = 'localhost';
-const BASE_DIR = process.cwd(); // Serves files from the current working directory
+const app = express();
 
-const server = http.createServer(async (req, res) => {
-    try {
-        const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
-        let pathname = parsedUrl.pathname;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-        // Serve index.html if no specific file is requested
-        if (pathname === '/') {
-            pathname = '/index.html';
-        }
+const hostname = 'localhost';
+const port = 3000;
+const root = '/';
 
-        const filePath = path.join(BASE_DIR, pathname);
-        const data = await readFile(filePath);
+app.use(express.static(path.join(__dirname, root)));
 
-        // Set Content-Type based on the file extension
-        const ext = path.extname(filePath).toLowerCase();
-        const mimeTypes = {
-            '.html': 'text/html',
-            '.js': 'text/javascript',
-            '.css': 'text/css',
-            '.json': 'application/json',
-            '.png': 'image/png',
-            '.jpg': 'image/jpg',
-            '.gif': 'image/gif',
-            '.svg': 'image/svg+xml',
-            '.wav': 'audio/wav',
-            '.mp4': 'video/mp4',
-            '.woff': 'application/font-woff',
-            '.ttf': 'application/font-ttf',
-            '.eot': 'application/vnd.ms-fontobject',
-            '.otf': 'application/font-otf',
-            '.wasm': 'application/wasm',
-        };
-
-        const contentType = mimeTypes[ext] || 'application/octet-stream';
-        res.writeHead(200, { 'Content-Type': contentType });
-        res.end(data);
-    } catch (error) {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('File not found');
-    }
+app.get(root, (res, req) => {
+    res.sendFile(path.join(__dirname, root, 'index.html'));
 });
 
-server.listen(PORT, HOST, () => {
-    console.log(`Server running at http://${HOST}:${PORT}/`);
+app.listen(port, hostname, () => {
+    console.log(`Server is running on http://${hostname}:${port}/`);
 });
