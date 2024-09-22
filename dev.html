@@ -11,16 +11,18 @@
         <link rel="icon" href="assets/images/BG_logo.png">
     </head>
     <body>
-        <header>
-            <h1>Welcome to the Experimental Homepage</h1>
-            <p>HTML Edition</p>
+        <header class="row col-s-12 col-m-12 col-l-12 header row">
+            <div class="col-m-4"></div>
+            <div class="col-m-4 title">
+                <h1>Welcome to the Experimental Homepage</h1>
+                <p><span class="subtitle">HTML Edition</span></p>
+            </div>
             <!--p>Go check out the <a href="dev.php">PHP Edition</a></p-->
         </header>
-        <main>
-            <section>
+        <main class="row">
+            <section class="col-s-12 col-m-12 navbar">
                 <h2>Helpful Links</h2>
                 <article><a href="index.html">Go back to the real, non-experimental homepage.</a></article>
-
                 <div class="navbar"></div>
             </section>
             <section>
@@ -30,16 +32,14 @@
             </section>
             <section>
                 <h2>Including Basic JS functionality</h2>
-                <script src="script.js"></script>
+                <script type="text/javascript">
+                    console.log("something happened");
+                    document.write("This is some basic javascript");
+                </script>
             </section>
             <section>
-                <h2>PHP testing/practice</h2>
-                <p>This page is <code>.html</code></p>
-                <article>
-                    <?php
-                        echo "This was created inside a php tag";
-                    ?>
-                </article>
+                <h2>Progresively adding some react</h2>
+                <div id="app"></div>
                 <article>
                     <div>
                         <p>Above, I placed the following:</p>
@@ -56,6 +56,8 @@
                 </article>
             </section>
         </main>
-        <footer>This is the footer</footer>
+        <div class="row col-s-12 footer">
+            <footer>This is the footer</footer>
+        </div>
     </body>
 </html>

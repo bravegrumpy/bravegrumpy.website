@@ -2,15 +2,13 @@
 **/.vs*/
 **/.idea/
 
-# scratch files
-**/**scratch**.*
-**/**scratch**/
+# node moduels
+node_modules
 
-# Enviornments
-**/**.env*
-
-# Legacy
-tools/
-.*lint.json/
-.notes/
-venvs/**
+# scratch files and directories
+scratch*
+**scratch**
+scratchy.*
+**/scratch**
+**/scratch/**
+**/scratch/**.*

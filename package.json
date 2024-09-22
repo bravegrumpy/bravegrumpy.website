@@ -1,8 +1,15 @@
 {
-    "name": "bravegrumpy.website",
-    "version": "0.2.0",
-    "scripts":{},
-    "type": "module",
-    "license": "SEE LICENSE IN LICENSE",
-    "dependencies": {}
+	"name": "bravegrumpy.website",
+	"version": "0.1.2",
+	"scripts": {
+		"start": "node server.js",
+		"serve": "node server.js",
+		"dev": "node server.js"
+	},
+	"type": "module",
+	"license": "SEE LICENSE IN LICENSE",
+	"dependencies": {
+		"express": "^4.21.0",
+		"helmet": "^7.1.0"
+	}
 }
