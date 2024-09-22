@@ -55,6 +55,13 @@
       "type": "manual"
     }
   },
+  "interactions": {
+    "lexdaebccbf": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lex"
+    }
+  },
   "parameters": {
     "AMPLIFY_function_devwebsite8a1053ca_deploymentBucketName": {
       "usedBy": [
@@ -85,6 +92,22 @@
         {
           "category": "hosting",
           "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_interactions_lexdaebccbf_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "interactions",
+          "resourceName": "lexdaebccbf"
+        }
+      ]
+    },
+    "AMPLIFY_interactions_lexdaebccbf_s3Key": {
+      "usedBy": [
+        {
+          "category": "interactions",
+          "resourceName": "lexdaebccbf"
         }
       ]
     }

@@ -32,6 +32,12 @@
       },
       "storage": {
         "devwebsite": {}
+      },
+      "interactions": {
+        "lexdaebccbf": {
+          "deploymentBucketName": "amplify-devwebsite-dev-ce492-deployment",
+          "s3Key": "amplify-builds/lexdaebccbf-552f776c30435531785a-build.zip"
+        }
       }
     }
   }

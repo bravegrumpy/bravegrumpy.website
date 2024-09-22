@@ -26,6 +26,13 @@ export type AmplifyDependentResourcesAttributes = {
       "Region": "string"
     }
   },
+  "interactions": {
+    "lexdaebccbf": {
+      "BotName": "string",
+      "FunctionArn": "string",
+      "Region": "string"
+    }
+  },
   "storage": {
     "devwebsite": {
       "BucketName": "string",
