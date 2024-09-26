@@ -1,3 +1,4 @@
+import { response } from 'express';
 import App from './components/App.svelte';
 
 async function fetchHtmlFiles() {
@@ -11,6 +12,7 @@ async function fetchHtmlFiles() {
         console.error(`Failed to fetch HTML files:`, error);
         return [];
     }
+    return response;
 }
 
 fetchHtmlFiles().then(htmlFiles => {
