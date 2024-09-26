@@ -29,7 +29,7 @@ app.get('/api/files', (req, res) => {
         }
 
         const htmlFiles = files.filter(file => file.endsWith('.html'));
-        res.json(htmlFiles);
+        return res.json(htmlFiles);
     });
 });
 

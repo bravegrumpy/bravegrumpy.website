@@ -6,15 +6,15 @@
     <ul>
         {#each htmlFiles as file}
             <li>
-                <a href={`/${file}`}>{file.split('.')[0]}</a>
-            </li>
+                <a href={`../${file}`}>{file.split('.')[0]}</a>
+            </li>            
         {/each}
     </ul>
 </nav>
 
 <style>
     nav {
-        background-color: blue;
+        background-color: cyan;
     }
     nav ul {
         list-style-type: none;
