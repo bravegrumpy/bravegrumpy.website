@@ -1,22 +1,15 @@
-import { response } from 'express';
+//import { response } from 'express';
 import App from './components/App.svelte';
 
+
 async function fetchHtmlFiles() {
-    try {
-        const response = await fetch('/api/files');
-        console.log(response);
-        if (!response.ok) {
-            throw new  Error(`HTTP error! status: ${response.status}`);
-        }
-    } catch (error) {
-        console.error(`Failed to fetch HTML files:`, error);
-        return [];
-    }
-    return response;
+    const response = await fetch('/api/files');
+    return await response.json();
 }
 
-fetchHtmlFiles().then(htmlFiles => {
-    new App({
+
+fetchHtmlFiles().then((htmlFiles) => {
+    const app = new App({
         target: document.getElementById('svelte-app'),
         props: {
             htmlFiles
