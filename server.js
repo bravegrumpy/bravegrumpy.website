@@ -6,8 +6,8 @@ import fs from 'fs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const hostname = 'localhost';
-const port = 3000;
+const HOSTNAME = process.env.HOSTNAME || 'localhost';
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -41,6 +41,6 @@ app.get('*', (req, res) => {
     }
 });
 
-app.listen(port, hostname, () => {
+app.listen(PORT, HOSTNAME, () => {
     console.log(`Server is  running at http://${hostname}:${port}/`);
 });
