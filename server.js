@@ -15,6 +15,7 @@ const root = '/';
 
 app.use(helmet());
 app.use(express.static(path.join(__dirname, root)));
+app.use(express.static('public'));
 
 app.get(root, (res, req) => {
     res.sendFile(path.join(__dirname, root, 'index.html'));
