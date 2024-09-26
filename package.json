@@ -6,7 +6,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"optimize": "vite optimize",
-		"start": "vite"
+		"start": "node server.js"
 	},
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",

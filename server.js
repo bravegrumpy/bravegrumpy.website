@@ -1,4 +1,3 @@
-import { dir } from 'console';
 import express  from  'express';
 import fs from 'fs';
 import helmet from 'helmet';
@@ -35,6 +34,11 @@ app.get('/api/files', (req, res) => {
 });
 
 app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname,  'build', 'index.html'));
+});
+
+/*
+app.get('*', (req, res) => {
     const filePath = path.join(__dirname, req.url);
     const defaultFile = path.join(__dirname, 'index.html');
 
@@ -44,6 +48,7 @@ app.get('*', (req, res) => {
         res.sendFile(defaultFile);
     }
 });
+*/
 
 app.listen(port, hostname, () => {
     console.log(`Server  is listening on https://${hostname}:${port}/`);
