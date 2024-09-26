@@ -2,9 +2,6 @@ import { defineConfig } from "vite";
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import path from 'path';
 
-const HOSTNAME  = process.env.HOSTNAME || 'localhost';
-
-
 export default defineConfig({
     plugins: [svelte()],
     resolve: {
@@ -16,7 +13,9 @@ export default defineConfig({
         ssr: 'src/main.js',
         outDir: 'build',
         rollupOptions: {
-            input: './src/main.js',
+            input: {
+                main: path.resolve(__dirname, 'main.js')
+            },
         },
     },
     server: {
@@ -25,8 +24,9 @@ export default defineConfig({
         },
         proxy: {
             '/api': {
-                target: `http://${HOSTNAME}:3000`,
+                target: 'http://backend:3000',//process.env.VITE_BACKEND_URL || `http://localhost:3000`,
                 changeOrigin: true,
+                //rewrite: (path) => path.replace(/^\/api/, ''),
                 secure: false,
             },
         },

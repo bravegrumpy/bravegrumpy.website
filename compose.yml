@@ -8,7 +8,9 @@ services:
     container_name: backend
     ports: 
       - "3000:3000"
-      - "5173:5173"
+    environment:
+      - NODE_ENV=production
+      - HOST=backend
     command: ["npm", "run", "start"]
   
   frontend:
@@ -17,7 +19,10 @@ services:
       dockerfile: Dockerfile
     container_name: frontend
     ports:
-      - "3001:3000"
-      - "5174:5173"
+      - "5173:5173"
+    depends_on:
+      - backend
+    environment:
+      - VITE_BACKEND_URL=http://backend:3000
     command: >
       sh -c "npm run dev && --host"
