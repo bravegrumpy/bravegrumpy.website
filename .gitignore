@@ -5,10 +5,15 @@
 # node moduels
 node_modules
 
+# Builds
+build
+
 # scratch files and directories
 scratch*
 **scratch**
-scratchy.*
+scratch*.*
+scratch**.*
 **/scratch**
 **/scratch/**
 **/scratch/**.*
+**old**

@@ -1,13 +1,34 @@
 import { defineConfig } from "vite";
-import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { svelte } from '@sveltejs/vite-plugin-svelte';
+import path from 'path';
 
 export default defineConfig({
     plugins: [svelte()],
-    server: {
-        open: true
+    resolve: {
+        alias: {
+            '@':path.resolve(__dirname, 'src'),
+        },
     },
     build: {
-        outDir: 'public',
-        emptyOutDir: true
-    }
+        ssr: 'src/main.js',
+        outDir: 'build',
+        rollupOptions: {
+            input: './src/main.js',
+        },
+    },
+    server: {
+        fs: {
+            allow: ['.'],
+        },
+        proxy: {
+            '/api': {
+                target: 'http://localhost:3000',
+                changeOrigin: true,
+                secure: false,
+            },
+        },
+    },
+    ssr: {
+        noExternal: ['svelte'],
+    },
 });
