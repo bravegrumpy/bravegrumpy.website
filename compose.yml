@@ -1,20 +1,23 @@
-version: '3.8'
+name: bravegrumpy.website
 
 services:
-  server:
+  backend:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: server
-    ports:
+    container_name: backend
+    ports: 
       - "3000:3000"
+      - "5173:5173"
     command: ["npm", "run", "start"]
   
-  svelte:
+  frontend:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: svelte
+    container_name: frontend
     ports:
-      - "5173:5173"
-    command: ["npm", "run", "dev"]
+      - "3001:3000"
+      - "5174:5173"
+    command: >
+      sh -c "npm run dev && --host"

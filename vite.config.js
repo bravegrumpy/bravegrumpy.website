@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import path from 'path';
 
+const HOSTNAME  = process.env.HOSTNAME || 'localhost';
+
 
 export default defineConfig({
     plugins: [svelte()],
@@ -23,7 +25,7 @@ export default defineConfig({
         },
         proxy: {
             '/api': {
-                target: 'http://localhost:3000',
+                target: `http://${HOSTNAME}:3000`,
                 changeOrigin: true,
                 secure: false,
             },
