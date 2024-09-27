@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1
 
+# Building App
 FROM node:20-alpine
 
 WORKDIR /app
@@ -14,6 +15,6 @@ RUN npm run build
 
 EXPOSE 3000
 
-CMD [ "npm", "run", "start"]
+CMD [ "npm", "run", "dev"]
 
-EXPOSE 3000 5173
+EXPOSE 3000 5173 8000

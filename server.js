@@ -2,6 +2,7 @@ import  express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
+import helmet from 'helmet';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,7 +13,10 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(helmet());
 app.use(express.static(__dirname));
-app.use(express.static(path.join(__dirname, 'build')));
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'build')));
+}
 
 app.get(`/api/files`, (req, res) => {
 
