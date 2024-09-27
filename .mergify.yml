@@ -1,15 +1,28 @@
 pull_request_rules:
-  - name: Make sure PR are update before merging with rebase
-    description: This automatically rebases PRs when they are out-of-date with the
-      base branch to avoid semantic conflicts (next step us switch to merge
-      queue).
+  - name: Label when a merge conflict occurs
     conditions:
-      - "#commits-behind >= 10"
+      - conflict
+    actions:
+      label:
+        toggle:
+          - conflict
+  - name: Labeling staging-content as an automerge branch
+    conditions:
+      - base = staging-content
+      - target = main
+    actions:
+      label:
+        toggle:
+          - automerge
+  - name: Automatic merge from staging-content to main when checks pass
+    conditions:
+      - "#conflict != true"
+      - target = main
+      - label = automerge
+      - label != conflict
     actions:
       rebase:
-  - name: Automatic merge
-    description: Merge when PR passes all branch protection and has label automerge
-    conditions:
-      - label = automerge
-    actions:
+      comment:
+        message: Content for bravegrumpy.website was added.
       merge:
+        method: merge
