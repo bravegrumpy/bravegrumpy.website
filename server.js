@@ -10,7 +10,7 @@ const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
 
 const app = express();
-
+app.use(helmet());
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 
