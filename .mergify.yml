@@ -1,4 +1,14 @@
 pull_request_rules:
+  - name: label staging-content as automerge
+    description: adds "automerge" label to PRs from the staging-content branch
+    conditions:
+      - label != conflicted
+      - base = main
+      - "#commits-behind <= 3"
+    actions:
+      label:
+        add:
+          - automerge
   - name: Merging Staging-content with Main
     description: Automatically merging staging-contet with main
     conditions:
