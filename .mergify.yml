@@ -1,4 +1,15 @@
 pull_request_rules:
+  - name: Adding automerge label
+    description: Adding the automerge label for PRs  on main that do not have the
+      conflicted label
+    conditions:
+      - "#added-lines <= 50"
+      - label != conflicted
+      - "#commits-behind<=10"
+    actions:
+      label:
+        toggle:
+          - automerge
   - name: Merging Staging-content with Main
     description: Automatically merging staging-contet with main
     conditions:
