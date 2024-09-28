@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import helmet from 'helmet';
+import viteConfig from './vite.config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,9 +15,9 @@ const app = express();
 app.use(helmet());
 app.use(express.static(__dirname));
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, 'build')));
-}
+//if (process.env.NODE_ENV === 'production') {
+app.use(express.static(path.join(__dirname, 'build')));
+//}
 
 app.get(`/api/files`, (req, res) => {
 
@@ -43,6 +44,11 @@ app.get('*', (req, res) => {
     } else {
         res.sendFile(defaultFile);
     }
+    res.sendFile(viteConfig);
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 app.listen(PORT, HOST, () => {
