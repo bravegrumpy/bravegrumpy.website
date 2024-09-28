@@ -18,9 +18,9 @@ services:
       dockerfile: Dockerfile
     container_name: frontend
     ports:
-      - "8000:8000"
+      - "5173:5173"
     depends_on:
       - backend
     environment:
       - VITE_BACKEND_URL=http://backend:3000
-    command: ["npm", "run", "dev"]
+    command: ["npm", "run", "preview"]

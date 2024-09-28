@@ -5,16 +5,12 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN rm -rf node_modules/ build/ && npm install
-
 COPY . .
 
-RUN npm run build
+RUN rm -rf node_modules/ build/ && npm ci && npm run build
 
+EXPOSE 5173
+EXPOSE 8000
 EXPOSE 3000
 
-CMD [ "npm", "run", "preview"]
-
-EXPOSE 3000 5173 8000
+CMD [ "npm", "run", "--mode", "production"]

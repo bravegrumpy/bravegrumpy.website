@@ -1,10 +1,11 @@
 import { defineConfig } from "vite";
 import { svelte } from '@sveltejs/vite-plugin-svelte';
-import path from 'path'
-import { fileURLToPath } from "url";
+import { htmlFiles } from './getFiles.js';
+//import path from 'path'
+//import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+//const __filename = fileURLToPath(import.meta.url);
+//const __dirname = path.dirname(__filename);
 
 export default defineConfig({
     plugins: [svelte()],
@@ -20,12 +21,19 @@ export default defineConfig({
             input: {
                 main: 'src/main.js',
                 index: 'index.html',
+                '0': htmlFiles[0],
+                '1': htmlFiles[1],
+                '2': htmlFiles[2],
+                '3': htmlFiles[3],
+                '4': htmlFiles[4],
+                '5': htmlFiles[5],
             },
-            /*external: [
-                //'./node_modules',
-                './stylesheets',
-                './archive./',
-            ],*/          
+            external: [
+                'svelte',
+                'express',
+                'server.js',
+                'helmet'
+            ],
         },
     },
     server: {

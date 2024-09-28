@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import fs from 'fs';
 import helmet from 'helmet';
 import viteConfig from './vite.config.js';
+import getFilenames from './getFiles.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,8 +23,10 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get(`/api/files`, (req, res) => {
 
     const directoryPath = __dirname;
+    const htmlFiles = getFilenames(directoryPath, '.html');
+    res.json(htmlFiles);
 
-    fs.readdir(directoryPath, (err, files) => {
+/*    fs.readdir(directoryPath, (err, files) => {
         if (err) {
             return res.status(500).send('Unable to scan directory');
         }
@@ -31,6 +34,7 @@ app.get(`/api/files`, (req, res) => {
         const htmlFiles = files.filter(file => file.endsWith('.html'));
         res.json(htmlFiles);
     });
+*/
 });
 
 
@@ -44,7 +48,7 @@ app.get('*', (req, res) => {
     } else {
         res.sendFile(defaultFile);
     }
-    res.sendFile(viteConfig);
+    //res.sendFile(viteConfig);
 });
 
 app.get('*', (req, res) => {

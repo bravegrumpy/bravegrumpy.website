@@ -3,8 +3,9 @@
 	"version": "0.1.2",
 	"scripts": {
 		"dev": "vite dev",
+        "prod": "vite run --mode production",
 		"build": "vite build",
-		"preview": "vite preview --port 8000",
+		"preview": "vite preview --port 80",
 		"optimize": "vite optimize",
 		"start": "node server.js"
 	},
