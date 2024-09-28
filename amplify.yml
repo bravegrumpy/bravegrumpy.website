@@ -6,8 +6,7 @@ frontend:
       commands:
         - 'npm install'
         - 'npm run build'
-        - 'npm run start'
-        - 'npm run preview'
+        - 'npm run start & npm run preview'
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /
