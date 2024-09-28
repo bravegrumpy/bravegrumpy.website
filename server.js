@@ -2,6 +2,7 @@ import express from 'express';
 import helmet from 'helmet';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import csurf from 'csurf';
 
 const app = express();
 
@@ -13,9 +14,8 @@ const port = 3000;
 
 const root = '/';
 
-app.disable('x-powered-by');
-
 app.use(helmet());
+app.use(csurf());;
 app.use(express.static(path.join(__dirname, root)));
 
 app.get(root, (res, req) => {

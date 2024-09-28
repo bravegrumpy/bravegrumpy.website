@@ -1,0 +1,13 @@
+pull_request_rules:
+  - name: Merging Staging-content with Main
+    description: Automatically merging staging-contet with main
+    conditions:
+      - base = main
+      - label = automerge
+      - label != conflicted
+    actions:
+      rebase:
+      comment:
+        message: Content for bravegrumpy.website  is added.
+      merge:
+        method: merge
