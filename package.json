@@ -5,7 +5,7 @@
 		"start": "node server.js",
 		"serve": "node server.js",
 		"dev": "node server.js",
-		"test": "node server.js"
+		"test": "node test.js"
 	},
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
