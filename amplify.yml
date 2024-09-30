@@ -3,12 +3,12 @@ frontend:
   phases:
     preBuild:
       commands:
-        - 'echo "installing dependancies..."'
-        - 'npm install --omit=dev --cache .npm --prefer-offline'
+        - echo "installing dependancies..."
+        - npm install --omit=dev --cache .npm --prefer-offline
     # IMPORTANT - Please verify your build commands
     build:
       commands:
-        - 'npm run build'
+        - npm run build
 
   artifacts:
     # IMPORTANT - Please verify your build output directory
@@ -18,4 +18,4 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
-      - '.npm/**/*'
+      - .npm/**/*
