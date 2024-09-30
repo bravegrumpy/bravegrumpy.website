@@ -2,11 +2,10 @@
 **/.vs*/
 **/.idea/
 
-# node moduels
-node_modules
-
-# Builds
+# build artifacts
 build
+node_modules
+.npm
 
 # scratch files and directories
 scratch*

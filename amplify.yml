@@ -1,35 +1,21 @@
 version: 1
-backend:
-  phases:
-    build:
-      commands:
-        - 'echo "${AWS_BRANCH}"'
-        - 'echo "installing node packages..."'
-        - 'npm install'
-        - 'echo "building svelte project..."'
-        - 'npm run build'
-        - 'echo "serving backend on port 3000..."'
-        - 'npm run start'
-    artifacts:
-      baseDirectory: /
-      files:
-        - '**/*'
-    cache:
-      paths:
-        - node_modules/**/*
-
 frontend:
   phases:
     # IMPORTANT - Please verify your build commands
+    preBuild:
+      commands:
+        - 'echo "installing dependancies..."'
+        - 'npm install --omit=dev --cache .npm --prefer-offline'
     build:
       commands:
-        - 'echo "starting front end"'
-        - 'npm run preview'
+        - 'echo "building project..."'
+        - 'npm run build'
   artifacts:
     # IMPORTANT - Please verify your build output directory
-    baseDirectory: /build
+    baseDirectory: build
     files:
       - '**/*'
   cache:
     paths:
       - node_modules/**/*
+      - '.npm/**/*'
