@@ -5,10 +5,11 @@ pull_request_rules:
     conditions:
       - "#added-lines <= 50"
       - label != conflicted
-      - "#commits-behind<=10"
     actions:
       label:
-        toggle:
+        remove:
+          - all
+        add:
           - automerge
   - name: Merging Staging-content with Main
     description: Automatically merging staging-contet with main
