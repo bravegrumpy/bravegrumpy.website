@@ -1,13 +1,14 @@
 pull_request_rules:
-  - name: label staging-content as automerge
-    description: adds "automerge" label to PRs from the staging-content branch
+  - name: Adding automerge label
+    description: Adding the automerge label for PRs  on main that do not have the
+      conflicted label
     conditions:
+      - "#added-lines <= 50"
       - label != conflicted
-      - base = main
-      - "#commits-behind <= 3"
+      - "#commits-behind<=10"
     actions:
       label:
-        add:
+        toggle:
           - automerge
   - name: Merging Staging-content with Main
     description: Automatically merging staging-contet with main
@@ -15,9 +16,13 @@ pull_request_rules:
       - base = main
       - label = automerge
       - label != conflicted
+      - "#commits-behind <= 5"
     actions:
       rebase:
       comment:
-        message: Content for bravegrumpy.website  is added.
+        message: Content for bravegrumpy.website  is added. This  merge was
+          automatically completed by mergify.
       merge:
         method: merge
+        commit_message_template: This commit was automatically completed by mergify on
+          behalf of @{{ author }}
