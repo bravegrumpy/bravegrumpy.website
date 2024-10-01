@@ -7,6 +7,16 @@ the best methodology for publishing it to the domain: bravegrumpy.com
 
 ## Notes
 
+### 2024
+
+#### October
+
+- This is likely the last iteration of this website without using some sort of javascript frontend framework.
+
+I want to look into what adapters exist in node that  can allow me to connect javascript and python.
+
+### 2022
+
 - [X] Right now, I own the domain bravegrumpy.com
 - [X] I purchased it through Route 53 in AWS
 - [X] I have DNS systems in place
@@ -18,13 +28,12 @@ the best methodology for publishing it to the domain: bravegrumpy.com
 
 #### October 20 `<sup>`th `</sup>`
 
-- [x] Enacted actual semver. Each change to this branch, will increment the "patch" version number. 
+- [x] Enacted actual semver. Each change to this branch, will increment the "patch" version number.
 - [x] I'm still very much in the "unstable relases" world with this.
 - [x] Clearly, the dev branch is  where theh svelte inclusion is happening.
 - [ ] Figure out the right  way to document code.
 - [ ] I also think that ultimately starting over with sveltekit, and being intentional with all of the routes, etc will be the way I implement js stuff.
 - [ ] figure out how many merges have gone into main, and then bump the versions accordingly.
-
 
 ### 2022
 
@@ -74,7 +83,7 @@ I know I haven't updated this readme in a while. Here are some highlights:
 - [X] figured out how to print error-logs in JS
 - [X] made edits to new-tab javascript.
 - [X] added favicon with BG logo.
-- [X] added in dropdown menu on www.bravegrumpy.com/helloWorld/helloWorld_html.html
+- [X] added in dropdown menu on [helloWorld page](www.bravegrumpy.com/helloWorld/helloWorld_html.html)
 - [X] main branch published at [http://www.bravegrumpy.com](http://www.bravegrumpy.com)
 - [X] Deleted template files that were used in flask.
 - [ ] Create a framework for Project 6
