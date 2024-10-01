@@ -5,17 +5,17 @@ import fs from 'fs';
 import helmet from 'helmet';
 import viteConfig from './vite.config.js';
 import getFilenames from './getFiles.js';
+import csurf from 'csurf';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(helmet());
+app.use(csurf());
 app.use(express.static(__dirname));
-
 //if (process.env.NODE_ENV === 'production') {
 app.use(express.static(path.join(__dirname, 'build')));
 //}
