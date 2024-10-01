@@ -3,7 +3,6 @@ pull_request_rules:
     description: Adding the automerge label for PRs  on main that do not have the
       conflicted label
     conditions:
-      - "#added-lines <= 50"
       - label != conflicted
       - "#commits-behind<=10"
     actions:
