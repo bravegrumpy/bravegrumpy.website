@@ -24,6 +24,10 @@
     <link rel="icon" href="assets/images/BG_logo.png">
     <script type="module" src="/src/main.js"></script>
     <!--script type="module" src="/build/main.js"></script-->
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js">
+    </script>
 </head>
 
 <body>
@@ -68,6 +72,17 @@
             <p style="display: block;">I'm working on a <a href="dev.html">new homepage</a>.</p>
         </div>
         <div class="section" id="svelte-app"></div>
+        <div class="section" id="python">
+            <script type="text/python">
+                from browser import document
+                def helloWorld():
+                    return "Hello world"
+                
+                document.getElementById('python') <= helloWorld()
+                print("hello from Brython")
+            </script>
+            <p>This div is <code>Brython</code> testing. </p>
+        </div>
     </div>
     <div class="row">
         <div class="col-s-12 footer">
