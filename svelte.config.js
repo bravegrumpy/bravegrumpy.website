@@ -13,6 +13,5 @@ export default {
             ssr: true,
             noExternal: ['svelte']},
         },
-    },
-    preprocess: vitePreprocess()
+    preprocess: vitePreprocess(),
 };
