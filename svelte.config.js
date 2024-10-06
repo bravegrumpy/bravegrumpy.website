@@ -10,8 +10,9 @@ export default {
         }),
         target: '#svelte-app',
         vite: {
-            ssr: true,//{noExternal: ['svelte']}
-        }
+            ssr: true,
+            noExternal: ['svelte']},
+        },
     },
-    preprocess: vitePreprocess()
+    preprocess: vitePreprocess(),
 };
