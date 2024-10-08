@@ -19,7 +19,7 @@
                     <?php echo "PHP Edition"; ?>
                 </span></p>
             </div>
-            <!--p>Go check out the <a href="dev.php">PHP Edition</a></p-->
+            <p>Go check out the <a href="dev.html">HTML Edition</a></p>
         </header>
         <main class="row">
             <section class="col-s-12 col-m-12 navbar">
@@ -40,28 +40,114 @@
                 </script>
             </section>
             <section>
-                <h2>Progresively adding some react</h2>
+                <h2>Basic PHP Functionality</h2>
                 <div id="app"></div>
                 <article>
                     <div>
-                        <p>Above, I placed the following:</p>
+                        <p>
+                            <?php
+                                echo "This was created inside a php tag";
+                                $a = "The following is the code I used to make it:";
+                            ?>
+                        </p>
+                        <p><?php echo $a ?></p>
                         <pre>
     &lt;?php
         echo "This was created inside a php tag";
     ?&gt;
                         </pre>
                     </div>
-                    <p>It did not render. This is because the <code>.php</code> file suffix is necessary, and does not exist here. This is true unless I can figure out how to tell the server to treat a <code>.html</code> file as php.</p>
-                    <p>This was me trying to figure out if php works when inside of an <code>.html</code> file. </p>
-                    <p>I do not feel like doing that.</p>
-                    <p>An exact copy of this page exists as a <code>.php</code> file. This is to show where PHP does and does not work. </p>
                 </article>
-            </section>
-            <section>
-                <p>This is some content change that I'm adding so that I can do approprate testing on mergify. 
-                    I'm placing it here because this file, dev.html is hidden in the staging-content and main branches.
-                </p>
-                <p>Another arbitrary change for mergify</p>
+                <article>
+                    <h2>Conditional Statements</h2>
+
+                    <form method="post">
+                    <input type="checkbox" name="check" id="check" default="true">
+                    <button type="submit">Submit</button>
+                    </form>
+
+                    <?php
+                        if (isset($_POST['check'])) {
+                          $expression = True;  
+                        } else {
+                            $expression = False;
+                        }
+                    ?>
+
+                    <p>The php expression: <pre>&lt?php echo $_POST['check']; ?&gt</pre> is evaluated.</p>
+
+                    <?php if($expression): ?>
+                        <p>The expression is True</p>
+                    <?php else: ?>
+                        <p>The expression is False</p>
+                    <?php endif; ?>
+                    <div>
+                        <h3>For Loop</h3>
+                        <ul>
+                            <?php for ($i = 0; $i < 5; ++$i): ?>
+                                <li>This is the <?= ($i + 1)?><?php
+                                    switch($i) {
+                                        case 0:
+                                            echo "st";
+                                            break;
+                                        case 1:
+                                            echo "nd";
+                                            break;
+                                        case 2:
+                                            echo "rd";
+                                            break;
+                                        default:
+                                            echo "th";
+                                    }
+                                    ?> loop.
+                                </li>
+                            <?php endfor; ?>
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <h2>Simple Tutorial</h2>
+                    <p>
+                    <?php
+                        if (str_contains($_SERVER['HTTP_USER_AGENT'], 'Firefox')) {
+                            echo 'You are using Firefox';
+                        }
+                    ?>
+                    </p>
+                    <p>
+                        <?php
+                            echo $_SERVER['REMOTE_ADDR'];
+                        ?>
+                    </p>
+                </article>
+                <article>
+                    <h2>Working with simple HTML Forms</h2>
+                    <div>
+                        <form action="./action.php" method="post">
+                            <div>
+                                <label for="name">Name:</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div>
+                                <label for="age"></label>
+                                <input type="number" name="age" id="age">
+                            </div>
+                            <div>
+                            <label for="accept">Do you want to check the box?</label>
+                            <input type="checkbox" name="accept" id="accept">
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div>
+                        <h3>Form Output</h3>
+                            <div>
+                                <?php
+                                    include("./action.php");
+                                ?>
+                            </div>
+                    </div>
+                </article>
             </section>
         </main>
         <div class="row col-s-12 footer">
