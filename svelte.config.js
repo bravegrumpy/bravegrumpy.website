@@ -8,7 +8,7 @@ export default {
             out: 'build',
             precompress: true
         }),
-        target: '#svelte-app',
+        target: ['#svelte-app', '.svelte'],
         vite: {
             ssr: true,
             noExternal: ['svelte']},
