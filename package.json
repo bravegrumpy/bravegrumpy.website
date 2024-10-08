@@ -1,6 +1,6 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.2.13",
+	"version": "0.2.14",
 	"scripts": {
 		"dev": "vite dev",
 		"prod": "vite run --mode production",
