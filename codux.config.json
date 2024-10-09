@@ -1,0 +1,6 @@
+{
+    "addPanel": {
+        "assets": ["@codux-boards/react-semantic"]
+    },
+    "boardGlobalSetup": null
+}
