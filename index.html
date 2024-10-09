@@ -73,13 +73,23 @@
         </div>
         <div class="section" id="svelte-app"></div>
         <div class="section" id="python">
+            <form onsubmit="{value}">
+                <input type="text" id="hello-world" value="helloWorld" />
+            </form>
             <script type="text/python">
                 from browser import document
-                def helloWorld():
-                    return "Hello world"
+                def helloWorld(n="world"):
+                    return f"Hello {n}"
                 
-                document.getElementById('python') <= helloWorld()
-                print("hello from Brython")
+                div = document.getElementById('python')
+                h3 = document.createElement('h3')
+                h3.innerText = "A pythonic Header"
+                div.appendChild(h3);
+
+                p = document.createElement('p')
+                div.appendChild(p)
+                
+                p <= helloWorld(document.getElementById('hello-world').value)
             </script>
             <h2>This div is <code>Brython</code> testing. </h2>
         </div>

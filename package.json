@@ -1,6 +1,6 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.2.8",
+	"version": "0.2.15",
 	"scripts": {
 		"dev": "vite dev",
 		"prod": "vite run --mode production",
@@ -13,15 +13,15 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {
 		"amplify-adapter": "^0.1.2",
-		"csurf": "^1.10.0",
 		"express": "^4.21.0",
 		"helmet": "^7.1.0",
+		"semantic-ui-css": "^2.5.0",
+		"semantic-ui-react": "^2.1.5",
 		"svelte": "^4.2.19"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-node": "^5.2.4",
+		"@codux-boards/react-semantic": "^1.0.7",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
-		"typescript": "^5.6.2",
 		"vite": "^5.4.8"
 	}
 }
