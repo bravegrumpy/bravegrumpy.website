@@ -6,6 +6,16 @@
  * The purpose of this website, is to practice responsive web design, and to publish creative writing.
  */
 
+/************************************************************************
+2024_09_29 EDIT
+*** I commented this file out because it has an XSS vulnerability.
+This part of the codebase is not under active development.
+But  Ido not want to completely delete a file that was a 
+part of my learning process. Keeping the file for historical purposes.
+
+*************************************************************************
+
+
 window.alert("This page is using Project-Link5.js")
 document.getElementById('output').innerHTML = "This is Writeen usen External JS"
 function handleFormSubmit(event) {
@@ -32,3 +42,6 @@ function handleFormSubmit(event) {
   form.addEventListener('submit', handleFormSubmit);
 
   document.getElementById('output').innerHTML = getURLParameter('name');
+
+
+*****************************************************************************/
