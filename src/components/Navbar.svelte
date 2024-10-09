@@ -3,31 +3,14 @@
 </script>
 
 <nav>
-    <ul>
-        {#each htmlFiles as file}
-            <li>
-                <a href={`../${file}`}>{file.split('.')[0]}</a>
-            </li>            
-        {/each}
-    </ul>
+    {#each htmlFiles as file}
+        <a href={`../${file}`}>{file.split('.')[0]}</a>      
+    {/each}
 </nav>
 
 <style>
-    nav {
-        background-color: cyan;
-    }
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    nav ul li {
-        display: inline;
+    a {
         margin-right: 10px;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: #000;
-        font-weight: bold;
+        background-image: 
     }
 </style>
