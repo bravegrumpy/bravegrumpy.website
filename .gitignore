@@ -1,3 +1,9 @@
+build
+node_modules/
+
+.vs**
+.idea**
+
 # IDE specific config
 **/.vs*/
 **/.idea/
@@ -9,7 +15,7 @@ build
 # scratch files and directories
 scratch*
 **scratch**
-scratchy.*
+scratch*.*
 **/scratch**
 **/scratch/**
 **/scratch/**.*
