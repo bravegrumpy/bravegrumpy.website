@@ -1,0 +1,10 @@
+**/**scratch**/**.*
+*scratch**.*
+
+build
+node_modules/
+
+**/flaskTest**
+
+.vs**
+.idea**
