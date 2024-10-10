@@ -1,6 +1,6 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.1.8-3",
+	"version": "0.2.19",
 	"scripts": {
 		"dev": "vite dev",
 		"prod": "vite run --mode production",
@@ -12,8 +12,13 @@
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {
+		"amplify-adapter": "^0.1.2",
 		"express": "^4.21.0",
 		"helmet": "^7.1.0",
+		"highlight.js": "^11.10.0",
+		"semantic-ui-css": "^2.5.0",
+		"semantic-ui-react": "^2.1.5",
+		"svelte": "^4.2.19"
 	},
 	"devDependencies": {
 		"@codux-boards/react-semantic": "^1.0.7",
