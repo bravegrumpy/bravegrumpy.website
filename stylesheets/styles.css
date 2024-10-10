@@ -14,13 +14,19 @@
 /************************************/
 /* Adding list of color names for easier future reference */
 :root {
-  --light0: #ffffff;
-  --dark0: #000000;
+  --white: #ffffff;
+  --black: #000000;
   --dark1: #144614;
+  --light1: #f2fcf1;
   --accent1A: #d2c8ff;
+  --darkAccent1A: #2e0e67;
+  --dark1Accent1A: #392b4c;
   --accent1B: #beb4ff;
+  --darkAccent1B: #260e67;
   --accent2A: #d1dcff;
+  --darkAccent2A: #2d2c83;
   --accent2B: #a7bcff;
+  --darkAccent2B: #1a194d;
   --boxShadowLight: rgba(0, 0, 0, 0.12);
   --boxShadowDark: rgba(0, 0, 0, 0.24);
 
