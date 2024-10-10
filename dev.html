@@ -9,6 +9,9 @@
         <title>Dev BraveGrumpy Homepage</title>
         <link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="icon" href="assets/images/BG_logo.png">
+        <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css">
+        <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
     </head>
     <body>
         <header class="row col-s-12 col-m-12 col-l-12 header row">
@@ -32,21 +35,36 @@
             </section>
             <section>
                 <h2>Including Basic JS functionality</h2>
+                <script type="module">
+                    import hljs from 'highlight.js';
+                    hljs.highlightAll();
+                </script>
                 <script type="text/javascript">
                     console.log("something happened");
                     document.write("This is some basic javascript");
                 </script>
+                <article>
+                    <h3>Above, I executed some javascript</h3>
+                    <pre><code class="language-javascript">
+import hljs from 'highlight.js';
+hljs.highlightAll();
+console.log("something happened");
+document.write("this is some basic javascript")
+                    </code></pre>
+                </article>
             </section>
             <section>
-                <h2>Progresively adding some react</h2>
+                <h2>Progresively adding some php,unsucessfully</h2>
                 <div id="app"></div>
                 <article>
                     <div>
                         <p>Above, I placed the following:</p>
                         <pre>
+                            <code class="language-php">
     &lt;?php
         echo "This was created inside a php tag";
     ?&gt;
+                            </code>
                         </pre>
                     </div>
                     <p>It did not render. This is because the <code>.php</code> file suffix is necessary, and does not exist here. This is true unless I can figure out how to tell the server to treat a <code>.html</code> file as php.</p>

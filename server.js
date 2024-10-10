@@ -3,8 +3,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import helmet from 'helmet';
-import viteConfig from './vite.config.js';
 import getFilenames from './getFiles.js';
+import hljs from 'highlight.js';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -35,6 +36,11 @@ app.get(`/api/files`, (req, res) => {
 */
 });
 
+app.get('/api/highlighted', ( req, res ) => {
+    let response = `<div><p>Hello World!</p>This is <em>highlighted</em>  Html<p></div>`
+    response = hljs.highlight(response, {  language: 'html' }).value;
+    res.json(response); 
+});
 
 
 app.get('*', (req, res) => {
