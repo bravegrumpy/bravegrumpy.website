@@ -1,4 +1,5 @@
 import  express from 'express';
+import helmet from 'helmet';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -10,15 +11,6 @@ const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
 
 const root = '/';
-
-const app = express();
-app.use(helmet());
-app.use(express.static(__dirname));
-//if (process.env.NODE_ENV === 'production') {
-app.use(express.static(path.join(__dirname, 'build')));
-//}
-
-app.get(`/api/files`, (req, res) => {
 
 app.use(helmet());
 app.use(express.static(path.join(__dirname, root)));
