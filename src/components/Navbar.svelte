@@ -9,8 +9,13 @@
 </nav>
 
 <style>
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+    }
     a {
         margin-right: 10px;
-        background-image: 
+        background-color: cyan;
     }
 </style>
