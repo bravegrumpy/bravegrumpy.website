@@ -3,7 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import helmet from 'helmet';
-import viteConfig from './vite.config.js';
 import getFilenames from './getFiles.js';
 
 const __filename = fileURLToPath(import.meta.url);
