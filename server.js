@@ -1,12 +1,11 @@
 import  express from 'express';
 import helmet from 'helmet';
 import { rateLimit } from 'express-rate-limit';
-import csrf from 'csrf-protection';
-import cookieParser from 'cookie-parser';
-
+import csurf from 'csurf';
+import session from 'express-session';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import fs from 'fs';
+
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -19,11 +18,9 @@ const app = express();
 app.use(helmet());
 app.use(limiter);
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
 
-const csrff = csrf({
-    secret: 'Hello World'
-});
+//CSRF Protection
+const csrfProtection = csurf();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,8 +30,11 @@ const PORT = process.env.PORT || 3000;
 const root = './';
 app.use(express.static(path.join(__dirname, root)));
 
-app.get('*', csrff.csrfCreate, (req, res) => {
-    const csrfToken = req.csrfToken;
+app.get('/csrf-token', (req, res) => {
+    res.json({ csrfToken: req.csrfToken() });
+})
+
+app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'index.html'))
 });
 
