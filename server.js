@@ -1,6 +1,8 @@
 import  express from 'express';
 import helmet from 'helmet';
 import { rateLimit } from 'express-rate-limit';
+import csrf from 'csrf-protection';
+import cookieParser from 'cookie-parser';
 
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -16,6 +18,12 @@ const limiter = rateLimit({
 const app = express();
 app.use(helmet());
 app.use(limiter);
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+
+const csrff = csrf({
+    secret: 'Hello World'
+});
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,15 +33,9 @@ const PORT = process.env.PORT || 3000;
 const root = './';
 app.use(express.static(path.join(__dirname, root)));
 
-app.get('*', (req, res) => {
-    const filePath = path.join(__dirname, req.url);
-    if ((fs.existsSync(filePath)) && fs.lstatSync(filePath).isFile()) {
-        res.sendFile(filePath);
-    } else if ((fs.existsSync(filePath)) && fs.lstatSync(filePath).isDirectory()) {
-        res.sendFile(path.resolve(path.join(path.dirname(req.url), 'index.html')));
-    } else {
-        res.sendFile(path.resolve(path.join(__dirname, root, 'index.html')));
-    }
+app.get('*', csrff.csrfCreate, (req, res) => {
+    const csrfToken = req.csrfToken;
+    res.sendFile(path.resolve(__dirname, 'index.html'))
 });
 
 app.listen(PORT, HOST, () => {
