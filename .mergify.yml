@@ -1,13 +1,16 @@
 pull_request_rules:
   - name: Add Cleanup Label
-    description: Adding cleanup label if head branch is not staging or dev.
+    description: Adding cleanup label to temporary branches
     conditions:
-      - merged
-      - head ~= staging/^
-      - head ~= development/^
+      - -base ~= development/..
+      - -base ~= staging/..
+      - -head ~= staging/..
+      - -head ~= development/..
     actions:
       label:
-        add:
+        remove:
+          - cleanup
+        toggle:
           - cleanup
   - name: delete head branch if "cleanup" label is present
     conditions:
