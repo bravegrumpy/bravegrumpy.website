@@ -1,6 +1,6 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.1.13",
+	"version": "0.1.14",
 	"scripts": {
 		"dev": "node server.js",
 		"build": "console.log('build step not implemented yet')",
