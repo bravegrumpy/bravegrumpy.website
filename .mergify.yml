@@ -37,7 +37,6 @@ pull_request_rules:
               - head ~= staging/..
           - label = automerge
           - label != conflicted
-          - "#commits-behind < 5"
     actions:
       update:
       comment:
