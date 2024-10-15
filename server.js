@@ -1,5 +1,6 @@
 import  express from 'express';
 import helmet from 'helmet';
+import csurf from 'csurf';
 import { rateLimit } from 'express-rate-limit';
 
 import path from 'path';
@@ -16,6 +17,7 @@ const limiter = rateLimit({
 const app = express();
 app.use(helmet());
 app.use(limiter);
+app.use(csurf());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
