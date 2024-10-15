@@ -1,14 +1,4 @@
 pull_request_rules:
-  - name: Adding Cleanup Label
-    description: Adding cleanup label if branch can be removed
-    conditions:
-      - label = automerge
-      - -head ~= development/..
-      - -head ~= staging/..
-    actions:
-      label:
-        add:
-          - cleanup
   - name: delete head branch if "cleanup" label is present
     conditions:
       - merged
@@ -40,3 +30,6 @@ pull_request_rules:
         method: merge
         commit_message_template: This commit was automatically completed by mergify on
           behalf of @{{ author }}
+queue_rules:
+  - name: MergeToMain
+  - name: MergeToStaging
