@@ -1,4 +1,16 @@
 pull_request_rules:
+  - name: Add Cleanup label
+    description: Adding cleanup label if auto merge is present, and if it is not my
+      perma-branches
+    conditions:
+      - label = automerge
+      - -head ~= staging/..
+      - -head ~= development/..
+      - head != main
+    actions:
+      label:
+        toggle:
+          - cleanup
   - name: delete head branch if "cleanup" label is present
     conditions:
       - merged
