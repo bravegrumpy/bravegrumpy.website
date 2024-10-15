@@ -9,8 +9,11 @@ node_modules/
 **/.idea/
 
 # build artifacts
-node_modules
+
 build
+node_modules
+.npm
+
 
 # scratch files and directories
 scratch*
@@ -19,3 +22,4 @@ scratch*.*
 **/scratch**
 **/scratch/**
 **/scratch/**.*
+**old**

@@ -2,6 +2,18 @@
 <html lang="en-us">
 
 <head>
+    <!--script type="module" src="src/main.js"></script-->
+    <!--script type="text/javascript">
+        if (import.meta.env.DEV) {
+            import('src/main.js').then((module) => {
+                module.init();
+            });
+        } else if (import.meta.env.PROD) {
+            import('build/main.js').then((module) => {
+                module.init();
+            });
+        }
+    </script-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BraveGrumpy Content">
@@ -10,6 +22,12 @@
     <title>BraveGrumpy Homepage</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="icon" href="assets/images/BG_logo.png">
+    <script type="module" src="/src/main.js"></script>
+    <!--script type="module" src="/build/main.js"></script-->
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js">
+    </script>
 </head>
 
 <body>
@@ -20,7 +38,7 @@
                 <h1>Brave Grumpy Home Page</h1>
                 <p><span class="subtitle">Welcome to the Brave Grumpy homepage. Click on the links to explore
                         content.</span></p>
-                <p style="display: none;">Color pallette curteosy of <a
+                <p style="display: block;">Color pallette curteosy of <a
                         href="https://coolors.co/?ref=6362d8b265b1bd000a79823a">Coolors</a></p>
             </div>
         </div>
@@ -51,7 +69,29 @@
             <h2>Click a link to view content.</h2>
             <p>This is the home page. The links to the left exist as a combination of all links on the page, and so that
                 I can expand beyond just the Hutopia part of this site.</p>
-            <p style="display: none;">I'm working on a <a href="dev.html">new homepage</a>.</p>
+            <p style="display: block;">I'm working on a <a href="dev.html">new homepage</a>.</p>
+        </div>
+        <div class="section" id="svelte-app"></div>
+        <div class="section" id="python">
+            <form onsubmit="{value}">
+                <input type="text" id="hello-world" value="helloWorld" />
+            </form>
+            <script type="text/python">
+                from browser import document
+                def helloWorld(n="world"):
+                    return f"Hello {n}"
+                
+                div = document.getElementById('python')
+                h3 = document.createElement('h3')
+                h3.innerText = "A pythonic Header"
+                div.appendChild(h3);
+
+                p = document.createElement('p')
+                div.appendChild(p)
+                
+                p <= helloWorld(document.getElementById('hello-world').value)
+            </script>
+            <h2>This div is <code>Brython</code> testing. </h2>
         </div>
     </div>
     <div class="row">
@@ -89,6 +129,5 @@
             </div>
         </div>
     </div>
-</body>
-
+    </body>
 </html>
