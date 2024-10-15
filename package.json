@@ -3,7 +3,7 @@
 	"version": "0.1.13",
 	"scripts": {
 		"dev": "node server.js",
-		//"build": "console.log('build step not implemented yet')",
+		"build": "console.log('build step not implemented yet')",
 		"prod": "node server.js",
 		"preview": "node server.js",
 		"optimize": "node server.js",
