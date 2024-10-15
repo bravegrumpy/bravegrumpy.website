@@ -21,7 +21,6 @@ app.use(express.urlencoded({ extended: true }));
 
 //CSRF Protection
 const csrfProtection = csurf();
-app.use(csrfProtection);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
