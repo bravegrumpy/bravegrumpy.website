@@ -5,6 +5,7 @@ pull_request_rules:
     conditions:
       - label != conflicted
       - "#commits-behind<=10"
+      - base = main
     actions:
       label:
         toggle:
