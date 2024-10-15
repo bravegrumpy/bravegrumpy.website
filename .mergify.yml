@@ -7,7 +7,7 @@ pull_request_rules:
       - -head ~= staging/..
     actions:
       label:
-        toggle:
+        add:
           - cleanup
   - name: delete head branch if "cleanup" label is present
     conditions:
