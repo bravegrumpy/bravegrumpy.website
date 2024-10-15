@@ -2,10 +2,16 @@
 	"name": "bravegrumpy.website",
 	"version": "0.1.8-2",
 	"scripts": {
-		"start": "node server.js",
-		"serve": "node server.js",
-		"dev": "node server.js",
-		"test": "node test.js"
+		"vite-dev": "vite dev",
+		"vite-build": "vite build",
+		"vite-prod": "vite run --mode production",
+		"vite-preview": "vite preview --port 80",
+		"vite-optimize": "vite optimize",
+		"express-start": "node server.js",
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview"
 	},
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",

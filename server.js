@@ -1,5 +1,4 @@
-import express from 'express';
-import helmet from 'helmet';
+import  express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -7,19 +6,27 @@ const app = express();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-const hostname = 'localhost';
-const port = 3000;
+const HOST = process.env.HOST || 'localhost';
+const PORT = process.env.PORT || 3000;
 
 const root = '/';
+
+const app = express();
+app.use(helmet());
+app.use(express.static(__dirname));
+//if (process.env.NODE_ENV === 'production') {
+app.use(express.static(path.join(__dirname, 'build')));
+//}
+
+app.get(`/api/files`, (req, res) => {
 
 app.use(helmet());
 app.use(express.static(path.join(__dirname, root)));
 
-app.get(root, (res, req) => {
-    res.sendFile(path.join(__dirname, root, 'index.html'));
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
-app.listen(port, hostname, () => {
-    console.log(`Server is running on http://${hostname}:${port}/`);
+app.listen(PORT, HOST, () => {
+    console.log(`Server is  running at http://${HOST}:${PORT}/`);
 });
