@@ -13,12 +13,11 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(helmet());
 app.use(express.static(__dirname));
-//if (process.env.NODE_ENV === 'production') {
-app.use(express.static(path.join(__dirname, 'build')));
-//}
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'build')));
+}
 
 app.get(`/api/files`, (req, res) => {
-
     const directoryPath = __dirname;
     const htmlFiles = getFilenames(directoryPath, '.html');
     res.json(htmlFiles);
