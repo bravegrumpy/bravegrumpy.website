@@ -1,15 +1,12 @@
 pull_request_rules:
-  - name: Add Cleanup Label
-    description: Adding cleanup label to temporary branches
+  - name: Adding Cleanup Label
+    description: Adding cleanup label if branch can be removed
     conditions:
-      - -base ~= development/..
-      - -base ~= staging/..
-      - -head ~= staging/..
+      - label = automerge
       - -head ~= development/..
+      - -head ~= staging/..
     actions:
       label:
-        remove:
-          - cleanup
         toggle:
           - cleanup
   - name: delete head branch if "cleanup" label is present
@@ -31,19 +28,14 @@ pull_request_rules:
   - name: Merging Staging-content with Main
     description: Automatically merging staging-contet with main
     conditions:
-      - and:
-          - or:
-              - base = main
-              - base ~= staging/..
-          - label = automerge
-          - label != conflicted
-          - "#commits-behind <= 10"
-          - "#commits-behind > 0"
+      - base = main
+      - label = automerge
+      - label != conflicted
+      - "#commits-behind < 1"
     actions:
-      update:
       comment:
-        message: This  merge was automatically completed by mergify on behalf of @{{
-          author }}.
+        message: Content for bravegrumpy.website  is added. This  merge was
+          automatically completed by mergify.
       merge:
         method: merge
         commit_message_template: This commit was automatically completed by mergify on
