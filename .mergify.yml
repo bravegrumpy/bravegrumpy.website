@@ -1,11 +1,4 @@
 pull_request_rules:
-  - name: Adding Cleanup Label
-    conditions:
-      - label = automerge
-    actions:
-      label:
-        add:
-          - cleanup
   - name: delete head branch if "cleanup" label is present
     conditions:
       - merged
