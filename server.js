@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
 
-const root = '/';
+const root = './';
 app.use(express.static(path.join(__dirname, root)));
 
 app.get('*', (req, res) => {
@@ -22,7 +22,7 @@ app.get('*', (req, res) => {
     } else if ((fs.existsSync(filePath)) && fs.lstatSync(filePath).isDirectory()) {
         res.sendFile(path.resolve(path.join(path.dirname(req.url), 'index.html')));
     } else {
-        res.sendFile(path.resolve(root, 'index.html'));
+        res.sendFile(path.resolve(path.join(__dirname, root, 'index.html')));
     }
 });
 
