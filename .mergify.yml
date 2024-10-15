@@ -31,14 +31,19 @@ pull_request_rules:
   - name: Merging Staging-content with Main
     description: Automatically merging staging-contet with main
     conditions:
-      - base = main
-      - label = automerge
-      - label != conflicted
-      - "#commits-behind < 1"
+      - and:
+          - or:
+              - base = main
+              - base ~= staging/..
+          - label = automerge
+          - label != conflicted
+          - "#commits-behind <= 10"
+          - "#commits-behind > 0"
     actions:
+      update:
       comment:
-        message: Content for bravegrumpy.website  is added. This  merge was
-          automatically completed by mergify.
+        message: This  merge was automatically completed by mergify on behalf of @{{
+          author }}.
       merge:
         method: merge
         commit_message_template: This commit was automatically completed by mergify on
