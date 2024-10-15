@@ -1,11 +1,16 @@
 pull_request_rules:
+  - name: delete head branch if "cleanup" label is present
+    conditions:
+      - merged
+      - label = cleanup
+    actions:
+      delete_head_branch:
   - name: Adding automerge label
     description: Adding the automerge label for PRs  on main that do not have the
       conflicted label
     conditions:
       - label != conflicted
       - "#commits-behind<=10"
-      - base = main
     actions:
       label:
         toggle:
