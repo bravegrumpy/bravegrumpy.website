@@ -11,6 +11,6 @@
 <style>
     a {
         margin-right: 10px;
-        background-image: 
+        background-color: cyan;
     }
 </style>
