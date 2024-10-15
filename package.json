@@ -1,6 +1,6 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.1.21",
+	"version": "0.1.23",
 	"scripts": {
 		"dev": "node server.js",
 		"prod": "node server.js",
@@ -12,6 +12,7 @@
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {
+		"cookies": "^0.9.1",
 		"csurf": "^1.10.0",
 		"express": "^4.21.1",
 		"express-rate-limit": "^7.4.1",
