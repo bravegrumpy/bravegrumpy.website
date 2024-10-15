@@ -15,12 +15,9 @@
 		"amplify-adapter": "^0.1.2",
 		"express": "^4.21.0",
 		"helmet": "^7.1.0",
-		"semantic-ui-css": "^2.5.0",
-		"semantic-ui-react": "^2.1.5",
 		"svelte": "^4.2.19"
 	},
 	"devDependencies": {
-		"@codux-boards/react-semantic": "^1.0.7",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
 		"vite": "^5.4.8"
 	}
