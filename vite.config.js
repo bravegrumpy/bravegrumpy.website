@@ -1,14 +1,21 @@
 import { defineConfig } from "vite";
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { htmlFiles } from './getFiles.js';
-//import path from 'path'
-//import { fileURLToPath } from "url";
-
-//const __filename = fileURLToPath(import.meta.url);
-//const __dirname = path.dirname(__filename);
+import expressApp from './server.js';
+import router from './routes.js';
+import express from 'express';
 
 export default defineConfig({
-    plugins: [svelte()],
+    plugins: [
+        svelte(),
+        {
+            name:'express-middleware',
+            configureServer(server) {
+                server.middlewares.use(router);
+                server.middlewares.use(expressApp.default || expressApp);
+            }
+        },
+    ],
     base: '/',
     build: {
         /*

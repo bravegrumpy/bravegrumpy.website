@@ -1,10 +1,6 @@
-// Importing express
+// Importing servers
 import  express from 'express';
-// Importing middleware
-import helmet from 'helmet';
-import Csrf from 'csrf';
-import cookieParser from 'cookie-parser';
-import rateLimit from 'express-rate-limit';
+import router from './routes.js';
 
 // Importing directories
 import path from 'path';
@@ -16,23 +12,8 @@ import getFilenames from './getFiles.js';
 
 // Initializing Express
 const app = express();
-
-// CSRF Protection
-const csrfProtection = Csrf({ cookie: true });
-
-// Rate Limiter
-const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    limit: 100, //Limit each IP to 100 requests per `window` (here, per 15 minutes)
-    standardHeaders: 'draft-7',
-    legacyHeaders: false,
-});
-
-// Middleware
-app.use(helmet());
-app.use(limiter);
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+app.set('trust proxy', 1);
+app.use(router);
 
 // Defining Routing Constants
 const __filename = fileURLToPath(import.meta.url);
@@ -45,29 +26,6 @@ app.use(express.static(__dirname));
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'build')));
 }
-
-// Route to generate csrf token
-app.get('/csrf-token', (req, res) => {
-    const token = csrfProtection.create(req.cookies._csrf_secret || csrfProtection.secretSync());
-    res.cookie('_csrf_secret', token.secret);
-    res.send(`
-        <form action="/submit" method="POST">
-            <input type="hidden" name="_csrf" value="${token}" />
-            <button type="submit">Submit</button>
-        </form>
-        `);
-});
-
-// Route to validate csrf token
-app.post('/submit', (req, res) => {
-    try {
-        const secret = req.cookies._csrf_secret;
-        csrfProtection.verify(secret, req.body._csrf);
-        res.send('Form submision successful');
-    } catch (error) {
-        res.status(403).send('Form submission failed');
-    }
-});
 
 app.get(`/api/files`, (req, res) => {
     const directoryPath = __dirname;
@@ -95,3 +53,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, HOST, () => {
     console.log(`Server is  running at http://${HOST}:${PORT}/`);
 });
+
+export default app;
