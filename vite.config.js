@@ -4,15 +4,7 @@ import { htmlFiles } from './getFiles.js';
 import expressApp from './server.js';
 
 export default defineConfig({
-    plugins: [
-        svelte(),
-        {
-            name:'express-middleware',
-            configureServer(server) {
-                server.middlewares.use(expressApp.default || expressApp);
-            }
-        },
-    ],
+    plugins: [svelte()],
     base: '/',
     build: {
         /*

@@ -7,11 +7,17 @@ export async function fetchHtmlFiles() {
     return await response.json();
 }
 
-fetchHtmlFiles().then((htmlFiles) => {
+
+async function initalizeApp() {
+    const htmlFiles = await fetchHtmlFiles();
     const app = new App({
         target: document.getElementById('svelte-app'),
-        props: {
-            htmlFiles
+        props: { 
+            htmlFiles: htmlFiles 
         }
     });
-});
+
+    return app;
+}
+
+export default initalizeApp();

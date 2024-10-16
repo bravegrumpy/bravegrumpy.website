@@ -23,7 +23,8 @@ const PORT = process.env.PORT || 3000;
 
 // Allowing use of scripts
 app.use((req, res, next) => {
-    res.setHeader("Content-Security-Policy", "script-src 'self'");
+    res.setHeader("Content-Security-Policy", 
+        "script-src 'self' 'unsafe-inline");
     next();
 });
 
@@ -56,7 +57,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
     console.log(`Server is  running at http://${HOST}:${PORT}/`);
 });
 

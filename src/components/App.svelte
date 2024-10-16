@@ -1,7 +1,7 @@
 <script>    
     import Navbar from "./Navbar.svelte";
     import Phrase from "./Phrase.svelte";
-    export let htmlFiles = [];
+    export let htmlFiles;
 
     let name = "";
     let message = `The text in this section is written using Svelte.`;
