@@ -12,7 +12,7 @@ import getFilenames from './getFiles.js';
 
 // Initializing Express
 const app = express();
-app.set('trust proxy', 1);
+app.set('trust proxy', true);
 app.use(router);
 
 // Defining Routing Constants
@@ -50,7 +50,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
-app.listen(PORT, HOST, () => {
+app.listen(PORT, () => {
     console.log(`Server is  running at http://${HOST}:${PORT}/`);
 });
 

@@ -11,7 +11,8 @@ export default {
         target: ['#svelte-app', '.svelte'],
         vite: {
             ssr: true,
-            noExternal: ['svelte']},
+            noExternal: ['svelte'],
         },
-    preprocess: vitePreprocess(),
+    },
+    preprocess: vitePreprocess()
 };

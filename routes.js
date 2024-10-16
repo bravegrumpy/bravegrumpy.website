@@ -14,6 +14,7 @@ const csrfProtection = Csrf({ cookie: true });
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
     limit: 100, //Limit each IP to 100 requests per `window` (here, per 15 minutes)
+    keyGenerator: (req) => req.ip || 'unknown-ip',
     standardHeaders: 'draft-7',
     legacyHeaders: false,
 });

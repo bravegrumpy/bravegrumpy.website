@@ -2,8 +2,6 @@ import { defineConfig } from "vite";
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { htmlFiles } from './getFiles.js';
 import expressApp from './server.js';
-import router from './routes.js';
-import express from 'express';
 
 export default defineConfig({
     plugins: [
@@ -11,7 +9,6 @@ export default defineConfig({
         {
             name:'express-middleware',
             configureServer(server) {
-                server.middlewares.use(router);
                 server.middlewares.use(expressApp.default || expressApp);
             }
         },
