@@ -29,10 +29,7 @@ app.use((req, res, next) => {
 });
 
 // Serving Static Files
-app.use(express.static(__dirname));
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, 'build')));
-}
+app.use(express.static(path.resolve(__dirname, 'build')));
 
 app.get(`/api/files`, (req, res) => {
     const directoryPath = __dirname;
@@ -40,21 +37,8 @@ app.get(`/api/files`, (req, res) => {
     res.json(htmlFiles);
 });
 
-
-
 app.get('*', (req, res) => {
-    const filePath = path.join(__dirname, req.url);
-    const defaultFile = path.join(__dirname, 'index.html');
-
-    if ((fs.existsSync(filePath)) && fs.lstatSync(filePath).isFile()) {
-        res.sendFile(filePath);
-    } else {
-        res.sendFile(defaultFile);
-    }
-});
-
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
 
 app.listen(PORT, HOST, () => {

@@ -5,7 +5,7 @@ import expressApp from './server.js';
 
 export default defineConfig({
     plugins: [svelte()],
-    base: '/',
+    base: './',
     build: {
         /*
         ssr: [
@@ -17,12 +17,10 @@ export default defineConfig({
             input: {
                 main: 'src/main.js',
                 index: 'index.html',
-                '0': htmlFiles[0],
-                '1': htmlFiles[1],
-                '2': htmlFiles[2],
-                '3': htmlFiles[3],
-                '4': htmlFiles[4],
-                '5': htmlFiles[5],
+		writing: 'writing.html',
+		'writing/wbw': 'work-by-week/wbw.html',
+		'link-repository': 'link-repository.html',
+		archive: 'archive/archive-00/index.html'
             },
             external: [
                 'svelte',
