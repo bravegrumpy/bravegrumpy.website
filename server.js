@@ -20,6 +20,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
+const root = '/';
 
 // Allowing use of scripts
 app.use((req, res, next) => {
@@ -29,7 +30,7 @@ app.use((req, res, next) => {
 });
 
 // Serving Static Files
-app.use(express.static(path.resolve(__dirname, 'build')));
+app.use(express.static(path.resolve(__dirname, root)));
 
 app.get(`/api/files`, (req, res) => {
     const directoryPath = __dirname;
@@ -38,8 +39,9 @@ app.get(`/api/files`, (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, root, 'index.html'));
 });
+
 
 app.listen(PORT, HOST, () => {
     console.log(`Server is  running at http://${HOST}:${PORT}/`);
