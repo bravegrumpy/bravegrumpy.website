@@ -48,35 +48,14 @@
             </ul>
         </div>
     </div>
-    <div class="col-s-9 col-m-6">
-        <div class="section">
-            <h2>Click a link to view content.</h2>
-            <p>This is the home page. Click on stuff to explore.</p>
-            <p>I am working to expand this site to beyond just the Huetopia section.</p>
-            <p style="display: none;">I'm working on a <a href="dev.html">new homepage</a>.</p>
-        </div>
-        <div class="section experiments">
-            <div class="section" id="svelte-app"></div>
-            <div style="display: none;" class="section" id="python">
-                <form onsubmit="{value}">
-                    <input type="text" id="hello-world" value="helloWorld" />
-                </form>
-                <script type="text/python">
-                    from browser import document
-                    def helloWorld(n="world"):
-                        return f"Hello {n}"
-                
-                    div = document.getElementById('python')
-                    h3 = document.createElement('h3')
-                    h3.innerText = "A pythonic Header"
-                    div.appendChild(h3);
-
-                    p = document.createElement('p')
-                    div.appendChild(p)
-                
-                    p <= helloWorld(document.getElementById('hello-world').value)
-                </script>
-            <h2>This div is <code>Brython</code> testing. </h2>
+    <div class="row">
+        <div class="col-s-9 col-m-6">
+            <div class="section">
+                <h2>Click a link to view content.</h2>
+                <p>This is the home page. Click on stuff to explore.</p>
+                <p>I am working to expand this site to beyond just the Huetopia section.</p>
+                <p style="display: none;">I'm working on a <a href="dev.html">new homepage</a>.</p>
+            </div>    
         </div>
     </div>
     <div class="row">
@@ -95,24 +74,18 @@
                     </p>
                 </div>
                 <div class="col-s-4"></div>
-            </div>
-            <div class="col-m-4 email">
-                <div class="col-s-4"></div>
-                <div class="col-s-4">
-                    <p>
-                        <a href="mailto:info@bravegrumpy.com" target="_blank"><img height="30em"
-                                src="https://fontmeme.com/permalink/231031/0c070e833e2d90b5effc2581b747e400.png"></a>
-                    </p>
                 </div>
-                <div class="col-s-4"></div>
+                <div class="col-m-4 email">
+                    <div class="col-s-4"></div>
+                    <div class="col-s-4">
+                        <p>
+                            <a href="mailto:info@bravegrumpy.com" target="_blank"><img height="30em"
+                                src="https://fontmeme.com/permalink/231031/0c070e833e2d90b5effc2581b747e400.png"></a>
+                        </p>
+                    </div>
+                    <div class="col-s-4"></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-s-12">
-            <div class="col-m-4 col-l-4 col-xl-4">
-            </div>
-        </div>
-    </div>
     </body>
 </html>
