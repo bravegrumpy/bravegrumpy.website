@@ -22,8 +22,6 @@
     <title>BraveGrumpy Homepage</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="icon" href="assets/images/BG_logo.png">
-    <script type="module" src="/src/main.js"></script>
-    <!--script type="module" src="/build/main.js"></script-->
     <script src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js">
@@ -71,6 +69,12 @@
                 I can expand beyond just the Hutopia part of this site.</p>
             <p style="display: block;">I'm working on a <a href="dev.html">new homepage</a>.</p>
         </div>
+        <script type="module">
+            import App from './src/main.js';
+            document.addEventListener("DOMContentLoaded", () => {
+                App.init()
+            });
+        </script>
         <div class="section" id="svelte-app"></div>
         <div class="section" id="python">
             <form onsubmit="{value}">

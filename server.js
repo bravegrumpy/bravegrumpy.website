@@ -21,6 +21,12 @@ const __dirname = path.dirname(__filename);
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
 
+// Allowing use of scripts
+app.use((req, res, next) => {
+    res.setHeader("Content-Security-Policy", "script-src 'self'");
+    next();
+});
+
 // Serving Static Files
 app.use(express.static(__dirname));
 if (process.env.NODE_ENV === 'production') {
