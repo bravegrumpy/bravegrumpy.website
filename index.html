@@ -2,18 +2,6 @@
 <html lang="en-us">
 
 <head>
-    <!--script type="module" src="src/main.js"></script-->
-    <!--script type="text/javascript">
-        if (import.meta.env.DEV) {
-            import('src/main.js').then((module) => {
-                module.init();
-            });
-        } else if (import.meta.env.PROD) {
-            import('build/main.js').then((module) => {
-                module.init();
-            });
-        }
-    </script-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BraveGrumpy Content">
@@ -51,8 +39,8 @@
                     <a href="writing.html">Huetopia Homepage</a>
                 </li>
                 <!--li>
-                            <a href="#">Art Portfolio</a>
-                        </li-->
+                    <a href="#">Art Portfolio</a>
+                </li-->
                 <li class="col-s-12 col-m-2 col-l-2 col-xl-2">
                     <a href="link-repository.html">Helpful Link Repository</a>
                 </li>
@@ -62,40 +50,17 @@
             </ul>
         </div>
     </div>
-    <div class="col-s-9 col-m-6">
-        <div class="section">
-            <h2>Click a link to view content.</h2>
-            <p>This is the home page. The links to the left exist as a combination of all links on the page, and so that
+    <div class="row">
+        <div class="col-s-9 col-m-6">
+            <div class="section">
+                <h2>Click a link to view content.</h2>
+                <p>This is the home page. The links to the left exist as a combination of all links on the page, and so that
                 I can expand beyond just the Hutopia part of this site.</p>
-            <p style="display: block;">I'm working on a <a href="dev.html">new homepage</a>.</p>
-        </div>
-        <script type="module">
-            import App from './src/main.js';
-            document.addEventListener("DOMContentLoaded", () => {
-                App.init()
-            });
-        </script>
-        <div class="section" id="svelte-app"></div>
-        <div class="section" id="python">
-            <form onsubmit="{value}">
-                <input type="text" id="hello-world" value="helloWorld" />
-            </form>
-            <script type="text/python">
-                from browser import document
-                def helloWorld(n="world"):
-                    return f"Hello {n}"
-                
-                div = document.getElementById('python')
-                h3 = document.createElement('h3')
-                h3.innerText = "A pythonic Header"
-                div.appendChild(h3);
-
-                p = document.createElement('p')
-                div.appendChild(p)
-                
-                p <= helloWorld(document.getElementById('hello-world').value)
-            </script>
-            <h2>This div is <code>Brython</code> testing. </h2>
+                <p style="display: block;">I'm working on a <a href="dev.html">new homepage</a>.</p>
+            </div>
+            <script type="module"></script>
+            <div class="section" id="svelte-app"></div>
+            <div class="section" id="python"></div>
         </div>
     </div>
     <div class="row">
@@ -110,7 +75,8 @@
                     <p>
                         <a href="https://discord.gg/ZfMntbk5U4" target="_blank">
                             <img height="30px" alt="Join the Discord Server in fun font."
-                                src="https://fontmeme.com/permalink/221211/d065f759532815397d12a82c27e8988c.png"></a>
+                                src="https://fontmeme.com/permalink/221211/d065f759532815397d12a82c27e8988c.png">
+                        </a>
                     </p>
                 </div>
                 <div class="col-s-4"></div>
@@ -124,12 +90,6 @@
                     </p>
                 </div>
                 <div class="col-s-4"></div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-s-12">
-            <div class="col-m-4 col-l-4 col-xl-4">
             </div>
         </div>
     </div>
