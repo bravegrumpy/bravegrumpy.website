@@ -5,7 +5,6 @@ import router from './routes.js';
 // Importing directories
 import path from 'path';
 import { fileURLToPath } from 'url';
-import fs from 'fs';
 
 // Importing functions
 import getFilenames from './getFiles.js';
@@ -20,7 +19,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
-const root = '/';
+const root = process.env.NODE_ENV === 'production' ? 'build' : '/';
 
 // Allowing use of scripts
 app.use((req, res, next) => {
@@ -43,8 +42,12 @@ app.get('*', (req, res) => {
 });
 
 
-app.listen(PORT, HOST, () => {
-    console.log(`Server is  running at http://${HOST}:${PORT}/`);
-});
+export async function startServer() {
+    app.listen(PORT, HOST, () => {
+        console.log(`Server is  running at http://${HOST}:${PORT}/`);
+    }).on('close', () => {
+        console.log('Server closed');
+    });
+}
 
 export default app;
