@@ -1,6 +1,6 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.1.35",
+	"version": "0.1.36",
 	"scripts": {
 		"dev": "node server.js",
 		"prod": "node server.js",
