@@ -4,5 +4,7 @@
 	"description": "BraveGrumpy Content Re-vamped using Gatsby",
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
-	"dependencies": {}
+	"devDependencies": {
+		"gatsby-cli": "^5.13.3"
+	}
 }
