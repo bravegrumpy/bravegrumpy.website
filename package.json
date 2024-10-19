@@ -4,7 +4,5 @@
 	"description": "BraveGrumpy personal website.",
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
-	"devDependencies": {
-		"gatsby-cli": "^5.13.3"
-	}
+	"devDependencies": {}
 }
