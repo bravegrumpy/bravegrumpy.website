@@ -1,7 +1,7 @@
 {
 	"name": "bravegrumpy.website",
 	"version": "0.3.0",
-	"description": "BraveGrumpy Content Re-vamped using Gatsby",
+	"description": "BraveGrumpy personal website.",
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
 	"devDependencies": {
