@@ -8,12 +8,15 @@ const identity = {
 
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"]
-//"Python", "Data Analysis", "CAD", "XML", "SQL", "python", "AWS"]
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs","python", "Data Analysis", "CAD", "XML", "SQL", "AWS"]
 
 const happy = true;
 const finished = false;
-const goal = 2;
+const goal = 3;
+
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase"
 ---
 <html lang="en-us">
 
@@ -24,6 +27,17 @@ const goal = 2;
         <meta name="author" content="Brave Grumpy Content">
         <meta name="keywords" content="Art, Writing, Photography, Personal Website">
         <title>{pageTitle} | BraveGrumpy</title>
+        <style define:vars={{skillColor, fontWeight, textCase}}>
+            h1 {
+                color: purple;
+                font-size: 4rem;
+            }
+            .skill {
+                color: var(--skillColor);
+                font-weight: var(--fontWeight);
+                text-transform: var(--textCase);
+            }
+        </style>
         <!--link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="icon" href="assets/images/BG_logo.png"-->
     </head>
@@ -42,7 +56,7 @@ const goal = 2;
         </ul>
         <p>My skills are:</p>
         <ul>
-            { skills.map((skill)=> <li>{skill}</li>) }
+            { skills.map((skill)=> <li class="skill">{skill}</li>) }
         </ul>
 
         {happy && <p>I am happy to be learning Astro!</p>}
