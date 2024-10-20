@@ -1,8 +1,6 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-import '../styles/global.css';
 const pageTitle = "About Me";
 const identity = {
     firstName: "BraveGrumpy",
@@ -22,52 +20,43 @@ const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase"
 ---
-<html lang="en-us">
+<head>
+    <title>
+        {pageTitle} | BraveGrumpy
+    </title>
+</head>
+<BaseLayout>
+    <h1>{pageTitle}</h1>
+    <style define:vars={{skillColor, fontWeight, textCase}}>
+        h1 {
+            color: purple;
+            font-size: 4rem;
+        }
+        .skill {
+            color: var(--skillColor);
+            font-weight: var(--fontWeight);
+            text-transform: var(--textCase);
+        }
+    </style>
+    <p>Here are a few facts about me:</p>
+    <ul>
+        <li>You can call me {identity.firstName}</li>
+        <li>I live in {identity.country} and I work as a {identity.occupation}</li>
+        {
+            identity.hobbies.length >= 2 &&
+            <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+        }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+        { skills.map((skill)=> <li class="skill">{skill}</li>) }
+    </ul>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="BraveGrumpy Content">
-        <meta name="author" content="Brave Grumpy Content">
-        <meta name="keywords" content="Art, Writing, Photography, Personal Website">
-        <title>{pageTitle} | BraveGrumpy</title>
-        <style define:vars={{skillColor, fontWeight, textCase}}>
-            h1 {
-                color: purple;
-                font-size: 4rem;
-            }
-            .skill {
-                color: var(--skillColor);
-                font-weight: var(--fontWeight);
-                text-transform: var(--textCase);
-            }
-        </style>
-        <!--link rel="stylesheet" href="stylesheets/styles.css">
-        <link rel="icon" href="assets/images/BG_logo.png"-->
-    </head>
-    <body>
-       <Header />
-       <h1>{pageTitle}</h1>
-        <p>Here are a few facts about me:</p>
-        <ul>
-            <li>You can call me {identity.firstName}</li>
-            <li>I live in {identity.country} and I work as a {identity.occupation}</li>
-            {identity.hobbies.length >= 2 &&
-                <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-            }
-        </ul>
-        <p>My skills are:</p>
-        <ul>
-            { skills.map((skill)=> <li class="skill">{skill}</li>) }
-        </ul>
+    {happy && <p>I am happy to be learning Astro!</p>}
 
-        {happy && <p>I am happy to be learning Astro!</p>}
+    {finished && <p>I finished this tutorial!</p>}
 
-        {finished && <p>I finished this tutorial!</p>}
-
-        {goal === 3 ? <p>My goal is to finish in 3 days. </p> : <p>My goal is not 3 days.</p>}
-	<Footer />
-    <script>
-        import '../scripts/menu.js';
-    </script>
-    </body>
+    {
+        goal === 3 ? <p>My goal is to finish in 3 days. </p> : <p>My goal is not 3 days.</p>
+    }
+</BaseLayout>
