@@ -1,8 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components';
-const { platform, username, link=`https://www.${platform}.com/${username}`, icons=`hugeicons` } = Astro.props
+const { platform, username, tld='com', subdomain='www', icons=`hugeicons`,} = Astro.props
 ---
-<a href={link}>
+<a href={`https://${subdomain}.${platform}.${tld}/${username}`}>
     <Icon name={`${icons}:${platform}`}/>
     {platform}
 </a>
@@ -22,7 +22,6 @@ const { platform, username, link=`https://www.${platform}.com/${username}`, icon
     a:hover {
         background-color: #ff9776;
         color: black;
-
     }
     [data-icon] {
         width: 1.5rem;
