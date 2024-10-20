@@ -5,11 +5,7 @@
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {
-		"@astrojs/rss": "^4.0.9",
-		"@astrojs/svelte": "^5.7.2",
-		"astro": "^4.16.6",
-		"svelte": "^5.0.2",
-		"typescript": "^5.6.3"
+		"astro": "^4.16.6"
 	},
 	"scripts": {
 		"dev": "astro dev",
