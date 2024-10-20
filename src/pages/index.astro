@@ -1,5 +1,8 @@
 ---
-import '../styles/global.css'
+import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
+
+const pageTitle = "Home Page";
 ---
 <html lang="en-us">
 
@@ -9,13 +12,11 @@ import '../styles/global.css'
         <meta name="description" content="BraveGrumpy Content">
         <meta name="author" content="Brave Grumpy Content">
         <meta name="keywords" content="Art, Writing, Photography, Personal Website">
-        <title>BraveGrumpy Homepage</title>
+        <title>{pageTitle} | BraveGrumpy</title>
         <!--link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="icon" href="assets/images/BG_logo.png"-->
     </head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
-        <h1>My Astro Site</h1>
+       <Navigation />
+       <h1>{pageTitle}</h1>
     </body>
