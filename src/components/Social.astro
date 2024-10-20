@@ -1,9 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
-const { platform, username } = Astro.props
+const { platform, username, link=`https://www.${platform}.com/${username}`, icons=`hugeicons` } = Astro.props
 ---
-<a href={`https://www.${platform}.com/${username}`}>
-    <Icon name={`hugeicons:${platform}`}/>
+<a href={link}>
+    <Icon name={`${icons}:${platform}`}/>
     {platform}
 </a>
 
