@@ -2,13 +2,19 @@
 import { Icon } from 'astro-icon/components';
 const { platform, username } = Astro.props
 ---
-<a href={`https://www.${platform}.com/${username}`}><Icon name=`hugeicons:${platform}`}/>>{platform}</a>
+<a href={`https://www.${platform}.com/${username}`}><Icon name=`hugeicons:${platform}`}/>{platform}</a>
 
 <style>
     a {
-	padding: 0.5rem 1rem;
-	color: white;
-	background-color: #4c1d95;
-	text-decoration: none;
+	    padding: 0.5rem 1rem;
+	    color: white;
+	    background-color: #4c1d95;
+        text-decoration: none;
+    }
+
+    [data-icon] {
+        color: #4c1d95;
+        background-color: white;
+        text-decoration: none;
     }
 </style>
