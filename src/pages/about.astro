@@ -1,4 +1,19 @@
 ---
+const pageTitle = "About Me";
+const identity = {
+    firstName: "BraveGrumpy",
+    country: 'USA, unfortunately',
+    occupation: 'engineer',
+    hobbies: ["3D Graphics", "photography", "website design", "boardgames", "painting", "logic puzzles"]
+
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"]
+//"Python", "Data Analysis", "CAD", "XML", "SQL", "python", "AWS"]
+
+const happy = true;
+const finished = false;
+const goal = 2;
 ---
 <html lang="en-us">
 
@@ -8,7 +23,7 @@
         <meta name="description" content="BraveGrumpy Content">
         <meta name="author" content="Brave Grumpy Content">
         <meta name="keywords" content="Art, Writing, Photography, Personal Website">
-        <title>BraveGrumpy Homepage</title>
+        <title>{pageTitle} | BraveGrumpy</title>
         <!--link rel="stylesheet" href="stylesheets/styles.css">
         <link rel="icon" href="assets/images/BG_logo.png"-->
     </head>
@@ -16,5 +31,23 @@
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
-        <h1>About Me</h1>
+        <h1>{pageTitle}</h1>
+        <p>Here are a few facts about me:</p>
+        <ul>
+            <li>You can call me {identity.firstName}</li>
+            <li>I live in {identity.country} and I work as a {identity.occupation}</li>
+            {identity.hobbies.length >= 2 &&
+                <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+            }
+        </ul>
+        <p>My skills are:</p>
+        <ul>
+            { skills.map((skill)=> <li>{skill}</li>) }
+        </ul>
+
+        {happy && <p>I am happy to be learning Astro!</p>}
+
+        {finished && <p>I finished this tutorial!</p>}
+
+        {goal === 3 ? <p>My goal is to finish in 3 days. </p> : <p>My goal is not 3 days.</p>}
     </body>
