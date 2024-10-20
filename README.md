@@ -11,6 +11,12 @@ the best methodology for publishing it to the domain: bravegrumpy.com
 
 #### October
 
+##### 18th
+
+- [ ] I am doing the gatsby tutorial, to see if I can implement some of the figma design I made.
+ 
+##### 2nd
+
 - This is likely the last iteration of this website without using some sort of javascript frontend framework.
 
 I want to look into what adapters exist in node that  can allow me to connect javascript and python.
