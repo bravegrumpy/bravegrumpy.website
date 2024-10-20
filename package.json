@@ -5,6 +5,7 @@
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {
+		"@astrojs/rss": "^4.0.9",
 		"@iconify-json/hugeicons": "^1.2.1",
 		"@iconify-json/simple-icons": "^1.2.9",
 		"astro": "^4.16.6",
