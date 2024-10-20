@@ -4,5 +4,16 @@
 	"description": "BraveGrumpy personal website.",
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
-	"devDependencies": {}
+	"dependencies": {
+		"@astrojs/svelte": "^5.7.2",
+		"astro": "^4.16.6",
+		"svelte": "^5.0.2",
+		"typescript": "^5.6.3"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview"
+	}
 }
