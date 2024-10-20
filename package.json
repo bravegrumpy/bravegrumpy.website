@@ -5,7 +5,8 @@
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {
-		"astro": "^4.16.6"
+		"astro": "^4.16.6",
+		"astro-icon": "^1.1.1"
 	},
 	"scripts": {
 		"dev": "astro dev",

@@ -1,7 +1,8 @@
 ---
+import { Icon } from 'astro-icon/components';
 const { platform, username } = Astro.props
 ---
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<a href={`https://www.${platform}.com/${username}`}><Icon name=`hugeicons:${platform}`}/>>{platform}</a>
 
 <style>
     a {
