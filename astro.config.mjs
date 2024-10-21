@@ -2,12 +2,13 @@ import { defineConfig } from 'astro/config'
 
 import icon from 'astro-icon';
 
+import preact from "@astrojs/preact";
+
 export default defineConfig({
-  integrations: [
-    icon({
+    site: "https://new.bravegrumpy.com",
+    integrations: [icon({
         include: {
             hugeicons: ["*"],
         },
-    }),
-],
+    }), preact()],
 });
