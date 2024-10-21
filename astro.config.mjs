@@ -8,9 +8,9 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
     site: "https://new.bravegrumpy.com",
-    integrations: [icon({
-        include: {
-            hugeicons: ["*"],
-        },
-    }), preact(), sitemap()],
+    integrations: [
+        icon({}), 
+        preact(), 
+        sitemap()
+    ],
 });
