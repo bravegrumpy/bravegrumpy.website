@@ -7,6 +7,7 @@
 	"dependencies": {
 		"@astrojs/preact": "^3.5.3",
 		"@astrojs/rss": "^4.0.9",
+		"@astrojs/sitemap": "^3.2.1",
 		"@iconify-json/hugeicons": "^1.2.1",
 		"@iconify-json/simple-icons": "^1.2.9",
 		"astro": "^4.16.6",
