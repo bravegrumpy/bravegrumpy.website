@@ -5,6 +5,7 @@
 # build artifacts
 build
 node_modules
+node_modules/**
 .npm
 dist
 
@@ -17,3 +18,6 @@ scratch**.*
 **/scratch/**
 **/scratch/**.*
 **old**
+
+# environment variables
+*.env*
