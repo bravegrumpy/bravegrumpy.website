@@ -6,11 +6,9 @@ import preact from "@astrojs/preact";
 
 import sitemap from "@astrojs/sitemap";
 
+import svelte from "@astrojs/svelte";
+
 export default defineConfig({
     site: "https://new.bravegrumpy.com",
-    integrations: [
-        icon({}), 
-        preact(), 
-        sitemap()
-    ],
+    integrations: [icon({}), preact(), sitemap(), svelte()],
 });
