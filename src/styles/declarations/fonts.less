@@ -1,12 +1,12 @@
 @fontSheet: '@styles/themes/fonts/';
 @import "@{fontSheet}/bravegrumpy.less";
 
-@logoText: #textStyles.logoText();
-@logoSubtitle: #textStyles.logoSubtitle();
-@pageTitle: #textStyles.pageTitle();
-@pageSubtitle: #textStyles.pageSubtitle();
-@navMenuDefault: #textStyles.navMenuDefault();
-@navMenuActive: #textStyles.navMenuActive();
-@heading: #textStyles.heading();
-@bodyText: #textStyles.bodyText();
-@footerText: #textStyles.footerText();
+@logoText: #textStyles.logoText(@size: 6rem);
+@logoSubtitle: #textStyles.logoSubtitle(@size: 1rem);
+@pageTitle: #textStyles.pageTitle(@weight: 500; @size: 2.5rem);
+@pageSubtitle: #textStyles.pageSubtitle(@size: 1rem);
+@navMenuDefault: #textStyles.navMenuDefault(@size: 1.5rem);
+@navMenuActive: #textStyles.navMenuActive(@size: 1.5rem);
+@heading: #textStyles.heading(@size: 2.5rem);
+@bodyText: #textStyles.bodyText(@size: 1rem);
+@footerText: #textStyles.footerText(@size: 1rem);

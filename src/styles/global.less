@@ -1,2 +1,113 @@
 @import 'declarations/colors.less';
 @import 'declarations/fonts.less';
+
+@borderRadius: 5px;
+@UIBorderThickness: 2px solid;
+
+html {
+    background-color: @base3;
+    @bodyText();
+    font-size: 1rem;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+}
+
+html.dark {
+    background-color: @base03;
+    color: @accent2a;
+}
+
+.dark .nav-links a {
+    color: @accent2a;
+}
+
+.hamburger {
+    width: 100px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+.icon {
+    display: block;
+    width: 40px;
+    background-color: @accent2a;
+    color: @logoPurple;
+    border-radius: @borderRadius;
+    border: @UIBorderThickness @logoPurple;
+    box-shadow: @boxShadowLight;
+}
+
+.dark .icon {
+    background-color: @brand6;
+    color: @accent1a;
+    border-radius: @borderRadius;
+    border: @UIBorderThickness @accent1a;
+    box-shadow: @boxShadowDark;
+}
+
+.nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    background-color: @brand1;
+    display: none;
+    margin: 0;
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    @navMenuDefault();
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: @logoPurple;
+}
+
+.dark .nav-links a {
+    color: @accent1a;
+}
+
+.nav-links a:hover, nav-links a:focus {
+    background-color: @highlight1;
+    color: @logoPurple;
+    @navMenuActive();
+}
+
+.expanded {
+    display: unset;
+}
+
+@media screen and (min-width: 636px) {
+    .nav-links {
+        margin-left: 5rem;
+        display: block;
+        width: auto;
+        background: none;
+
+        a {
+            display: inline-block;
+            padding: 15px 20px;
+        }
+    }
+
+    .hamburger{
+        display: none;
+    }
+}

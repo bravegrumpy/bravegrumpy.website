@@ -1,7 +1,14 @@
 ---
+import { Icon } from 'astro-icon/components';
+const { size } = Astro.props;
 ---
 <div class="hamburger">
-    <span class="line"></span>
-    <span class="line"></span>
-    <span class="line"></span>
+    <Icon class="icon" name="hugeicons:menu-01" />
 </div>
+
+<style define:vars={{ size }}>
+    [data-icon] {
+        width: var(--size);
+        height: var(--size);
+    }
+</style>
