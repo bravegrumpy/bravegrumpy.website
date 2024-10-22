@@ -32,12 +32,16 @@ html.dark {
     color: @accent2a;
 }
 
-.dark .nav-links a {
-    color: @accent2a;
+.dark {
+    .nav-links {
+        a {
+            color: @accent2a;
+        }
+    }
 }
 
 .hamburger {
-    width: 100px;
+    width: 150px;
     padding-right: 20px;
     cursor: pointer;
 }
@@ -51,12 +55,14 @@ html.dark {
     box-shadow: @boxShadowLight;
 }
 
-.dark .icon {
-    background-color: @brand6;
-    color: @accent1a;
-    border-radius: @borderRadius;
-    border: @UIBorderThickness @accent1a;
-    box-shadow: @boxShadowDark;
+.dark {
+    .icon {
+        background-color: @brand6;
+        color: @accent1a;
+        border-radius: @borderRadius;
+        border: @UIBorderThickness @accent1a;
+        box-shadow: @boxShadowDark;
+    }
 }
 
 .nav-links {
@@ -68,26 +74,37 @@ html.dark {
     margin: 0;
 }
 
-.nav-links a {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-    text-decoration: none;
-    @navMenuDefault();
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: @logoPurple;
+.nav-links {
+    a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        text-decoration: none;
+        @navMenuDefault();
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: @logoPurple;
+
+        &:hover, &:focus {
+            background-color: @highlight1;
+            color: @logoPurple;
+            @navMenuActive();
+            font-size: 1.2rem;
+        }
+    }
 }
 
-.dark .nav-links a {
-    color: @accent1a;
-}
+.dark {
+    .nav-links {
+        a {
+            color: @accent1a;
 
-.nav-links a:hover, nav-links a:focus {
-    background-color: @highlight1;
-    color: @logoPurple;
-    @navMenuActive();
+            &:hover, &:focus {
+                color: @logoPurple;
+            }
+        }
+    }
 }
 
 .expanded {
