@@ -1,86 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
 
+
 #textStyles {
-    @defaults: {
-        font-optical-sizing: auto;;
-        font-weight: normal;
-        font-size: 1rem;
-        font-family: monospace;
+    .defaults() {
+        font-optical-sizing: auto;
     }
 
-    .fontStyle(@style: normal) when ((@style = normal) or (@style = italic)) {
+    .fontStyle(@style: normal) when (@style = normal), (@style = italic) {
         font-style: @style;
     }
-//    @weight: 400, @font: "Grenze Gotisch", @size: 96px
-    .logoText(@weight: 400; @font: "Grenze Gotisch"; @size: 96px){
-        @defaults();
-        .fontStyle();
-        font-weight: @weight;
-        font-family: @font, serif;
-        font-size: @size;
-    }
 
-    .logoSubtitle(@weight: 600; @font: "Texturina"; @size: 20px){
-        @defaults();
-        .fontStyle(italic);
-        font-size: @size;
-        font-family: @font, serif;
-        font-weight: @weight;
-    }
-
-    .recursive (
-        @slant: 0;
-        @casual: 0;
-        @cursive: 0;
-        @mono:1
-    ) {
-        @defaults();
-        .fontStyle();
+    .recursive(@slant: 0, @casual: 0, @cursive: 0, @mono: 1) {
         font-family: "Recursive", monospace;
+        .defaults();
+        .fontStyle();
         font-variation-settings: "slt" @slant, "CASL" @casual, "CRSV" @cursive, "MONO" @mono;
     }
 
-    .pageTitle(@weight: 600; @size: 64px) {
-        font-size: @weight;
-        font-weight: @size;
-        .recursive(0, 1, 1, 0);
-    }
+    .fonts() {
+        .logoText(@weight: 400; @font: "Grenze Gotisch"; @size: 6rem) {
+            .defaults();
+            .fontStyle();
+            font-weight: @weight;
+            font-family: @font, serif;
+            font-size: @size;
+        }
 
-    .pageSubtitle(@weight: 300; @size: 24px) {
-        .recursive(-8, 1, 1, 1);
-        font-size: @size;
-        font-weight: @weight;
-    }
+        .logoSubtitle(@weight: 600; @font: "Texturina"; @size: 1.5px) {
+            .defaults();
+            .fontStyle(italic);
+            font-size: @size;
+            font-family: @font;
+            font-weight: @weight;
+        }
 
-    .navMenuDefault(@weight: 600; @size: 32px) {
-        .recursive(-8, 1, 1, 0);
-        font-size: @size;
-        font-weight: @weight;
-    }
+        .pageTitle(@weight: 600; @size: 4rem; @recursive: 0, 1, 1, 0) {
+            .recursive(@recursive);
+        }
 
-    .navMenuActive(@weight: 900; @size: 32px) {
-        .recursive(0, 1, 1, 0.51);
-        font-size: 32px;
-        font-weight: 900;
-    }
+        .pageSubtitle(@weight: 300; @size: 1.5rem;) {
+            .recursive(-8, 1, 1, 0);
+            font-size: @size;
+            font-weight: @weight;
+        }
 
-    .heading(@weight: 700; @size: 32px) {
-        font-size: @size;
-        font-weight: @weight;
-        .recursive(0, 1, 0.5, 0.57);
-    }
+        .navMenuDefault(@weight: 900; @size: 2rem;) {
+            .recursive(-8, 1, 1, 0);
+            font-size: @size;
+            font-weight: @weight;
+        }
 
-    .bodyText(@weight: 400; @size: 16px) {
-        font-weight: @weight;
-        font-size: @size;
-        .recursive(0, 0, 0, 0);
-    }
+        .navMenuActive(@weight: 900; @size: 2rem;) {
+            .recursive(0, 1, 0.55, 0.2);
+        }
 
-    .footerText(@weight: 400; @size: 20px) {
-        @defaults();
-        .fontStyle();
-        font-weight: @weight;
-        font-size: @size;
-        .recursive(0, 0, 0, 0);
+        .heading(@weight: 900; @size: 2rem) {
+            .recursive(0, 1, 0.5, 0.57);
+            font-size: @size;
+            font-weight: @weight;
+        }
+
+        .bodyText(@weight: 400; @size: 1rem) {
+            .recursive(0, 0, 0, 0);
+            font-weight:  @weight;
+            font-size: @size;
+        }
+
+        .footerText(@weight: 400; @size: 1.25rem;) {
+            .recursive(0, 0, 0, 0);
+            font-weight:  @weight;
+            font-size: @size;
+        }
     }
 }

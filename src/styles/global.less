@@ -1,13 +1,15 @@
-@import 'declarations/colors.less';
-@import 'declarations/fonts.less';
+@import 'declarations.less';
 
 @borderRadius: 5px;
 @UIBorderThickness: 2px solid;
+@elementBorder: 2px solid;
+@buttonBorder: 5px solid;
+
+#textStyles();
 
 html {
     background-color: @base3;
-    @bodyText();
-    font-size: 1rem;
+    .fonts.bodyText();
 }
 
 body {
@@ -24,7 +26,7 @@ body {
 
 h1 {
     margin: 1rem 0;
-    font-size: 2.5rem;
+    .fonts.pageTitle(@size: 2.5rem);
 }
 
 html.dark {
@@ -40,14 +42,14 @@ html.dark {
     }
 }
 
+
 .hamburger {
-    width: 150px;
     padding-right: 20px;
     cursor: pointer;
 }
 .icon {
     display: block;
-    width: 40px;
+    margin-bottom: 10px;
     background-color: @accent2a;
     color: @logoPurple;
     border-radius: @borderRadius;
@@ -80,17 +82,15 @@ html.dark {
         text-align: center;
         padding: 10px 0;
         text-decoration: none;
-        @navMenuDefault();
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-transform: uppercase;
+        .fonts.navMenuDefault(@size: 1.2rem, @weight: bold);
+        text-transform: none;
         color: @logoPurple;
+        border-radius: @borderRadius;
 
         &:hover, &:focus {
             background-color: @highlight1;
             color: @logoPurple;
-            @navMenuActive();
-            font-size: 1.2rem;
+            .fonts.navMenuActive();
         }
     }
 }
@@ -102,6 +102,7 @@ html.dark {
 
             &:hover, &:focus {
                 color: @logoPurple;
+                .fonts.navMenuActive();
             }
         }
     }
@@ -115,12 +116,34 @@ html.dark {
     .nav-links {
         margin-left: 5rem;
         display: block;
+        position: static;
         width: auto;
         background: none;
 
         a {
             display: inline-block;
-            padding: 15px 20px;
+            padding: 10px 20px;
+            border: @buttonBorder @logoPurple;
+            background-color: @accent1a;
+            .fonts.navMenuDefault(@size: 1.2rem, @weight: bold);
+        }
+
+        &:hover, &:focus {
+            .fonts.navMenuActive(@size: 1.2rem, @weight: 600);
+        }
+    }
+
+    .dark {
+        .nav-links {
+            a {
+                color: @accent2a;
+                border: @buttonBorder $color;
+                background-color: @brand1;
+
+                &:hover, &:focus {
+                    background-color: @highlight1;
+                }
+            }
         }
     }
 

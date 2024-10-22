@@ -27,10 +27,12 @@ const textCase = "uppercase"
 </head>
 <BaseLayout>
     <h1>{pageTitle}</h1>
-    <style define:vars={{skillColor, fontWeight, textCase}}>
+    <style define:vars={{skillColor, fontWeight, textCase}} lang="less">
+        @import '@styles/declarations.less';
         h1 {
             color: purple;
             font-size: 4rem;
+            #textStyles.fonts.logoText();
         }
         .skill {
             color: var(--skillColor);
