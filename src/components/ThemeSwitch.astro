@@ -1,5 +1,5 @@
 <label class="switch">
-    <input type="checkbox" id="themeToggle" checked>
+    <input type="checkbox" id="themeToggle">
     <span class="slider"></span>
 </label>
 
@@ -90,7 +90,7 @@
             element.classList.toggle("dark");
 
             const isDark = element.classList.contains("dark");
-            localStorage.setItem("theme", isDark ? "dark" :  "light");
+            localStorage.setItem("theme", isDark ? "light" :  "dark");
         };
 
         document.getElementById("themeToggle")?.addEventListener("change", handleToggleChange);
