@@ -3,11 +3,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths" : {
-        "@/*": ["src/*"],
-        "@components/*" : ["src/components/*"],
-        "@layouts/*": ["src/layouts/*"],
-        "@styles/*" : ["src/styles/*"],
-        "@scripts/*" : ["src/scripts/*"],
+        "@/*": ["./src/*"],
+        "@components/*" : ["./src/components/*"],
+        "@layouts/*": ["./src/layouts/*"],
+        "@styles/*" : ["./src/styles/*"],
+        "@scripts/*" : ["./src/scripts/*"],
     },
     "strictNullChecks": true,
     "allowJs": true,
