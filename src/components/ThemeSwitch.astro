@@ -15,6 +15,9 @@
             opacity: 0;
             width: 0;
             height: 0;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
 
             &:checked + .slider {
                 background-color: lighten(@brand3, 30%);
@@ -45,6 +48,8 @@
         bottom: 0;
         background-color: lighten(@logoPurple, 5%);
         -webkit-transition: .4s;
+        -moz-transition: .4s;
+        transition: .4s;
         transition: .4s;
         border-radius: 34px;
         border: 2px solid @brand1;
