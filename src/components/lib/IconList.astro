@@ -3,12 +3,19 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <Icon name="game-icons:sun" />
+<Icon name="game-icons:night-sleep" />
 
 <style lang="less">
     @import '@styles/declarations.less';
+    @size: 128px;
+    
     [data-icon] {
-        width: 512px;
-        height: 512px;
+        width: @size;
+        height: @size;
         color: @yellow;
+    }
+    
+    [data-icon="game-icons:night-sleep"] {
+        color: @cyan;
     }
 </style>

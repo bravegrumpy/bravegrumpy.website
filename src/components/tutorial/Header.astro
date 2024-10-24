@@ -1,0 +1,14 @@
+---
+import Navigation from './Navigation.astro';
+import Hamburger from './Hamburger.astro';
+import ThemeSwitch from '@components/ThemeSwitch.astro';
+import Logo from '@components/Logo.svelte';
+---
+<header>
+    <Logo client:load/>
+    <nav>
+	    <Hamburger size="50px"/>
+        <ThemeSwitch />
+	    <Navigation />
+    </nav>
+</header>
