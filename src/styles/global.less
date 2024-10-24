@@ -1,14 +1,7 @@
 @import 'declarations.less';
 
-@borderRadius: 5px;
-@UIBorderThickness: 2px solid;
-@elementBorder: 2px solid;
-@buttonBorder: 5px solid;
-
-#textStyles();
-
 html {
-    background-color: @white;
+    background-color: @base3;
     .fonts.bodyText();
 }
 
@@ -18,7 +11,6 @@ body {
     max-width: 80ch;
     padding: 1rem;
     line-height: 1.5;
-    background-color: @base3;
 }
 
 * {
@@ -41,6 +33,10 @@ html.dark {
             color: @accent2a;
         }
     }
+}
+
+img {
+    border-radius: @borderRadius;
 }
 
 

@@ -1,15 +1,19 @@
 <script>
-    let { size = 75} = $props();
+    import Icon from '@iconify/svelte';
+    import 'iconify-icon';
+    let { size = 75, icon, children} = $props();
 </script>
 
 <svelte:options runes />
 
 <div class="logo">
-    <img 
-        src='/favicon.png'
-        width="{size}"
-        height="{size}"
-    />
+    <slot name="logo">
+        <img 
+            src='/favicon.png'
+            width="{size}"
+            height="{size}"
+        />
+    </slot>
     <div class="title">
         <h1>BraveGrumpy</h1>
         <p>Welcome to my chaotic castle for creativity.</p>
@@ -17,22 +21,20 @@
 </div>
 
 <style lang="less">
-    @import '@styles/declarations.less';
-    #textStyles();
+    @import '/src/styles/declarations.less';
 
     h1 {
         .fonts.logoText(@size: 5rem);
-        line-height: 1rem;
+        line-height: 3rem;
     }
 
     .logo {
-        margin-bottom: 50px;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        align-items: first-baseline;
         flex-wrap: wrap;
         max-width: 80%;
-        border-radius: 5px;
         border: 3px solid mediumorchid;
 
         .title {

@@ -1,10 +1,14 @@
 ---
 import Logo from './Logo.svelte';
+import TopNav from './TopNav';
+import ThemeSwitch from './ThemeSwitch.astro';
 ---
 <header>
-    <Logo
-        size=55px
-    />
+    <Logo size=75px>
+        <ThemeSwitch slot="themeSwitch" />
+    </Logo>
+    <TopNav client:load />
+    <ThemeSwitch />
 </header>
 
 <style lang="less">
@@ -12,5 +16,13 @@ import Logo from './Logo.svelte';
     header {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border: 2px solid @base0;
+        width: 100%;
+    }
+    [data-icon] {
+        color: @yellow;
+        font-size: 3rem;
     }
 </style>
