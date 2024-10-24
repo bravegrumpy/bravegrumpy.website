@@ -12,6 +12,9 @@
     "strictNullChecks": true,
     "allowJs": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-  }
+    "jsxImportSource": "react",
+  },
+  "exclude": [
+    "archive"
+  ]
 }
