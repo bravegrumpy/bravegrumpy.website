@@ -1,23 +1,25 @@
 <script>
-    import Icon from '@iconify/svelte';
-    import 'iconify-icon';
-    let { size = 75, icon, children} = $props();
+    let { size = "75"} = $props();
 </script>
 
 <svelte:options runes />
 
 <div class="logo">
-    <slot name="logo">
+    <slot name="img">
         <img 
             src='/favicon.png'
-            width="{size}"
-            height="{size}"
+            width={size}
+            height={size}
         />
     </slot>
     <div class="title">
         <h1>BraveGrumpy</h1>
         <p>Welcome to my chaotic castle for creativity.</p>
     </div>
+    <div class-="anotherDiv">
+        <h2>Some Text </h2>
+    </div>
+    <slot name="themeSwitch"></slot>
 </div>
 
 <style lang="less">
@@ -32,9 +34,7 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: first-baseline;
-        flex-wrap: wrap;
-        max-width: 80%;
+        align-items: flex-start;
         border: 3px solid mediumorchid;
 
         .title {

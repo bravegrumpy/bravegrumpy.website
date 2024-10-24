@@ -2,24 +2,23 @@
 import Logo from './Logo.svelte';
 import TopNav from './TopNav';
 import ThemeSwitch from './ThemeSwitch.astro';
+
+let size = "75px";
 ---
 <header>
-    <Logo size=75px>
-        <ThemeSwitch slot="themeSwitch" />
-    </Logo>
-    <TopNav client:load />
-    <ThemeSwitch />
+    <Logo client:load size={size}/> 
 </header>
 
 <style lang="less">
     @import '@styles/declarations.less';
     header {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
-        justify-content: flex-start;
+        justify-content: space-between;
         border: 2px solid @base0;
         width: 100%;
+        gap: 10px;
     }
     [data-icon] {
         color: @yellow;
