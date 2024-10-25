@@ -1,0 +1,8 @@
+---
+let { className, href, text } = Astro.props;
+---
+<a class=`navButton ${className}` href={href}>{text}</a>
+
+<style lang="less">
+    @import '@styles/declarations.less';
+</style>

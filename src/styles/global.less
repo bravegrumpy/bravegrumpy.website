@@ -1,4 +1,8 @@
 @import 'declarations.less';
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+
+@import "@styles/themes/assets/backgrounds/checker.less";
+
 
 html {
     background-color: @base2;
@@ -32,27 +36,42 @@ img {
     border-radius: @borderRadius;
 }
 
-/*
-.navButton.default {
-    background-color: @brand1;
-    color: @accent1a;
-    border-radius: @borderRadius;
-    border: 5px solid $color;
-    padding: 3px 15px;
+
+.navButton{
     text-decoration: none;
-    font-family: "Recursive";
-    font-variation-settings: @mono, @casl, @wght;
+    padding: 5px 20px;
+    border-radius: @borderRadius;
+    border: @buttonBorder;
+    font-size: 1.3rem;
+
+    &.default {
+        background-color: @brand1;
+        font-style: italic;
+        font-weight: 500;
+        color: @accent1a;
+    }
+
+    &.active {
+        background-color: @brand1;
+        color: @highlight1;
+        font-weight: 900;
+        text-rendering: optimizeLegibility;
+        text-transform: uppercase;
+    }
 }
 
-.navButton.active {
-    background-color: @brand1;
-    color: @highlight1;
-    border-radius: @borderRadius;
-    border: 5px solid $color;
-    padding: 3px 15px;
-    .fonts.navMenuActive();
-    font-size: 2rem;
-}*/
+.dark {
+    .navButton {
+        background-color: @accent1a;
+        &.default {
+            color: @logoPurple;
+        }
+
+        &.active {
+            color: @brand1;
+        }
+    }
+}
 
 .hamburger {
     padding-right: 20px;
@@ -72,11 +91,6 @@ img {
     body {
         background-color: @base03;
     }
-    /*
-    .navButton.default {
-        color: @brand1;
-        background-color: @accent1a;
-    }*/
     .icon {
         background-color: @brand6;
         color: @accent1a;

@@ -1,13 +1,12 @@
 ---
-let { className, href, text } = Astro.props;
+import NavButton from "./NavButton.astro";
 ---
-<a class={className} href={href}>{text}</a>
+<div class="container">
 
-<style lang="less">
-    @import '@styles/declarations.less';
+</div>
 
-    a {
-        font-family: "Recursive" serif;
-        font-variation-settings: "slnt" -12;
+<style>
+    .containter{
+        width: 100%;
     }
 </style>
