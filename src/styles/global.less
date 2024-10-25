@@ -27,18 +27,28 @@ html.dark {
     color: @accent2a;
 }
 
-.dark {
-    .nav-links {
-        a {
-            color: @accent2a;
-        }
-    }
-}
-
 img {
     border-radius: @borderRadius;
 }
 
+.navButton.default {
+    background-color: @brand1;
+    color: @accent1a;
+    border-radius: @borderRadius;
+    border: 5px solid $color;
+    padding: 3px 15px;
+    .fonts.navMenuDefault();
+}
+
+.navButton.active {
+    background-color: @brand1;
+    color: @highlight1;
+    border-radius: @borderRadius;
+    border: 5px solid $color;
+    padding: 3px 15px;
+    .fonts.navMenuActive();
+    font-size: 2rem;
+}
 
 .hamburger {
     padding-right: 20px;
@@ -55,6 +65,10 @@ img {
 }
 
 .dark {
+    .navButton.default {
+        color: @brand1;
+        background-color: @accent1a;
+    }
     .icon {
         background-color: @brand6;
         color: @accent1a;

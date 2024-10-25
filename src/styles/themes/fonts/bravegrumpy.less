@@ -10,11 +10,15 @@
         font-style: @style;
     }
 
-    .recursive(@slant: 0, @casual: 0, @cursive: 0, @mono: 1) {
+    .recursive(@slant, @casual, @cursive, @mono) {
         font-family: "Recursive", monospace;
         .defaults();
         .fontStyle();
-        font-variation-settings: "slt" @slant, "CASL" @casual, "CRSV" @cursive, "MONO" @mono;
+        font-variation-settings: 
+            "slnt" @slant,
+            "CASL" @casual, 
+            "CRSV" @cursive, 
+            "MONO" @mono;
     }
 
     .fonts() {
@@ -34,8 +38,8 @@
             font-weight: @weight;
         }
 
-        .pageTitle(@weight: 600; @size: 4rem; @recursive: 0, 1, 1, 0) {
-            .recursive(@recursive);
+        .pageTitle(@weight: 600; @size: 4rem;) {
+            .recursive(0, 1, 1, 0);
         }
 
         .pageSubtitle(@weight: 300; @size: 1.5rem;) {
@@ -44,14 +48,14 @@
             font-weight: @weight;
         }
 
-        .navMenuDefault(@weight: 900; @size: 2rem;) {
+        .navMenuDefault(@weight: 600; @size: 2rem;) {
             .recursive(-8, 1, 1, 0);
             font-size: @size;
             font-weight: @weight;
         }
 
         .navMenuActive(@weight: 900; @size: 2rem;) {
-            .recursive(0, 1, 0.55, 0.2);
+            .recursive(0, 1, 0.5, 0.2);
         }
 
         .heading(@weight: 900; @size: 2rem) {

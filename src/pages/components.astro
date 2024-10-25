@@ -1,0 +1,15 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Navigation from "@/components/Navigation.astro";
+const pageTitle = "Creating Components";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Recursive:CRSV@1&display=swap" rel="stylesheet">
+    </head>
+    <Navigation href="/" text="Home" className="navButton default"/>
+    <Navigation href="/components" text="components" className="navButton active" />
+</BaseLayout>
