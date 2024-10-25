@@ -1,0 +1,25 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/astro/components";
+
+let { pageTitle } = Astro.props;
+---
+<BaseLayout 
+    pageTitle={pageTitle}
+>
+    <body>
+        <header>
+            <nav>
+                <SignedOut>
+                    <SignInButton mode="modal" />
+                </SignedOut>
+                <SignedIn>
+                    <UserButton />
+                 </SignedIn>
+            </nav>
+        </header>
+        <article>
+            <slot />
+        </article>
+    </body>
+</BaseLayout>

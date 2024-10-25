@@ -10,10 +10,12 @@
 		"@astrojs/sitemap": "^3.2.1",
 		"@astrojs/svelte": "^5.7.2",
 		"@astrojs/tailwind": "^5.1.2",
+		"@clerk/astro": "^1.4.1",
 		"@radix-ui/react-navigation-menu": "^1.2.1",
 		"@types/react": "^18.3.12",
 		"@types/react-dom": "^18.3.1",
 		"astro": "^4.16.6",
+		"astro-aws-amplify": "^0.1.0",
 		"astro-icon": "^1.1.1",
 		"astro-seo-meta": "^4.1.1",
 		"less": "^4.2.0",
@@ -35,10 +37,9 @@
 		"@iconify-json/simple-icons": "^1.2.9",
 		"flowbite": "^2.5.2",
 		"flowbite-svelte": "^0.47.1",
-		"flowbite-svelte-icons": "^1.6.2",
-		"svelte-preprocess": "^6.0.3"
+		"flowbite-svelte-icons": "^1.6.2"
 	},
-    "overrides": {
-        "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6"
-    }
+	"overrides": {
+		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.6"
+	}
 }
