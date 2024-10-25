@@ -2,78 +2,59 @@
 
 
 #textStyles {
-    .defaults() {
-        font-optical-sizing: auto;
-    }
-
-    .fontStyle(@style: normal) when (@style = normal), (@style = italic) {
-        font-style: @style;
-    }
-
-    .recursive(@slant, @casual, @cursive, @mono) {
-        font-family: "Recursive", monospace;
-        .defaults();
-        .fontStyle();
-        font-variation-settings: 
-            "slnt" @slant,
-            "CASL" @casual, 
-            "CRSV" @cursive, 
-            "MONO" @mono;
+    .recursive(@size: 1rem; @monospace: 0; @casual: 0; @weight: 400; @slant: -3; @cursive: 0.5;) {
+        font-family: "Recursive";
+        font-size: @size;
+        font-variation-settings: @mono, @casl, @wght, @slnt, @crsv;
+        @mono: "MONO" @monospace;
+        @casl: "CASL" @casual;
+        @wght: "wght" @weight;
+        @slnt: "slnt" @slant;
+        @crsv: "CRSV" @cursive;
     }
 
     .fonts() {
         .logoText(@weight: 400; @font: "Grenze Gotisch"; @size: 6rem) {
-            .defaults();
-            .fontStyle();
+            font-optical-sizing: auto;
             font-weight: @weight;
             font-family: @font, serif;
             font-size: @size;
         }
 
         .logoSubtitle(@weight: 600; @font: "Texturina"; @size: 1.5px) {
-            .defaults();
-            .fontStyle(italic);
+            font-optical-sizing: auto;
+            font-style: italic;
             font-size: @size;
             font-family: @font;
             font-weight: @weight;
         }
 
         .pageTitle(@weight: 600; @size: 4rem;) {
-            .recursive(0, 1, 1, 0);
+            .recursive(@slant: -8; @weight; @casual: 1; @cursive: 1; @monospace: 0);
         }
 
         .pageSubtitle(@weight: 300; @size: 1.5rem;) {
-            .recursive(-8, 1, 1, 0);
-            font-size: @size;
-            font-weight: @weight;
+            .recursive(@slant: 0; @weight; @casual: 1; @cursive: 1; @monospace: 0);
         }
 
         .navMenuDefault(@weight: 600; @size: 2rem;) {
-            .recursive(-8, 1, 1, 0);
-            font-size: @size;
-            font-weight: @weight;
+            .recursive(@slant: -8; @weight; @casual: 1; @cursive: 1; @monospace: 0);
         }
 
         .navMenuActive(@weight: 900; @size: 2rem;) {
-            .recursive(0, 1, 0.5, 0.2);
+            .recursive(@slant: 0; @weight; @casual: 1; @cursive: 0.5; @monospace: 0.51);
         }
 
-        .heading(@weight: 900; @size: 2rem) {
-            .recursive(0, 1, 0.5, 0.57);
-            font-size: @size;
-            font-weight: @weight;
+        .heading(@weight: 700; @size: 2rem) {
+            .recursive(@slant: 0; @weight; @casual: 1; @cursive: 0.5; @monospace: 0.57);
         }
 
         .bodyText(@weight: 400; @size: 1rem) {
-            .recursive(0, 0, 0, 0);
-            font-weight:  @weight;
-            font-size: @size;
+            .recursive(@slant: 0; @weight; @casual: 0; @cursive: 0; @monospace: 0);
         }
 
         .footerText(@weight: 400; @size: 1.25rem;) {
-            .recursive(0, 0, 0, 0);
-            font-weight:  @weight;
-            font-size: @size;
+            .recursive(@slant: 0; @weight; @casual: 0; @cursive: 0; @monospace: 0);
         }
     }
 }

@@ -1,7 +1,7 @@
 @import 'declarations.less';
 
 html {
-    background-color: @base3;
+    background-color: @base2;
     .fonts.bodyText();
 }
 
@@ -11,6 +11,7 @@ body {
     max-width: 80ch;
     padding: 1rem;
     line-height: 1.5;
+    background-color: @base3;
 }
 
 * {
@@ -23,7 +24,7 @@ h1 {
 }
 
 html.dark {
-    background-color: @base03;
+    background-color: @base02;
     color: @accent2a;
 }
 
@@ -31,13 +32,16 @@ img {
     border-radius: @borderRadius;
 }
 
+/*
 .navButton.default {
     background-color: @brand1;
     color: @accent1a;
     border-radius: @borderRadius;
     border: 5px solid $color;
     padding: 3px 15px;
-    .fonts.navMenuDefault();
+    text-decoration: none;
+    font-family: "Recursive";
+    font-variation-settings: @mono, @casl, @wght;
 }
 
 .navButton.active {
@@ -48,7 +52,7 @@ img {
     padding: 3px 15px;
     .fonts.navMenuActive();
     font-size: 2rem;
-}
+}*/
 
 .hamburger {
     padding-right: 20px;
@@ -65,10 +69,14 @@ img {
 }
 
 .dark {
+    body {
+        background-color: @base03;
+    }
+    /*
     .navButton.default {
         color: @brand1;
         background-color: @accent1a;
-    }
+    }*/
     .icon {
         background-color: @brand6;
         color: @accent1a;

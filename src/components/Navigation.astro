@@ -2,3 +2,12 @@
 let { className, href, text } = Astro.props;
 ---
 <a class={className} href={href}>{text}</a>
+
+<style lang="less">
+    @import '@styles/declarations.less';
+
+    a {
+        font-family: "Recursive" serif;
+        font-variation-settings: "slnt" -12;
+    }
+</style>

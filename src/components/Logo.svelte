@@ -1,5 +1,5 @@
 <script>
-    let { size = "75", themeSwitch=(() => {})} = $props();
+    let { size = "75"} = $props();
 
 </script>
 
