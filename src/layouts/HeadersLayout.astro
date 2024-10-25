@@ -1,0 +1,19 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const {pageTitle} = Astro.props;
+---
+<BaseLayout pageTitle={pageTitle}>
+    <a href="/headers/">List</a>
+    <a href="/headers/1/">1</a>
+    <a href="/headers/2/">2</a>
+    <a href="/headers/3/">3</a>
+    <a href="/headers/4/">4</a>
+    <a href="/headers/5/">5</a>
+    <br>
+    <br>
+    <hr style="border-width: 5px; border-color: black;">
+    <br>
+    <br>
+    <slot></slot>
+</BaseLayout>

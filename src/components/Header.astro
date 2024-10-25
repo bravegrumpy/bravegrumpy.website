@@ -6,22 +6,52 @@ import ThemeSwitch from './ThemeSwitch.astro';
 let size = "75px";
 ---
 <header>
-    <Logo client:load size={size}/> 
+    <div class="band1">
+        <Logo size={size} />
+        <ThemeSwitch />
+    </div>
+    <div class="band2">
+        <nav>
+            <a href="/">home</a>
+            <a href="/about">about</a>
+            <a href="/blog">blog</a>
+            <a href="/headers">headers</a>
+        </nav>
+    </div>
 </header>
 
 <style lang="less">
     @import '@styles/declarations.less';
     header {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        border: 2px solid @base0;
         width: 100%;
-        gap: 10px;
+        gap: 0px;
     }
     [data-icon] {
         color: @yellow;
         font-size: 3rem;
+    }
+
+    .band1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: space-between;
+        background-color: @accent1a;
+        width: 100%;
+    }
+
+    .band2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: @logoPurple;
+        width: 100%;
+        height: 50px;
+        color: @accent1a;
     }
 </style>

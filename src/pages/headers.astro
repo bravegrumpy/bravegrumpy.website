@@ -1,0 +1,15 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const allHeaders = await Astro.glob('./headers/**/*.astro');
+
+const pageTitle = "List of Headers";
+---
+<BaseLayout pageTitle={pageTitle}>
+    <h2>List of Header Options</h2>
+    <ul>
+        <li><a href="/headers/1/">Option 1</a></li>
+        <li><a href="/headers/2/">Option 2</a></li>
+        <li><a href="/headers/3/">Option 3</a></li>
+        <li><a href="/headers/4/">Option 4</a></li>
+    </ul>
+</BaseLayout>
