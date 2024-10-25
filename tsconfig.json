@@ -16,6 +16,6 @@
     "jsxImportSource": "react",
   },
   "exclude": [
-    "archive"
+    "archive/"
   ]
 }

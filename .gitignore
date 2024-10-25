@@ -21,3 +21,8 @@ scratch**.*
 
 # environment variables
 *.env*
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
