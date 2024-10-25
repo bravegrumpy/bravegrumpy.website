@@ -1,22 +1,10 @@
 ---
-import { Protect, SignOutButton, UserButton, SignInButton, SignedIn, SignedOut } from '@clerk/astro/components';
 import BaseLayout from "@layouts/BaseLayout.astro";
-import UserButtonLink from 'node_modules/@clerk/astro/components/interactive/UserButton/UserButtonLink.astro';
+
 const pageTitle = "Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <h2>My awesome blog subtitle</h2>
-    <p>This is information that will always show</p>
-
-    <UserButton />
-
-    <SignedIn>
-        <p>This information *should* be protected.</p>
-        <SignInButton mode="modal" />
-    </SignedIn>
-    <SignedOut>
-        <p>This should show if you are signed out.</p>
-        <SignOutButton mode="modal"/>
-    </SignedOut>
+    <p>This is my amazing subtitle</p>
 </BaseLayout>
