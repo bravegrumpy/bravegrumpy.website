@@ -5,15 +5,15 @@ import NavButton from "./NavButton.astro";
 const { props } = Astro.props;
 
 ---
-<div class="container">
+<nav class="container">
     {props.routes.map((route) => (
         <NavButton {...route} />
     ))}
-</div>
+</nav>
 
 <style lang="less">
     @import "@styles/declarations.less";
-    .container {
+    nav {
         background-color: @logoPurple;
         width: 100%;
         height: 4rem;
@@ -23,8 +23,8 @@ const { props } = Astro.props;
         align-content: center;
     }
 
-    .dark {
-        .container {
+    :global(.dark) {
+        nav {
             background-color: @accent2a;
         }
     }

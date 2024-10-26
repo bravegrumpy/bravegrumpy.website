@@ -18,10 +18,11 @@
 </div>
 
 <style lang="less">
-    @import "@styles/declarations.less";
+    @import "../styles/declarations.less";
     h1 {
-        .fonts.logoText(@size: 5rem);
+        .fonts.logoText(@size: 5rem; @weight: 400;);
         line-height: 3rem;
+        padding-bottom: -3px;
     }
 
     p {
@@ -35,7 +36,10 @@
         align-items: flex-start;
 
         .title {
-            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
         }
     }
 </style>

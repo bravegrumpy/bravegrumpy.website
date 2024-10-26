@@ -1,27 +1,63 @@
 ---
 import Logo from './Logo.svelte';
 import ThemeSwitch from './ThemeSwitch.astro';
+import Navigation from './Navigation.astro';
+const currentPath = Astro.url.pathname;
+const pages = await Astro.glob('@/pages/*.astro');
+
+function active(href) {
+    return currentPath === href ? "active" : "default";
+}
+
+
+let nav = { routes: [
+    {
+        href: "/",
+        className: active("/"),
+        text: "home",  
+    },
+    {
+        href: "/about",
+        className: active("/about"),
+        text: "/about".substring(1),  
+    },
+    {
+        href: "/blog",
+        className: active("/blog"),
+        text: "/blog".substring(1),  
+    },
+    {
+        href: "/headers",
+        className: active("/headers"),
+        text: "/headers".substring(1),  
+    },
+    {
+        href: "/components",
+        className: active("/components"),
+        text: "/components".substring(1),  
+    }
+]}
 
 ---
 <header>
-    <div class="band1">
+    <div class="logo">
         <Logo />
         <ThemeSwitch />
     </div>
-    <div class="band2">
-        <nav>
-            <a href="/">home</a>
-            <a href="/about">about</a>
-            <a href="/blog">blog</a>
-            <a href="/headers">headers</a>
-            <a href="/components">components</a>
-        </nav>
-    </div>
+    <Navigation props={nav} />
 </header>
 
 <style lang="less">
-    @import: "../styles/declarations.css";
+    @import "../styles/declarations.less";
     
+    :global(.dark) {
+        header {
+            .logo {
+                background-color: @logoPurple;
+            }
+        }
+    }
+
     header {
         display: flex;
         flex-direction: column;
@@ -30,21 +66,14 @@ import ThemeSwitch from './ThemeSwitch.astro';
         width: 100%;
         gap: 0px;
         
-        .band1 {
+        .logo {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-items: space-between;
             width: 100%;
-        }
-
-        .band2 {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            width: 100%;
-            height: 50px;
+            gap: 5rem;
+            background-color: @accent1a;
         }
     }
 </style>

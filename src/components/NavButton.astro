@@ -17,25 +17,23 @@ let { className, href, text } = Astro.props;
         align-self: center;
         text-transform: uppercase;
         margin-left: 1rem;
-        font-family: "Recursive" monospace;
-        font-optical-sizing: auto;
-        font-variation-settings: "slnt" -8, "CASL" 0, "CRSV" 0, "MONO" 0;
     }
 
     .navButton.default {
         color: @accent1a;
-        font-weight: 600;
+        .fonts.navMenuDefault(@size: 1rem;);
     }
 
     .navButton.active {
         color: @highlight1;
-        font-weight: 900;
+        .fonts.navMenuActive(@size: 1rem;);
     }
 
-    .dark {
+    :global(.dark) {
         .navButton {
             background-color: @accent1a;
         }
+
         .navButton.default {
             color: @logoPurple;
         }
