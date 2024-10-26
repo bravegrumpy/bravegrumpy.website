@@ -1,4 +1,5 @@
 <script>
+    import '@styles/declarations.less';
     let { size = "75"} = $props();
 
 </script>
@@ -19,8 +20,7 @@
 </div>
 
 <style lang="less">
-    @import (reference) '@styles/declarations.less';
-
+    @import '@styles/declarations.less';
     h1 {
         .fonts.logoText(@size: 5rem);
         line-height: 3rem;

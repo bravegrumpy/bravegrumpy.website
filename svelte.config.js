@@ -1,13 +1,6 @@
-import { vitePreprocess } from '@astrojs/svelte';
+import { sveltePreprocess } from 'svelte-preprocess';
 import path from 'path';
 
 export default {
-	preprocess: vitePreprocess({
-        style: {
-            less: {
-                paths: [path.resolve('src')],
-                javascriptEnabled: true,
-            }
-        }
-    }),
+	preprocess: sveltePreprocess(),
 }

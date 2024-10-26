@@ -12,7 +12,11 @@ export default defineConfig({
             preprocessorOptions: {
                 less: {
                     javascriptEnabled: true,
-                    paths: [path.resolve('src')]
+                    math: 'always',
+                    relativeUrls: true,
+                    globalVars: {
+                        '@styles': '"src/styles"',
+                    }
                 }
             }
         }

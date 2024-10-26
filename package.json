@@ -17,7 +17,7 @@
 		"astro-seo-meta": "^4.1.1",
 		"less": "^4.2.0",
 		"react": "^18.3.1",
-		"react-dom": "^18.3.1"
+		"react-dom": "^18.3.1",
 	},
 	"scripts": {
 		"dev": "astro dev",
