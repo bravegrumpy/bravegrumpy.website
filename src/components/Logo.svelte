@@ -20,7 +20,7 @@
 </div>
 
 <style lang="less">
-    @import '/src/styles/declarations.less';
+    @import '@styles/declarations.less';
 
     h1 {
         .fonts.logoText(@size: 5rem);
