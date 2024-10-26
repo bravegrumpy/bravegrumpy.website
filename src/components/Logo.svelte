@@ -1,4 +1,5 @@
 <script>
+    import "@styles/declarations.less";
     let { size = "75"} = $props();
 
 </script>

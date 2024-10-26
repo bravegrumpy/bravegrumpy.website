@@ -1,8 +1,47 @@
 ---
+import "@styles/declarations.less"
 let { className, href, text } = Astro.props;
 ---
 <a class=`navButton ${className}` href={href}>{text}</a>
 
 <style lang="less">
-    @import '@styles/declarations.less';
+    @import "@styles/declarations.less";
+
+    .navButton {
+        padding: 0.5rem 1rem;
+        border-radius: @borderRadius;
+        border: @buttonBorder;
+        background-color: @brand1;
+        text-decoration: none;
+        height: fit-content;
+        align-self: center;
+        font-family: "Recursive";
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .navButton.default {
+        color: @accent1a;
+        font-style: oblique;
+        font-weight: 600;
+    }
+
+    .navButton.active {
+        color: @highlight1;
+        font-weight: 900;
+    }
+
+    .dark {
+        .navButton {
+            background-color: @accent1a;
+        }
+        .navButton.default {
+            color: @logoPurple;
+        }
+
+        .navButton.active {
+            color: @brand1;
+        }
+    }
 </style>

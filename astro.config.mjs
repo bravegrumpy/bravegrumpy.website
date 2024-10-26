@@ -7,4 +7,13 @@ import react from "@astrojs/react";
 export default defineConfig({
     site: "https://new.bravegrumpy.com",
     integrations: [icon(), sitemap(), svelte(), react()],
+    vite: {
+        css: {
+            preprocessorOptions: {
+                less: {
+                    javascriptEnabled: true,
+                }
+            }
+        }
+    }
 });

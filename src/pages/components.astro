@@ -1,10 +1,51 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Navigation from "@/components/Navigation.astro";
+
+function isActive(href: string): string {
+    const url = new URL(import.meta.url);
+    const pathname = url.pathname;
+    const segments = pathname.split("/");
+    const fileName = segments.slice(-1)[0];
+    const fN = fileName[0] === "/" ? fileName.slice(1) : fileName;
+    const slug = fN?.replace(/\.[^/.]+$/, '/');
+
+    return href === slug ? "active" : "default";
+}
+
+const nav = {
+    routes: [
+        {
+            href: "/",
+            className: isActive("/"),
+            text: "home",
+        },
+        {
+            href: "/about/",
+            className: isActive("/about/"),
+            text: "about",
+        },
+        {
+            href: "/blog/",
+            className: isActive("/blog/"),
+            text: "blog",
+        },
+        {
+            href: "/headers/",
+            className: isActive("/headers/*"),
+            text: "headers",
+        },
+        {
+            href: "/components",
+            className: "active",
+            text: "components",
+        }
+    ],
+};
+
 const pageTitle = "Creating Components";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <Navigation href="/" text="Home" className="default"/>
-    <Navigation href="/components" text="components" className="navButton active" />
+    <Navigation props={nav}/>
 </BaseLayout>

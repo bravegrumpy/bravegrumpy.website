@@ -1,16 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+
+@font-face {
+    font-family: "Recursive";
+    src: url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap');
+    font-weight: 300 1000;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Grenze Gotisch";
+    src: @import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Texturina";
+    src: url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+    font-weight: 100 900;
+    font-display: swap;
+}
 
 
 #textStyles {
     .recursive(@size: 1rem; @monospace: 0; @casual: 0; @weight: 400; @slant: -3; @cursive: 0.5;) {
-        font-family: "Recursive";
+        font-family: "Recursive" monospace;
         font-size: @size;
-        font-variation-settings: @mono, @casl, @wght, @slnt, @crsv;
         @mono: "MONO" @monospace;
         @casl: "CASL" @casual;
         @wght: "wght" @weight;
         @slnt: "slnt" @slant;
         @crsv: "CRSV" @cursive;
+        font-variation-settings: @mono, @casl, @wght, @slnt, @crsv;
     }
 
     .fonts() {
@@ -30,31 +50,80 @@
         }
 
         .pageTitle(@weight: 600; @size: 4rem;) {
-            .recursive(@slant: -8; @weight; @casual: 1; @cursive: 1; @monospace: 0);
+            .recursive(
+                @size;
+                @slant: -8;
+                @weight; 
+                @casual: 1; 
+                @cursive: 1; 
+                @monospace: 0
+                );
         }
 
         .pageSubtitle(@weight: 300; @size: 1.5rem;) {
-            .recursive(@slant: 0; @weight; @casual: 1; @cursive: 1; @monospace: 0);
+            .recursive(
+                @size;
+                @slant: 0;
+                @weight; 
+                @casual: 1; 
+                @cursive: 1; 
+                @monospace: 0
+                );
         }
 
         .navMenuDefault(@weight: 600; @size: 2rem;) {
-            .recursive(@slant: -8; @weight; @casual: 1; @cursive: 1; @monospace: 0);
+            .recursive(
+                @size;
+                @slant: -8;
+                @weight; 
+                @casual: 1; 
+                @cursive: 1; 
+                @monospace: 0
+                );
         }
 
         .navMenuActive(@weight: 900; @size: 2rem;) {
-            .recursive(@slant: 0; @weight; @casual: 1; @cursive: 0.5; @monospace: 0.51);
+            .recursive(
+                @size;
+                @slant: 0;
+                @weight; 
+                @casual: 1; 
+                @cursive: 0.5; 
+                @monospace: 0.5
+                );
         }
 
         .heading(@weight: 700; @size: 2rem) {
-            .recursive(@slant: 0; @weight; @casual: 1; @cursive: 0.5; @monospace: 0.57);
+            .recursive(
+                @size;
+                @slant: 0;
+                @weight; 
+                @casual: 1; 
+                @cursive: 0.5; 
+                @monospace: 0.57
+                );
         }
 
         .bodyText(@weight: 400; @size: 1rem) {
-            .recursive(@slant: 0; @weight; @casual: 0; @cursive: 0; @monospace: 0);
+            .recursive(
+                @size;
+                @slant: 0;
+                @weight; 
+                @casual: 0; 
+                @cursive: 0; 
+                @monospace: 0
+                );
         }
 
         .footerText(@weight: 400; @size: 1.25rem;) {
-            .recursive(@slant: 0; @weight; @casual: 0; @cursive: 0; @monospace: 0);
+            .recursive(
+                @size;
+                @slant: 0;
+                @weight; 
+                @casual: 0; 
+                @cursive: 0; 
+                @monospace: 0
+                );
         }
     }
 }

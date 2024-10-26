@@ -1,12 +1,31 @@
 ---
+import "@styles/declarations.less";
 import NavButton from "./NavButton.astro";
+
+const { props } = Astro.props;
+
 ---
 <div class="container">
-
+    {props.routes.map((route) => (
+        <NavButton {...route} />
+    ))}
 </div>
 
-<style>
-    .containter{
+<style lang="less">
+    @import "@styles/declarations.less";
+    .container {
+        background-color: @logoPurple;
         width: 100%;
+        height: 4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .dark {
+        .container {
+            background-color: @accent2a;
+        }
     }
 </style>
