@@ -1,3 +1,5 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Recursive:slnt,wght,CASL,CRSV,MONO@-8,300..1000,0..1,0..1,0..1&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
 
 @font-face {
     font-family: "Recursive";
@@ -8,7 +10,7 @@
 
 @font-face {
     font-family: "Grenze Gotisch";
-    src: @import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap');
+    src: url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap');
     font-weight: 100 900;
     font-display: swap;
 }
@@ -19,25 +21,27 @@
     font-weight: 100 900;
     font-display: swap;
 }
+*/
 
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap');
 
 #textStyles {
     .recursive(@size: 1rem; @monospace: 0; @casual: 0; @weight: 400; @slant: -3; @cursive: 0.5;) {
-        font-family: "Recursive" monospace;
+        font-family: "Recursive", monospace;
         font-size: @size;
-        @mono: "MONO" @monospace;
-        @casl: "CASL" @casual;
-        @wght: "wght" @weight;
-        @slnt: "slnt" @slant;
-        @crsv: "CRSV" @cursive;
-        font-variation-settings: @mono, @casl, @wght, @slnt, @crsv;
+        font-variation-settings:
+            "MONO" @monospace,
+            "CASL" @casual,
+            "wght" @weight,
+            "slnt" @slant,
+            "CRSV" @cursive;
     }
 
     .fonts() {
         .logoText(@weight: 400; @font: "Grenze Gotisch"; @size: 6rem) {
             font-optical-sizing: auto;
             font-weight: @weight;
-            font-family: @font, serif;
+            font-family: @font;
             font-size: @size;
         }
 

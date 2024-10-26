@@ -2,11 +2,10 @@
 import Logo from './Logo.svelte';
 import ThemeSwitch from './ThemeSwitch.astro';
 
-let size = "75px";
 ---
 <header>
     <div class="band1">
-        <Logo size={size} />
+        <Logo />
         <ThemeSwitch />
     </div>
     <div class="band2">
@@ -21,7 +20,7 @@ let size = "75px";
 </header>
 
 <style lang="less">
-    @import: "@styles/declarations.less";
+    @import: "../styles/declarations.css";
     
     header {
         display: flex;

@@ -1,7 +1,4 @@
-@import 'declarations.less';
-
-@import "@styles/themes/assets/backgrounds/checker.less";
-
+@import './declarations.less';
 
 html {
     background-color: @base2;
@@ -46,7 +43,7 @@ img {
     background-color: @accent2a;
     color: @logoPurple;
     border-radius: @borderRadius;
-    border: @UIBorderThickness @logoPurple;
+    border: @borders[UI] $color; 
     box-shadow: @boxShadowLight;
 }
 
@@ -59,7 +56,7 @@ img {
         background-color: @brand6;
         color: @accent1a;
         border-radius: @borderRadius;
-        border: @UIBorderThickness @accent1a;
+        border: @borders[UI] $color;
         box-shadow: @boxShadowDark;
     }
 }
@@ -123,7 +120,8 @@ img {
         a {
             display: inline-block;
             padding: 10px 20px;
-            border: @buttonBorder @logoPurple;
+            color: @logoPurple;
+            border: @borders[button] $color;
             background-color: @accent1a;
             .fonts.navMenuDefault(@size: 1.2rem, @weight: bold);
         }
@@ -137,7 +135,7 @@ img {
         .nav-links {
             a {
                 color: @accent2a;
-                border: @buttonBorder $color;
+                border: @borders[button] $color;
                 background-color: @brand1;
 
                 &:hover, &:focus {

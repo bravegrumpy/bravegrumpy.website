@@ -9,16 +9,12 @@ export default defineConfig({
     integrations: [icon(), sitemap(), svelte(), react()],
     vite: {
         css: {
-            preprocessorOptions: {
-                less: {
-                    javascriptEnabled: true,
-                    math: 'always',
-                    relativeUrls: true,
-                    globalVars: {
-                        '@styles': '"src/styles"',
-                    }
-                }
+            less: {
+                javascriptEnabled: true,
             }
         }
+    },
+    experimental: {
+        optimizeFonts: true,
     }
 });

@@ -10,20 +10,20 @@ let { className, href, text } = Astro.props;
     .navButton {
         padding: 0.5rem 1rem;
         border-radius: @borderRadius;
-        border: @buttonBorder;
+        border: @borders[button];
         background-color: @brand1;
         text-decoration: none;
         height: fit-content;
         align-self: center;
-        font-family: "Recursive";
         text-transform: uppercase;
-        font-size: 1rem;
         margin-left: 1rem;
+        font-family: "Recursive" monospace;
+        font-optical-sizing: auto;
+        font-variation-settings: "slnt" -8, "CASL" 0, "CRSV" 0, "MONO" 0;
     }
 
     .navButton.default {
         color: @accent1a;
-        font-style: oblique;
         font-weight: 600;
     }
 

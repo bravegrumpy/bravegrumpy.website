@@ -1,7 +1,5 @@
 <script>
-    import '@styles/declarations.less';
-    let { size = "75"} = $props();
-
+    let size = "75px";
 </script>
 
 <svelte:options runes />
@@ -20,10 +18,14 @@
 </div>
 
 <style lang="less">
-    @import '@styles/declarations.less';
+    @import "@styles/declarations.less";
     h1 {
         .fonts.logoText(@size: 5rem);
         line-height: 3rem;
+    }
+
+    p {
+        .fonts.logoSubtitle(@size: 1rem, @weight: 600);
     }
 
     .logo {
@@ -33,12 +35,7 @@
         align-items: flex-start;
 
         .title {
-            display: flex;
-            flex-direction: column;
-            align-content: flex-start;
-            justify-content: start;
-            width: auto;
-            gap: 0;
+            
         }
     }
 </style>

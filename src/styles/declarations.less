@@ -1,10 +1,9 @@
-@themes: '@styles/themes/colors';
+@themes: '@styles/themes';
+@color: '@{themes}/colors';
 
-@import "@{themes}/bravegrumpy.less";
-@import "@{themes}/solarized.less"; 
-
-@fontSheet: '@styles/themes/fonts';
-@import "@{fontSheet}/bravegrumpy.less";
+@import "@{color}/bravegrumpy.less";
+@import "@{color}/solarized.less"; 
+@import "@{themes}/fonts/bravegrumpy.less";
 
 #textStyles();
 
@@ -13,6 +12,12 @@
 
 
 @borderRadius: 5px;
-@UIBorderThickness: 2px solid;
-@elementBorder: 2px solid;
-@buttonBorder: 5px solid;
+
+@bordersBase: solid;
+
+
+@borders: {
+    UI: 2px @bordersBase;
+    element: 2px @bordersBase;
+    button: 5px @bordersBase;
+}
