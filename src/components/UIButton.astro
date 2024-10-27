@@ -6,7 +6,26 @@ import { Icon } from 'astro-icon/components';
 </button>
 
 <style lang="less">
+    @import "@styles/declarations.less";
+
     .iconButton {
-        all: unset;
+        background-color: @accent2a;
+        color: @logoPurple;
+        border: @borders[button] $color;
+        border-radius: @borderRadius;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        width: 4rem;
+        height: 4rem;
+        
+        [data-icon] {
+            width: 3rem;
+            height: 3rem;
+            stroke-width: 10px;
+        }
     }
 </style>
