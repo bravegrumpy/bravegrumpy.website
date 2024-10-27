@@ -2,7 +2,7 @@
 import Logo from './Logo.svelte';
 import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
-const currentPath = Astro.url.pathname;
+const currentPath = await Astro.url.pathname;
 const pages = await Astro.glob('../pages/*.astro');
 
 function active(href) {
