@@ -2,8 +2,6 @@
     let size = "75px";
 </script>
 
-<svelte:options runes />
-
 <div class="logo">
     <img 
         src='/favicon.png'

@@ -3,11 +3,12 @@ import Logo from './Logo.svelte';
 import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
 const currentPath = Astro.url.pathname;
-const pages = await Astro.glob('@/pages/*.astro');
+const pages = await Astro.glob('../pages/*.astro');
 
 function active(href) {
     return currentPath === href ? "active" : "default";
 }
+
 
 
 let nav = { routes: [
@@ -41,7 +42,7 @@ let nav = { routes: [
 ---
 <header>
     <div class="logo">
-        <Logo />
+        <Logo client:load />
         <ThemeSwitch />
     </div>
     <Navigation props={nav} />
