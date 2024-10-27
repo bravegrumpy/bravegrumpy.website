@@ -2,19 +2,24 @@
 import { Icon } from 'astro-icon/components';
 ---
 <button class="iconButton">
-    <Icon name="hugeicons:wordpress" />
+    <Icon name="hugeicons:alpha-square" />
 </button>
 
 <style lang="less">
     @import "@styles/declarations.less";
 
+    :global(.dark) {
+        .iconButton {
+            background-color: @brand6;
+            color: @accent1a;
+        }
+        }
+
     .iconButton {
         background-color: @accent2a;
         color: @logoPurple;
-        border: @borders[button] $color;
+        border: @borders[UI];
         border-radius: @borderRadius;
-
-        
 
         display: flex;
         flex-direction: row;

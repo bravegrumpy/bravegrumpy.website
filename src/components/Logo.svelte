@@ -1,17 +1,22 @@
 <script>
-    export let size = "75px";
+    let { size } = $props();
 </script>
 
 <div class="logo">
-    <img 
-        src='/favicon.png'
-        width={size}
-        height={size}
-        alt="BraveGrumpy logo"
-    />
+    <div class="images">
+        <slot name="image">
+        <img 
+            src='/favicon.png'
+            width={size}
+            height={size}
+            alt="BraveGrumpy logo"
+        />
+        </slot>
+        <slot name="switch"></slot>
+    </div>
     <div class="title">
         <h1>BraveGrumpy</h1>
-        <p>Welcome to my chaotic castle for creativity.</p>
+        <p>Welcome to my chaotic castle of curious creations. I hope you like what you find.</p>
     </div>
 </div>
 
@@ -19,17 +24,31 @@
     @import "@styles/declarations.less";
     h1 {
         .fonts.logoText(@size: 5rem; @weight: 400;);
-        line-height: 1rem;
-        padding-bottom: -3px;
+        color: @logoPurple;
     }
 
     p {
         .fonts.logoSubtitle(@size: 1rem, @weight: 600);
         align-self: center;
+        text-wrap: wrap;
+        text-align: left;
+        width: 18.75rem;
+        padding: 0;
+        margin-top: -3.125rem;
     }
 
     img {
         border-radius: @borderRadius;
+    }
+
+    :global(.dark) {
+        .logo {
+            .title {
+                h1, p {
+                    color: @accent1a;
+                }
+            }
+        }
     }
 
     .logo {
@@ -41,11 +60,18 @@
         align-items: flex-start;
         gap: 0.2rem;
 
+        .images {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
         .title {
             display: flex;
             flex-direction: column;
             justify-items: flex-start;
-            align-items: stretch;
+            align-items: flex-start;
         }
     }
 </style>

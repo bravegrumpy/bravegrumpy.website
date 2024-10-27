@@ -42,8 +42,9 @@ let nav = { routes: [
 ---
 <header>
     <div class="logo">
-        <Logo client:load />
-        <ThemeSwitch />
+        <Logo client:load size="105rem">
+            <ThemeSwitch slot="switch" />
+        </Logo>
     </div>
     <Navigation props={nav} />
 </header>
@@ -64,8 +65,8 @@ let nav = { routes: [
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        width: 100%;
         gap: 0px;
+        width: 100%;
         
         .logo {
             display: flex;
@@ -73,7 +74,7 @@ let nav = { routes: [
             align-items: center;
             justify-items: space-between;
             width: 100%;
-            gap: 5rem;
+            gap: 10rem;
             background-color: @accent1a;
         }
     }
