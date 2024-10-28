@@ -2,12 +2,14 @@
 import Logo from './Logo.svelte';
 import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
-const currentPath = await Astro.url.pathname;
+
+const currentPath = await Astro.request.url;
 const pages = await Astro.glob('../pages/*.astro');
 
 function active(href) {
     return currentPath === href ? "active" : "default";
 }
+
 
 
 
@@ -48,6 +50,15 @@ let nav = { routes: [
     </div>
     <Navigation props={nav} client:load/>
 </header>
+
+<div>
+    <h3>{new URL(await Astro.request.url).href.split('/').slice(-1)}</h3>
+    <ul>
+        {
+            pages.map((page) => <li>{page.url}</li>)
+        }
+    </ul>
+</div>
 
 <style lang="less">
     @import "../styles/declarations.less";
