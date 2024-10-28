@@ -3,43 +3,44 @@ import Logo from './Logo.svelte';
 import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
 
-const currentPath = await Astro.request.url;
+
+const currentPath = Astro.request.url.split("/").slice(-1);
 const pages = await Astro.glob('../pages/*.astro');
 
 function active(href) {
     return currentPath === href ? "active" : "default";
 }
 
+const nav = {
+    routes: [
+        {
+            href: "/",
+            className: 'default',
+            text: 'home'
+        },
+        {
+            href: "/about",
+            className: 'default',
+            text: 'about'
+        },
+        {
+            href: "/blog",
+            className: 'default',
+            text: 'blog'
+        },
+        {
+            href: "/headers",
+            className: 'default',
+            text: 'headers'
+        },
+        {
+            href: "/components",
+            className: 'default',
+            text: 'components'
+        },
+    ]
+}
 
-
-
-let nav = { routes: [
-    {
-        href: "/",
-        className: active("/"),
-        text: "home",  
-    },
-    {
-        href: "/about",
-        className: active("/about"),
-        text: "/about".substring(1),  
-    },
-    {
-        href: "/blog",
-        className: active("/blog"),
-        text: "/blog".substring(1),  
-    },
-    {
-        href: "/headers",
-        className: active("/headers"),
-        text: "/headers".substring(1),  
-    },
-    {
-        href: "/components",
-        className: active("/components"),
-        text: "/components".substring(1),  
-    }
-]}
 
 ---
 <header>
@@ -48,16 +49,12 @@ let nav = { routes: [
             <ThemeSwitch slot="switch" />
         </Logo>
     </div>
-    <Navigation props={nav} client:load/>
+    <Navigation props={nav}/>
 </header>
 
 <div>
     <h3>{new URL(await Astro.request.url).href.split('/').slice(-1)}</h3>
-    <ul>
-        {
-            pages.map((page) => <li>{page.url}</li>)
-        }
-    </ul>
+    <p>{Astro.request.url}</p>
 </div>
 
 <style lang="less">
