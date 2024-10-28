@@ -4,43 +4,43 @@ import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
 
 
-const currentPath = Astro.request.url.split("/").slice(-1);
 const pages = await Astro.glob('../pages/*.astro');
 
+
+
 function active(href) {
-    return currentPath === href ? "active" : "default";
+    return new URL(Astro.request.url).pathname === href ? "active" : "default";
 }
 
 const nav = {
     routes: [
         {
             href: "/",
-            className: 'default',
+            className: active("/"),
             text: 'home'
         },
         {
             href: "/about",
-            className: 'default',
+            className: active("/about"),
             text: 'about'
         },
         {
             href: "/blog",
-            className: 'default',
+            className: active("/blog"),
             text: 'blog'
         },
         {
             href: "/headers",
-            className: 'default',
+            className: active("/headers"),
             text: 'headers'
         },
         {
             href: "/components",
-            className: 'default',
+            className: active("/components"),
             text: 'components'
         },
     ]
 }
-
 
 ---
 <header>
@@ -54,7 +54,11 @@ const nav = {
 
 <div>
     <h3>{new URL(await Astro.request.url).href.split('/').slice(-1)}</h3>
-    <p>{Astro.request.url}</p>
+    <ul>
+        {
+            pages.map((page) => <li>{page.url}</li>)
+        }
+    </ul>
 </div>
 
 <style lang="less">
