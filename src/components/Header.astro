@@ -52,15 +52,6 @@ const nav = {
     <Navigation props={nav}/>
 </header>
 
-<div>
-    <h3>{new URL(await Astro.request.url).href.split('/').slice(-1)}</h3>
-    <ul>
-        {
-            pages.map((page) => <li>{page.url}</li>)
-        }
-    </ul>
-</div>
-
 <style lang="less">
     @import "../styles/declarations.less";
     

@@ -1,8 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+let { icon } = Astro.props;
 ---
 <button class="iconButton">
-    <Icon name="hugeicons:alpha-square" />
+    <Icon name={icon} />
 </button>
 
 <style lang="less">
@@ -12,14 +14,16 @@ import { Icon } from 'astro-icon/components';
         .iconButton {
             background-color: @brand6;
             color: @accent1a;
+            box-shadow: @boxShadowDark;
         }
-        }
+    }
 
     .iconButton {
         background-color: @accent2a;
         color: @logoPurple;
         border: @borders[UI];
         border-radius: @borderRadius;
+        box-shadow: @boxShadowLight;
 
         display: flex;
         flex-direction: row;
