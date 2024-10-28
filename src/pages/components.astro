@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Navigation from "@/components/Navigation.astro";
 import UIButton from "@/components/UIButton.astro";
+import PageTitle from "@/components/PageTitle.astro";
 
 function isActive(href: string): string {
     const url = new URL(import.meta.url);
@@ -48,5 +49,8 @@ const pageTitle = "Creating Components";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <UIButton />
+    <p>This is a list of various components that I've made. I'm using it to be able to visually see the changes I'm making.</p>
+    <Navigation props={nav}/>
+    <UIButton icon="hugeicons:github"/>
+    <PageTitle />
 </BaseLayout>

@@ -1,10 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-let { icon } = Astro.props;
+const { icon } = Astro.props;
 ---
 <button class="iconButton">
-    <Icon name={icon} />
+    <Icon name=`${icon}` />
 </button>
 
 <style lang="less">
