@@ -4,42 +4,31 @@ import Navigation from "@/components/Navigation.astro";
 import UIButton from "@/components/UIButton.astro";
 import PageTitle from "@/components/PageTitle.svelte";
 
-function isActive(href: string): string {
-    const url = new URL(import.meta.url);
-    const pathname = url.pathname;
-    const segments = pathname.split("/");
-    const fileName = segments.slice(-1)[0];
-    const fN = fileName[0] === "/" ? fileName.slice(1) : fileName;
-    const slug = fN?.replace(/\.[^/.]+$/, '/');
-
-    return href === slug ? "active" : "default";
-}
-
 const nav = {
     routes: [
         {
             href: "/",
-            className: isActive("/"),
+            className: "default",
             text: "home",
         },
         {
             href: "/about/",
-            className: isActive("/about/"),
+            className: "default",
             text: "about",
         },
         {
             href: "/blog/",
-            className: isActive("/blog/"),
+            className: "default",
             text: "blog",
         },
         {
             href: "/headers/",
-            className: isActive("/headers/*"),
+            className: "default",
             text: "headers",
         },
         {
             href: "/components",
-            className: "active",
+            className: "default",
             text: "components",
         }
     ],

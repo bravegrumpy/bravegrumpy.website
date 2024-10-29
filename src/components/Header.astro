@@ -19,13 +19,19 @@ function active(href) {
             <ThemeSwitch slot="switch" />
         </Logo>
     </div>
-    <Navigation props={routes:[
-        {href:"/", text:"home", className:'default'},
-        {href:"/about", text:"about", className:'default'},
-        {href:"/blog", text:"blog", className:'default'},
-        {href:"/headers", text:"headers", className:'default'},
-        {href:"/components", text:"components", className:'default'},
-    ]}/>
+    <Navigation 
+        props={
+            {
+                routes: [
+                    {href:"/", text:"home", className:"default"},
+                    {href:"/about", text:"about", className:"default"},
+                    {href:"/blog", text:"blog", className:"default"},
+                    {href:"/headers", text:"headers", className:"default"},
+                    {href:"/components", text:"components", className:"default"}
+                ]
+            }
+        }
+    />
 </header>
 
 <style lang="less">
