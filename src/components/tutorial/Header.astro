@@ -5,7 +5,9 @@ import ThemeSwitch from '@components/ThemeSwitch.astro';
 import Logo from '@components/Logo.svelte';
 ---
 <header>
-    <Logo client:load/>
+    <Logo client:load
+        size="105rem"
+    />
     <nav>
 	    <Hamburger size="50px"/>
         <ThemeSwitch />

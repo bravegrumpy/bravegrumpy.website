@@ -1,5 +1,5 @@
 <script>
-    let { size } = $props();
+    let { size="75px" } = $props();
 </script>
 
 <div class="logo">
