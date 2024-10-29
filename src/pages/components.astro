@@ -4,42 +4,16 @@ import Navigation from "@/components/Navigation.astro";
 import UIButton from "@/components/UIButton.astro";
 import PageTitle from "@/components/PageTitle.svelte";
 
-const nav = {
-    routes: [
-        {
-            href: "/",
-            className: "default",
-            text: "home",
-        },
-        {
-            href: "/about/",
-            className: "default",
-            text: "about",
-        },
-        {
-            href: "/blog/",
-            className: "default",
-            text: "blog",
-        },
-        {
-            href: "/headers/",
-            className: "default",
-            text: "headers",
-        },
-        {
-            href: "/components",
-            className: "default",
-            text: "components",
-        }
-    ],
-};
+import { navigation } from "@/scripts/navigation.js";
 
 const pageTitle = "Creating Components";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <p>This is a list of various components that I've made. I'm using it to be able to visually see the changes I'm making.</p>
-    <Navigation props={nav}/>
+
+    
+    <Navigation props={navigation}/>
     <UIButton icon="hugeicons:github"/>
     <PageTitle client:load />
 </BaseLayout>

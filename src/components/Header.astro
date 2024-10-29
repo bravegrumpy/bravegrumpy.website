@@ -3,15 +3,7 @@ import Logo from './Logo.svelte';
 import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
 
-
-const pages = await Astro.glob('../pages/*.astro');
-
-
-
-function active(href) {
-    return new URL(Astro.request.url).pathname === href ? "active" : "default";
-}
-
+import { navigation } from "@scripts/navigation.js";
 ---
 <header>
     <div class="logo">
@@ -19,19 +11,7 @@ function active(href) {
             <ThemeSwitch slot="switch" />
         </Logo>
     </div>
-    <Navigation 
-        props={
-            {
-                routes: [
-                    {href:"/", text:"home", className:"default"},
-                    {href:"/about", text:"about", className:"default"},
-                    {href:"/blog", text:"blog", className:"default"},
-                    {href:"/headers", text:"headers", className:"default"},
-                    {href:"/components", text:"components", className:"default"}
-                ]
-            }
-        }
-    />
+    <Navigation props={navigation}/>
 </header>
 
 <style lang="less">
