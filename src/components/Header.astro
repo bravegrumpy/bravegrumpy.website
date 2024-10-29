@@ -12,36 +12,6 @@ function active(href) {
     return new URL(Astro.request.url).pathname === href ? "active" : "default";
 }
 
-const nav = {
-    routes: [
-        {
-            href: "/",
-            className: active("/"),
-            text: 'home'
-        },
-        {
-            href: "/about",
-            className: active("/about"),
-            text: 'about'
-        },
-        {
-            href: "/blog",
-            className: active("/blog"),
-            text: 'blog'
-        },
-        {
-            href: "/headers",
-            className: active("/headers"),
-            text: 'headers'
-        },
-        {
-            href: "/components",
-            className: active("/components"),
-            text: 'components'
-        },
-    ]
-}
-
 ---
 <header>
     <div class="logo">
@@ -49,7 +19,13 @@ const nav = {
             <ThemeSwitch slot="switch" />
         </Logo>
     </div>
-    <Navigation props={nav}/>
+    <Navigation props={[
+        {href:"/", text:"home", className:'default'},
+        {href:"/about", text:"about", className:'default'},
+        {href:"/blog", text:"blog", className:'default'},
+        {href:"/headers", text:"headers", className:'default'},
+        {href:"/components", text:"components", className:'default'},
+    ]}/>
 </header>
 
 <style lang="less">
