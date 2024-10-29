@@ -7,4 +7,5 @@ import react from "@astrojs/react";
 export default defineConfig({
     site: "https://new.bravegrumpy.com",
     integrations: [icon(), sitemap(), svelte(), react()],
+    base: '/dist'
 });
