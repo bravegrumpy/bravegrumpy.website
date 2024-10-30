@@ -21,9 +21,6 @@
 		"build": "astro build",
 		"preview": "astro preview"
 	},
-	"overrides": {
-		"@sveltejs/vite-plugin-svelte": "^4"
-	},
 	"devDependencies": {
 		"@iconify-json/game-icons": "^1.2.0",
 		"@iconify-json/hugeicons": "^1.2.1",
