@@ -9,7 +9,7 @@
 		"@astrojs/sitemap": "^3.2.1",
 		"@astrojs/svelte": "^5.7.2",
 		"astro": "^4.16.7",
-		"astro-aws-amplify": "^0.0.7",
+		"astro-aws-amplify": "^0.1.0",
 		"astro-icon": "^1.1.1",
 		"astro-seo-meta": "^4.1.1",
 		"svelte": "^5.1.4",
@@ -25,5 +25,8 @@
 		"@iconify-json/game-icons": "^1.2.0",
 		"@iconify-json/hugeicons": "^1.2.1",
 		"@iconify-json/simple-icons": "^1.2.10"
-	}
+	},
+    "overrides": {
+        "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6"
+    }
 }
