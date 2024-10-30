@@ -5,6 +5,10 @@ import Navigation from './Navigation.astro';
 
 import { navigation } from '@scripts/navigation.js';
 
+navigation.routes.forEach((route) => (
+    route.className = Astro.url.pathname === route.href ? "active" : "default"
+));
+
 ---
 <header>
     <div class="logo">
@@ -21,6 +25,7 @@ import { navigation } from '@scripts/navigation.js';
     </div>
     <Navigation props={navigation} />
 </header>
+
 
 <style lang="less">
     @import "../styles/declarations.less";
