@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import Navigation from "@/components/Navigation.astro";
+
 import { navigation, colors } from "@/scripts/data.js";
 
 
@@ -30,12 +32,11 @@ const pageTitle = "Creating Components";
         </div>
     </div>
 </BaseLayout>
-<style>
+<style lang="less">
     /* Container to hold all elements */
     .container {
         position: relative;
         width: 100%;
-        max-width: 800px;
         margin: 0 auto;
         padding-top: 50px; /* Add space to avoid overlap with top navigation */
         background-color: #d8b8ff;
@@ -44,10 +45,11 @@ const pageTitle = "Creating Components";
     /* Top bar containing the navigation buttons */
     .top-bar {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         background-color: #d8b8ff; /* Light purple background */
         padding: 10px;
         border-radius: 8px;
+        gap: 0.5rem;
     }
 
     .top-bar .nav-item {
