@@ -2,30 +2,34 @@
 import "@styles/declarations.less";
 import NavButton from "./NavButton.astro";
 
-const { props } = Astro.props;
+const { props} = Astro.props;
+
+const width = props.width;
+const backgroundColor = props.backgroundColor;
+const darkBackgroundColor = props.darkBackgroundColor;
 
 ---
-<nav class="container">
+<nav class="navigaion">
     {props.routes.map((route) => (
         <NavButton {...route} />
     ))}
 </nav>
 
-<style lang="less">
-    @import "@styles/declarations.less";
+<style lang="less" define:vars={{width, backgroundColor, darkBackgroundColor}}>
     nav {
-        background-color: @logoPurple;
-        width: 100%;
+        background-color: var(--backgroundColor);
+        width: var(--width);
         height: 4rem;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: flex-start;
         align-content: center;
     }
 
     :global(.dark) {
         nav {
-            background-color: @accent2a;
+            background-color: var(--darkBackgroundColor);
         }
     }
 </style>

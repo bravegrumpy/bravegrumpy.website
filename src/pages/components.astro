@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Navigation from "@/components/Navigation.astro";
-import UIButton from "@/components/UIButton.astro";
-import PageTitle from "@/components/PageTitle.svelte";
-import Header from "@/components/Header.astro";
+import Logo from "@components/Logo.svelte";
+import Navigation from "@components/Navigation.astro";
+import PageTite from "@components/PageTitle.svelte";
 
+import { navigation } from "@scripts/navigation.js";
 
 const pageTitle = "Creating Components";
 ---
@@ -12,10 +12,86 @@ const pageTitle = "Creating Components";
 <BaseLayout pageTitle={pageTitle}>
     <p>This is a list of various components that I've made. I'm using it to be able to visually see the changes I'm making.</p>
 
+    <style lang="less">
+        @import "@styles/declarations.less";
+        /* Container to hold all elements */
+        .container {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            padding-top: 50px; /* Add space to avoid overlap with top navigation */
+            background-color: #d8b8ff;
+        }
+
+        /* Top bar containing the navigation buttons */
+        .top-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #d8b8ff; /* Light purple background */
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .top-bar .nav-item {
+            padding: 10px 20px;
+            font-weight: bold;
+            border: 2px solid #6c3483; /* Darker purple border */
+            background-color: #fff; /* White background */
+            color: #6c3483;
+            border-radius: 8px;
+        }
+
+        /* Div to hold content on top of two other divs */
+        .middle-box {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            padding: 20px;
+            background-color: #e6e6fa; /* Soft lavender background */
+            color: #333;
+            border: 2px solid #6c3483; /* Darker purple border */
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Bottom bar containing the lower navigation buttons */
+        .bottom-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #6c3483; /* Darker purple background */
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+
+        .bottom-bar .nav-item {
+            padding: 10px 20px;
+            font-weight: bold;
+            border: 2px solid #fff;
+            background-color: #fff; /* White background */
+            color: #6c3483;
+            border-radius: 8px;
+        }
+    </style>
     <div class="container">
-        <Header />
-        <UIButton icon="hugeicons:github"/>
-        <PageTitle />
+        <div class="top-bar">
+            <Logo />
+            <Navigation props={{ routes:[
+                {href: '#', text: 'home', className: 'default'}
+            ]}} width="auto"/>
+        </div>
+        
+        <div class="middle-box">
+            <h2>Home</h2>
+            <p>Welcome to the homepage. Click on links to explore.</p>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="nav-item">Home</div>
+            <div class="nav-item">Writing</div>
+            <div class="nav-item">Links</div>
+            <div class="nav-item">Archive</div>
+        </div>
     </div>
-    <p>{Astro.request.url}</p>
 </BaseLayout>
