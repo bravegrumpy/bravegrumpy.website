@@ -24,7 +24,8 @@
 	"devDependencies": {
 		"@iconify-json/game-icons": "^1.2.0",
 		"@iconify-json/hugeicons": "^1.2.1",
-		"@iconify-json/simple-icons": "^1.2.10"
+		"@iconify-json/simple-icons": "^1.2.10",
+		"less": "^4.2.0"
 	},
 	"overrides": {
 		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.6"
