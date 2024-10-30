@@ -12,15 +12,6 @@ import svelte from "@astrojs/svelte";
 
 export default defineConfig({
   site: "https://new.bravegrumpy.com",
-  integrations: [
-        sitemap(), 
-        icon({
-            include: {
-                game-icons: ["*"],
-                simple-icons: ["*"],
-                hugeicons: ["*"],
-            },
-        }), 
-        svelte(),
-        ],
+  integrations: [ sitemap(), icon(), svelte()],
+  output: "prerender"
 });
