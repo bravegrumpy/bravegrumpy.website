@@ -1,23 +1,39 @@
 ---
-let { 
+import { colors } from "@scripts/data.js";
+
+
+const { 
     className, 
     href, 
     text,
-    defaultBackgroundColor = '#6e34a2',
-    defaultColor = '#d2c8ff',
-    defaultActiveColor = '#d1dcff',
+    palette = {
+        defaultBackgroundColor: colors.bravegrumpy.brand1,
+        defaultColor: colors.bravegrumpy.accent1a,
+        defaultActiveColor: colors.bravegrumpy.highlight1,
+        darkBackgroundColor: colors.bravegrumpy.accent1a,
+        darkDefaultColor: colors.bravegrumpy.logoPurple,
+        darkActiveColor: colors.bravegrumpy.brand1
+    },
 } = Astro.props;
+
+const defaultBackgroundColor = palette["defaultBackgroundColor"];
+const defaultColor = palette["defaultColor"];
+const defaultActiveColor = palette["defaultActiveColor"];
+const darkBackgroundColor = palette["darkBackgroundColor"];
+const darkDefaultColor = palette["darkDefaultColor"];
+const darkActiveColor = palette["darkActiveColor"];
+
 ---
 <a class=`navButton ${className}` href={href}>{text}</a>
 
-<style lang="less" define:vars={{defaultBackgroundColor, defaultColor, defaultActiveColor}}>
+<style lang="less" define:vars={{defaultBackgroundColor, defaultColor, defaultActiveColor, darkBackgroundColor, darkDefaultColor,  darkActiveColor}}>
     @import "@styles/declarations.less";
 
     .navButton {
         padding: 0.5rem 1rem;
         border-radius: @borderRadius;
         border: @borders[button];
-        background-color: var(--defaultbackgroundColor);
+        background-color: var(--defaultBackgroundColor);
         text-decoration: none;
         height: fit-content;
         align-self: center;
@@ -31,21 +47,21 @@ let {
     }
 
     .navButton.active {
-        color: @highlight1;
+        color: var(--defaultActiveColor);
         .fonts.navMenuActive(@size: 1rem;);
     }
 
     :global(.dark) {
         .navButton {
-            background-color: @accent1a;
+            background-color: var(--darkBackgroundColor);
         }
 
         .navButton.default {
-            color: @logoPurple;
+            color: var(--darkDefaultColor)
         }
 
         .navButton.active {
-            color: @brand1;
+            color: var(--darkActiveColor);
         }
     }
 </style>

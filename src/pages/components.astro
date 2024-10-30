@@ -18,6 +18,15 @@ navigation["backgroundColor"] = colors.bravegrumpy.logoPurple;
 navigation["darkBackgroundColor"] = colors.bravegrumpy.accent2a;
 navigation["width"] = "500px";
 
+const buttonPalette = {
+    defaultBackgroundColor: colors.bravegrumpy.accent1a,
+    defaultColor: colors.bravegrumpy.logoPurple,
+    defaultActiveColor: colors.bravegrumpy.brand1,
+    darkBackgroundColor: colors.bravegrumpy.brand1,
+    darkDefaultColor: colors.bravegrumpy.accent1a,
+    darkActiveColor: colors.bravegrumpy.highlight1
+}
+
 
 const pageTitle = "Creating Components";
 ---
@@ -98,7 +107,8 @@ const pageTitle = "Creating Components";
     <div class="header">
         <div class="top-bar">
             <Logo />
-            <NavButton className="default" text="Home" href="#" backgroundColor={colors.bravegrumpy.accent1a}/>
+            <NavButton className="default" text="Home" href="#"
+                palette={buttonPalette}/>
             <div class="nav-item">Writing</div>
             <div class="nav-item">Links</div>
             <div class="nav-item">Archive</div>
