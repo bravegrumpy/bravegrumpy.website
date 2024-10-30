@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
-import awsAmplifyfrom 'astro-aws-amplify';
+import awsAmplify from 'astro-aws-amplify';
 
 import sitemap from "@astrojs/sitemap";
 
@@ -15,5 +15,5 @@ export default defineConfig({
   site: "https://new.bravegrumpy.com",
   integrations: [ sitemap(), icon(), svelte()],
   output: "server",
-  adapter: awsAmplifyfrom(),
+  adapter: awsAmplify(),
 });
