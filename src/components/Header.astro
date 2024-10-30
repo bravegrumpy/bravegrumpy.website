@@ -2,21 +2,23 @@
 import Logo from './Logo.svelte';
 import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
+import { Image } from 'astro:assets';
 
 import { navigation } from "@scripts/navigation.js";
 ---
 <header>
     <div class="logo">
         <Logo size={"105rem"}>
-            <img
+            <Image
                 src="/favicon.png"
-                alt="BraveGrumpy logo"
+                alt="BraveGrumpy Logo"
                 slot="image"
-                width="110px"
+                width="110"
                 style="border-radius: 5px"
             />
             <ThemeSwitch slot="switch" />
         </Logo>
+        <Navigation items={navigation} />
     </div>
     <nav class="nav">
         <a href="/">home</a>
