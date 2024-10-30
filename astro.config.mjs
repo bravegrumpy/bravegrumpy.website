@@ -12,7 +12,7 @@ import svelte from "@astrojs/svelte";
 
 
 export default defineConfig({
-  site: "*",
+  site: "https://bravegrumpy.com",
   integrations: [ sitemap(), icon(), svelte()],
   output: 'server',
   adapter: awsAmplify(),
