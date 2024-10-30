@@ -5,7 +5,6 @@ import UIButton from "@/components/UIButton.astro";
 import PageTitle from "@/components/PageTitle.svelte";
 import Header from "@/components/Header.astro";
 
-import { navigation } from "@/scripts/navigation.js";
 
 const pageTitle = "Creating Components";
 ---
@@ -14,8 +13,7 @@ const pageTitle = "Creating Components";
     <p>This is a list of various components that I've made. I'm using it to be able to visually see the changes I'm making.</p>
 
     <Header />
-    <Navigation props={navigation}/>
     <UIButton icon="hugeicons:github"/>
     <PageTitle />
-    <p>{import.meta.url}</p>
+    <p>{Astro.request.url}</p>
 </BaseLayout>
