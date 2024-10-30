@@ -14,6 +14,9 @@ const {
         darkDefaultColor: colors.bravegrumpy.logoPurple,
         darkActiveColor: colors.bravegrumpy.brand1
     },
+    style = {
+        fontSize: "1rem"
+    }
 } = Astro.props;
 
 const defaultBackgroundColor = palette["defaultBackgroundColor"];
@@ -23,10 +26,11 @@ const darkBackgroundColor = palette["darkBackgroundColor"];
 const darkDefaultColor = palette["darkDefaultColor"];
 const darkActiveColor = palette["darkActiveColor"];
 
+const fontSize = style["fontSize"]
 ---
 <a class=`navButton ${className}` href={href}>{text}</a>
 
-<style lang="less" define:vars={{defaultBackgroundColor, defaultColor, defaultActiveColor, darkBackgroundColor, darkDefaultColor,  darkActiveColor}}>
+<style lang="less" define:vars={{defaultBackgroundColor, defaultColor, defaultActiveColor, darkBackgroundColor, darkDefaultColor,  darkActiveColor, fontSize}}>
     @import "@styles/declarations.less";
 
     .navButton {
@@ -43,12 +47,12 @@ const darkActiveColor = palette["darkActiveColor"];
 
     .navButton.default {
         color: var(--defaultColor);
-        .fonts.navMenuDefault(@size: 1rem;);
+        .fonts.navMenuDefault(@size: var(--fontSize););
     }
 
     .navButton.active {
         color: var(--defaultActiveColor);
-        .fonts.navMenuActive(@size: 1rem;);
+        .fonts.navMenuActive(@size: var(--fontSize););
     }
 
     :global(.dark) {
