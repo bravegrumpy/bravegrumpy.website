@@ -1,17 +1,23 @@
 ---
-import "@styles/declarations.less"
-let { className, href, text } = Astro.props;
+let { 
+    className, 
+    href, 
+    text,
+    defaultBackgroundColor = '#6e34a2',
+    defaultColor = '#d2c8ff',
+    defaultActiveColor = '#d1dcff',
+} = Astro.props;
 ---
 <a class=`navButton ${className}` href={href}>{text}</a>
 
-<style lang="less">
+<style lang="less" define:vars={{defaultBackgroundColor, defaultColor, defaultActiveColor}}>
     @import "@styles/declarations.less";
 
     .navButton {
         padding: 0.5rem 1rem;
         border-radius: @borderRadius;
         border: @borders[button];
-        background-color: @brand1;
+        background-color: var(--defaultbackgroundColor);
         text-decoration: none;
         height: fit-content;
         align-self: center;
@@ -20,7 +26,7 @@ let { className, href, text } = Astro.props;
     }
 
     .navButton.default {
-        color: @accent1a;
+        color: var(--defaultColor);
         .fonts.navMenuDefault(@size: 1rem;);
     }
 
