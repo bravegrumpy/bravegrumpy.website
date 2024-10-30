@@ -4,6 +4,8 @@ import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
 
 import { navigation } from "@scripts/navigation.js";
+
+const currentPage = Astro.url.pathname;
 ---
 <header>
     <div class="logo">
@@ -17,8 +19,8 @@ import { navigation } from "@scripts/navigation.js";
             />
             <ThemeSwitch slot="switch" />
         </Logo>
-        <Navigation items={navigation} />
     </div>
+    <Navigation props={navigation} />
     <nav class="nav">
         <a href="/">home</a>
         <a href="/about/">about</a>
