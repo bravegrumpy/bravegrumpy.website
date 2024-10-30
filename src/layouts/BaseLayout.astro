@@ -34,6 +34,13 @@ const { pageTitle } = Astro.props;
     </head>
     <body>
        <Header />
+       <nav class="nav">
+        <a href="/">home</a>
+        <a href="/about/">about</a>
+        <a href="/blog/">blog</a>
+        <a href="/headers/">headers</a>
+        <a href="/components/">components</a>
+    </nav>
        <h1 transition:animate="slide">{pageTitle}</h1>
        <slot></slot>
        <Footer />
