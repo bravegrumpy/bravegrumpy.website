@@ -12,8 +12,10 @@ const pageTitle = "Creating Components";
 <BaseLayout pageTitle={pageTitle}>
     <p>This is a list of various components that I've made. I'm using it to be able to visually see the changes I'm making.</p>
 
-    <Header />
-    <UIButton icon="hugeicons:github"/>
-    <PageTitle />
+    <div class="container">
+        <Header />
+        <UIButton icon="hugeicons:github"/>
+        <PageTitle />
+    </div>
     <p>{Astro.request.url}</p>
 </BaseLayout>
