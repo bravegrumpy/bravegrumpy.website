@@ -1,3 +1,19 @@
+import lessToJs from 'less-vars-to-js';
+import fs from 'fs';
+
+const paletteBraveGrumpy = fs.readFileSync('src/styles/themes/colors/bravegrumpy.less', 'utf-8');
+
+const paletteSolarized = fs.readFileSync('src/styles/themes/colors/solarized.less', 'utf-8');
+
+const bravegrumpy = lessToJs(paletteBraveGrumpy, {resolveVariables: true, stripPrefix: true});
+
+const solarized = lessToJs(paletteSolarized, {resolveVariables: true, stripPrefix: true});
+
+export const colors = {
+    bravegrumpy: bravegrumpy,
+    solarized: solarized
+}
+
 export const navigation = {
     routes: [
         {

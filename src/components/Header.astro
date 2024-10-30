@@ -4,15 +4,16 @@ import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
 import '@styles/declarations.less';
 
-import { navigation } from '@scripts/navigation.js';
+import { navigation, colors } from '@/scripts/data.js';
 
 navigation.routes.forEach((route) => (
     route.className = Astro.url.pathname === route.href ? "active" : "default"
 ));
 
+
 navigation["width"] = '100%';
-navigation["backgroundColor"] = '#270d3e';
-navigation["darkBackgroundColor"] = '#d1dcff';
+navigation["backgroundColor"] = colors.bravegrumpy.logoPurple;
+navigation["darkBackgroundColor"] = colors.bravegrumpy.accent2a;
 
 ---
 <header>
