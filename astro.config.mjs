@@ -1,15 +1,13 @@
 import { defineConfig } from 'astro/config';
 
-import icon from 'astro-icon';
+
+import sitemap from "@astrojs/sitemap";
 
 
-import svelte from "@astrojs/svelte";
-
-
-import react from "@astrojs/react";
+import icon from "astro-icon";
 
 
 export default defineConfig({
   site: "https://new.bravegrumpy.com",
-  integrations: [],
+  integrations: [sitemap(), icon()],
 });

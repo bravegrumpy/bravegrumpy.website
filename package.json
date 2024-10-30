@@ -6,7 +6,9 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {
 		"@astrojs/rss": "^4.0.9",
-		"astro": "^4.16.7"
+		"@astrojs/sitemap": "^3.2.1",
+		"astro": "^4.16.7",
+		"astro-icon": "^1.1.1"
 	},
 	"scripts": {
 		"dev": "astro dev",
