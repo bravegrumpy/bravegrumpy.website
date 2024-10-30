@@ -5,6 +5,7 @@
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {
+		"@astro-aws/adapter": "^0.7.0",
 		"@astrojs/node": "^8.3.4",
 		"@astrojs/react": "^3.6.2",
 		"@astrojs/rss": "^4.0.9",
