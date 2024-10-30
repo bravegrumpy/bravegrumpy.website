@@ -7,3 +7,7 @@ export const navigation = {
         {href:"/components", text:"components", className:"default"},
     ],
 }
+
+export async function GET({ request}) {
+    return new Response(JSON.stringify(request.href));
+}
