@@ -29,5 +29,8 @@
 	},
 	"overrides": {
 		"@sveltejs/vite-plugin-svelte": "^4"
+	},
+	"devDependencies": {
+		"@aws-amplify/cli": "^12.13.0"
 	}
 }
