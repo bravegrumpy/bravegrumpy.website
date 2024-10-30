@@ -17,19 +17,19 @@ navigation["backgroundColor"] = colors.bravegrumpy.logoPurple;
 navigation["darkBackgroundColor"] = colors.bravegrumpy.accent2a;
 navigation["width"] = "500px";
 
+const color1 = colors.bravegrumpy.accent1a;
+
 const pageTitle = "Creating Components";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <p>This is a list of various components that I've made. I'm using it to be able to visually see the changes I'm making.</p>
 
-    <style>
-
+    <style define:vars{{ color1 }}>
         /* Container to hold all elements */
         .container {
             position: relative;
             width: 100%;
-            max-width: 800px;
             margin: 0 auto;
             padding-top: 50px; /* Add space to avoid overlap with top navigation */
             background-color: green;
