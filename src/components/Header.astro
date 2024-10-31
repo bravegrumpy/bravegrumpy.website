@@ -2,7 +2,10 @@
 import Logo from './Logo.svelte';
 import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
+import PageTitle from './PageTitle.svelte';
 import '@styles/declarations.less';
+
+import { Image } from 'astro:assets';
 
 import { navigation, colors } from '@/scripts/data.js';
 
@@ -23,21 +26,25 @@ navigation["width"] = '100%';
 navigation["backgroundColor"] = colors.bravegrumpy.logoPurple;
 navigation["darkBackgroundColor"] = colors.bravegrumpy.accent2a;
 navigation["justifyContent"] = "flex-start";
+
+const { pageTitle, pageSubtitle } = Astro.props;
 ---
-<header>
+<header class="header">
     <div class="logo">
         <Logo size={"105rem"}>
-            <img
+            <Image
                 src="/favicon.png"
-                alt="BraveGrumpy Logo"
+                alt="BravegrumpyLogo"
                 slot="image"
-                width="110"
+                width=105
+                height=105 
                 style="border-radius: 5px"
             />
             <ThemeSwitch slot="switch" />
         </Logo>
     </div>
     <Navigation props={navigation} />
+    <PageTitle pageTitle={pageTitle} pageSubtitle={pageSubtitle}/>
 </header>
 
 
@@ -45,20 +52,22 @@ navigation["justifyContent"] = "flex-start";
     @import "../styles/declarations.less";
     
     :global(.dark) {
-        header {
+        .header {
+            background-color: @logoPurple;
             .logo {
                 background-color: @logoPurple;
             }
         }
     }
 
-    header {
+    .header {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 0px;
+        gap: 1rem;
         width: 100%;
+        background-color: @accent1a;
         
         .logo {
             display: flex;

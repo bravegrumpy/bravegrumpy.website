@@ -1,11 +1,11 @@
 <script>
-    let {pageTitle='Page Title', subtitle='Placeholder subtitle'} = $props();
+    let {pageTitle='Page Title', pageSubtitle='Placeholder subtitle'} = $props();
 </script>
 
 
 <div class="pageTitle">
     <h2>{pageTitle}</h2>
-    <p>{subtitle}</p>
+    <p>{pageSubtitle}</p>
 </div>
 
 <style lang="less">

@@ -2,12 +2,13 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 const pageTitle = "About Me";
+const pageSubtitle = "Trivia about me, the author"
+
 const identity = {
     firstName: "BraveGrumpy",
     country: 'USA, unfortunately',
     occupation: 'engineer',
     hobbies: ["3D Graphics", "photography", "website design", "boardgames", "painting", "logic puzzles"]
-
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs","python", "Data Analysis", "CAD", "XML", "SQL", "AWS"]
@@ -25,7 +26,7 @@ const textCase = "uppercase"
         {pageTitle} | BraveGrumpy
     </title>
 </head>
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
     <h1>{pageTitle}</h1>
     <style define:vars={{skillColor, fontWeight, textCase}} lang="less">
         @import '@styles/declarations.less';
