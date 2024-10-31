@@ -3,16 +3,17 @@
 </script>
 
 <div class="logo">
-    <div class="images">
+    <div class="images">        
         <slot name="image">
-        <img 
-            src='/favicon.png'
-            width={size}
-            height={size}
-            alt="BraveGrumpy logo"
-        />
+            <img 
+                src='/favicon.png'
+                width={size}
+                height={size}
+                alt="BraveGrumpy logo"
+            />
         </slot>
         <slot name="switch"></slot>
+
     </div>
     <div class="title">
         <h1>BraveGrumpy</h1>
