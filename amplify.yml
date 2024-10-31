@@ -10,7 +10,8 @@ frontend:
     build:
       commands: 
         - npm run build
-        - echo '{"files":{"index.html":{"type":"file"}}}' > dist/deploy-manifest.json
+        - mkdir -p .amplify-hosting
+        - echo '{"files":{"index.html":{"type":"file"}}}' > .amplify-hosting/deploy-manifest.json
         - ls -la dist
   artifacts:
     baseDirectory: ./dist
