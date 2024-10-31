@@ -8,12 +8,12 @@ import icon from "astro-icon";
 
 import svelte from "@astrojs/svelte";
 
-import awsAmplify from 'astro-aws-amplify';
+
+import react from "@astrojs/react";
 
 
 export default defineConfig({
     site: "https://bravegrumpy.com",
-    integrations: [ sitemap(), icon(), svelte()],
-    adapter: awsAmplify(),
-    output: 'server',
+    integrations: [sitemap(), icon(), svelte(), react()],
+    output: 'static',
 });
