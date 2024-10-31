@@ -4,6 +4,8 @@
 
 # build artifacts
 node_modules
+dist
+build
 
 # scratch files and directories
 scratch*
