@@ -5,12 +5,10 @@ import Navigation from './Navigation.astro';
 import PageTitle from './PageTitle.svelte';
 import '@styles/declarations.less';
 
-import { Image } from 'astro:assets';
-
 import { navigation, colors } from '@/scripts/data.js';
 
 navigation.routes.forEach((route) => (
-    route.className = Astro.url.pathname === route.href ? "active" : "default",
+    route.className = "default",
     route.palette = {
         defaultBackgroundColor: colors.bravegrumpy.brand1,
         defaultColor: colors.bravegrumpy.accent1a,
@@ -32,7 +30,7 @@ const { pageTitle, pageSubtitle } = Astro.props;
 <header class="header">
     <div class="logo">
         <Logo size={"105rem"}>
-            <Image
+            <img
                 src="/favicon.png"
                 alt="BravegrumpyLogo"
                 slot="image"
