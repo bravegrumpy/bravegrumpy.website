@@ -3,14 +3,18 @@ frontend:
   phases:
     preBuild:
       commands:
+        - rm -rf node_modules
+        - nvm install 20
+        - nvm use 20
         - npm ci
     build:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: /dist
+    baseDirectory: dist
     files:
       - '**/*'
+    disableHashing: true
   cache:
     paths:
       - node_modules/**/*
