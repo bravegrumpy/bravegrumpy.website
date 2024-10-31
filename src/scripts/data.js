@@ -45,5 +45,10 @@ export const navigation = {
             text:"components", 
             className: "default"
         },
+        {
+            href:"/tags", 
+            text:"tags", 
+            className: "default"
+        },
     ],
 }
