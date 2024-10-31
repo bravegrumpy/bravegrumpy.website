@@ -5,11 +5,6 @@
 # build artifacts
 build
 node_modules
-node_modules/**
-.npm
-dist
-.amplify_outputs
-.amplify-hosting
 
 # scratch files and directories
 scratch*
