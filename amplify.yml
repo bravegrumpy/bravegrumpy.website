@@ -6,36 +6,14 @@ frontend:
         - rm -rf node_modules
         - nvm install 20
         - nvm use 20
-        - npm ci
+        - npm install
     build:
       commands:
         - npm run build
-        # Create the .amplify-hosting directory and manifest
-        - |
-          mkdir -p .amplify-hosting
-          echo '{
-            "version": 1,
-            "appRoot": "dist",
-            "framework": "static",
-            "files": {
-              "**/*": {
-                "type": "static"
-              },
-              "index.html": {
-                "type": "static",
-                "headers": {
-                  "Cache-Control": "no-cache"
-                }
-              }
-            }
-          }' > .amplify-hosting/deploy-manifest.json
-        - ls -la dist
-        - ls -la .amplify-hosting
   artifacts:
     baseDirectory: dist
     files:
       - '**/*'
   cache:
     paths:
-      - 'node_modules/**/*'
-      - '.npm-cache/**/*'
+      - node_modules/**/*
