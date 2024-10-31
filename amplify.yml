@@ -3,6 +3,9 @@ frontend:
   phases:
     preBuild: 
       commands:
+        - rm -rf node_modules
+        - nvm install 20
+        - nvm use  20
         - npm ci
     build:
       commands: 
@@ -12,5 +15,4 @@ frontend:
     files:
       - '**/*'
     cache:
-      paths:
-        - node_modules/**/*
+      paths: []
