@@ -5,8 +5,7 @@ frontend:
       commands:
         - npm ci
     build:
-      commands:
-        - python -m http.server 80
+      commands: []
   artifacts:
     baseDirectory: /
     files:
