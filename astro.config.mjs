@@ -2,10 +2,7 @@ import { defineConfig } from 'astro/config';
 
 import sitemap from "@astrojs/sitemap";
 
-
 import icon from "astro-icon";
-
-
 
 import react from "@astrojs/react";
 
@@ -17,5 +14,4 @@ export default defineConfig({
     outDir: 'dist',
     site: "https://bravegrumpy.com",
     integrations: [sitemap(), icon(), react(), svelte()],
-    output: 'static',
 });
