@@ -15,6 +15,10 @@ export const colors = {
 }
 
 export const navigation = {
+    width: "100%",
+    backgroundColor: colors.bravegrumpy.brand1,
+    darkBackgroundColor: colors.bravegrumpy.accent1a,
+    justifyContent: "flex-start",
     routes: [
         {
             href:"/", 

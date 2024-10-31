@@ -1,0 +1,121 @@
+---
+import HeadersLayout from "@/layouts/HeadersLayout.astro"
+
+const pageTitle = "Layered Div Example Without Overlap"
+---
+<HeadersLayout pageTitle={pageTitle}>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layered Div Example Without Overlap</title>
+    <style>
+        /* Container to hold all elements */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            gap: 30px; /* Add space between elements */
+            padding: 20px; /* Add space to avoid overlap with top navigation */
+            box-sizing: border-box;
+        }
+
+        /* Top bar containing the navigation buttons */
+        .top-bar {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            background-color: #d8b8ff; /* Light purple background */
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .top-bar .nav-item {
+            padding: 10px 20px;
+            font-weight: bold;
+            border: 2px solid #6c3483; /* Darker purple border */
+            background-color: #fff; /* White background */
+            color: #6c3483;
+            border-radius: 8px;
+        }
+
+        /* Div to hold content on top of two other divs */
+        .middle-box {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background: linear-gradient(135deg, #d8b8ff, #c8a0f0, #b06ce0, #8a3ba8, #6c3483, #371b51); /* Metallic-like gradient */
+            border-radius: 16px;
+            box-shadow: 
+                4px 4px 10px rgba(0, 0, 0, 0.4), /* Shadow to add depth */
+                -4px -4px 12px rgba(255, 255, 255, 0.5); /* Bright highlight to add shine */
+            border: 1px solid #c6c6c6; /* Subtle metallic border */
+            color: #333;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .middle-box h2 {
+            font-weight: bold;
+            font-size: 1.8em;
+            margin: 0 0 10px 0;
+            color: #222;
+            text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7), -1px -1px 2px rgba(0, 0, 0, 0.2); /* Reflective text */
+        }
+
+        .middle-box p {
+            font-size: 1em;
+            line-height: 1.4em;
+            color: #444;
+        }
+
+        /* Bottom bar containing the lower navigation buttons */
+        .bottom-bar {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            background-color: #6c3483; /* Darker purple background */
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .bottom-bar .nav-item {
+            padding: 10px 20px;
+            font-weight: bold;
+            border: 2px solid #fff;
+            background-color: #fff; /* White background */
+            color: #6c3483;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <div class="nav-item">Home</div>
+            <div class="nav-item">Writing</div>
+            <div class="nav-item">Links</div>
+            <div class="nav-item">Archive</div>
+            <div class="nav-item">Contact</div>
+        </div>
+        
+        <div class="middle-box">
+            <h2>Home</h2>
+            <p>Welcome to the homepage. Click on links to explore.</p>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="nav-item">Home</div>
+            <div class="nav-item">Writing</div>
+            <div class="nav-item">Links</div>
+            <div class="nav-item">Archive</div>
+        </div>
+    </div>
+</body>
+</html>
+</HeadersLayout>

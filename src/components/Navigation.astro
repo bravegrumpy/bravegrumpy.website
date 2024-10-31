@@ -4,9 +4,10 @@ import NavButton from "./NavButton.astro";
 
 const {props} = Astro.props;
 
-const width = props.width;
-const backgroundColor = props.backgroundColor;
-const darkBackgroundColor = props.darkBackgroundColor;
+let width = props.width;
+let backgroundColor = props.backgroundColor;
+let darkBackgroundColor = props.darkBackgroundColor;
+let justifyContent = props.justifyContent;
 
 ---
 <nav class="navigaion">
@@ -15,7 +16,7 @@ const darkBackgroundColor = props.darkBackgroundColor;
     ))}
 </nav>
 
-<style lang="less" define:vars={{width, backgroundColor, darkBackgroundColor}}>
+<style lang="less" define:vars={{width, backgroundColor, darkBackgroundColor, justifyContent}}>
     nav {
         background-color: var(--backgroundColor);
         width: var(--width);
@@ -23,8 +24,9 @@ const darkBackgroundColor = props.darkBackgroundColor;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: var(--justifyContent);
         align-content: center;
+        gap: 0.1rem;
     }
 
     :global(.dark) {

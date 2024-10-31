@@ -7,14 +7,22 @@ import '@styles/declarations.less';
 import { navigation, colors } from '@/scripts/data.js';
 
 navigation.routes.forEach((route) => (
-    route.className = Astro.url.pathname === route.href ? "active" : "default"
+    route.className = Astro.url.pathname === route.href ? "active" : "default",
+    route.palette = {
+        defaultBackgroundColor: colors.bravegrumpy.brand1,
+        defaultColor: colors.bravegrumpy.accent1a,
+        defaultActiveColor: colors.bravegrumpy.highlight1,
+        darkBackgroundColor: colors.bravegrumpy.accent1a,
+        darkDefaultColor: colors.bravegrumpy.logoPurple,
+        darkActiveColor: colors.bravegrumpy.brand1
+    }
 ));
 
 
 navigation["width"] = '100%';
 navigation["backgroundColor"] = colors.bravegrumpy.logoPurple;
 navigation["darkBackgroundColor"] = colors.bravegrumpy.accent2a;
-
+navigation["justifyContent"] = "flex-start";
 ---
 <header>
     <div class="logo">
