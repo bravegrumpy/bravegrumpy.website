@@ -3,7 +3,6 @@
 **/.idea/
 
 # build artifacts
-build
 node_modules
 
 # scratch files and directories
