@@ -12,6 +12,6 @@ import svelte from "@astrojs/svelte";
 
 export default defineConfig({
     outDir: 'dist',
-    site: "https://bravegrumpy.com",
+    site: "https://new.bravegrumpy.com",
     integrations: [sitemap(), icon(), react(), svelte()],
 });
