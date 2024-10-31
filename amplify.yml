@@ -17,7 +17,7 @@ frontend:
             "routes": [
               {
               "route": "/*",
-              "serveDirectory": "/"
+              "serveDirectory": "dist/"
               }
             ],
             "files": [
@@ -38,7 +38,7 @@ frontend:
         - ls -la dist 
         - cat dist/deploy-manifest.json
   artifacts:
-    baseDirectory: ./dist
+    baseDirectory: dist/
     files:
       - '**/*'
   cache: 
