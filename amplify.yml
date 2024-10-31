@@ -10,11 +10,32 @@ frontend:
     build:
       commands:
         - npm run build
+        # Create the .amplify-hosting directory and manifest
+        - |
+          mkdir -p .amplify-hosting
+          echo '{
+            "version": 1,
+            "appRoot": "dist",
+            "framework": "static",
+            "files": {
+              "**/*": {
+                "type": "static"
+              },
+              "index.html": {
+                "type": "static",
+                "headers": {
+                  "Cache-Control": "no-cache"
+                }
+              }
+            }
+          }' > .amplify-hosting/deploy-manifest.json
+        - ls -la dist
+        - ls -la .amplify-hosting
   artifacts:
     baseDirectory: dist
     files:
       - '**/*'
-    disableHashing: true
   cache:
     paths:
-      - node_modules/**/*
+      - 'node_modules/**/*'
+      - '.npm-cache/**/*'
