@@ -30,12 +30,12 @@ navigation["justifyContent"] = "flex-start";
 
 <header class="header">
     <div class="logo">
-        <Logo size={"105rem"}>
+        <Logo client:load size={"105rem"}>
             <ThemeSwitch slot="switch"/>
         </Logo>
     </div>
     <Navigation props={navigation} />
-    <PageTitle pageTitle={pageTitle} pageSubtitle={pageSubtitle}/>
+    <PageTitle client:load pageTitle={pageTitle} pageSubtitle={pageSubtitle}/>
 </header>
 
 
