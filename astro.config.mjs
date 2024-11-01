@@ -1,3 +1,9 @@
 import { defineConfig } from "astro/config";
 
-export default defineConfig({});
+import svelte from "@astrojs/svelte";
+
+import icon from "astro-icon";
+
+export default defineConfig({
+  integrations: [svelte(), icon()]
+});
