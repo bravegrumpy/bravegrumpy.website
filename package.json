@@ -1,6 +1,6 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.2.36-38",
+	"version": "0.2.36-39",
 	"description": "BraveGrumpy personal website.",
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
@@ -8,10 +8,10 @@
 		"astro": "^4.16.8"
 	},
 	"scripts": {
-        "dev": "astro dev",
-        "start": "astro dev",
-        "build": "astro build",
-        "preview": "astro preview",
-        "astro": "astro"
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
 	}
 }
