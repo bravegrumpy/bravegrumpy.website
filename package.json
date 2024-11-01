@@ -12,7 +12,9 @@
 		"helmet": "^8.0.0"
 	},
 	"scripts": {
-		"start": "node server.js",
-		"run": "node server.js"
+        "dev": "python -m http.server 8000",
+        "serve": "python -m http.server 80",
+        "start": "python -m http.server 80",
+        "production": "NODE_ENV=production python -m http.server 80"
 	}
 }
