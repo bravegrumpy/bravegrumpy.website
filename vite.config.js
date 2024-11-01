@@ -5,12 +5,6 @@ import expressApp from './server';
 export default defineConfig({
     plugins: [
         svelte(),
-        {
-            name: 'custom-express-middleware',
-            configureServer(server) {
-                server.middlewares.use(expressApp);
-            }
-        }
     ],
     build: {
         outDir: 'build',

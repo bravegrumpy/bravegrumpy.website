@@ -19,3 +19,4 @@ export default function getFilenames(currentDirectory=defaultDirectory, fileType
 
 export const htmlFiles = getFilenames();
 console.log(htmlFiles.length);
+htmlFiles.forEach(file => console.log(file));
