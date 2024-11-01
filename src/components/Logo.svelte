@@ -4,14 +4,12 @@
 
 <div class="logo">
     <div class="images">        
-        <slot name="image">
-            <img 
-                src='/favicon.png'
-                width={size}
-                height={size}
-                alt="BraveGrumpy logo"
-            />
-        </slot>
+        <img 
+            src='/favicon.png'
+            width={size}
+            height={size}
+            alt="BraveGrumpy logo"
+        />
         <slot name="switch"></slot>
 
     </div>

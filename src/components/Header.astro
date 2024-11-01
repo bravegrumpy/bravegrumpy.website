@@ -2,6 +2,7 @@
 import Logo from './Logo.svelte';
 import Navigation from './Navigation.astro';
 import PageTitle from './PageTitle.svelte';
+import ThemeSwitch from './ThemeSwitch.astro';
 import '@styles/declarations.less';
 
 import { navigation, colors } from '@/scripts/data.js';
@@ -30,15 +31,7 @@ navigation["justifyContent"] = "flex-start";
 <header class="header">
     <div class="logo">
         <Logo size={"105rem"}>
-            <img
-                src="/favicon.png"
-                alt="BravegrumpyLogo"
-                slot="image"
-                width=105
-                height=105 
-                style="border-radius: 5px"
-            />
-            <slot name="switch" slot="switch"></slot>
+            <ThemeSwitch slot="switch"/>
         </Logo>
     </div>
     <Navigation props={navigation} />

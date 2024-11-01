@@ -2,7 +2,6 @@
 import { Seo } from "astro-seo-meta";
 import Header from '@components/Header.astro';
 import Footer from '@tutorial/Footer.astro';
-import ThemeSwitch from "@/components/ThemeSwitch.astro";
 import '@styles/global.less';
 
 const { pageTitle, pageSubtitle } = Astro.props;
@@ -36,9 +35,7 @@ const { pageTitle, pageSubtitle } = Astro.props;
             pageTitle={pageTitle} 
             pageSubtitle={pageSubtitle}
             active={Astro.url.pathname}
-        >
-            <ThemeSwitch slot="switch" />
-       </Header>
+        />
        <slot></slot>
        <Footer />
        <script>
