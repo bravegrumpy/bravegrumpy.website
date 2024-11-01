@@ -46,9 +46,12 @@ topNav.routes.forEach((route) => (
 navigation["width"] = "100%";
 
 const pageTitle = "Creating Components";
+const pageSubtitle = "A place for me to create components from modular parts, and see what  I'm doing, before  applying it to the whole page"
+
+const  currentPath = "/components";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} currentPath={currentPath}>
     <p>This is a list of various components that I've made. I'm using it to be able to visually see the changes I'm making.</p>
 
     <hr />

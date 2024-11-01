@@ -3,9 +3,10 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 
 const pageTitle = "Home";
 const  pageSubtitle = "The the main entrance to my blog";
+const currentPath = "/";
 ---
 
-<BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
+<BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} currentPath={currentPath}>
     <h2>My awesome blog subtitle</h2>
     <p>This is my amazing subtitle</p>
     <p>There is stuff here. I plan on adding stuff over time.</p>

@@ -33,7 +33,6 @@
 
         p {
             .fonts.pageSubtitle(@size: 1.618rem);
-            line-height: 1rem;
             padding: 0;
             margin: 1rem;
         }

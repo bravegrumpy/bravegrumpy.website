@@ -5,7 +5,7 @@ import Header from '@components/Header.astro';
 import Footer from '@tutorial/Footer.astro';
 import '@styles/global.less';
 
-const { pageTitle, pageSubtitle } = Astro.props;
+const { pageTitle, pageSubtitle, currentPath='' } = Astro.props;
 ---
 <html lang="en-us">
     <head>
@@ -40,7 +40,7 @@ const { pageTitle, pageSubtitle } = Astro.props;
        <Header 
             pageTitle={pageTitle} 
             pageSubtitle={pageSubtitle}
-            active={Astro.url.pathname}
+            active={currentPath}
         />
        <slot></slot>
        <Footer />
