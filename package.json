@@ -1,6 +1,6 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.2.37-1",
+	"version": "0.2.37-2",
 	"description": "BraveGrumpy personal website.",
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
@@ -12,9 +12,9 @@
 		"helmet": "^8.0.0"
 	},
 	"scripts": {
-        "dev": "python -m http.server 8000",
-        "serve": "python -m http.server 80",
-        "start": "python -m http.server 80",
-        "production": "NODE_ENV=production python -m http.server 80"
+		"dev": "python -m http.server 8000",
+		"serve": "python -m http.server 80",
+		"start": "python -m http.server 80",
+		"production": "NODE_ENV=production python -m http.server 80"
 	}
 }
