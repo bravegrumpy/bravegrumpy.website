@@ -1,0 +1,27 @@
+{
+  "name": "bravegrumpy.website",
+  "version": "0.0.1-2",
+  "description": "Experimental branch of the bravegrumpy website. I nuked everything and started over.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo 'Test is happening'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bravegrumpy/bravegrumpy.website.git"
+  },
+  "keywords": [
+    "experiemtnal-branch",
+    "blog",
+    "personal-website",
+    "fiction",
+    "coding-playground",
+    "portfolio"
+  ],
+  "author": "Robin L. Ortner (BraveGrumpy)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bravegrumpy/bravegrumpy.website/issues"
+  },
+  "homepage": "https://github.com/bravegrumpy/bravegrumpy.website#readme"
+}
