@@ -1,13 +1,13 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.2.36-35",
+	"version": "0.2.36-36",
 	"description": "BraveGrumpy personal website.",
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {},
 	"scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "echo \"Error: no build specified\" && exit 1"
-    },
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "echo \"Error: no build specified\" && exit 1"
+	},
 	"devDependencies": {}
 }
