@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - 'echo "instaling dependancies..."'
+        - 'npm ci'
+    build:
+      commands:
+        - ""
+  artifacts:
+    baseDirectory: /
+    files: 
+      - '**/*'
+  cache:
+    paths:
+      - 'node_modules/**/*'
