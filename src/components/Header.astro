@@ -1,14 +1,15 @@
 ---
 import Logo from './Logo.svelte';
-import ThemeSwitch from './ThemeSwitch.astro';
 import Navigation from './Navigation.astro';
 import PageTitle from './PageTitle.svelte';
 import '@styles/declarations.less';
 
 import { navigation, colors } from '@/scripts/data.js';
 
+const { pageTitle, pageSubtitle, active } = Astro.props;
+
 navigation.routes.forEach((route) => (
-    route.className = "default",
+    route.className = active === route.href ? "active" : "",
     route.palette = {
         defaultBackgroundColor: colors.bravegrumpy.brand1,
         defaultColor: colors.bravegrumpy.accent1a,
@@ -24,9 +25,8 @@ navigation["width"] = '100%';
 navigation["backgroundColor"] = colors.bravegrumpy.logoPurple;
 navigation["darkBackgroundColor"] = colors.bravegrumpy.accent2a;
 navigation["justifyContent"] = "flex-start";
-
-const { pageTitle, pageSubtitle } = Astro.props;
 ---
+
 <header class="header">
     <div class="logo">
         <Logo size={"105rem"}>
@@ -38,7 +38,7 @@ const { pageTitle, pageSubtitle } = Astro.props;
                 height=105 
                 style="border-radius: 5px"
             />
-            <ThemeSwitch slot="switch" />
+            <slot name="switch" slot="switch"></slot>
         </Logo>
     </div>
     <Navigation props={navigation} />
