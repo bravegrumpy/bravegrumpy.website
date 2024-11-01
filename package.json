@@ -6,10 +6,8 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {},
 	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview"
-	},
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "echo \"Error: no build specified\" && exit 1"
+    },
 	"devDependencies": {}
 }
