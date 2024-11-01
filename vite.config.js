@@ -1,10 +1,18 @@
 import { defineConfig } from "vite";
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import expressApp from './server';
+import { startServer } from "./server";
 
 export default defineConfig({
     plugins: [
         svelte(),
+        {
+            name: 'custom-express-middleware',
+            configureServer(server) {
+                server.middlewares.use(expressApp);
+                server.middlewares.use(startServer());
+            }
+        }
     ],
     build: {
         outDir: 'build',

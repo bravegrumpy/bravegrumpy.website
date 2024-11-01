@@ -7,7 +7,7 @@
 		"build": "vite build",
 		"preview": "vite preview --port 8000",
 		"optimize": "vite optimize",
-		"start": "node server.js"
+		"start": "vite run --mode production"
 	},
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",

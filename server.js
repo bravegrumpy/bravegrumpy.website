@@ -41,19 +41,12 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, root, 'index.html'));
 });
 
-
-app.listen(PORT, HOST, () => {
-    console.log(`Server is  running at http://${HOST}:${PORT}/`);
-});
-
-
-/*
 export async function startServer() {
     app.listen(PORT, HOST, () => {
         console.log(`Server is  running at http://${HOST}:${PORT}/`);
     }).on('close', () => {
         console.log('Server closed');
     });
-} */
+} 
 
 export default app;
