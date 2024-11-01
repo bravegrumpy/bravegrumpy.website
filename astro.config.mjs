@@ -4,6 +4,9 @@ import svelte from "@astrojs/svelte";
 
 import icon from "astro-icon";
 
+import sitemap from "@astrojs/sitemap";
+
 export default defineConfig({
-  integrations: [svelte(), icon()]
+    site: "https://new.bravegrumpy.com",
+    integrations: [svelte(), icon(), sitemap()]
 });

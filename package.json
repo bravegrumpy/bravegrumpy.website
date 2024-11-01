@@ -5,6 +5,8 @@
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {
+		"@astrojs/rss": "^4.0.9",
+		"@astrojs/sitemap": "^3.2.1",
 		"@astrojs/svelte": "^5.7.2",
 		"@iconify-json/hugeicons": "^1.2.1",
 		"@iconify-json/simple-icons": "^1.2.10",
