@@ -5,7 +5,7 @@ import Logo from "@/components/Logo.svelte";
 import PageTitle from "@/components/PageTitle.svelte";
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
 
-import { navigation, colors } from "@/scripts/data.js";
+import {  colors } from "@/scripts/data.js";
 
 
 let topNav = {
@@ -15,19 +15,34 @@ let topNav = {
     justifyContent: "flex-end",
     routes: [
         {
-            href: "#",
-            text: "Nav1",
-            className: "default"
+            href: "/",
+            text: "home",
+            className: ""
         },
         {
-            href: "#",
-            text: "Nav2",
-            className: "active"
+            href: '/about',
+            text: 'about',
+            className: ""
         },
         {
-            href: "#",
-            text: "Nav3",
-            className: "default"
+            href: '/blog',
+            text: 'blog',
+            className: ""
+        },
+        {
+            href: '/headers',
+            text: 'headers',
+            className: ""
+        },
+        {
+            href: '/components',
+            text: 'components',
+            className: ""
+        },
+        {
+            href: '/tags',
+            text: 'tags',
+            className: ""
         },
     ]
 }
@@ -43,7 +58,20 @@ topNav.routes.forEach((route) => (
     }
 ))
 
-navigation["width"] = "100%";
+let navigation = {
+    width: "100%",
+    backgroundColor: colors.bravegrumpy.logoPurple,
+    darkBackgroundColor: colors.bravegrumpy.accent1a,
+    justifyContent: "flex-start",
+    routes: [
+        {
+            href: '/',
+            text: "home",
+            className: "",
+        }
+    ]
+}
+
 
 const pageTitle = "Creating Components";
 const pageSubtitle = "A place for me to create components from modular parts, and see what  I'm doing, before  applying it to the whole page"
@@ -59,8 +87,12 @@ const  currentPath = "/components";
 
     <div class="container">
         <div class="top">
-            <Logo />
-            <Navigation props={topNav} />
+            <Logo id="top-logo">
+                <ThemeSwitch slot="switch" />
+            </Logo>
+            <div id="top-nav">
+                <Navigation props={topNav} />
+            </div>
         </div>
         <div class="middle">
             <PageTitle />
@@ -84,14 +116,28 @@ const  currentPath = "/components";
         margin: 0 auto;
         gap: 0rem;
         background-color: @accent1a;
+        border: 5px solid mediumaquamarine;
     }
     .top{
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100%;
         padding-bottom: 0px;
+        border: 5px solid mediumslateblue;
+
+        #top-nav{
+            padding-bottom: 5rem;
+            border: 5px solid yellow;
+            flex-basis: 100%;
+            flex-grow: 2;
+        }
+
+        #top-logo {
+            flex-basis: 50%;
+            flex-shrink: 2;
+        }
     }
     .middle{
         flex-basis: fit-content;
@@ -99,6 +145,7 @@ const  currentPath = "/components";
         top: 50%;
         left: 50%;
         transform: translate(80%, 50%);
+        border: 5px solid goldenrod;
     }
     .bottom{
         display: flex;
@@ -106,6 +153,7 @@ const  currentPath = "/components";
         align-items: stretch;
         justify-content: space-around;
         width: 100%;
+        border: 5px solid pink;
     }
 
     :global(.dark) {
