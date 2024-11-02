@@ -82,7 +82,7 @@ const  currentPath = "/components";
         align-items: flex-start;
         width: 100%;
         margin: 0 auto;
-        gap: 2rem;
+        gap: 0rem;
         background-color: @accent1a;
     }
     .top{
@@ -94,11 +94,11 @@ const  currentPath = "/components";
         padding-bottom: 0px;
     }
     .middle{
-        width: 30rem;
+        flex-basis: fit-content;
         position: absolute;
-        top: 100%;
+        top: 50%;
         left: 50%;
-        transform: translate(20%, -105%);
+        transform: translate(80%, 50%);
     }
     .bottom{
         display: flex;
@@ -118,6 +118,17 @@ const  currentPath = "/components";
         .middle{}
         .bottom{
             background-color: @accent2a;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .middle{
+            position: static;
+            top: 0px;
+            flex-basis: 100%;
+            width: 100%;
+            order: 3;
+            transform: translate(0, 0);
         }
     }
 </style>

@@ -21,20 +21,20 @@
         border: @borders[element];
         border-radius: @borderRadius;
         gap: 0;
-        padding: 1.25rem;
+        padding: 0 2rem;
         box-shadow: @boxShadowLight;
+        order: 3;
 
         h2 {
-            .fonts.pageTitle(@size: 2.617rem;);
-            line-height: 1rem;
+            .fonts.pageTitle(@size: 1.55rem;);
             padding: 0;
-            margin: 1rem;
+            margin: 0;
         }
 
         p {
-            .fonts.pageSubtitle(@size: 1.618rem);
+            .fonts.pageSubtitle(@size: 1.248rem);
             padding: 0;
-            margin: 1rem;
+            margin: 0;
         }
     }
 
