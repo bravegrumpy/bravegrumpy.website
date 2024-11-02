@@ -61,7 +61,6 @@ navigation["justifyContent"] = "flex-end";
     </div>
 </header>
 
-
 <style lang="less">
     @import '@styles/declarations.less';
 
@@ -128,10 +127,17 @@ navigation["justifyContent"] = "flex-end";
     }
 
     @media (max-width: 1200px) {
+        .container {
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            gap: 1.5rem;
+            padding-bottom: $gap;
+        }
         .middle{
-            position: static;
-            top: 0px;
-            flex-basis: 100%;
+            position: absolute;
+            top: 100%;
+            max-width: 100%;
             width: 100%;
             order: 3;
             transform: translate(0, 0);
@@ -140,6 +146,20 @@ navigation["justifyContent"] = "flex-end";
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
+            gap: 1.5rem;
+
+            #top-nav {
+                padding: $gap;
+                align-self: center;
+                border-radius: @borderRadius;
+                border: @borders[button] @brand1;
+            }
         }
+
+        .bottom {
+            display: none;
+        }
+
+        :global(.dark) {}
     }
 </style>
