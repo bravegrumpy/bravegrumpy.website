@@ -59,10 +59,7 @@ let subnav = {
                 <slot></slot>
             </Main>
             <Aside client:load>
-                <div slot="aside" class="aside">
-                    <h2>This is  some content</h2>
-                    <p>This is from the base layout</p>
-                </div>
+                <slot name="aside"></slot>
             </Aside>
         </main>
        <Footer />
