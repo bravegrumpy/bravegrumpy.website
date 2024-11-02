@@ -6,6 +6,7 @@ import Footer from '@tutorial/Footer.astro';
 import '@styles/global.less';
 import { colors } from '@scripts/data.js';
 import Main from '@components/svelte/Main.svelte';
+import Aside from '@components/svelte/Aside.svelte';
 
 const { pageTitle, pageSubtitle, currentPath='', routes=[] } = Astro.props;
 
@@ -57,6 +58,7 @@ let subnav = {
             <Main client:load >
                 <slot></slot>
             </Main>
+            <Aside client:load />
         </main>
        <Footer />
        <script>
