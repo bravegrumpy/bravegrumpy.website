@@ -7,67 +7,140 @@ import '@styles/declarations.less';
 
 import { navigation, colors } from '@/scripts/data.js';
 
-const { pageTitle, pageSubtitle, active } = Astro.props;
+const { 
+    pageTitle, 
+    pageSubtitle, 
+    active, 
+    subnav={
+        width: "100%",
+        backgroundColor: colors.bravegrumpy.logoPurple, 
+        darkBackgroundColor: colors.bravegrumpy.accent2a, 
+        routes:[]} 
+    } = Astro.props;
 
 navigation.routes.forEach((route) => (
     route.className = active === route.href ? "active" : "",
     route.palette = {
-        defaultBackgroundColor: colors.bravegrumpy.brand1,
-        defaultColor: colors.bravegrumpy.accent1a,
-        defaultActiveColor: colors.bravegrumpy.highlight1,
-        darkBackgroundColor: colors.bravegrumpy.accent1a,
-        darkDefaultColor: colors.bravegrumpy.logoPurple,
-        darkActiveColor: colors.bravegrumpy.brand1
+        defaultBackgroundColor: colors.bravegrumpy.accent1a,
+        defaultColor: colors.bravegrumpy.logoPurple,
+        defaultActiveColor: colors.bravegrumpy.brand1,
+        darkBackgroundColor: colors.bravegrumpy.brand1,
+        darkDefaultColor: colors.bravegrumpy.accent1a,
+        darkActiveColor: colors.bravegrumpy.highlight1
     }
 ));
 
 
 navigation["width"] = '100%';
-navigation["backgroundColor"] = colors.bravegrumpy.logoPurple;
-navigation["darkBackgroundColor"] = colors.bravegrumpy.accent2a;
-navigation["justifyContent"] = "flex-start";
+navigation["backgroundColor"] = colors.bravegrumpy.accent1a;
+navigation["darkBackgroundColor"] = colors.bravegrumpy.logoPurple;
+navigation["justifyContent"] = "flex-end";
 ---
 
-<header class="header">
-    <div class="logo">
-        <Logo client:load size={"105rem"}>
-            <ThemeSwitch slot="switch"/>
-        </Logo>
+<header>
+    <div class="container">
+        <div class="top">
+            <div id="top-logo">
+                <Logo>
+                    <ThemeSwitch slot="switch" />
+                </Logo>
+            </div>
+            <div id="top-nav">
+                <Navigation props={navigation} />
+            </div>
+        </div>
+        <div class="middle">
+            <PageTitle
+                pageTitle={pageTitle}
+                pageSubtitle={pageSubtitle} 
+            />
+        </div>
+        <div class="bottom">
+            <Navigation props={subnav} />
+        </div>
     </div>
-    <Navigation props={navigation} />
-    <PageTitle client:load pageTitle={pageTitle} pageSubtitle={pageSubtitle}/>
 </header>
 
 
 <style lang="less">
-    @import "../styles/declarations.less";
-    
-    :global(.dark) {
-        .header {
-            background-color: @logoPurple;
-            .logo {
-                background-color: @logoPurple;
-            }
-        }
-    }
+    @import '@styles/declarations.less';
 
-    .header {
+    .container {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: space-between;
-        gap: 1rem;
         width: 100%;
+        margin: 0 auto;
+        gap: 0rem;
         background-color: @accent1a;
-        
-        .logo {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-items: space-between;
+        border: 5px solid mediumaquamarine;
+        margin-bottom: 3rem;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-bottom: 0px;
+        border: 5px solid mediumslateblue;
+
+        #top-nav {
+            padding-bottom: 5rem;
+            flex-basis: 100%;
+            flex-grow: 2;
+            border: 5px solid yellow;   
+        }
+
+        #top-logo {
+            flex-basis: 50%;
+            flex-shrink: 2;
+            border: 5px solid red;
+        }
+    }
+
+    .middle {
+        max-width: 40rem;
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translate(-20%, 25%);
+        border: 5px solid blue;
+    }
+    .bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-around;
+        width: 100%;
+        padding-top: 0px;
+        border: 5px solid goldenrod;
+    }
+
+    :global(.dark){
+        .container{
+            background-color: @logoPurple;
+        }
+        .top{
+            background-color: @logoPurple;
+        }
+        .middle{}
+        .bottom{
+            background-color: @accent2a;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .middle{
+            position: static;
+            top: 0px;
+            flex-basis: 100%;
             width: 100%;
-            gap: 10rem;
-            background-color: @accent1a;
+            order: 3;
+            transform: translate(0, 0);
         }
     }
 </style>

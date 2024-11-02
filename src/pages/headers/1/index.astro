@@ -1,9 +1,11 @@
 ---
-import HeadersLayout from '@layouts/HeadersLayout.astro';
+import HeadersLayout, {routes} from '@layouts/HeadersLayout.astro';
 
 const pageTitle = "Layered Div Example";
+const pageSubtitle = "Layered Div Example";
+const slug = 1;
 ---
-<HeadersLayout pageTitle={pageTitle}>
+<HeadersLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} slug={slug} >
     <style>
         /* Container to hold all elements */
         .container {

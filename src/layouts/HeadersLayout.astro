@@ -1,9 +1,56 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+const currentPath = "/headers";
+const { 
+    pageTitle, 
+    pageSubtitle, 
+    slug
+} = Astro.props;
 
-const {pageTitle, pageSubtitle, currentPath} = Astro.props;
+
+export let routes = [
+    {
+        href: "/headers/",
+        text: "List",
+        className: "",
+    },
+    {
+        href: "/headers/1/",
+        text: "1",
+        className: "",
+    },
+    {
+        href: "/headers/2/",
+        text: "2",
+        className: "",
+    },
+    {
+        href: "/headers/3/",
+        text: "3",
+        className: "",
+    },
+    {
+        href: "/headers/4/",
+        text: "4",
+        className: "",
+    },
+    {
+        href: "/headers/5/",
+        text: "5",
+        className: "",
+    },
+    {
+        href: "/headers/6/",
+        text: "6",
+        className: "",
+    }
+]
+
+routes.forEach((route) => route.className = `/headers/${slug}/` === route.href ? "active" : "" )
+
+
 ---
-<BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} currentPath={currentPath}>
+<BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} currentPath={currentPath} routes={routes}>
     <a href="/headers/">List</a>
     <a href="/headers/1/">1</a>
     <a href="/headers/2/">2</a>

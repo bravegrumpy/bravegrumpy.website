@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from '@layouts/BaseLayout.astro';
 import BlogPost from '@tutorial/BlogPost.astro';
+import { colors } from '@scripts/data.js';
 
 const pageTitle = "My Astro Learning Blog";
 const pageSubtitle = "This is where I will post about my journey learning Astro";
@@ -9,8 +10,30 @@ const currentPath = "/blog";
 
 
 const allPosts = await getCollection("posts");
+
+let routes = [{
+    href: currentPath,
+    text: "blog",
+    className: "active"
+}]
+
+allPosts.forEach((post) => (
+    routes.push(
+        {
+            href: `/posts/${post.slug}/`,
+            text: post.data.label,
+            className: ""
+        }
+    )
+))
+
 ---
-<BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} currentPath={currentPath}>
+<BaseLayout 
+    pageTitle={pageTitle} 
+    pageSubtitle={pageSubtitle} 
+    currentPath={currentPath}
+    routes={routes}
+>
     <p>The following is a list of posts</p>
         <ul>
             {

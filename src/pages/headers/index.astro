@@ -1,12 +1,17 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { routes } from '@layouts/HeadersLayout.astro';
 const allHeaders = await Astro.glob('./**/*.astro');
 
 const pageTitle = "List of Headers";
 const pageSubtitle = "A bunch of headers that ChatGPT generated ffor me so I can figure  out the  correct CSS needed to follow my design."
 const currentPath = "/headers";
+
+routes[0].className = "active"
+
+
 ---
-<BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} currentPath={currentPath}>
+<BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} currentPath={currentPath} routes={routes}>
     <h2>List of Header Options</h2>
     <ul>
         <li><a href="/headers/1/">Option 1</a></li>

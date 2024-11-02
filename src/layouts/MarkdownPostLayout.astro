@@ -1,8 +1,15 @@
 ---
 import BaseLayout  from './BaseLayout.astro';
-const { frontmatter } = Astro.props;
+const { frontmatter, routes, currentPath } = Astro.props;
+
 ---
-<BaseLayout pageTitle={frontmatter.title} pageSubtitle={frontmatter.description} currentPath={frontmatter.slug}>
+<BaseLayout 
+    pageTitle={frontmatter.title} 
+    pageSubtitle={frontmatter.description} 
+    currentPath={currentPath}
+    routes={routes}
+>
+    <h1>{frontmatter.title}</h1>
     <p>Published on: {frontmatter.pubDate.toString().slice(0,15)}</p>
     <p><em>{frontmatter.description}</em></p>
     <p><strong>Written by <a href="/about/">{frontmatter.author}</a></strong></p>
@@ -15,9 +22,15 @@ const { frontmatter } = Astro.props;
     <slot></slot>
 </BaseLayout>
 
-<style>
+<style lang="less">
+    @import '@styles/declarations.less';
+
     a {
       color: #00539F;
+    }
+
+    h1 {
+        .fonts.heading(@size: 2rem);
     }
   
     .tags {

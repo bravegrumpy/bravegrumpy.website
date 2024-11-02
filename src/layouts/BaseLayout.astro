@@ -4,8 +4,17 @@ import { Seo } from "astro-seo-meta";
 import Header from '@components/Header.astro';
 import Footer from '@tutorial/Footer.astro';
 import '@styles/global.less';
+import { colors } from '@scripts/data.js';
 
-const { pageTitle, pageSubtitle, currentPath='' } = Astro.props;
+const { pageTitle, pageSubtitle, currentPath='', routes=[] } = Astro.props;
+
+let subnav = {
+    width: "100%",
+    justifyContent: "flex-start",
+    backgroundColor: colors.bravegrumpy.logoPurple,
+    darkBackgroundColor: colors.bravegrumpy.accent2a,
+    routes: routes
+}
 ---
 <html lang="en-us">
     <head>
@@ -16,7 +25,7 @@ const { pageTitle, pageSubtitle, currentPath='' } = Astro.props;
             description="Personal website, art portfolio, and creative writing blog."
             keywords={["Art", "Writing", "Original Fiction", "Photography", "personal website", "blog"]}
             icon="/favicon.png"
-            themeColor=#6e34a2;
+            themeColor={colors.bravegrumpy.logoPurple};
             colorScheme="light"
             facebook={{
                 url: "https://bravegrumpy.com",
@@ -41,6 +50,7 @@ const { pageTitle, pageSubtitle, currentPath='' } = Astro.props;
             pageTitle={pageTitle} 
             pageSubtitle={pageSubtitle}
             active={currentPath}
+            subnav={subnav}
         />
        <slot></slot>
        <Footer />

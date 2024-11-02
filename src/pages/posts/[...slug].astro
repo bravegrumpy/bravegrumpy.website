@@ -2,16 +2,35 @@
 import { getCollection } from 'astro:content';
 import MarkdownPostLayout from '@layouts/MarkdownPostLayout.astro';
 
+const allPosts = await getCollection('posts');
+
+let routes = [
+    {
+        href: "/blog",
+        text: "blog",
+        className: ""
+    }
+]
+
 export async function getStaticPaths() {
     const blogEntries = await getCollection('posts');
     return blogEntries.map(entry => ({
-        params: { slug: entry.slug }, props: { entry },
+        params: { slug: entry.slug }, props: { entry },   
     }));
 }
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+
+allPosts.forEach((post) => routes.push({
+    href: `/posts/${post.slug}/`,
+    text: post.data.label,
+    className: entry.slug === post.slug ? "active" : ""
+}));
+
+
 ---
-<MarkdownPostLayout frontmatter={entry.data}>
+<MarkdownPostLayout frontmatter={entry.data} currentPath='/blog' routes={routes}>
     <Content />
 </MarkdownPostLayout>
