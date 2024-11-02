@@ -5,6 +5,9 @@ import Header from '@components/Header.astro';
 import Footer from '@tutorial/Footer.astro';
 import '@styles/global.less';
 import { colors } from '@scripts/data.js';
+import Main from '@components/svelte/Main.svelte';
+import Aside from '@components/svelte/Aside.svelte';
+import SideNav from '@components/svelte/SideNav.svelte';
 
 const { pageTitle, pageSubtitle, currentPath='', routes=[] } = Astro.props;
 
@@ -52,10 +55,28 @@ let subnav = {
             active={currentPath}
             subnav={subnav}
         />
-       <slot></slot>
+        <main>
+            <Main>
+                <slot></slot>
+            </Main>
+            <Aside>
+                <slot name="aside"></slot>
+            </Aside>
+            <SideNav />
+        </main>
        <Footer />
        <script>
         import '@/scripts/menu.js';
        </script>
     </body>
 </html>
+
+<style lang="less">
+    @import '@styles/declarations.less';
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 1rem;
+    }
+</style>

@@ -16,6 +16,8 @@
         gap: 0;
         padding: 0 1rem;
         color: @logoPurple;
+        width: 100%;
+        grid-column: 2;
     }
 
     :global(.dark) {
