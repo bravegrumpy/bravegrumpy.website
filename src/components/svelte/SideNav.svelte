@@ -2,16 +2,16 @@
 
 <div class="menu">
     <div class="sideNav">
-        <a href="#header">This is a thing</a>
+        <a>This is a thing</a>
     </div>
     <div class="sideNav active">
-        <a href="#header">This is a thing</a>
+        <a>This is a thing</a>
     </div>
     <div class="sideNav dark">
-        <a href="#header">This is a thing</a>
+        <a>This is a thing</a>
     </div>
     <div class="sideNav dark active">
-        <a href="#header">This is a thing</a>
+        <a>This is a thing</a>
     </div>
 </div>
 
