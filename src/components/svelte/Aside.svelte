@@ -1,7 +1,5 @@
 <div class="aside">
-    <h2>Logline</h2>
-    <p>This is a sample aside.</p>
-    <p>I am using this now until I can figure out how to designate a part of  a markdown file to go here.</p>
+    <slot name="aside"></slot>
 </div>
 
 <style lang="less">
