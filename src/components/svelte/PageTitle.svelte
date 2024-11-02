@@ -4,7 +4,7 @@
 
 
 <div class="pageTitle">
-    <h2>{pageTitle}</h2>
+    <h1>{pageTitle}</h1>
     <p>{pageSubtitle}</p>
 </div>
 
@@ -25,8 +25,8 @@
         box-shadow: @boxShadowLight;
         order: 3;
 
-        h2 {
-            .fonts.pageTitle(@size: 1.55rem;);
+        h1 {
+            .fonts.pageTitle(@size: 2.426rem;);
             padding: 0;
             margin: 0;
         }

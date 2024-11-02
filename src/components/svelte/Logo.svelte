@@ -24,6 +24,7 @@
     h1 {
         .fonts.logoText(@size: 5rem; @weight: 400;);
         color: @logoPurple;
+        margin: 1rem 0;
     }
 
     p {

@@ -1,9 +1,11 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Navigation from "@/components/Navigation.astro";
-import Logo from "@/components/Logo.svelte";
-import PageTitle from "@/components/PageTitle.svelte";
+import Logo from "@components/svelte/Logo.svelte";
+import PageTitle from "@components/svelte/PageTitle.svelte";
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
+
+import Main from "@components/svelte/Main.svelte";
 
 import {  colors } from "@/scripts/data.js";
 
@@ -84,6 +86,19 @@ const  currentPath = "/components";
 ---
 
 <BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} currentPath={currentPath}>
+    <h2>Making a body component</h2>
+    <p>In the next <code>div</code> I'm putting a react component. At first I'll just be following the basic react tutorial, but then I plan on adding styles.</p>
+    <div>
+        <Main>
+            <h2>Main Content</h2>
+            <p>This should be rendering from the "main" component created with svelte.</p>
+
+            <h2>Another Topic</h2>
+            <p>I eventually plan on using this a part of the "BaseLayout" for where content get rendered. I'm unsure  of how I plan on handling </p>
+        </Main>
+    </div>
+    <hr>
+    <h2>Header Component Composition</h2>
     <p>This is a list of various components that I've made. I'm using it to be able to visually see the changes I'm making.</p>
 
     <hr />

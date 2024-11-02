@@ -1,7 +1,7 @@
 ---
-import Logo from './Logo.svelte';
+import Logo from '@components/svelte/Logo.svelte';
 import Navigation from './Navigation.astro';
-import PageTitle from './PageTitle.svelte';
+import PageTitle from '@components/svelte/PageTitle.svelte';
 import ThemeSwitch from './ThemeSwitch.astro';
 import '@styles/declarations.less';
 
@@ -41,7 +41,7 @@ navigation["justifyContent"] = "flex-end";
     <div class="container">
         <div class="top">
             <div id="top-logo">
-                <Logo>
+                <Logo size="105rem">
                     <ThemeSwitch slot="switch" />
                 </Logo>
             </div>
@@ -58,6 +58,7 @@ navigation["justifyContent"] = "flex-end";
         <div class="bottom">
             <Navigation props={subnav} />
         </div>
+        <div class="dark-bar"></div>
     </div>
 </header>
 
@@ -103,6 +104,7 @@ navigation["justifyContent"] = "flex-end";
         top: 50%;
         right: 0%;
         transform: translate(-20%, 25%);
+        padding-bottom: 5rem;
     }
     .bottom {
         display: flex;
@@ -111,6 +113,9 @@ navigation["justifyContent"] = "flex-end";
         justify-content: space-around;
         width: 100%;
         padding-top: 0px;
+    }
+    .dark-bar {
+        display: none;
     }
 
     :global(.dark){
@@ -133,6 +138,7 @@ navigation["justifyContent"] = "flex-end";
             justify-content: center;
             gap: 1.5rem;
             padding-bottom: $gap;
+            margin-bottom: 8rem;
         }
         .middle{
             position: absolute;
@@ -149,15 +155,25 @@ navigation["justifyContent"] = "flex-end";
             gap: 1.5rem;
 
             #top-nav {
-                padding: $gap;
+                padding: 0;
                 align-self: center;
                 border-radius: @borderRadius;
-                border: @borders[button] @brand1;
             }
         }
 
         .bottom {
             display: none;
+        }
+        
+        .dark-bar{
+            align-self: stretch;
+            display: block;
+            height: 3rem;
+            width: 100%;
+            background-color: @logoPurple;
+            margin-bottom: -2rem;
+            margin-top: -1rem;
+            border-radius: @borderRadius;
         }
 
         :global(.dark) {}
