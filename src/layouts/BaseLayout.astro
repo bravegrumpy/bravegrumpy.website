@@ -56,13 +56,13 @@ let subnav = {
             subnav={subnav}
         />
         <main>
-            <Main>
+            <Main client:load >
                 <slot></slot>
             </Main>
             <Aside>
                 <slot name="aside"></slot>
             </Aside>
-            <SideNav />
+            <SideNav client:load />
         </main>
        <Footer />
        <script>
