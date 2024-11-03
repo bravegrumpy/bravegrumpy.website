@@ -5,9 +5,13 @@ const paletteBraveGrumpy = fs.readFileSync('src/styles/themes/colors/bravegrumpy
 
 const paletteSolarized = fs.readFileSync('src/styles/themes/colors/solarized.less', 'utf-8');
 
+const textStyles = fs.readFileSync('src/styles/themes/fonts/bravegrumpy.less', 'utf-8');
+
 const bravegrumpy = lessToJs(paletteBraveGrumpy, {resolveVariables: true, stripPrefix: true});
 
 const solarized = lessToJs(paletteSolarized, {resolveVariables: true, stripPrefix: true});
+
+export const fonts = lessToJs(textStyles, {resolveVariables: true, stripPrefix: true});
 
 export const colors = {
     bravegrumpy: bravegrumpy,

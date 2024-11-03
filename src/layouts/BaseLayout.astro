@@ -6,7 +6,7 @@ import Footer from '@tutorial/Footer.astro';
 import '@styles/global.less';
 import { colors } from '@scripts/data.js';
 import Main from '@components/svelte/Main.svelte';
-import Aside from '@components/svelte/Aside.svelte';
+import MenuButton from '@components/svelte/MenuButton.svelte';
 
 const { pageTitle, pageSubtitle, currentPath='', routes=[] } = Astro.props;
 
@@ -58,6 +58,10 @@ let subnav = {
             <Main client:load >
                 <slot></slot>
             </Main>
+            <div class="sideNav">
+                <MenuButton />
+                <MenuButton className="active" />
+            </div>
         </main>
        <Footer />
        <script>
@@ -72,6 +76,14 @@ let subnav = {
     main {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
+        gap: 1rem;
+    }
+
+    .sideNav {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
     }
 </style>
