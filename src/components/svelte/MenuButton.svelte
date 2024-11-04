@@ -32,7 +32,7 @@
     
     .active {
             .fonts.navMenuActive(@size: 1.5rem);
-            background-color: @accent1a;
+            background-color: @accent2a;
             color: @logoPurple;
             border-color: $color;
         }
