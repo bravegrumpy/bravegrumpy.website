@@ -22,7 +22,7 @@
     .menuButton {
         background-color: @accent2b;
         color: @dark1;
-        padding: 0.5rem 0rem 0.5rem 1.5rem;
+        padding: 0.5rem 1rem 0.5rem 1.5rem;
         .fonts.navMenuDefault(@size: 1.5rem);
         border-top-right-radius: @borderRadius;
         border-bottom-right-radius: @borderRadius;
