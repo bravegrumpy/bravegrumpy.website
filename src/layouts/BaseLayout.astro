@@ -8,7 +8,7 @@ import { colors } from '@scripts/data.js';
 import Main from '@components/svelte/Main.svelte';
 import Aside from '@components/svelte/Aside.svelte';
 
-const { pageTitle, pageSubtitle, currentPath='', routes=[], aside=false,sidenav=false} = Astro.props;
+const { pageTitle, pageSubtitle, currentPath='', routes=[], aside=false, sidenav=false} = Astro.props;
 
 let subnav = {
     width: "100%",
@@ -52,14 +52,14 @@ let subnav = {
             pageTitle={pageTitle} 
             pageSubtitle={pageSubtitle}
             active={currentPath}
-            sidenav={sidenav}
+            subnav={subnav}
         />
         <main>
             <Main client:load >
                 <slot></slot>
             </Main>
-            {aside ? <Aside><slot name='aside'></slot></Aside> : ''}
-            {sidenav ? <div class='sideNav'><slot name='sidenav'></slot></div> : ''}
+            {aside ? <Aside><slot name='aside'></slot></Aside> : '' }
+            {sidenav ? <div class='sideNav'><slot name='sidenav'></slot></div> : '' }
         </main>
        <Footer />
        <script>
