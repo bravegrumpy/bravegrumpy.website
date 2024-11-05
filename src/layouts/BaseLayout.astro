@@ -8,7 +8,7 @@ import { colors } from '@scripts/data.js';
 import Main from '@components/svelte/Main.svelte';
 import Aside from '@components/svelte/Aside.svelte';
 
-const { pageTitle, pageSubtitle, currentPath='', routes=[], aside=false sidenav=false} = Astro.props;
+const { pageTitle, pageSubtitle, currentPath='', routes=[], aside=false,sidenav=false} = Astro.props;
 
 let subnav = {
     width: "100%",
@@ -52,7 +52,7 @@ let subnav = {
             pageTitle={pageTitle} 
             pageSubtitle={pageSubtitle}
             active={currentPath}
-            subnav={subnav}
+            sidenav={sidenav}
         />
         <main>
             <Main client:load >

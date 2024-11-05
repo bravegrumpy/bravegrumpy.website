@@ -33,8 +33,6 @@ allPosts.forEach((post) => routes.push({
 
 ---
 <MarkdownPostLayout frontmatter={entry.data} currentPath='/blog' routes={routes}>
-    <div slot="sidenav">
-        {headings.map((h) => <MenuButton href={h.slug} text={h.text}/>)}
-    </div>
+    {/*headings.map((h) => <MenuButton slot="sidenav" href={`#${h.slug}`} text={h.text}/>)*/}
     <Content />
 </MarkdownPostLayout>
