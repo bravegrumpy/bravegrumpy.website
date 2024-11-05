@@ -8,7 +8,7 @@ const { frontmatter, routes, currentPath } = Astro.props;
     currentPath={currentPath}
     routes={routes}
     aside={true}
-    sidenav
+    sidenav={frontmatter.sidenav}
 >
 
     <h1>{frontmatter.title}</h1>
