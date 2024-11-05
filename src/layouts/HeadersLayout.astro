@@ -51,17 +51,6 @@ routes.forEach((route) => route.className = `/headers/${slug}/` === route.href ?
 
 ---
 <BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} currentPath={currentPath} routes={routes}>
-    <a href="/headers/">List</a>
-    <a href="/headers/1/">1</a>
-    <a href="/headers/2/">2</a>
-    <a href="/headers/3/">3</a>
-    <a href="/headers/4/">4</a>
-    <a href="/headers/5/">5</a>
-    <a href="/headers/6/">6</a>
-    <br>
-    <br>
-    <hr style="border-width: 5px; border-color: black;">
-    <br>
-    <br>
+    <h2>{pageTitle}</h2>
     <slot></slot>
 </BaseLayout>
