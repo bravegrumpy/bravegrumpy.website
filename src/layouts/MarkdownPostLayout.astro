@@ -1,14 +1,16 @@
 ---
 import BaseLayout  from './BaseLayout.astro';
 const { frontmatter, routes, currentPath } = Astro.props;
-
 ---
 <BaseLayout 
     pageTitle={frontmatter.title} 
     pageSubtitle={frontmatter.description} 
     currentPath={currentPath}
     routes={routes}
+    aside={true}
+    sidenav
 >
+
     <h1>{frontmatter.title}</h1>
     <p>Published on: {frontmatter.pubDate.toString().slice(0,15)}</p>
     <p><em>{frontmatter.description}</em></p>
@@ -20,6 +22,11 @@ const { frontmatter, routes, currentPath } = Astro.props;
         ))}
     </div>
     <slot></slot>
+    <div slot="aside">
+        <h2>Description</h2>
+        <p>{frontmatter.description}</p>
+    </div>
+    <slot slot="sidenav" name="sidenav"></slot>
 </BaseLayout>
 
 <style lang="less">

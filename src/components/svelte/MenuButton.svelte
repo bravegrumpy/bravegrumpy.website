@@ -1,15 +1,15 @@
 <script>
     let {
         className = '',
-        href = '/',
-        text = 'Menu Navigation Button',
+        href,
+        text,
     } = $props();
 
 </script>
 
 <a 
     class='menuButton {className}' 
-    href={href}
+    {href}
     style:text-decoration=none
     style:height=fit-content
 >

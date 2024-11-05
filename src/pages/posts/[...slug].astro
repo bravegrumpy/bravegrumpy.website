@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import MarkdownPostLayout from '@layouts/MarkdownPostLayout.astro';
+import MenuButton from '@components/svelte/MenuButton.svelte';
 
 const allPosts = await getCollection('posts');
 
@@ -20,7 +21,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
 
 
 allPosts.forEach((post) => routes.push({
@@ -32,5 +33,8 @@ allPosts.forEach((post) => routes.push({
 
 ---
 <MarkdownPostLayout frontmatter={entry.data} currentPath='/blog' routes={routes}>
+    <div slot="sidenav">
+        {headings.map((h) => <MenuButton href={h.slug} text={h.text}/>)}
+    </div>
     <Content />
 </MarkdownPostLayout>

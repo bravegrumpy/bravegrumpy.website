@@ -1,5 +1,5 @@
 <div class="aside">
-    <slot name="aside"></slot>
+    <slot></slot>
 </div>
 
 <style lang="less">

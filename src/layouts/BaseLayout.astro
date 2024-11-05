@@ -6,9 +6,9 @@ import Footer from '@tutorial/Footer.astro';
 import '@styles/global.less';
 import { colors } from '@scripts/data.js';
 import Main from '@components/svelte/Main.svelte';
-import MenuButton from '@components/svelte/MenuButton.svelte';
+import Aside from '@components/svelte/Aside.svelte';
 
-const { pageTitle, pageSubtitle, currentPath='', routes=[] } = Astro.props;
+const { pageTitle, pageSubtitle, currentPath='', routes=[], aside=false sidenav=false} = Astro.props;
 
 let subnav = {
     width: "100%",
@@ -58,10 +58,8 @@ let subnav = {
             <Main client:load >
                 <slot></slot>
             </Main>
-            <div class="sideNav">
-                <MenuButton />
-                <MenuButton className="active" />
-            </div>
+            {aside ? <Aside><slot name='aside'></slot></Aside> : ''}
+            {sidenav ? <div class='sideNav'><slot name='sidenav'></slot></div> : ''}
         </main>
        <Footer />
        <script>
