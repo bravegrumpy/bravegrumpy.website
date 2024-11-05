@@ -54,5 +54,10 @@ export const navigation = {
             text:"tags", 
             className: "default"
         },
+        {
+            href:"/huetopia", 
+            text:"Creative Writing", 
+            className: "default"
+        },
     ],
 }

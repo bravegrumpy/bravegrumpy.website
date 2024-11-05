@@ -4,10 +4,12 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 const pageTitle = "Home";
 const  pageSubtitle = "The the main entrance to my blog";
 const currentPath = "/";
+
+const year = new Date().getFullYear()
 ---
 
 <BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle} currentPath={currentPath}>
-    <h2>My awesome blog subtitle</h2>
-    <p>This is my amazing subtitle</p>
+    <h2>Welcome to my website</h2>
     <p>There is stuff here. I plan on adding stuff over time.</p>
+    <p>If this website were made in the '90s, then I would add the obligitory under construction gif here. Alas, we are not in the '90s, but in the year {year}, so I am not adding the pointless gif (yet) 😝. </p>
 </BaseLayout>

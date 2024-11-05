@@ -17,7 +17,18 @@ const postsCollection = defineCollection({
       tags: z.array(z.string())
     })
 });
+
+const huetopiaCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        subtitle: z.string(),
+        label: z.string(),
+        aside: z.string().optional()
+    })
+});
 // Export a single `collections` object to register your collection(s)
 export const collections = {
-  posts: postsCollection,
+  'posts': postsCollection,
+  'huetopia': huetopiaCollection
 };

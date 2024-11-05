@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import MenuButton from '@components/svelte/MenuButton.svelte';
+
+const allHuetopia = await getCollection('huetopia');
+const currentPath = '/huetopia'
+
+let routes = [
+    {
+        href: currentPath,
+        text: 'Huetopia Homepage',
+        className: ''
+    }
+]
+
+export async function getStaticPaths() {
+    const huetopiaEntries = await getCollection('huetopia');
+    return huetopiaEntries.map(entry => ({
+        params: { slug: entry.slug }, props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await entry.render();
+
+allHuetopia.forEach((post) => routes.push({
+    href: `huetopia/${post.slug}/`,
+    text: post.data.title,
+    className: entry.slug === post.slug ? 'active' : ''
+}));
+---
+<BaseLayout
+    pageTitle={entry.data.title}
+    pageSubtitle={entry.data.subtitle}
+    currentPath={currentPath}
+    routes={routes}
+    aside={entry.data.aside ? true : false}
+    sidenav={true}
+>
+    {
+        headings.map((heading) => (
+            <MenuButton slot="sidenav" href={`#${heading.slug}`} text={heading.text} />
+        ))
+    }
+    <Content />
+    <Fragment set:html={entry.data.aside} slot="aside" />
+</BaseLayout>
