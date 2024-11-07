@@ -1,19 +1,21 @@
-# IDE specific config
-**/.vs*/
-**/.idea/
-
-# build artifacts
-build
 node_modules
-.npm
-dist
 
-# scratch files and directories
-scratch*
-**scratch**
-scratch*.*
-scratch**.*
-**/scratch**
-**/scratch/**
-**/scratch/**.*
-**old**
+# Output
+.output
+.vercel
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
