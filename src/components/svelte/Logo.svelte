@@ -4,7 +4,7 @@
 
 <div class="logo">
     <div class="images">        
-        <img 
+        <img
             src='/favicon.png'
             width={size}
             height={size}
