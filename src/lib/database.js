@@ -1,4 +1,4 @@
-const posts = [
+export default const posts = [
     {
         slug: 'welcome',
         title: 'Welcome to the Aperture Science computer-aided enrichment center',
@@ -14,4 +14,4 @@ const posts = [
         title: 'This was a triumph',
         content: "<p>I'm making a note here: HUGE SUCCESS.</p>"
     }
-]
+];
