@@ -1,15 +1,15 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.2.37-14",
+	"version": "0.2.37-15",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview"
 	},
-    "prisma": {
-        "seed": "tsx prisma/seed.ts"
-    },
+	"prisma": {
+		"seed": "tsx prisma/seed.ts"
+	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
