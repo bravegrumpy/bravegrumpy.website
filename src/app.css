@@ -7,6 +7,34 @@ h1 {
     --slnt: 'slnt' 0;
     --CRSV: 'CRSV' 0.5;
     font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+
+    font-size: calc(1rem 
+        * var(--fontRatio) 
+        * var(--fontRatio) 
+        * var(--fontRatio) 
+        * var(--fontRatio) 
+        * var(--fontRatio) 
+        * var(--fontRatio)
+    );
+}
+
+h2 {
+    font-family: var(--Recursive), 'monospace';
+    font-optical-sizing: auto;
+    --mono: "MONO" 0;
+    --casl: "CASL"0.8;
+    --wght: 'wght' 800;
+    --slnt: 'slnt' 0;
+    --CRSV: 'CRSV' 0.5;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+
+    font-size: calc(1rem
+        * var(--fontRatio)
+        * var(--fontRatio)
+        * var(--fontRatio)
+        * var(--fontRatio)
+        * var(--fontRatio)
+    );
 }
 
 p {
