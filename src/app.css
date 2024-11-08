@@ -46,6 +46,6 @@ p {
     --slnt: 'slnt' 0;
     --CRSV: 'CRSV' 0.5;
     font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
-    color: 'blue';
-
+    font-size: 1rem;
+    color: blue;
 }
