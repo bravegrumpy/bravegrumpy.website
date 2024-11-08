@@ -1,0 +1,23 @@
+h1 {
+    font-family: var(--Recursive), 'monospace';
+    font-optical-sizing: auto;
+    --mono: "MONO" 0;
+    --casl: "CASL"0.8;
+    --wght: 'wght' 800;
+    --slnt: 'slnt' 0;
+    --CRSV: 'CRSV' 0.5;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+}
+
+p {
+    font-family: var(--Recursive), 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-optical-sizing: auto;
+    --mono: "MONO" 1;
+    --casl: "CASL"0.3;
+    --wght: 'wght' 400;
+    --slnt: 'slnt' 0;
+    --CRSV: 'CRSV' 0.5;
+    font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
+    color: 'blue';
+
+}

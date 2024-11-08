@@ -1,2 +1,2 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<h1>BraveGrumpy Home Page</h1>
+<p>Welcome to the Brave Grumpy homepage. Click on the links to explore content.</p>
