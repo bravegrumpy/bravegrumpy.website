@@ -20,3 +20,9 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Scratch files
+**scratch**
+**/scratch*.*
+**/scratch**/**.*
+!scratch.env.text
