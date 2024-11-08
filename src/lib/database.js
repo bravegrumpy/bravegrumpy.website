@@ -1,4 +1,4 @@
-export default const posts = [
+export const posts = [
     {
         slug: 'welcome',
         title: 'Welcome to the Aperture Science computer-aided enrichment center',

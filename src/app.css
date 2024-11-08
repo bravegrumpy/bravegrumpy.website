@@ -47,5 +47,5 @@ p {
     --CRSV: 'CRSV' 0.5;
     font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
     font-size: 1rem;
-    color: blue;
+    color: var(--dark1);
 }
