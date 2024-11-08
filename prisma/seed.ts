@@ -30,7 +30,6 @@ async function main(){
             content: "<p>I'm making a note here: HUGE SUCCESS.</p>"
         },
     })
-    console.log({ welcome, safety, cake })
 }
 
 main()

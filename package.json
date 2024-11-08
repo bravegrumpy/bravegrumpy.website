@@ -7,6 +7,9 @@
 		"build": "vite build",
 		"preview": "vite preview"
 	},
+    "prisma": {
+        "seed": "tsx prisma/seed.ts"
+    },
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
