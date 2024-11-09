@@ -1,4 +1,5 @@
 <script>
+    import '$lib/styles.css';
     let { children } = $props();
     let route = $state();
 </script>
@@ -7,13 +8,9 @@
 <div class="nav">
     <nav>
         <a href='/'>home</a>
-        <a href='/writing'>writing</a>
+        <a data-sveltekit-preload-data="viewport" href='/writing'>writing</a>
     </nav>
 </div>
-
-<svelte:head>
-    <link rel='stylesheet' href='/src/app.css'>
-</svelte:head>
 
 <div class='children'>
     {@render children()}

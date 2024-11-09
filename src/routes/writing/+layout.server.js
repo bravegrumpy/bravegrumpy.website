@@ -1,4 +1,4 @@
-import { posts } from '$lib/database';
+import { posts } from '$lib/database.js';
 
 export async function load() {
     return {

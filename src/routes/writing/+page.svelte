@@ -1,7 +1,7 @@
 <script>
     import { marked } from 'marked';
     let { data } = $props();
-    let text = $state('### Write something \n Nothing written here will be saved');
+    let text = $state('### Write something \n - \[ \] Nothing written here will be saved');
 </script>
 <h1>Writing Home Page</h1>
 <p>This is the home page for all of my writing.
