@@ -16,4 +16,4 @@ const cake  = {
     content: "<p>I'm making a note here: HUGE SUCCESS.</p>"
 };
 
-export const posts = [welcome, safety, cake];
+export let posts = [welcome, safety, cake];
