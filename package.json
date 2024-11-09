@@ -1,6 +1,6 @@
 {
 	"name": "bravegrumpy.website",
-	"version": "0.2.37-23",
+	"version": "0.2.37-24",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
