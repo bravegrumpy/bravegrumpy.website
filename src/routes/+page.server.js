@@ -1,4 +1,4 @@
-export function load({ cookies }){
+export async function load({ cookies }){
     const visited = cookies.get('visited');
 
     cookies.set('visited', 'true', { path: '/'});

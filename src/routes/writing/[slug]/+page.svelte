@@ -1,6 +1,5 @@
 <script>
     let { data } = $props();
-    let page = $state();
 </script>
 <h1>Writing Blog Page</h1>
 <p>I plan on updating this  as I learn more mechanics for changing things.</p>

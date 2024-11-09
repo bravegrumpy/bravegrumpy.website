@@ -1,10 +1,10 @@
-import { posts } from '$lib/database.js';
+import { posts } from '$lib/database';
 
-export function load() {
+export async function load() {
     return {
-        summaries: posts.map((post) => ({
+        summaries: await posts.map((post) => ({
             slug: post.slug,
             title: post.title
         }))
-    };
+    }
 }
