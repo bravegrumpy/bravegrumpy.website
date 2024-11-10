@@ -4,7 +4,7 @@ import router from './routes.js';
 
 // Importing directories
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 // Importing functions
 import getFilenames from './getFiles.js';
@@ -41,13 +41,15 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, root, 'index.html'));
 });
 
+const thisFileUrl = pathToFileURL(process.argv[1]).href;
 
-export async function startServer() {
+if (import.meta.url === thisFileUrl) {
     app.listen(PORT, HOST, () => {
         console.log(`Server is  running at http://${HOST}:${PORT}/`);
     }).on('close', () => {
         console.log('Server closed');
     });
 }
+
 
 export default app;
