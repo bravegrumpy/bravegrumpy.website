@@ -9,6 +9,7 @@
 build
 node_modules
 .npm
+.vite.config.js.timestamp*
 
 ## build artifacts from other branches
 .svelte-kit
