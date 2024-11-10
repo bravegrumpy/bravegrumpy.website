@@ -2,9 +2,6 @@ import { SvelteMap } from "svelte/reactivity";
 
 const db = new SvelteMap();
 
-
-
-
 const welcome = {
     slug: 'welcome',
     title: 'Welcome to the Aperture Science computer-aided enrichment center',
@@ -23,17 +20,20 @@ const cake  = {
     content: "<p>I'm making a note here: HUGE SUCCESS.</p>"
 };
 
-export let posts = [welcome, safety, cake];
+db.set('welcome', welcome);
+db.set('cake', cake);
+db.set('safety', safety);
+
+
+//export let posts = [welcome, safety, cake];
+
+export let posts = [db.get('welcome')]
 
 export function getAllPosts() {
     return posts;
 }
 
-export function addPost( newPost ) {
-    const slug = newPost.slug;
-    const title = newPost.title;
-    const content = newPost.content;
-
+export function addPost( slug, title, content ) {
     post = {slug, title, content};
     posts.push(post);
 
