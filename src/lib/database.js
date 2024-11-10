@@ -1,3 +1,10 @@
+import { SvelteMap } from "svelte/reactivity";
+
+const db = new SvelteMap();
+
+
+
+
 const welcome = {
     slug: 'welcome',
     title: 'Welcome to the Aperture Science computer-aided enrichment center',
@@ -17,3 +24,22 @@ const cake  = {
 };
 
 export let posts = [welcome, safety, cake];
+
+export function getAllPosts() {
+    return posts;
+}
+
+export function addPost( newPost ) {
+    const slug = newPost.slug;
+    const title = newPost.title;
+    const content = newPost.content;
+
+    post = {slug, title, content};
+    posts.push(post);
+
+    return(post);
+}
+
+export function post(slug) {
+    return posts.find((post) => post.slug === slug);
+}

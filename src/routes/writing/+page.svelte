@@ -1,7 +1,5 @@
 <script>
-    import { marked } from 'marked';
     let { data } = $props();
-    let text = $state('### Write something \n - \[ \] Nothing written here will be saved');
 </script>
 <h1>Writing Home Page</h1>
 <p>This is the home page for all of my writing.
@@ -19,8 +17,23 @@
     {/each}
 </ul>
 
-<div>
-    <h2>Write in Markdown!</h2>
-    <textarea bind:value={text}></textarea>
-    {@html marked(text)}
-</div>
+<h2>Add a new Post</h2>
+<form method="POST">
+    <label>
+        Slug:
+        <input name="slug" />
+    </label>
+    <br>
+    <label>
+        Title:
+        <input name="title" />
+    </label>
+    <br>
+    <label>
+        Content: <br>
+        <textarea name="content"></textarea>
+    </label>
+    <label>
+        <button type="submit">Submit</button>
+    </label>
+</form>
