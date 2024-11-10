@@ -2,15 +2,19 @@
 **/.vs*/
 **/.idea/
 
+# Secrets
+*.env**
+
 # build artifacts
-<<<<<<< HEAD
 build
 node_modules
 .npm
-=======
-node_modules
-build
->>>>>>> 9c171734fd2dd612b2f19cef8a7bcfa7bfb8078e
+
+## build artifacts from other branches
+.svelte-kit
+.svelte*
+.astro
+
 
 # scratch files and directories
 scratch*
