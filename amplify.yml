@@ -5,6 +5,7 @@ frontend:
       commands:
         - echo "installing dependancies..."
         - npm ci
+        - NODE_ENV="production"
     # IMPORTANT - Please verify your build commands
     build:
       commands:

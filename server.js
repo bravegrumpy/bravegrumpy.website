@@ -19,8 +19,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
-//const root = process.env.NODE_ENV === 'production' ? './build' : './';
-const root = './build';
+const root = process.env.NODE_ENV === 'production' ? './build' : './';
+//const root = './build';
 
 // Allowing use of scripts
 app.use((req, res, next) => {
