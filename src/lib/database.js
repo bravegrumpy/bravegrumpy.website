@@ -34,7 +34,7 @@ export function getAllPosts() {
 }
 
 export function addPost( slug, title, content ) {
-    post = {slug, title, content};
+    const post = {slug: slug, title: title, content: content};
     posts.push(post);
 
     return(post);
