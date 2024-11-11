@@ -1,5 +1,10 @@
 # bravegrumpy
 
+## This branch is duplicated on netlify.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1a6a2b49-fc8d-4dc8-b2e8-6f41a7f1fd01/deploy-status)](https://app.netlify.com/sites/svelte-bravegrumpy/deploys)
+
+---
+
 This repo is for the hello-world website, and nothing else
 
 I will be using this site to experiment with JavaScript and to experiment with
