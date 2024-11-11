@@ -27,7 +27,7 @@ db.set('safety', safety);
 
 //export let posts = [welcome, safety, cake];
 
-export let posts = [db.get('welcome')]
+export let posts = [db.get('welcome'), db.get('safety'), db.get('cake')]
 
 export function getAllPosts() {
     return posts;
