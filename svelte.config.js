@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from 'amplify-adapter';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 //import adapter from '@sveltejs/adapter-node';
 
@@ -10,6 +10,7 @@ export default {
         }),
         target: ['#svelte-app', '.svelte'],
         vite: {
+            ssr: true,
             noExternal: ['svelte'],
         },
     },

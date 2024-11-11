@@ -18,6 +18,12 @@ export default defineConfig({
 
                 const outDir = options.dir || 'build';
                 const manifestFilePath = path.resolve(outDir, 'deploy-manifest.json');
+
+                if (!fs.existsSync(outDir)) {
+                    fs.mkdirSync(outDir, { recursive: true});
+                }
+
+
                 fs.writeFileSync(manifestFilePath, JSON.stringify(manifestContent, null, 2));
                 console.log(`Successfully created deploy-manifest.json  in "${outDir}"`);
             }
