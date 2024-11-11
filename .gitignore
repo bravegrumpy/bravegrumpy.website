@@ -13,7 +13,8 @@ build
 node_modules
 .npm
 
-## build artifacts from other branchs
+
+## Build  artifacts from other branches
 .svelte-kit
 
 # environment variables and secrets
