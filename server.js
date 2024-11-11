@@ -26,13 +26,20 @@ app.use(limiter);
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// amplify
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*")
+    res.header("Access-Control-Alloow_Headers", "Origin, X-Requested-With, Content-Type, Accept")
+    next()
+});
+
 
 // Defining Static Routes
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
-const root = '/';
+const root = './';
 
 // Route to generate csrf token
 app.get('/form', (req, res) => {
@@ -56,6 +63,7 @@ app.post('/submit', (req, res) => {
 });
 
 app.use(express.static(path.join(__dirname, root)));
+
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(path.join(__dirname, root, 'index.html')))
