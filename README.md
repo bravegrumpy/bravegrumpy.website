@@ -1,5 +1,15 @@
 # bravegrumpy
 
+## Deployment
+
+This particular branch is deployed  to both netlify and amplify.
+
+Here is the status:
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4e63f009-5e13-48d7-9928-68ec2864c37a/deploy-status)](https://app.netlify.com/sites/bravegrumpy/deploys)
+
+---
+
 This repo is for the hello-world website, and nothing else
 
 I will be using this site to experiment with JavaScript and to experiment with
