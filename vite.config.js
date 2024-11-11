@@ -5,29 +5,7 @@ import path from 'path';
 
 export default defineConfig({
     plugins: [
-        svelte(),
-        {
-            name: 'generate-deploy-manifest',
-            apply: 'build',
-            generateBundle(options, bundle) {
-                const files = Object.keys(bundle).map(fileName => fileName);
-                const manifestContent = {
-                    version: 1,
-                    files: files
-                };
-
-                const outDir = options.dir || 'build';
-                const manifestFilePath = path.resolve(outDir, 'deploy-manifest.json');
-
-                if (!fs.existsSync(outDir)) {
-                    fs.mkdirSync(outDir, { recursive: true});
-                }
-
-
-                fs.writeFileSync(manifestFilePath, JSON.stringify(manifestContent, null, 2));
-                console.log(`Successfully created deploy-manifest.json  in "${outDir}"`);
-            }
-        },
+        svelte()
     ],
     build: {
         outDir: 'build',
