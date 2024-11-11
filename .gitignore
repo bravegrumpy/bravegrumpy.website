@@ -13,6 +13,9 @@ build
 node_modules
 .npm
 
+## build artifacts from other branchs
+.svelte-kit
+
 # environment variables and secrets
 **.env*
 
