@@ -1,9 +1,27 @@
 import { defineConfig } from "vite";
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+import fs from 'fs';
+import path from 'path';
 
 export default defineConfig({
     plugins: [
         svelte(),
+        {
+            name: 'generate-deploy-manifest',
+            apply: 'build',
+            generateBundle(options, bundle) {
+                const files = Object.keys(bundle).map(fileName => fileName);
+                const manifestContent = {
+                    version: 1,
+                    files: files
+                };
+
+                const outDir = options.dir || 'build';
+                const manifestFilePath = path.resolve(outDir, 'deploy-manifest.json');
+                fs.writeFileSync(manifestFilePath, JSON.stringify(manifestContent, null, 2));
+                console.log(`Successfully created deploy-manifest.json  in "${outDir}"`);
+            }
+        },
     ],
     build: {
         outDir: 'build',
