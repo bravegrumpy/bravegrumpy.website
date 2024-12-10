@@ -1,22 +1,5 @@
 // Importing servers
 import  express from 'express';
-<<<<<<< HEAD
-import router from './routes.js';
-
-// Importing directories
-import path from 'path';
-import { fileURLToPath, pathToFileURL } from 'url';
-
-// Importing functions
-import getFilenames from './getFiles.js';
-
-// Initializing Express
-const app = express();
-app.set('trust proxy', true);
-app.use(router);
-
-// Defining Routing Constants
-=======
 import helmet from 'helmet';
 import { rateLimit } from 'express-rate-limit';
 import Csrf from 'csrf';
@@ -46,12 +29,10 @@ app.use(cookieParser());
 
 
 // Defining Static Routes
->>>>>>> b17a60f551da554d257b727249f934755343ec62
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
-<<<<<<< HEAD
 const root = process.env.NODE_ENV === 'production' ? './build' : './';
 //const root = './build';
 
@@ -77,19 +58,6 @@ app.get('*', (req, res) => {
 });
 
 const thisFileUrl = pathToFileURL(process.argv[1]).href;
-
-if (import.meta.url === thisFileUrl) {
-    app.listen(PORT, HOST, () => {
-        console.log(`Server is  running at http://${HOST}:${PORT}/`);
-    }).on('close', () => {
-        console.log('Server closed');
-    });
-}
-
-
-export default app;
-=======
-const root = '/';
 
 // Route to generate csrf token
 app.get('/form', (req, res) => {
@@ -121,4 +89,6 @@ app.get('*', (req, res) => {
 app.listen(PORT, HOST, () => {
     console.log(`Server is  running at http://${HOST}:${PORT}/`);
 });
->>>>>>> b17a60f551da554d257b727249f934755343ec62
+
+
+export default app;

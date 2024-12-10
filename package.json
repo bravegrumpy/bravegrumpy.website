@@ -1,29 +1,23 @@
 {
 	"name": "bravegrumpy.website",
-<<<<<<< HEAD
-	"version": "0.2.1027-15",
+	"version": "0.2.1027-15 / 0.1.34",
 	"scripts": {
-		"dev": "vite dev",
-		"prod": "vite run --mode production",
-		"build": "vite build",
-		"preview": "vite preview --port 8000",
-		"optimize": "vite optimize",
-		"start": "node server.js"
-=======
-	"version": "0.1.34",
-	"scripts": {
+		"new:dev": "vite dev",
+		"new:prod": "vite run --mode production",
+		"new:build": "vite build",
+		"new:preview": "vite preview --port 8000",
+		"new:optimize": "vite optimize",
+		"new:start": "node server.js",
 		"dev": "node server.js",
 		"prod": "node server.js",
 		"preview": "node server.js",
 		"optimize": "node server.js",
 		"start": "node server.js",
 		"test": "node test.js"
->>>>>>> b17a60f551da554d257b727249f934755343ec62
 	},
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
 	"dependencies": {
-<<<<<<< HEAD
 		"amplify-adapter": "^0.1.4",
 		"cookie-parser": "^1.4.7",
 		"csrf": "^3.1.0",
@@ -35,12 +29,5 @@
 	},
 	"devDependencies": {
 		"@sveltejs/vite-plugin-svelte": "^3.1.2"
-=======
-		"cookie-parser": "^1.4.7",
-		"csrf": "^3.1.0",
-		"express": "^4.21.1",
-		"express-rate-limit": "^7.4.1",
-		"helmet": "^7.2.0"
->>>>>>> b17a60f551da554d257b727249f934755343ec62
-	}
+}
 }
