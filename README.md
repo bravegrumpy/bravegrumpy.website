@@ -83,7 +83,7 @@ I know I haven't updated this readme in a while. Here are some highlights:
 - [X] figured out how to print error-logs in JS
 - [X] made edits to new-tab javascript.
 - [X] added favicon with BG logo.
-- [X] added in dropdown menu on [helloWorld page](www.bravegrumpy.com/helloWorld/helloWorld_html.html)
+- [X] added in dropdown menu on [www.bravegrumpy.com/helloWorld/helloWorld_html.html](www.bravegrumpy.com/helloWorld/helloWorld_html.html)
 - [X] main branch published at [http://www.bravegrumpy.com](http://www.bravegrumpy.com)
 - [X] Deleted template files that were used in flask.
 - [ ] Create a framework for Project 6
