@@ -5,13 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: 
-      - "main"
-      - "staging/green"
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - "main"
-      - "stagin/green"
+    branches: [ "main" ]
 
 jobs:
   build:

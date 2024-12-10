@@ -9,17 +9,8 @@ node_modules/
 **/.idea/
 
 # build artifacts
-build
 node_modules
-.npm
-
-
-## Build  artifacts from other branches
-.svelte-kit
-
-# environment variables and secrets
-**.env*
-
+build
 
 # scratch files and directories
 scratch*
@@ -28,4 +19,3 @@ scratch*.*
 **/scratch**
 **/scratch/**
 **/scratch/**.*
-**old**
