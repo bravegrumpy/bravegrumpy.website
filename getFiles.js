@@ -7,8 +7,7 @@ const __dirname = path.dirname(__filename);
 const defaultDirectory = __dirname;
 const html = '.html';
 
-export default function  getFilenames(currentDirectory=defaultDirectory, fileType=html) {
-    
+export default function getFilenames(currentDirectory=defaultDirectory, fileType=html) {
     const filenames = fs.readdirSync(currentDirectory).filter(file => {
         const filePath = path.join(currentDirectory, file);
         const isFile = fs.statSync(filePath).isFile();
@@ -17,7 +16,6 @@ export default function  getFilenames(currentDirectory=defaultDirectory, fileTyp
     });
     return filenames;
 }
-
 
 export const htmlFiles = getFilenames();
 console.log(htmlFiles.length);
