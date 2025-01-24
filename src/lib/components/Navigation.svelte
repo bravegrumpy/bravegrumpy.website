@@ -33,6 +33,7 @@
       --fontSize={fontSize}
       --marginLeft={marginLeft}
       --marginTop="10px"
+      --buttonWidth = "250px"
     />
   {/each}
 </div>

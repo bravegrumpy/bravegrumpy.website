@@ -9,25 +9,28 @@ const links = [
   {
     id: "2",
     href: "/writing",
-    text: "Writing",
-    pageTitle: "Creative Writing",
-    pageSubtitle: "A collection of written works.",
+    text: "Creative Writing",
+    pageTitle: "Huetopia",
+    pageSubtitle: "A colorful continent within a magical world",
     subnav: [
-      {
-        id: "2-0",
-        href: "/writing/huetopia",
-        text: "Huetopia",
-        pageTitle: "Huetopia",
-        pageSubtitle: "A colorful continent within a magical world.",
-      },
-      {
-        id: "2-1",
-        href: "/writing/blog",
-        text: "Blog",
-        pageTitle: "Blog",
-        pageSubtitle: "Written works about my thoughts and feelings",
-      },
+        {
+            id: "2",
+            href: "/writing",
+            text: "Huetopia Home",
+        },
+        {
+            id: "2-0",
+            href: "/writing/wbw",
+            text: "Coursera WBW"
+        }
     ],
+  },
+  {
+    id: "3",
+    href: "/blog",
+    text: "Blog",
+    pageTitle: "Blog",
+    pageSubtitle: "Written works about my thoughts and feelings",
   },
   //   {
   //     id: '2',
@@ -67,7 +70,7 @@ const links = [
   //     ]
   //   },
   {
-    id: "3",
+    id: "4",
     href: "/links",
     text: "Links",
     pageTitle: "Link Repository",

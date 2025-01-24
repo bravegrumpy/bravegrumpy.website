@@ -1,0 +1,43 @@
+<script>
+    import Section from '$lib/components/Section.svelte';
+    import Article from '$lib/components/Article.svelte';
+    import Aside from '$lib/components/Aside.svelte';
+</script>
+
+<Article>
+    <Section sectionClass="font-heading text-3xl">
+
+## Welcome to Huetopia
+    
+    </Section> 
+    <Section>
+
+Huetopia is a world that I have been building for some time.
+
+This website is for chronicling my progress as I folow the <a href="https://www.coursera.org/learn/write-your-first-novel/home/info" target="_blank">Writing your First Novel</a> course.  It is taught by <a href="https://www.coursera.org/instructor/dwheeler" target="_blank">David Wheeler</a> and published by <a href="https://msu.edu/" target="_blank">Michigan State Universtity</a> on <a href="https://www.coursera.org" target="_blank">Coursera</a>.
+
+For week by week progress go to the <a href="work-by-week/index.html">Coursera Work By Week</a> page.
+
+To read full chapters as they are written, go to Read Now.
+
+    </Section>
+</Article>
+
+<div style:grid-column="3/4">
+    <Aside --asideHeight="fit-content">
+
+## Logline
+
+Enter a world full of bright colors and geometric geographies, where the politics of the past inform the leaders' decisions while oblivious to the ancient magic forces stirring.
+
+    </Aside>
+
+
+    <Aside>
+
+## Dramatic Question
+
+
+Will a group of graduate students complete a quest to understand their history and make an informed decision about continuing to live in their previously invisible utopia?
+    </Aside>
+</div>
