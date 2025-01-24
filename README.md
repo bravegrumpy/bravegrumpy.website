@@ -7,6 +7,14 @@ the best methodology for publishing it to the domain: bravegrumpy.com
 
 ## Notes
 
+### 2025
+
+#### January
+
+##### 24th
+
+- [x] I moved the contents from the [svelte.bravegrumpy.website repo](https://dev.svelte.bravegrumpy.com) into the main bravegrumpy repo. This should be pretty usable as a framework for porting existing content.
+
 ### 2024
 
 #### October
