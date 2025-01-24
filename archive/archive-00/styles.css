@@ -6,33 +6,33 @@
  * The purpose of this website, is to practice responsive web design, and to publish creative writing.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Fredoka&family=Sacramento&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri&family=Fredoka&family=Sacramento&display=swap");
 
-:root{
-    --main-bg:  #d2c8ff;
-    --second-bg: #d1dcff;
-    --emp-color: rgba(20, 100, 20);
-    --title-font: 'El Messiri', sans-serif;
-    --text-font:  'Fredoka', sans-serif;
-    --emp-font:  'Sacramento', cursive;
+:root {
+  --main-bg: #d2c8ff;
+  --second-bg: #d1dcff;
+  --emp-color: rgba(20, 100, 20);
+  --title-font: "El Messiri", sans-serif;
+  --text-font: "Fredoka", sans-serif;
+  --emp-font: "Sacramento", cursive;
 }
 
 body {
-    background-color: var(--main-bg);
-    margin-left: 200px;
-    margin-right: 200px;
+  background-color: var(--main-bg);
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
-h2{
-    color:  black;
-    font-family: var(--title-font);
+h2 {
+  color: black;
+  font-family: var(--title-font);
 }
 
 .title {
-    font-size: 20px;
-    /*width: 325px;*/
-    text-align: center;
-    border-style: double;
-    font-family: var(--title-font);
-    background-color: var(--second-bg);
+  font-size: 20px;
+  /*width: 325px;*/
+  text-align: center;
+  border-style: double;
+  font-family: var(--title-font);
+  background-color: var(--second-bg);
 }

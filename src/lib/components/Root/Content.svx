@@ -1,0 +1,17 @@
+<script>
+    import { Checkbox } from 'flowbite-svelte';
+</script>
+
+## Home Page
+
+Hi! I am a creative at heart, and have put this together to show off my web-development, creative writing skills, and visual media skills.  
+
+This is a personal website, that I've been using to aggregate my creative works in a single location. 
+
+I created this website using SvelteKit 2.0 and Svelte 5.
+All of the design work is original.
+
+### Things I want to add:
+
+- <Checkbox>Some code references</Checkbox>
+- <Checkbox>A streamlined version of this theme.</Checkbox>

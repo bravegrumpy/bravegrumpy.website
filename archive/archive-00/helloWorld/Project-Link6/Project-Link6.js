@@ -5,4 +5,3 @@
  * Otherwise, you can email seacrestskylar@gmail.com, or join the discord server, linked within each page.
  * The purpose of this website, is to practice responsive web design, and to publish creative writing.
  */
-
