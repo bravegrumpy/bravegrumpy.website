@@ -30,6 +30,14 @@ I want to look into what adapters exist in node that  can allow me to connect ja
 
 ## Change-Log
 
+### 2025 
+
+#### January
+
+##### 24 <sup>th</sup>
+
+Bringing practice repo to this one. This one also deploys, so I can migrate to this.
+
 ### 2024
 
 #### October 20 `<sup>`th `</sup>`
