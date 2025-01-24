@@ -13,6 +13,8 @@ the best methodology for publishing it to the domain: bravegrumpy.com
 
 ##### 24th
 
+- [x] Bringing practice repo to this one. This one also deploys, so I can migrate to this.
+
 - [x] I moved the contents from the [svelte.bravegrumpy.website repo](https://dev.svelte.bravegrumpy.com) into the main bravegrumpy repo. This should be pretty usable as a framework for porting existing content.
 
 ### 2024
@@ -38,13 +40,6 @@ I want to look into what adapters exist in node that  can allow me to connect ja
 
 ## Change-Log
 
-### 2025 
-
-#### January
-
-##### 24 <sup>th</sup>
-
-Bringing practice repo to this one. This one also deploys, so I can migrate to this.
 
 ### 2024
 
@@ -99,8 +94,8 @@ I know I haven't updated this readme in a while. Here are some highlights:
 
 - [ ] TODO: Squash all the hello world projects into one web-page
   - [ ] can you combine multiple html files into one page?
-- [ ] TODO: Make better logo
-- [ ] TODO: Add in new-feature branch to start making massive changes.
+- [x] TODO: Make better logo
+- [x] TODO: Add in new-feature branch to start making massive changes.
 - [ ] TODO: figure out how to extract information with JS.
 - [X] figured out how to print error-logs in JS
 - [X] made edits to new-tab javascript.
