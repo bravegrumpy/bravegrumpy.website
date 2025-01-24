@@ -31,9 +31,9 @@
     --largeWidth={largeWidth}
   />
   <Section
-    lightColors="text-flush-orange-700 bg-flush-orange-300"
-    darkColors="dark:text-flush-orange-300 dark:bg-flush-orange-700"
-    sectionClass="font-heading text-3xl self-start"
+    lightColors="text-valencia-800 bg-valencia-300"
+    darkColors="dark:text-valencia-300 dark:bg-valencia-800"
+    sectionClass="font-heading text-3xl self-center w-full"
     --XMargin="0px"
   >
     <h2>Error {$page.status}: Page {$page.error.message}</h2>
@@ -48,10 +48,11 @@
       slug="/"
       text="Click here return to Bravegrumpy Homepage"
       --fontSize="1.2rem"
-      --buttonWidth="515px"
+      --buttonWidth="75%"
       --marginLeft="0px"
-      className="self-center mb-[25px] hue-rotate-90 hover:hue-rotate-60"
+      className="self-center mb-[25px] hover:hue-rotate-15 "
     />
+</Section>
     <ul style:display="none">
       <li>Origin: {$page.url.origin}</li>
       <li>HostName: {$page.url.hostname}</li>
@@ -59,7 +60,7 @@
       <li>PathName: {$page.url.pathname}</li>
       <li>Searh Parameters: {$page.url.searchParams}</li>
     </ul>
-  </Section>
+
   <UnderConstruction
     text=""
     constructionHeight="2rem"
