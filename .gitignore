@@ -26,3 +26,8 @@ vite.config.ts.timestamp-*
 .amplify
 amplify_outputs*
 amplifyconfiguration*
+
+# scratch files
+scratch/**
+*scratch*
+*scratch*.*
