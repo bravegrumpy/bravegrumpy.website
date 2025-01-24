@@ -3,9 +3,10 @@ node_modules
 # Output
 .output
 .vercel
+.netlify
+.wrangler
 /.svelte-kit
 /build
-/.astro
 
 # OS
 .DS_Store
@@ -20,9 +21,3 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-
-# Scratch files
-**scratch**
-**/scratch*.*
-**/scratch**/**.*
-!scratch.env.text
