@@ -36,7 +36,7 @@ I want to look into what adapters exist in node that  can allow me to connect ja
 
 ##### 24 <sup>th</sup>
 
-Brin
+Bringing practice repo to this one. This one also deploys, so I can migrate to this.
 
 ### 2024
 
