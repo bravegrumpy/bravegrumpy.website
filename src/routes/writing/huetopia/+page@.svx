@@ -4,6 +4,18 @@
     import Aside from '$lib/components/Aside.svelte';
 </script>
 
+<Article --articleColumn="1/2">
+
+    <Aside --asideHeight="fit-content">
+
+## Links will eventually go here. 
+
+- I need to figure out what  the right links are.
+
+
+    </Aside>
+</Article>
+
 <Article>
     <Section sectionClass="font-heading text-3xl">
 

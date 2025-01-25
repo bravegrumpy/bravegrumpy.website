@@ -22,19 +22,18 @@ const links = [
         },
         {
             id: "2-0",
-            href: "/writing/blog",
-            text: "Blog",
-            pageTitle: "Blog",
-            pageSubtitle: "Written works about my thoughts and feelings"
-
+            href: "/writing/huetopia",
+            text: "Huetopia",
+            pageTitle: "Huetopia Homepage",
+            pageSubtitle: "A colorful continent within a magical world"
         },
         {
             id: "2-1",
-            href: "/writing/huetopia",
-            text: "Fantasy",
-            pageTitle: "Huetopia Homepage",
-            pageSubtitle: "A colorful continent within a magical world"
-        }
+            href: "/writing/huetopia/wbw",
+            text: "Excercieses",
+            pageTitle: "Coursera Work by Week",
+            pageSubtitle: "Weekly posts, and writing not yet put in order"
+        },
     ],
   },
   //   {
@@ -96,6 +95,13 @@ const links = [
     //   }
     // ]
   },
+  {
+    id: "4",
+    href: "/blog",
+    text: "Blog",
+    pageTitle: "Blog",
+    pageSubtitle: "Written works about my thoughts and feelings"
+ }
 ];
 
 const currentTab = "/links";
