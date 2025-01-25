@@ -10,7 +10,10 @@
     className = '',
     marginLeft = '1rem',
     navigationWidth = '1250px',
-    justifyContent = 'flex-start'
+    justifyContent = 'flex-start',
+    buttonWidth = '250px',
+    marginBottom = "10px",
+    marginTop = "10px"
   } = $props();
 
   //   const buttonSize = $derived(`size-[${iconSize * 2}px]`);
@@ -32,8 +35,9 @@
       {className}
       --fontSize={fontSize}
       --marginLeft={marginLeft}
-      --marginTop="10px"
-      --buttonWidth="250px"
+      --marginTop={marginTop}
+      --marginBottom = {marginBottom}
+      --buttonWidth={buttonWidth}
     />
   {/each}
 </div>

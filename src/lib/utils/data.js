@@ -23,17 +23,17 @@ const links = [
       {
         id: '2-0',
         href: '/writing/huetopia',
-        text: 'Huetopia',
+        text: 'Fantasy',
         pageTitle: 'Huetopia Homepage',
         pageSubtitle: 'A colorful continent within a magical world'
       },
       {
         id: '2-1',
-        href: '/writing/huetopia/wbw',
-        text: 'Excercieses',
-        pageTitle: 'Coursera Work by Week',
-        pageSubtitle: 'Weekly posts, and writing not yet put in order'
-      }
+        href: '/writing/blog',
+        text: 'Blog',
+        pageTitle: 'Blog',
+        pageSubtitle: 'Written works about my thoughts and feelings.'
+    }
     ]
   },
   //   {
@@ -94,13 +94,6 @@ const links = [
     //     pageSubtitle: 'Another attempt at making a reasonable base layout'
     //   }
     // ]
-  },
-  {
-    id: '4',
-    href: '/blog',
-    text: 'Blog',
-    pageTitle: 'Blog',
-    pageSubtitle: 'Written works about my thoughts and feelings'
   }
 ];
 

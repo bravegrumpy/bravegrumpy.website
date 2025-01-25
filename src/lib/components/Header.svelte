@@ -87,12 +87,13 @@
   }
 
   #bottomBar {
-    margin-top: -3rem;
-    height: 5rem;
+    /* margin-top: -3rem; */
+    height: 100px;
     display: flex;
     flex-direction: row;
     gap: 1rem;
     align-items: center;
+    justify-content: flex-start;
   }
   @media screen and (max-width: 1000px) {
     #darkmode {

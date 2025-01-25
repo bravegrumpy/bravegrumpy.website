@@ -14,7 +14,7 @@
 
 <nav>
   {#if hasSubnav}
-    <Navigation links={currentLink.subnav} reversed={false} {slug} {fontSize} />
+    <Navigation links={currentLink.subnav} reversed={false} {slug} {fontSize} buttonWidth="200px" />
   {/if}
 </nav>
 
