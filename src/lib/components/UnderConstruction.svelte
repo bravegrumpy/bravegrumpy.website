@@ -5,7 +5,7 @@
 
   const {
     text = 'This website is perpetually under construction 😎',
-    constructionHeight = 'fit-content'  
+    constructionHeight = 'fit-content'
   } = $props();
 </script>
 

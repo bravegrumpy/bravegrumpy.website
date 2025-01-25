@@ -22,7 +22,8 @@ li:last-child {
   border-right: none;
 }
 
-li a, .dropdown-button {
+li a,
+.dropdown-button {
   display: inline-block;
   color: var(--text-color);
   text-align: center;
@@ -30,7 +31,8 @@ li a, .dropdown-button {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropdown-button {
+li a:hover,
+.dropdown:hover .dropdown-button {
   background-color: mediumaquamarine;
   color: darkblue;
 }

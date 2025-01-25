@@ -52,14 +52,14 @@
       --marginLeft="0px"
       className="self-center mb-[25px] hover:hue-rotate-15 "
     />
-</Section>
-    <ul style:display="none">
-      <li>Origin: {$page.url.origin}</li>
-      <li>HostName: {$page.url.hostname}</li>
-      <li>Host: {$page.url.host}</li>
-      <li>PathName: {$page.url.pathname}</li>
-      <li>Searh Parameters: {$page.url.searchParams}</li>
-    </ul>
+  </Section>
+  <ul style:display="none">
+    <li>Origin: {$page.url.origin}</li>
+    <li>HostName: {$page.url.hostname}</li>
+    <li>Host: {$page.url.host}</li>
+    <li>PathName: {$page.url.pathname}</li>
+    <li>Searh Parameters: {$page.url.searchParams}</li>
+  </ul>
 
   <UnderConstruction
     text=""

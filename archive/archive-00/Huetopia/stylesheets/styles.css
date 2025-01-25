@@ -21,7 +21,7 @@
 /************************************/
 /* Ensuring that rows are on a new line */
 .row::after {
-  content: "";
+  content: '';
   clear: both;
   display: table;
 }
@@ -29,7 +29,7 @@
 
 /************************************/
 /* setting up columns to go left */
-[class*="col-"] {
+[class*='col-'] {
   float: left;
   padding: 15px;
 }
@@ -38,7 +38,7 @@
 /************************************/
 /* Generic styling */
 html {
-  font-family: "Lucida Sans", sans-serif;
+  font-family: 'Lucida Sans', sans-serif;
 }
 /************************************/
 
@@ -68,7 +68,9 @@ html {
   margin-bottom: 7px;
   background-color: #d1dcff;
   color: #000000;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow:
+    0 1px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .navbar ul li a {
@@ -82,7 +84,9 @@ html {
   /*box-shadow: 0 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);*/
 }
 
-.navbar li:hover, .navbar .dropdown-button:hover, .navbar .dropdown:hover {
+.navbar li:hover,
+.navbar .dropdown-button:hover,
+.navbar .dropdown:hover {
   background-color: #a7bcff;
 }
 
@@ -116,7 +120,9 @@ html {
   margin-bottom: 10px;
   background-color: #d1dcff;
   color: #000000;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow:
+    0 1px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .menu li a {
@@ -140,7 +146,7 @@ div.construction {
   font-size: 5rem;
   text-align: center;
   color: red;
-  font-family: "Courier", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Courier', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bolder;
   transform: rotate(-10deg);
   width: 100%;
@@ -151,7 +157,7 @@ p.construction {
   font-size: 1rem;
   text-align: center;
   color: red;
-  font-family: "Courier", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Courier', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bolder;
   transform: rotate(10deg);
   width: 100%;
@@ -167,7 +173,9 @@ p.construction {
   color: #000000;
   font-size: 14px;
   border-radius: 10%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .aside h2 {
@@ -195,7 +203,7 @@ p.construction {
 
 /************************************/
 /* For mobile phones: */
-[class*="col-"] {
+[class*='col-'] {
   width: 100%;
 }
 /************************************/
@@ -203,7 +211,7 @@ p.construction {
 /*************************************************/
 /* portrait mode */
 @media only screen and (orientation: portrait) {
-  [class*="col-"] {
+  [class*='col-'] {
     width: 100%;
     /* Uncomment the below line to see blocking guides*/
     /*border: 1px solid orange;*/
