@@ -9,7 +9,7 @@ const links = [
   {
     id: '2',
     href: '/writing',
-    text: 'Creative Writing',
+    text: 'Writing',
     pageTitle: 'Creative  Writing',
     pageSubtitle: 'There is a lot of creative writing here.',
     subnav: [
