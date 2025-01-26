@@ -107,12 +107,14 @@ const links = [
         href: '/archive/sites',
         text: 'Sites',
         pageTite: 'Old Website Versions',
-        pageSubtitle: 
+        pageSubtitle: "Previous iterations of this website."
       },
       {
         id: '4-1',
         href: '/archive/content',
-        text: 'Content'
+        text: 'Content',
+        pageTitle: "Archived Content",
+        pageSubtitle: 'Contnet I no longer stand by'
       }
     ],
   }
