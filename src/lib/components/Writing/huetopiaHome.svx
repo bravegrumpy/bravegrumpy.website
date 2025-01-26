@@ -1,3 +1,5 @@
+<div style:display="none">
+
 ## Welcome to Huetopia
 
 Huetopia is a world that i have been building for some time.
@@ -7,3 +9,13 @@ This website is for chronicling my progress as I folow the [Writing your first N
 For week by week progress go to the [Coursera Work By Week](https://www.bravegrumpy.com/content/chapters/index.html) page.
 
 To read full chapters as they are written, go to [Read Now](https://www.bravegrumpy.com/content/chapters/index.html).
+
+</div>  
+
+Huetopia is a world that I have been building for some time.
+
+This website is for chronicling my progress as I folow the <a href="https://www.coursera.org/learn/write-your-first-novel/home/info" target="_blank">Writing your First Novel</a> course.  It is taught by <a href="https://www.coursera.org/instructor/dwheeler" target="_blank">David Wheeler</a> and published by <a href="https://msu.edu/" target="_blank">Michigan State Universtity</a> on <a href="https://www.coursera.org" target="_blank">Coursera</a>.
+
+For week by week progress go to the <a href="work-by-week/index.html">Coursera Work By Week</a> page.
+
+To read full chapters as they are written, go to Read Now.

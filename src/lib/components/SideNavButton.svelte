@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   const { href = '#', text = 'This is the bookmark', active = false } = $props();
 </script>
 
@@ -40,5 +40,24 @@
   :global(.dark) [data-active='true'] {
     background-color: var(--bravegrumpy-brand6);
     color: var(--bravegrumpy-highlight1);
+  }
+</style> -->
+<script>
+  import '$lib/styles/globals.css';
+  const { text = 'test', href = '/', slug = '/', active = href === slug } = $props();
+</script>
+
+<a {href} data-active={active}>{text}</a>
+
+<style>
+  a {
+    color: var(--bravegrumpy-dark1);
+    @apply no-underline;
+    background-color: var(--bravegrumpy-accen t2b);
+  }
+
+  :global(.dark) a {
+    color: var(--bravegrumpy-accent2b);
+    background-color: var(--bravegrumpy-dark1);
   }
 </style>
