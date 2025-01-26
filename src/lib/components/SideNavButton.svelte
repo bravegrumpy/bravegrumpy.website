@@ -52,6 +52,7 @@
 <style>
   a {
     text-decoration-line: none;
+    margin-top: 15px;
     width: 100%;
     font-size: var(--fontSize, 1.5rem);
     border: 5px solid currentColor;

@@ -95,6 +95,25 @@ const links = [
     //   }
     // ]
   },
+  {
+    id: '4',
+    href: '/archive',
+    text: 'Archives',
+    pageTitle: 'Archives',
+    pageSubtitle: 'Previous versions of this website',
+    subnav: [
+      {
+        id: '4-0',
+        href: '/archive/sites',
+        text: 'Sites'
+      },
+      {
+        id: '4-1',
+        href: '/archive/content',
+        text: 'Content'
+      }
+    ],
+  }
 ];
 
 const currentTab = "/links";
