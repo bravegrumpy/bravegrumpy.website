@@ -3,7 +3,9 @@
   import links from '$lib/utils/data.js';
   import { page } from '$app/stores';
 
-  const slug = $derived($page.url.pathname);
+  const slug = $derived(
+    '/' + $page.url.pathname.split('/')[1] + '/' + $page.url.pathname.split('/')[2]
+  );
 
   const mainPage = $derived('/' + $page.url.pathname.split('/')[1]);
   const { fontSize = '1.5rem' } = $props();

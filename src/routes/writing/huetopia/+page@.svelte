@@ -8,18 +8,20 @@
 
   import SideNav from '$lib/components/SideNav.svelte';
   import SideNavButton from '$lib/components/SideNavButton.svelte';
+
+  import { page } from '$app/stores';
 </script>
 
-<Article --articleColumn="1/2">
-  <Aside --asideHeight="fit-content">
-    <h2>Links will eventually go here.</h2>
-    <ul>
-      <li>I need to figure out what the right links are.</li>
-    </ul>
-  </Aside>
-  <SideNav />
-  <SideNavButton />
-</Article>
+<SideNav
+  references={[
+    {
+      id: 'a',
+      href: '/writing/huetopia/wbw',
+      slug: '/writing/huetopia/wbw',
+      text: 'Coursera Work by week'
+    }
+  ]}
+/>
 
 <Article>
   <Section sectionClass="font-heading text-3xl">
@@ -28,6 +30,11 @@
 
   <Section>
     <HuetopiaHome />
+  </Section>
+
+  <Section>
+    <h2>I'm doing some troubleshooting.</h2>
+    <p>{`/${$page.url.pathname.split('/')[1]}/${$page.url.pathname.split('/')[2]}`}</p>
   </Section>
 </Article>
 

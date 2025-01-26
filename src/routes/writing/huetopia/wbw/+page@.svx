@@ -1,20 +1,17 @@
 <script>
-    import Article from '$lib/components/Article.svelte';
-    import Section from '$lib/components/Section.svelte';
-    import BaseContent from '$lib/components/BaseContent.svelte';
-    import {page} from '$app/stores';
+  import Article from '$lib/components/Article.svelte';
+  import Section from '$lib/components/Section.svelte';
+  import BaseContent from '$lib/components/BaseContent.svelte';
+  import { page } from '$app/stores';
 </script>
 
 
 <Article>
-<Section >
+<Section>
 
-## Placeholder text
-
-This is  something. I don't know if it will work but it  should be something.
+## This is placeholder text
 
 {$page.url}
 
 </Section>
-
 </Article>
