@@ -1,6 +1,6 @@
 {
   "name": "bravegrumpy.website",
-  "private": true,
+  "author": "bravegrumpy",
   "version": "0.3.1-25",
   "type": "module",
   "scripts": {
