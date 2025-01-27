@@ -56,3 +56,15 @@ How do these work here?
 </Aside>
 
 </BaseContent>
+
+<BaseContent title="New Addition">
+
+<Section>
+
+## New Addition
+
+I am making this change for the sake of having a change.
+
+</Section>
+
+</BaseContent>
