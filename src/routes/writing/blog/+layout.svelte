@@ -9,4 +9,6 @@
   <title>{$page.data.page.text} | Bravegrumpy</title>
 </svelte:head>
 
-{@render children()}
+<BaseLayout>
+  {@render children()}
+</BaseLayout>

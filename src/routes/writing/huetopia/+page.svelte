@@ -12,17 +12,6 @@
   import { page } from '$app/stores';
 </script>
 
-<SideNav
-  references={[
-    {
-      id: 'a',
-      href: '/writing/huetopia/wbw',
-      slug: '/writing/huetopia/wbw',
-      text: 'Coursera Work by week'
-    }
-  ]}
-/>
-
 <Article>
   <Section sectionClass="font-heading text-3xl">
     <h2>Welcome to Huetopia</h2>

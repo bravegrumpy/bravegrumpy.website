@@ -3,10 +3,12 @@
     import Section from '$lib/components/Section.svelte';
     import Aside from '$lib/components/Aside.svelte';
     import BaseContent from '$lib/components/BaseContent.svelte';
+    import BaseLayout from '$lib/components/BaseLayout.svelte';
     import {page} from '$app/stores';
 </script>
 
 
+<BaseLayout>
 <BaseContent open title="first placeholder">
 <Article>
 <Section >
@@ -68,3 +70,5 @@ I am making this change for the sake of having a change.
 </Section>
 
 </BaseContent>
+
+</BaseLayout>

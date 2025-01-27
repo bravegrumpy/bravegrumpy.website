@@ -14,18 +14,27 @@ const links = [
     pageSubtitle: "There is a lot of creative writing here.",
     subnav: [
       {
-        id: "2",
-        href: "/writing",
-        text: "Writing",
-        pageTitle: "Creative Writing",
-        pageSubtitle: "Writing Homepage",
-      },
-      {
         id: "2-0",
         href: "/writing/huetopia",
         text: "Fantasy",
         pageTitle: "Huetopia Homepage",
         pageSubtitle: "A colorful continent within a magical world",
+        subnav: [
+          {
+            id: '2-0-0',
+            href: '/writing/huetopia/wbw',
+            text: 'Coursera Work by Week',
+            pageTite: 'Coursera Work by Week',
+            pageSubtitle: 'Writing Excercises'
+          },
+          {
+            id: "2-0-1",
+            href: "/writing/huetopia/content",
+            text: 'Read Now',
+            pageTitle: "Narrative",
+            pageSubtitle: "What I've written so far"
+          }
+        ],
       },
       {
         id: "2-1",
