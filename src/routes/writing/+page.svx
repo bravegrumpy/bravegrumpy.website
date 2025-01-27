@@ -4,10 +4,12 @@
     import Aside from '$lib/components/Aside.svelte';
     import BaseContent from '$lib/components/BaseContent.svelte';
     import {page} from '$app/stores';
+
+    import { output } from 'bravegrumpy-testnpmdir';
 </script>
 
 
-<BaseContent open>
+<BaseContent open title="first placeholder">
 <Article>
 <Section >
 
@@ -22,7 +24,7 @@ This is  something. I don't know if it will work but it  should be something.
 </Article>
 </BaseContent>
 
-<BaseContent>
+<BaseContent title="🧐 searching for contnet">
 
 <Section>
 
@@ -34,7 +36,7 @@ It is the second "tab". I do not think these tabs are actually referenced. So I 
 
 </BaseContent>
 
-<BaseContent>
+<BaseContent title="A third piece of llorem ipsum">
 
 <Section>
 
