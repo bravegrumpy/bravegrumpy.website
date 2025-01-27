@@ -4,8 +4,6 @@
     import Aside from '$lib/components/Aside.svelte';
     import BaseContent from '$lib/components/BaseContent.svelte';
     import {page} from '$app/stores';
-
-    import { output } from 'bravegrumpy-testnpmdir';
 </script>
 
 
