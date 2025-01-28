@@ -1,6 +1,7 @@
 <script>
 import Section from '$lib/components/Section.svelte';
-let sectionClass = $state("font-bodyText prose min-w-full prose-ul:list-disc list-inside prose-p:text-bravegrumpy-brand4")
+
+const sectionClass = $state("font-bodyText prose min-w-full **:list-disc **:list-inside")
 </script>
 
 <Section {sectionClass}>
@@ -94,40 +95,39 @@ let sectionClass = $state("font-bodyText prose min-w-full prose-ul:list-disc lis
 
 <Section {sectionClass}>
 
-Skylar Seacrest
-Aliases
+## Skylar Seacrest
 
-    Skylar Seacrest
-    K-Ler
-    X
-    Asym
-
-Region-Of-Origin
-
-One of the ellipsoid tribes on the outskirts of the Great Circular Lake. This territory was taken over by the Triangle nation about one thousand years ago, so many of her nation’s cultural practices have been influenced by Triangle culture. Most people have never heard of the ellipsoid tribes. Their lakes, the Ellipses, have since been renamed by the Triangles as the Angular Rivlettes.
+- Aliases
+    - Skylar Seacrest
+    - K-Ler
+    - X
+    - Asym
+    
+- Region-Of-Origin
+    One of the ellipsoid tribes on the outskirts of the Great Circular Lake. This territory was taken over by the Triangle nation about one thousand years ago, so many of her nation’s cultural practices have been influenced by Triangle culture. Most people have never heard of the ellipsoid tribes. Their lakes, the Ellipses, have since been renamed by the Triangles as the Angular Rivlettes.
 Religions Within this Region
 
-The largest religion is an extremely old religion, Curl3 A subset of this religion eventually evolved into Draconian
+    The largest religion is an extremely old religion, Curl3 A subset of this religion eventually evolved into Draconian
 Special Skills
 
-Character X knows the prayers, summoning the Dragon of the River, and many other spirits. She is skeptical, given that she has not seen any firsthand. She does not know that the visions come at a Color Magic Adept ceremony immediately after her Ph.D. graduation.
+    Character X knows the prayers, summoning the Dragon of the River, and many other spirits. She is skeptical, given that she has not seen any firsthand. She does not know that the visions come at a Color Magic Adept ceremony immediately after her Ph.D. graduation.
 Occupation
 
-X is a student at The Academy. While her parents could pay the tuition, she also got a partial scholarship because of her unnaturally high color-magic powers.
+    X is a student at The Academy. While her parents could pay the tuition, she also got a partial scholarship because of her unnaturally high color-magic powers.
+    
+    X eventually graduates, and becomes a historian, to right the incorrect record that Arch provided. K-ler is the author of this tale, and therefore almost everything will be colored through K-ler’s her lens. The reader won’t know that she is a her. Or much of what this is about.
+    
+    Her role as a narrator might come through when we read a book by Professor Arch, in the next volume.
 
-X eventually graduates, and becomes a historian, to right the incorrect record that Arch provided. K-ler is the author of this tale, and therefore almost everything will be colored through K-ler’s her lens. The reader won’t know that she is a her. Or much of what this is about.
+- Personality
+    - Secretive
+    - Analytical
+    - Quiet
+    - Shy
+    - Loyal to her friends
+    - Discerning
 
-Her role as a narrator might come through when we read a book by Professor Arch, in the next volume.
-Personality
-
-    Secretive
-    Analytical
-    Quiet
-    Shy
-    Loyal to her friends
-    Discerning
-
-Attitudes about Euclidean School4
+- Attitudes about Euclidean School[4]
 
 Her peers thought she was super fun to be around and aspired to be like her. She schooled even the most athletic of her peers at sports and could be the life of the party. However, this extreme charisma never reached her eyes. She always thought she didn’t fit in. However, part of it was the weight of keeping her community’s secrets while at school. Acting like the perfectly trained Angular seemed fun but was exhausting.
 
@@ -200,6 +200,10 @@ Note:Skylar has two different answers to these questions. The Genuine Answer giv
     Genuine Response: I would slice-a-plane12 run away from this torus13, and find a place where I can paint, without having to deal with the ramifications.
 
     Recorded Response: I would stay loyal to the remnants of Triangle society.
+
+</Section>
+
+<Section>
 
 Lytia Quartano
 Region of Origin
