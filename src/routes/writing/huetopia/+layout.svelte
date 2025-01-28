@@ -5,6 +5,7 @@
 
   import Logline from '$lib/components/Writing/Logline.svx';
   import DramaticQuestion from '$lib/components/Writing/DramaticQuestion.svx';
+  import Article from '$lib/components/Article.svelte';
 
   const currSlug = $derived($page.url.pathname);
 
@@ -19,11 +20,11 @@
 
 {@render children()}
 
-<div style:grid-column="3/4" style:display="flex" style:flex-direction="column" style:gap="15px">
-  <Aside --asideHeight="fit-content">
+<Article --articleColumn="3/4">
+  <Aside --asideHeight="fit-content" --asidePadding="25px">
     <Logline />
   </Aside>
-  <Aside --asideHeight="fit-content">
+  <Aside --asideHeight="fit-content" --asidePadding="25px">
     <DramaticQuestion />
   </Aside>
-</div>
+</Article>

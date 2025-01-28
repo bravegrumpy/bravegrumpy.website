@@ -14,9 +14,19 @@
     color: var(--bravegrumpy-dark1);
     border-radius: var(--borderRadius);
     border: 2px solid;
-    padding: 10px;
+    padding: var(--asidePadding, 10px);
     height: var(--asideHeight, 200px);
     margin: 15px;
+
+    font-size: var(--fontSize, 1rem);
+
+    font-family: Recursive;
+    font-variation-settings:
+      'MONO' var(--mono, 0.6),
+      'CASL' var(--casl, 1),
+      'wght' var(--wght, 355),
+      'CRSV' var(--crsv, 0.5),
+      'slnt' var(--slnt, -14);
   }
 
   /* :global(h2) {

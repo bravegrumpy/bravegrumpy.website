@@ -72,12 +72,11 @@ Types of Adult Content Present
   </Section>
 </Article>
 
-<Article --articleColumn="3/4" --asideHeight="fit-content">
-  <Aside>
-    <h2>Crafts shown off here:</h2>
-    <ul>
-      <li>Writing</li>
-      <li>Resources to Enhanace Creativity</li>
-    </ul>
-  </Aside>
-</Article>
+<Aside --crsv="0" --slnt="0" --asideHeight="fit-content">
+  
+<h2>Crafts shown off here:</h2>
+
+Writing
+
+Resources to Enhanace Creativity
+</Aside>
