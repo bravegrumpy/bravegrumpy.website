@@ -7,7 +7,7 @@
     darkBackground = 'dark:bg-bravegrumpy-black',
     darkColors = `${darkText} ${darkBackground}`,
     colors = `${lightColors} ${darkColors}`,
-    sectionClass = `font-bodyText prose min-w-full prose-ul:list-disc prose-ol:list-decimal`,
+    sectionClass = `font-bodyText`,
     section = true,
     className = `${sectionClass} ${colors} ${section ? 'section' : ''}`,
     children
