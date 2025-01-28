@@ -84,6 +84,13 @@ const links = [
   //   },
   {
     id: "3",
+    href: "/visual",
+    text: 'Gallery',
+    pageTitle: "Art Gallery",
+    pageSubtitle: "Original Artwork. Mostly digial art, some photography & paintings"
+  },
+  {
+    id: "4",
     href: "/links",
     text: "Links",
     pageTitle: "Link Repository",
@@ -105,21 +112,21 @@ const links = [
     // ]
   },
   {
-    id: '4',
+    id: '5',
     href: '/archive',
     text: 'Archives',
     pageTitle: 'Archives',
     pageSubtitle: 'Previous versions of this website',
     subnav: [
       {
-        id: '4-0',
+        id: '5-0',
         href: '/archive/sites',
         text: 'Sites',
         pageTite: 'Old Website Versions',
         pageSubtitle: "Previous iterations of this website."
       },
       {
-        id: '4-1',
+        id: '5-1',
         href: '/archive/content',
         text: 'Content',
         pageTitle: "Archived Content",
