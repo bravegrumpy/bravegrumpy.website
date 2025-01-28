@@ -72,7 +72,7 @@ Types of Adult Content Present
   </Section>
 </Article>
 
-<Aside --crsv="0" --slnt="0" --asideHeight="fit-content">
+<Aside --crsv="0" --slnt="0" --asideHeight="fit-content"  >
   
 <h2>Crafts shown off here:</h2>
 
