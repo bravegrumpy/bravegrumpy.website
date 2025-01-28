@@ -1,0 +1,29 @@
+<script>
+
+import Section from '$lib/components/Section.svelte';
+import Article from '$lib/components/Article.svelte';
+
+</script>
+
+<Article --articleColumn="2/4">
+<Section>
+
+<h2 class="text-2xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">Llorem Ipsum</h2>
+
+</Section>
+
+<Section>
+
+Lorem ipsum odor amet, consectetuer adipiscing elit. Adipiscing lacinia nascetur libero est dictum conubia. Velit sem iaculis at consectetur inceptos dignissim. Tincidunt habitant rhoncus a taciti himenaeos porttitor vivamus. Non aptent accumsan neque sodales sagittis litora justo fusce. Auctor class convallis laoreet dui eu. Rhoncus luctus consectetur mattis volutpat erat. Parturient sapien nibh tristique per tincidunt conubia. Blandit consectetur ipsum sagittis sit bibendum vel ultrices habitasse faucibus.
+
+Suspendisse gravida placerat netus tempor; rutrum lacinia netus. Ultricies malesuada consequat venenatis efficitur orci. Posuere id sodales libero ultricies ex tempor. Amet phasellus natoque pharetra congue bibendum malesuada lacinia eu mauris. Augue facilisis amet bibendum vestibulum blandit molestie scelerisque ridiculus. Accumsan orci primis potenti interdum taciti commodo duis. Imperdiet ut finibus tempus curae class dolor senectus ridiculus. Proin hendrerit turpis fermentum egestas, venenatis duis dignissim.
+
+Porttitor pretium ultricies; lobortis dis arcu varius. Fames efficitur luctus condimentum est sollicitudin eleifend. Commodo vehicula eros dui ullamcorper senectus mollis ultrices mollis. Metus faucibus pharetra leo, ex dictum litora. Augue phasellus ac ad; facilisi interdum hendrerit. Cursus montes proin arcu cras bibendum diam odio nec. Pharetra gravida quis sem aptent quisque vulputate condimentum class. Enim libero turpis ultricies magnis ad fermentum integer interdum.
+
+Diam scelerisque ultrices scelerisque nam auctor. Viverra quisque fermentum egestas placerat facilisi integer volutpat accumsan. Aptent leo quis fusce venenatis auctor vehicula praesent. Nunc vivamus finibus congue euismod vitae etiam. Dis aptent sapien torquent molestie ut proin. Tempus montes molestie congue sociosqu potenti efficitur. Eget magna purus litora montes magna sodales. Dis posuere cubilia tempus inceptos sem quam.
+
+Iaculis ex feugiat finibus fringilla euismod nullam natoque magnis maximus. Fusce himenaeos placerat eget consequat; natoque ex consequat facilisi. Posuere varius aliquam tellus ligula eleifend volutpat adipiscing at. Quisque penatibus tristique vestibulum elementum pellentesque magnis ligula. Vivamus cursus massa finibus tristique; eu vehicula facilisi. Phasellus parturient sed massa sollicitudin molestie ante. Diam duis dignissim quisque inceptos torquent nibh.
+
+</Section>
+
+</Article>

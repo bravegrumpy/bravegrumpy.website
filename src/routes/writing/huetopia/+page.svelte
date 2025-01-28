@@ -26,13 +26,3 @@
     <p>{`/${$page.url.pathname.split('/')[1]}/${$page.url.pathname.split('/')[2]}`}</p>
   </Section>
 </Article>
-
-<div style:grid-column="3/4">
-  <Aside --asideHeight="fit-content">
-    <Logline />
-  </Aside>
-
-  <Aside --asideHeight="fit-content">
-    <DramaticQuestion />
-  </Aside>
-</div>

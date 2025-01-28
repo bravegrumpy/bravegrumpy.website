@@ -758,6 +758,7 @@ export default {
     },
     function ({ addVariant }) {
       addVariant('reversed', '&.reversed');
-    }
+    },
+    require('@tailwindcss/typography')
   ]
 };
