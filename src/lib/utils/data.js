@@ -82,13 +82,13 @@ const links = [
   //       }
   //     ]
   //   },
-  {
-    id: "3",
-    href: "/visual",
-    text: 'Gallery',
-    pageTitle: "Art Gallery",
-    pageSubtitle: "Original Artwork. Mostly digial art, some photography & paintings"
-  },
+  // {
+  //   id: "3",
+  //   href: "/visual",
+  //   text: 'Gallery',
+  //   pageTitle: "Art Gallery",
+  //   pageSubtitle: "Original Artwork. Mostly digial art, some photography & paintings"
+  // },
   {
     id: "4",
     href: "/links",
