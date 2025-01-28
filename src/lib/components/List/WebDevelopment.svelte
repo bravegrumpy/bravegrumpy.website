@@ -146,6 +146,25 @@
       >
     </li>
   </LOL>
+  <LOL heading="Placeholder Content">
+    <li>
+      <a href="https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators" target="_blank"
+        >List of Placeholder text generators</a
+      >
+    </li>
+    <li>
+      <a href="https://loremipsum.io/21-of-the-best-placeholder-image-generators" target="_blank"
+        >List of placeholder image sources</a
+      >
+    </li>
+    <li>In both of the subsequent resources, when I say "API" I mean a way to specificy requirements in URL></li>
+    <li>
+      <a href="https://placehold.co/" target="_blank">Blank Placeholder Images with API</a>
+    </li>
+    <li>
+      <a href="https://placedog.net/" target="_blank">Placeholder Dogs with API</a>
+    </li>
+  </LOL>
   <LOL title="Online Development Environments">
     <li>
       <a href="https://codepen.io/" target="_blank">Codepen -- Easy, can fit in iframe, static</a>
