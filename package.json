@@ -1,6 +1,8 @@
 {
   "name": "bravegrumpy.website",
   "author": "bravegrumpy",
+  "readme": "README.md",
+  "private": "true",
   "version": "0.3.1-32",
   "type": "module",
   "scripts": {
@@ -39,5 +41,6 @@
   },
   "dependencies": {
     "amplify-adapter": "^0.2.0"
-  }
+  },
+  "homepage": "https://new.bravegrumpy.com"
 }
