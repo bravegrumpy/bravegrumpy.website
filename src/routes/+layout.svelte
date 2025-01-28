@@ -16,7 +16,7 @@
 <div
   class="w-full bg-solarized-base-2 text-solarized-base-00 dark:bg-solarized-base-02 dark:text-solarized-base-0"
 >
-  <div class="body mx-auto w-4/5 bg-solarized-base-3 dark:bg-solarized-base-03">
+  <div class="body mx-auto w-full bg-solarized-base-3 dark:bg-solarized-base-03">
     <Header {links} />
     <Main>
       {@render children()}
