@@ -3,7 +3,7 @@
   "author": "bravegrumpy",
   "readme": "README.md",
   "private": "true",
-  "version": "0.3.1-39",
+  "version": "0.3.1-40",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
