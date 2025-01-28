@@ -44,10 +44,13 @@
 </style> -->
 <script>
   import '$lib/styles/globals.css';
-  let { text = 'test', href = '/', slug = '/writing', active = href === slug } = $props();
+  let { text = 'test', href = '/', slug = '/writing' } = $props();
+  const active = $derived(href === slug);
 </script>
 
-<a {href} data-active={active}>{text}</a>
+<a data-sveltekit-preload-code="viewport" {href} data-active={active}>
+  {text}
+</a>
 
 <style>
   a {

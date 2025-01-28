@@ -27,7 +27,7 @@
   } = $props();
 </script>
 
-<aside data-sveltekit-reload class="aside">
+<aside class="aside">
   {#each references as ref (ref.id)}
     {#if ref.active != undefined}
       <SideNavButton id={ref.id} href={ref.href} text={ref.text} active={ref.active} />
