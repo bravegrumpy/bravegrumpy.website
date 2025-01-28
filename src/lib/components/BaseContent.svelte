@@ -25,7 +25,7 @@
     h6 = '',
     open = false,
     title = 'title',
-    defaultClass = 'text-2xl border-[5px] border-solid border-current border-l-0 px-4 py-1 w-full rounded-[5px] rounded-l-none -ml-[60px] mr-5',
+    defaultClass = 'text-2xl border-[5px] border-solid border-current border-l-0 px-4 py-1 w-full rounded-[5px] rounded-l-none -ml-[20px] mr-5',
     activeClasses = 'font-navMenuActive bg-bravegrumpy-accent2a text-bravegrumpy-logoPurple dark:bg-bravegrumpy-brand6 dark:text-bravegrumpy-highlight1',
     inactiveClasses = 'font-navMenuDefault bg-bravegrumpy-accent2b text-bravegrumpy-dark1 dark:bg-bravegrumpy-dark1 dark:text-bravegrumpy-accent2b',
     children
