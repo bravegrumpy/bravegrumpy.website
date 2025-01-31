@@ -12,8 +12,8 @@
     navigationWidth = '1250px',
     justifyContent = 'flex-start',
     buttonWidth = '250px',
-    marginBottom = "10px",
-    marginTop = "10px"
+    marginBottom = '10px',
+    marginTop = '10px'
   } = $props();
 
   //   const buttonSize = $derived(`size-[${iconSize * 2}px]`);
@@ -36,7 +36,7 @@
       --fontSize={fontSize}
       --marginLeft={marginLeft}
       --marginTop={marginTop}
-      --marginBottom = {marginBottom}
+      --marginBottom={marginBottom}
       --buttonWidth={buttonWidth}
     />
   {/each}

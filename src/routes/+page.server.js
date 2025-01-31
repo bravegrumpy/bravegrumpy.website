@@ -1,9 +1,9 @@
 export async function load({ cookies }) {
-  const visited = await cookies.get("visited");
+  const visited = await cookies.get('visited');
 
-  cookies.set("visited", "true", { path: "/" });
+  cookies.set('visited', 'true', { path: '/' });
 
   return {
-    visited: visited === "true",
+    visited: visited === 'true'
   };
 }

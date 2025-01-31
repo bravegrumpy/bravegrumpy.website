@@ -1,24 +1,24 @@
 const links = [
   {
-    id: "1",
-    href: "/",
-    text: "Home",
-    pageTitle: "Home Page",
-    pageSubtitle: "This is the bravegrumpy Homepage!",
+    id: '1',
+    href: '/',
+    text: 'Home',
+    pageTitle: 'Home Page',
+    pageSubtitle: 'This is the bravegrumpy Homepage!'
   },
   {
-    id: "2",
-    href: "/writing",
-    text: "Writing",
-    pageTitle: "Creative  Writing",
-    pageSubtitle: "There is a lot of creative writing here.",
+    id: '2',
+    href: '/writing',
+    text: 'Writing',
+    pageTitle: 'Creative  Writing',
+    pageSubtitle: 'There is a lot of creative writing here.',
     subnav: [
       {
-        id: "2-0",
-        href: "/writing/huetopia",
-        text: "Fantasy",
-        pageTitle: "Huetopia Homepage",
-        pageSubtitle: "A colorful continent within a magical world",
+        id: '2-0',
+        href: '/writing/huetopia',
+        text: 'Fantasy',
+        pageTitle: 'Huetopia Homepage',
+        pageSubtitle: 'A colorful continent within a magical world',
         subnav: [
           {
             id: '2-0-0',
@@ -35,22 +35,22 @@ const links = [
             pageSubtitle: 'Writing excercises'
           },
           {
-            id: "2-0-2",
-            href: "/writing/huetopia/content",
+            id: '2-0-2',
+            href: '/writing/huetopia/content',
             text: 'Read Now',
-            pageTitle: "Narrative",
+            pageTitle: 'Narrative',
             pageSubtitle: "What I've written so far"
           }
-        ],
+        ]
       },
       {
-        id: "2-1",
-        href: "/writing/blog",
-        text: "Blog",
-        pageTitle: "Blog",
-        pageSubtitle: "Written works about my thoughts and feelings.",
-      },
-    ],
+        id: '2-1',
+        href: '/writing/blog',
+        text: 'Blog',
+        pageTitle: 'Blog',
+        pageSubtitle: 'Written works about my thoughts and feelings.'
+      }
+    ]
   },
   //   {
   //     id: '2',
@@ -97,11 +97,11 @@ const links = [
   //   pageSubtitle: "Original Artwork. Mostly digial art, some photography & paintings"
   // },
   {
-    id: "4",
-    href: "/links",
-    text: "Links",
-    pageTitle: "Link Repository",
-    pageSubtitle: "This is a list of helpful links",
+    id: '4',
+    href: '/links',
+    text: 'Links',
+    pageTitle: 'Link Repository',
+    pageSubtitle: 'This is a list of helpful links'
     // subnav: [
     //   {
     //     id: '3-1',
@@ -130,29 +130,22 @@ const links = [
         href: '/archive/sites',
         text: 'Sites',
         pageTite: 'Old Website Versions',
-        pageSubtitle: "Previous iterations of this website."
+        pageSubtitle: 'Previous iterations of this website.'
       },
       {
         id: '5-1',
         href: '/archive/content',
         text: 'Content',
-        pageTitle: "Archived Content",
+        pageTitle: 'Archived Content',
         pageSubtitle: 'Contnet I no longer stand by'
       }
-    ],
+    ]
   }
 ];
 
-const currentTab = "/links";
+const currentTab = '/links';
 
-const listOfIds = [
-  `#ior`,
-  `#rs`,
-  `#lighting`,
-  `#lightingOnline`,
-  `#finiteLight`,
-  `#infiniteLight`,
-];
+const listOfIds = [`#ior`, `#rs`, `#lighting`, `#lightingOnline`, `#finiteLight`, `#infiniteLight`];
 
 const listOfTabs = [
   `${currentTab}${listOfIds[0]}`,
@@ -160,46 +153,46 @@ const listOfTabs = [
   `${currentTab}${listOfIds[2]}`,
   `${currentTab}${listOfIds[3]}`,
   `${currentTab}${listOfIds[4]}`,
-  `${currentTab}${listOfIds[5]}`,
+  `${currentTab}${listOfIds[5]}`
 ];
 
 const headings = [
   {
-    id: "3-0-0",
+    id: '3-0-0',
     active: currentTab === listOfTabs[0],
     href: listOfIds[0],
-    text: "Index of Refraction",
+    text: 'Index of Refraction'
   },
   {
-    id: "3-0-1",
+    id: '3-0-1',
     active: currentTab === listOfTabs[1],
     href: listOfIds[1],
-    text: "Realistic Scale",
+    text: 'Realistic Scale'
   },
   {
-    id: "3-0-2",
+    id: '3-0-2',
     active: currentTab === listOfTabs[2],
     href: listOfIds[2],
-    text: "Realistic Scale",
+    text: 'Realistic Scale'
   },
   {
-    id: "3-0-3",
+    id: '3-0-3',
     active: currentTab === listOfTabs[3],
     href: listOfIds[3],
-    text: "Lighting, general",
+    text: 'Lighting, general'
   },
   {
-    id: "3-0-4",
+    id: '3-0-4',
     active: currentTab === listOfTabs[4],
     href: listOfIds[4],
-    text: "Finite Light Source",
+    text: 'Finite Light Source'
   },
   {
-    id: "3-0-5",
+    id: '3-0-5',
     active: currentTab === listOfTabs[5],
     href: listOfIds[5],
-    text: "Infinite Light Source",
-  },
+    text: 'Infinite Light Source'
+  }
 ];
 
 export default links;
