@@ -28,7 +28,14 @@ const links = [
             pageSubtitle: 'Writing Excercises'
           },
           {
-            id: "2-0-1",
+            id: '2-0-1',
+            href: '/writing/huetopia/character-profiles',
+            text: 'Character profiles',
+            pageTitle: 'Character Profiles',
+            pageSubtitle: 'Writing excercises'
+          },
+          {
+            id: "2-0-2",
             href: "/writing/huetopia/content",
             text: 'Read Now',
             pageTitle: "Narrative",

@@ -5,7 +5,7 @@ import Article from '$lib/components/Article.svelte';
 
 </script>
 
-<Article --articleColumn="2/4">
+<Article --articleColumn="2/3">
 <Section>
 
 <h2 class="text-2xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">Llorem Ipsum</h2>

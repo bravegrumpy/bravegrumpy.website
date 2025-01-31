@@ -11,11 +11,15 @@
     rowStart = 1,
     rowEnd = 2,
     TabsDefaultClass = 'flex flex-col gap-4 mt-[15px]',
+    customContentClass = false,
     children
   } = $props();
 
   let TabsContentClass = $derived(
-    `rounded-lg col-start-${colStart} col-end-${colEnd} row-start-${rowStart} row-end-${rowEnd}`
+    customContentClass
+      ? customContentClass +
+          ` col-start-${colStart} col-end-${colEnd} row-start-${rowStart} row-end-${rowEnd}`
+      : `rounded-lg col-start-${colStart} col-end-${colEnd} row-start-${rowStart} row-end-${rowEnd}`
   );
 
   //   let TabsDefaultClass = 'flex flex-col gap-4 mt-[15px]';
