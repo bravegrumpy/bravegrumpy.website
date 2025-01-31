@@ -1,16 +1,18 @@
 <script>
-  import Article from '$lib/components/Article.svelte';
+  import AttichaosArchibald from '../../../writing/huetopia/wbw/(character_profiles)/AttichaosArchibald.svelte';
+  import SkylarSeacrest from '../../../writing/huetopia/wbw/(character_profiles)/SkylarSeacrest.svelte';
+  import BaseContent from '$lib/components/BaseContent.svelte';
+  import BaseLayout from '$lib/components/BaseLayout.svelte';
   import Section from '$lib/components/Section.svelte';
-  import Footnotes from './Footnotes.svelte';
+  import Article from '$lib/components/Article.svelte';
+  import SideNav from '$lib/components/SideNav.svelte';
   import Main from '$lib/components/Main.svelte';
 
-  import Logline from '$lib/components/Writing/Logline.svx';
-  import DramaticQuestion from '$lib/components/Writing/DramaticQuestion.svx';
-
-  import BaseLayout from '$lib/components/BaseLayout.svelte';
   import Aside from '$lib/components/Aside.svelte';
 
-  const { children } = $props();
+  import { page } from '$app/stores';
+  import PageTitle from '$lib/components/PageTitle.svelte';
+  import Heading from '$lib/components/Heading.svelte';
 
   let defaultClass = $state(
     'w-[150px] border-[5px] border-solid border-current rounded-[5px] text-xl font-navMenuDefault p-2 bg-bravegrumpy-accent2b dark:bg-bravegrumpy-dark1'
@@ -23,25 +25,10 @@
   let TabsDefaultClass = $state(
     'flex flex-row gap-4 p-5 col-start-1 col-end-4 flex-wrap bg-bravegrumpy-accent2a rounded-[5px] border-2 border-solid border-bravegrumpy-black dark:border-bravegrumpy-accent2b dark:bg-bravegrumpy-black'
   );
+
+  const currSlug = $state($page.url.pathname);
+
+  const { children } = $props();
 </script>
 
-<Article --articleColumn="2/3" articleClass="-mt-[15px]">
-  <BaseLayout>
-    {@render children()}
-  </BaseLayout>
-</Article>
-
-<Article --articleColumn="2/3" --articleRow="2/4">
-  <Section>
-    <Footnotes />
-  </Section>
-</Article>
-
-<Article --articleColumn="3/4">
-  <Aside --asideHeight="fit-content">
-    <Logline />
-  </Aside>
-  <Aside --asideHeight="fit-content">
-    <DramaticQuestion />
-  </Aside>
-</Article>
+<p>This is asdfkks</p>

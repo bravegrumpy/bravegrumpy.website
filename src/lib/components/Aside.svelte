@@ -1,8 +1,10 @@
 <script>
-  const { children } = $props();
+  const { className = '', children } = $props();
+
+  const asideClass = $state(`${className} aside`);
 </script>
 
-<aside class="aside">
+<aside class={asideClass}>
   {@render children()}
 </aside>
 

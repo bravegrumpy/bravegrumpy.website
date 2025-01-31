@@ -48,7 +48,12 @@
   const active = $derived(href === slug);
 </script>
 
-<a data-sveltekit-preload-code="viewport" {href} data-active={active}>
+<a
+  data-sveltekit-preload-code="viewport"
+  class="hover:scale-105 hover:hue-rotate-30"
+  {href}
+  data-active={active}
+>
   {text}
 </a>
 

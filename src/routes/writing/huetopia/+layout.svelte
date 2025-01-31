@@ -19,12 +19,3 @@
 <SideNav references={$page.data.writing} slug={currSlug} />
 
 {@render children()}
-
-<Article --articleColumn="3/4">
-  <Aside --asideHeight="fit-content" --asidePadding="25px">
-    <Logline />
-  </Aside>
-  <Aside --asideHeight="fit-content" --asidePadding="25px">
-    <DramaticQuestion />
-  </Aside>
-</Article>
