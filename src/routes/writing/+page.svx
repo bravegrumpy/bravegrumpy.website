@@ -1,0 +1,74 @@
+<script>
+    import Article from '$lib/components/Article.svelte';
+    import Section from '$lib/components/Section.svelte';
+    import Aside from '$lib/components/Aside.svelte';
+    import BaseContent from '$lib/components/BaseContent.svelte';
+    import BaseLayout from '$lib/components/BaseLayout.svelte';
+    import {page} from '$app/stores';
+</script>
+
+
+<BaseLayout>
+<BaseContent open title="first placeholder">
+<Article>
+<Section >
+
+## Placeholder text
+
+This is  something. I don't know if it will work but it  should be something.
+
+{$page.url}
+
+</Section>
+
+</Article>
+</BaseContent>
+
+<BaseContent title="🧐 searching for contnet">
+
+<Section>
+
+## This is some more  text.
+
+It is the second "tab". I do not think these tabs are actually referenced. So I will not use them everywhere.
+
+</Section>
+
+</BaseContent>
+
+<BaseContent title="A third piece of llorem ipsum">
+
+<Section>
+
+This is a third one for good measure.
+
+</Section>
+
+<Section>
+
+It has two sections, to test if I need an Article.
+
+</Section>
+
+<Aside>
+
+How do these work here?
+
+
+</Aside>
+
+</BaseContent>
+
+<BaseContent title="New Addition">
+
+<Section>
+
+## New Addition
+
+I am making this change for the sake of having a change.
+
+</Section>
+
+</BaseContent>
+
+</BaseLayout>

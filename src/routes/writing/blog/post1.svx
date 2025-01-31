@@ -1,0 +1,20 @@
+---
+h2: Tuesday, December 31st 2024
+date: 2024-12-31
+---
+
+<script>
+    import BlogLayout from '$lib/components/Blog/BlogLayout.svelte'
+</script>
+
+<BlogLayout {h2} title={date.toString().slice(0,10)}>
+
+### Happy New year bitches.
+
+I'm clearly not happy. I'm not exactly sure why. But this is okay. 
+
+I have orange airheads, so I'm obviously happy. 
+
+For sure, I'm happy. This is what happy looks like. Everybody knows that.
+
+</BlogLayout>

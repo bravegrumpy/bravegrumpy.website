@@ -1,0 +1,57 @@
+<script>
+    import Article from '$lib/components/Article.svelte';
+</script>
+
+
+
+<Article>
+
+
+
+
+    #### Online Lighting Resources
+    
+    - [Blender Light Objects](https://docs.blender.org/manual/en/latest/render/lights/light_object.html#common-settings)
+    
+    - [Wikipedia Common Energy and Lumens Table](https://en.wikipedia.org/wiki/Lumen_(unit))
+    
+    - [Wikipedia Radiant Flux](https://en.wikipedia.org/wiki/Radiant_flux)
+
+    #### Lighting Value Table
+
+    ##### Common Lighting Radiant Flux Luminous Efficacy
+
+    | Light Source Type | Luminous Efficacy (lm/W) |
+    | --- | --- |
+    |Incandescent Bulb | 10-17 |
+    | Halogen Bulb | 16-24 | 
+    | Compact Fluorescent Lamp (CFL) | 45-75 | 
+    | LED Bulb | 80-100+ | 
+    | Metal Halide Lamp | 65-115 | 
+    | High-Pressure Sodium Lamp | 70-100 | 
+    | Low-Pressure Sodium Lamp | 100-200 | 
+    | Tungsten Photographic/Film Light | 15-22 |
+    | HMI (Hydrargyrum Medium-arc Iodide) Photo Light | 85-108 | 
+    | LED Photographic/Film Light | 80-100 |    
+
+    
+    ##### Common Outdoor lighting conditions Radiant Flux
+
+
+    | Light Source Type | Radiant Flux (W/m²) | Illuminance (lux) |
+    | --- | --- | --- |
+    | Sunny Day | ~1000 W/m² | 100,000-130,000 |
+    | Cloudy Day | ~100-500 W/m² | 1,000-5,000 |
+    | Full Moon Night | ~0.0001-0.0003 W/m² | 0.1-0.3 |
+    | **New Moon Night Conditions** |  |  |
+    | Clear Sky, No Light Pollution | ~0.00002 W/m² | 0.002-0.003 |
+    | Clear Sky, High Light Pollution | ~0.00001 W/m² | 0.001-0.002 |
+    | Cloudy Sky, No Light Pollution | ~0.000005 W/m² | 0.0005-0.001 |
+    | Cloudy Sky, High Light Pollution | ~0.000002 W/m² | 0.0002-0.0005 |
+
+                                            
+</Article>
+
+
+
+

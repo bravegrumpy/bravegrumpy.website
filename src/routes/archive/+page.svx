@@ -1,0 +1,24 @@
+<script>
+  import Article from "$lib/components/Article.svelte";
+  import Section from "$lib/components/Section.svelte";
+</script>
+
+<Article --articleColumn="1/4">
+  <Section>
+    <h2 class="font-heading text-bravegrumpy-brand3 text-3xl">Archives</h2>
+  </Section>  
+  <Section>
+
+There are two types of archives, [sites](/archive/sites) and [content](/archive/content).
+
+### Site Archive
+
+The sites arhcive shows old versions of this site. While it does showcase the entier site, as it was, also includes a lot of other extraneous stuff, such as the styling, and random code that may or may not be useful.
+I do no not provide any guarantee the links work.
+
+### Content Archive
+
+This is where I'm pplacing old content that I no longer stand by. This content may or may not have this design system. 
+
+  </Section>
+</Article>
