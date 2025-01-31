@@ -1,36 +1,38 @@
+build
+node_modules/
+
+.vs**
+.idea**
+
+# IDE specific config
+**/.vs*/
+**/.idea/
+
+# Secrets
+*.env**
+
+# build artifacts
+build
 node_modules
+.npm
+.vite.config.js.timestamp*
 
-# Output
-.output
-.vercel
-.netlify
-.wrangler
-/.svelte-kit
-/build
+## build artifacts from other branches
+.svelte-kit
+.svelte*
+.astro
 
-# OS
-.DS_Store
-Thumbs.db
 
-# Env
-.env
-.env.*
-!.env.example
-!.env.test
-
-# Vite
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
+# scratch files and directories
+scratch*
+**scratch**
+scratch*.*
+**/scratch**
+**/scratch/**
+**/scratch/**.*
+**old**
 
 # amplify
 .amplify
 amplify_outputs*
 amplifyconfiguration*
-
-# scratch files
-scratch/**
-*scratch*
-*scratch*.*
-**/scratch.*
-**/*scratch.*
-**/*scratch/**/*/*
