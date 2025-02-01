@@ -1,12 +1,24 @@
 <script>
   import December from '../2024_12.svx';
 
+  import Icon from '@iconify/svelte';
+
   import { Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
 </script>
 
 <Breadcrumb>
-  <BreadcrumbItem href="/writing/blog">Blog Home</BreadcrumbItem>
-  <BreadcrumbItem href="/writing/blog/2024">2024</BreadcrumbItem>
+  <BreadcrumbItem href="/writing/blog">
+    <svelte:fragment slot="icon">
+      <Icon icon="hugeicons:arrow-right-double" width="24" height="24" />
+    </svelte:fragment>
+    Blog Home
+  </BreadcrumbItem>
+  <BreadcrumbItem href="/writing/blog/2024">
+    <svelte:fragment slot="icon">
+      <Icon icon="hugeicons:arrow-right-double" width="24" height="24" />
+    </svelte:fragment>
+    2024
+  </BreadcrumbItem>
 </Breadcrumb>
 
 <div

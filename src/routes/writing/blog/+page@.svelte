@@ -4,6 +4,8 @@
 
   import { Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
 
+  import Icon from '@iconify/svelte';
+
   import BaseContent from '$lib/components/BaseContent.svelte';
 
   import Article from '$lib/components/Article.svelte';
@@ -12,7 +14,12 @@
 </script>
 
 <Breadcrumb>
-  <BreadcrumbItem href="/writing/blog">Blog Home</BreadcrumbItem>
+  <BreadcrumbItem href="/writing/blog">
+    <svelte:fragment slot="icon">
+      <Icon icon="hugeicons:arrow-right-double" width="24" height="24" />
+    </svelte:fragment>
+    Blog Home
+  </BreadcrumbItem>
 </Breadcrumb>
 
 <Article --articleColumn="2/3">
