@@ -8,16 +8,19 @@ node_modules/
 **/.vs*/
 **/.idea/
 
+# Secrets
+*.env**
+
 # build artifacts
 build
 node_modules
 .npm
+.vite.config.js.timestamp*
 
-## build artifacts from other branchs
+## build artifacts from other branches
 .svelte-kit
-
-# environment variables and secrets
-**.env*
+.svelte*
+.astro
 
 
 # scratch files and directories
@@ -27,4 +30,11 @@ scratch*.*
 **/scratch**
 **/scratch/**
 **/scratch/**.*
+**scratch.*
+**/*scratch/*.*
 **old**
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
