@@ -1,0 +1,11 @@
+<script>
+
+import Post2 from './post2.svx';
+import Post3 from './post3.svelte';
+import Post4 from './post4.svelte';
+
+</script>
+
+<Post4 />
+<Post3 />
+<Post2 />
