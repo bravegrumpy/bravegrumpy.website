@@ -6,6 +6,7 @@ date: 2025-02-01
 <script>
     import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
     import Icon from '@iconify/svelte';
+    import DecoratedSwitch from '$lib/components/DecoratedSwitch.svelte';
 </script>
 
 <BlogLayout {h2} title={date.toString().slice(0,10)} open >
@@ -21,6 +22,7 @@ I have not moved over all of the experimental php and Brython content, as I have
 My next goal is to devise a realisitic strategy for having a real databse, rather than my janky data.js file. 
 This way I can store this markdown information in a database.
 
+<DecoratedSwitch />
 
 </BlogLayout>
 

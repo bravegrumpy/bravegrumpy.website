@@ -20,7 +20,7 @@
   ]}
 />
 
-<Article --articleColumn="2/3">
+<Article --articleColumn="2/4">
   <Section>
     <h2 class="font-heading text-2xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">
       Old Iterations of this Website

@@ -129,7 +129,7 @@ const links = [
         id: '5-0',
         href: '/archive/sites',
         text: 'Sites',
-        pageTite: 'Old Website Versions',
+        pageTitle: 'Old Website Versions',
         pageSubtitle: 'Previous iterations of this website.'
       },
       {
