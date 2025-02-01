@@ -4,20 +4,26 @@
 
   import Icon from '@iconify/svelte';
   import { Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
+
+  let breadcrumbClass = $state("bg-solarized-base-2 border-2 border-solid border-current text-flush-orange-800  w-fit px-2 rounded-[5px] py-2");
+
+  let bredcrumbItemClass = $state("bg-solarized-base-2 border-2 border-solid border-current text-flush-orange-800 rounded-[5px] px-10 py-2 text-flush-orange-800")
+
+  let breadcrumbItemContentClass = $state("font-navMenuDefault text-xl text-flush-orange-800 hover:hue-rotate-60 hover:scale-105");
 </script>
 
-<Breadcrumb>
-  <BreadcrumbItem href="/writing/blog">
+<Breadcrumb class={breadcrumbClass}>
+  <BreadcrumbItem href="/writing/blog" >
     <svelte:fragment slot="icon">
-      <Icon icon="hugeicons:arrow-right-double" width="24" height="24" />
+      <Icon icon="hugeicons:notebook" width="24" height="24" />
     </svelte:fragment>
-    Blog
+    <p class={breadcrumbItemContentClass}>Blog</p>
   </BreadcrumbItem>
   <BreadcrumbItem href="/writing/blog/2025">
     <svelte:fragment slot="icon">
-      <Icon icon="hugeicons:arrow-right-double" width="24" height="24" />
+      <Icon icon="hugeicons:arrow-right-01" width="24" height="24" />
     </svelte:fragment>
-    2025
+    <p class={breadcrumbItemContentClass}>2025</p>
   </BreadcrumbItem>
 </Breadcrumb>
 
