@@ -20,9 +20,9 @@
       y = 0,
       width = 0,
       height = 0,
-      fillColor = '#000000',
-      strokeColor = '#000000',
-      strokeWidth = 2
+      fillColor = "#000000",
+      strokeColor = "#000000",
+      strokeWidth = 2,
     ) {
       //ensure that arguemnts passed in are numbers
       this.x = Number(x);
@@ -86,8 +86,8 @@
 
   //setup config variables and start program
   function init() {
-    canvas = document.getElementById('gameCanvas');
-    ctx = canvas.getContext('2d');
+    canvas = document.getElementById("gameCanvas");
+    ctx = canvas.getContext("2d");
 
     //insert drawings here
 
@@ -101,8 +101,8 @@
 
     //filled rectangle with outline
     ctx.beginPath();
-    ctx.strokeStyle = 'red';
-    ctx.fillStyle = 'blue';
+    ctx.strokeStyle = "red";
+    ctx.fillStyle = "blue";
     ctx.lineWidth = 5;
     ctx.rect(260, 20, 100, 100); //draw a filled rectangle with an outline
     ctx.fill();
@@ -115,11 +115,11 @@
     ctx.stroke();
 
     //drawing rectangle from class
-    const mySquare = new Rectangle(500, 20, 100, 100, 'pink', 'gold', 5);
+    const mySquare = new Rectangle(500, 20, 100, 100, "pink", "gold", 5);
     console.log(mySquare.area);
     mySquare.draw();
   }
 
   // wait for html to load before starting program
-  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener("DOMContentLoaded", init);
 })();
