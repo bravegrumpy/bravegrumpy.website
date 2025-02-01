@@ -13,18 +13,21 @@
   import NavButton from '$lib/components/NavButton.svelte';
 </script>
 
-
 <Breadcrumb>
-  <BreadcrumbItem href="/writing/blog" class="bg-solarized-base-2 border-2 border-solid border-current text-flush-orange-800 rounded-[5px] px-10 py-4">
+  <BreadcrumbItem
+    href="/writing/blog"
+    class="rounded-[5px] border-2 border-solid border-current bg-solarized-base-2 px-10 py-4 text-flush-orange-800 dark:bg-affair-950 dark:text-chateau-green-600"
+  >
     <svelte:fragment slot="icon">
       <Icon icon="hugeicons:notebook" width="24" height="24" />
     </svelte:fragment>
-    <p class="font-navMenuDefault text-xl text-flush-orange-800 hover:hue-rotate-60 hover:scale-105">
+    <p
+      class="font-navMenuDefault text-xl text-flush-orange-800 hover:scale-105 hover:hue-rotate-60 dark:text-chateau-green-500"
+    >
       Blog
     </p>
   </BreadcrumbItem>
 </Breadcrumb>
-
 
 <Article --articleColumn="2/3">
   <Section>
