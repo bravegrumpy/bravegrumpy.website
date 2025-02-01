@@ -37,5 +37,5 @@
 </Article>
 
 <Article --articleColumn="2/3" --articleRow="2/3">
-  <div style:height="500px" style:background-color="pink"></div>
+  <div style:height="125px"></div>
 </Article>

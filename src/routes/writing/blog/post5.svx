@@ -1,0 +1,24 @@
+---
+h2: Saturday, February 1st, 2025
+date: 2025-02-01
+---
+
+<script>
+    import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
+</script>
+
+<BlogLayout {h2} title={date.toString().slice(0,10)} open >
+
+## Finishing v2
+
+I have finally completed the conversion from the [old version](/archive/archive-01/index.html) of this site with modern web design.
+
+Previous versions of this site have had some svelte, but this one is made completely with sveltekit.
+
+I have not moved over all of the experimental php and Brython content, as I have not yet figured out how to implement this.
+
+My next goal is to devise a realisitic strategy for having a real databse, rather than my janky data.js file. 
+This way I can store this markdown information in a database.
+
+</BlogLayout>
+

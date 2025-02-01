@@ -34,13 +34,13 @@ const links = [
             pageTitle: 'Character Profiles',
             pageSubtitle: 'Writing excercises'
           },
-          {
-            id: '2-0-2',
-            href: '/writing/huetopia/content',
-            text: 'Read Now',
-            pageTitle: 'Narrative',
-            pageSubtitle: "What I've written so far"
-          }
+          // {
+          //   id: '2-0-2',
+          //   href: '/writing/huetopia/content',
+          //   text: 'Read Now',
+          //   pageTitle: 'Narrative',
+          //   pageSubtitle: "What I've written so far"
+          // }
         ]
       },
       {

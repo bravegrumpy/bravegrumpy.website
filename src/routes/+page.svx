@@ -35,7 +35,7 @@
   const cookieChange = data.visited ? 'back' : '';
 </script>
 
-<Article --articleRow="1/3" --articleColumn="1/3">
+<Article --articleRow="1/3" --articleColumn="1/4">
   <Section>
     <h2 class="font-heading text-3xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">
       BraveGrumpy Website
@@ -72,11 +72,12 @@ Types of Adult Content Present
   </Section>
 </Article>
 
-<Aside --crsv="0" --slnt="0" --asideHeight="fit-content"  >
+
+<!--Aside --crsv="0" --slnt="0" --asideHeight="fit-content"  >
   
 <h2>Crafts shown off here:</h2>
 
 Writing
 
 Resources to Enhanace Creativity
-</Aside>
+</Aside-->
