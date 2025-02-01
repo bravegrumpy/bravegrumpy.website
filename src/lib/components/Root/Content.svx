@@ -1,0 +1,34 @@
+<script>
+    import { Checkbox } from 'flowbite-svelte';
+    import Section from '$lib/components/Section.svelte';
+</script>
+
+<Section>
+
+## Home Page
+
+Hi! I am a creative at heart, and have put this together to show off my web-development, creative writing skills, and visual media skills.
+
+This is a personal website, that I've been using to aggregate my creative works in a single location.  It is in constant motion, as this is more a creative playground than a portfilio website.
+However, it also serves  to show off what I can do.
+
+I created this website using SvelteKit 2.0 and Svelte 5.
+All of the design work is original.
+
+### Things I want to add:
+
+- <Checkbox>Some code references</Checkbox>
+- <Checkbox>A streamlined version of this theme.</Checkbox>
+
+</Section>
+<Section>
+
+## Technology
+
+This website was created using Svelte5, and SvelteKit 2. I used Flowbite-Svelte as the basis for some components.
+I used Figma to create the basic design, but with the help of the Flowbite component library, I coded the rest. 
+
+Generally, I do not like using tailwind for front-end  design, as I find pure CSS, or the framework LESS to be a bit more clearly understandable.  I like pure CSS as it has no dependancies, however it is clear that it is a bit of a mess in its current state.   Ilike LESS more because it allows for mixins, aka, "functional" snippets that can be used elsewhere.  Furthermore, LESS and CSS start out with the base HTML styling, so I have a clear idea of how each thing is going to behaive.  However, the flowbite component library, useful for stuff such as the dark/light mode button, is built on top of tailwind, so I am alos including that.
+
+Becasue of the two competing philosophies, I am truly using a blend of traditional CSS and tailwind for my styles.  In general, if I am making the component from scratch, it is using pure CSS, but if it is a Flowbite component, I am using tailwind. However, for stuff such as my "section" component, ie the background taht surrounds this very text, I am using some tailwind, so that I can have more extensible style control. 
+</Section>
