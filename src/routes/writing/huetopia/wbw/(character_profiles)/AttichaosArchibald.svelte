@@ -51,8 +51,8 @@
 <h6>In other words</h6>
 <p>
   Atichaos Archibald has expensive taste. This makes sense, as he has spent 53 years on the cushy
-  TriVerment payroll. Atti’s students do NOT know quite how wealthy he truly is, as he dresses like
-  a frumpy professor.
+  TriVerment payroll. Atti&apos;s students do NOT know quite how wealthy he truly is, as he dresses
+  like a frumpy professor.
 </p>
 <h5>Fashion (as Professor Arch)</h5>
 <p>
