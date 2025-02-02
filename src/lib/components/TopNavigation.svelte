@@ -14,7 +14,15 @@
 </script>
 
 <nav>
-  <Navigation {links} {slug} {fontSize} reversed navigationWidth="60%" justifyContent="flex-end" buttonWidth="150px" />
+  <Navigation
+    {links}
+    {slug}
+    {fontSize}
+    reversed
+    navigationWidth="60%"
+    justifyContent="flex-end"
+    buttonWidth="150px"
+  />
   <DarkMode
     class="{buttonSize} rounded-[5px] border-[2px] border-solid border-current bg-bravegrumpy-accent2a text-bravegrumpy-logoPurple dark:bg-bravegrumpy-brand6 dark:text-bravegrumpy-accent1a"
   >

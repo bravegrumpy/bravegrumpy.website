@@ -32,8 +32,8 @@
   tabStyle="none"
   divider={true}
   defaultClass="flex flex-row gap-2 mx-2"
-  activeClasses="w-fit h-[40px] px-8 rounded-t-lg bg-solarized-base-2 border-2 border-b-0 border-solid border-current text-solarized-yellow text-base dark:bg-solarized-base-02 dark:text-edward-400"
-  inactiveClasses="w-fit h-[40px] px-8 rounded-t-lg bg-solarized-base-2 border-2 border-b-0 border-solid border-current text-solarized-dark1 text-base dark:bg-edward-950 dark:text-solarized-base-0"
+  activeClasses="w-fit h-[40px] px-8 rounded-t-lg bg-solarized-base-2 border-2 border-b-0 border-solid border-current text-solarized-yellow text-base dark:bg-solarized-base-02 dark:text-edward-400 hover:hue-rotate-15"
+  inactiveClasses="w-fit h-[40px] px-8 rounded-t-lg bg-solarized-base-2 border-2 border-b-0 border-solid border-current text-solarized-dark1 text-base dark:bg-edward-950 dark:text-solarized-base-0 hover:scale-105 hover:hue-rotate-15"
   contentClass="rounded-[5px] bg-solarized-yellow -mt-[25px] text-solarized-base03 dark:bg-solarized-base-0 dark:text-affair-100"
 >
   <TabItem open>

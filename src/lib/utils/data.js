@@ -21,26 +21,26 @@ const links = [
         pageSubtitle: "A colorful continent within a magical world",
         subnav: [
           {
-            id: '2-0-0',
-            href: '/writing/huetopia/wbw',
-            text: 'Coursera Work by Week',
-            pageTite: 'Coursera Work by Week',
-            pageSubtitle: 'Writing Excercises'
+            id: "2-0-0",
+            href: "/writing/huetopia/wbw",
+            text: "Coursera Work by Week",
+            pageTite: "Coursera Work by Week",
+            pageSubtitle: "Writing Excercises",
           },
           {
-            id: '2-0-1',
-            href: '/writing/huetopia/character-profiles',
-            text: 'Character profiles',
-            pageTitle: 'Character Profiles',
-            pageSubtitle: 'Writing excercises'
+            id: "2-0-1",
+            href: "/writing/huetopia/character-profiles",
+            text: "Character profiles",
+            pageTitle: "Character Profiles",
+            pageSubtitle: "Writing excercises",
           },
-          {
-            id: "2-0-2",
-            href: "/writing/huetopia/content",
-            text: 'Read Now',
-            pageTitle: "Narrative",
-            pageSubtitle: "What I've written so far"
-          }
+          // {
+          //   id: '2-0-2',
+          //   href: '/writing/huetopia/content',
+          //   text: 'Read Now',
+          //   pageTitle: 'Narrative',
+          //   pageSubtitle: "What I've written so far"
+          // }
         ],
       },
       {
@@ -119,28 +119,28 @@ const links = [
     // ]
   },
   {
-    id: '5',
-    href: '/archive',
-    text: 'Archives',
-    pageTitle: 'Archives',
-    pageSubtitle: 'Previous versions of this website',
+    id: "5",
+    href: "/archive",
+    text: "Archives",
+    pageTitle: "Archives",
+    pageSubtitle: "Previous versions of this website",
     subnav: [
       {
-        id: '5-0',
-        href: '/archive/sites',
-        text: 'Sites',
-        pageTite: 'Old Website Versions',
-        pageSubtitle: "Previous iterations of this website."
+        id: "5-0",
+        href: "/archive/sites",
+        text: "Sites",
+        pageTitle: "Old Website Versions",
+        pageSubtitle: "Previous iterations of this website.",
       },
       {
-        id: '5-1',
-        href: '/archive/content',
-        text: 'Content',
+        id: "5-1",
+        href: "/archive/content",
+        text: "Content",
         pageTitle: "Archived Content",
-        pageSubtitle: 'Contnet I no longer stand by'
-      }
+        pageSubtitle: "Contnet I no longer stand by",
+      },
     ],
-  }
+  },
 ];
 
 const currentTab = "/links";

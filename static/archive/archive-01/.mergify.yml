@@ -40,7 +40,7 @@ pull_request_rules:
       conflicted label
     conditions:
       - label != conflicted
-      - '#commits-behind<=10'
+      - "#commits-behind<=10"
     actions:
       label:
         toggle:
@@ -51,7 +51,7 @@ pull_request_rules:
       - base = main
       - label = automerge
       - label != conflicted
-      - '#commits-behind <= 5'
+      - "#commits-behind <= 5"
       - and:
           - or:
               - base = main

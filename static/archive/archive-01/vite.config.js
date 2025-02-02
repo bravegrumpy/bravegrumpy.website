@@ -1,43 +1,43 @@
-import { defineConfig } from 'vite';
-import { svelte } from '@sveltejs/vite-plugin-svelte';
-import expressApp from './server';
+import { defineConfig } from "vite";
+import { svelte } from "@sveltejs/vite-plugin-svelte";
+import expressApp from "./server";
 
 export default defineConfig({
   plugins: [
     svelte(),
     {
-      name: 'custom-express-middleware',
+      name: "custom-express-middleware",
       configureServer(server) {
         server.middlewares.use(expressApp);
-      }
-    }
+      },
+    },
   ],
   build: {
-    outDir: 'build',
+    outDir: "build",
     rollupOptions: {
       input: {
-        main: 'src/main.js',
-        index: 'index.html',
-        writing: 'writing.html',
-        'writing/wbw': 'work-by-week/wbw.html',
-        'link-repository': 'link-repository.html',
-        archive: 'archive/archive-00/index.html'
+        main: "src/main.js",
+        index: "index.html",
+        writing: "writing.html",
+        "writing/wbw": "work-by-week/wbw.html",
+        "link-repository": "link-repository.html",
+        archive: "archive/archive-00/index.html",
       },
-      external: ['svelte', 'express', 'helmet']
-    }
+      external: ["svelte", "express", "helmet"],
+    },
   },
   server: {
     fs: {
-      allow: ['.']
+      allow: ["."],
     },
     proxy: {
-      '/api': {
-        target: process.env.VITE_BACKEND_URL || 'http://localhost:3000',
+      "/api": {
+        target: process.env.VITE_BACKEND_URL || "http://localhost:3000",
         changeOrigin: true,
-        secure: false
-      }
-    }
-  }
+        secure: false,
+      },
+    },
+  },
 });
 
 /*********************************************************

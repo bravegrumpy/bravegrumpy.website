@@ -4,9 +4,11 @@
   // Toggle state
   let { checked } = $state(false);
 
+  let { offIcon = 'game-icons:sun', onIcon = 'game-icons:night-sleep' } = $props();
+
   // Customize which icons to show for OFF/ON states
-  let offIcon = 'game-icons:sun'; // or any other Iconify icon (e.g., 'mdi:weather-sunny')
-  let onIcon = 'game-icons:night-sleep'; // or any other Iconify icon
+  // let offIcon = 'game-icons:sun'; // or any other Iconify icon (e.g., 'mdi:weather-sunny')
+  // let onIcon = 'game-icons:night-sleep'; // or any other Iconify icon
 </script>
 
 <label class="switch">
@@ -19,9 +21,9 @@
     <span class="thumb">
       <!-- Show different icons depending on on/off (checked) -->
       {#if checked}
-        <Icon icon={onIcon} />
+        <Icon icon={onIcon} width="100" height="100" />
       {:else}
-        <Icon icon={offIcon} />
+        <Icon icon={offIcon} width="100" height="100" />
       {/if}
     </span>
   </span>
@@ -58,6 +60,8 @@
     --s: 16px; /* control the size*/
     --c1: #fffdb8;
     --c2: #aebee5;
+    --c3: #8fcfcf;
+    --c4: #886a06;
 
     --_g: var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%, var(--c1) 36% 44%,
       var(--c2) 46% 54%, var(--c1) 56% 64%, var(--c2) 66% 74%, var(--c1) 76% 84%, var(--c2) 86% 94%;
@@ -76,10 +80,11 @@
     left: 4px;
     width: 26px;
     height: 26px;
-    background-color: #aebee5;
+    /* background-color: #aebee5; */
+    background-color: var(--c3);
     border-radius: 50%;
     transition: 0.4s;
-    color: #fffdb8;
+    color: var(--c4);
 
     /* Center the icon within the thumb */
     display: flex;
@@ -89,39 +94,43 @@
 
   /* When checked, the slider track turns blue (or any other color) */
   input:checked + .slider {
+    /* --c5: #d7d5fd; */
+    --c5: #99ff;
+    /* --c6: #020317; */
+    --c6: #022f;
     background: radial-gradient(
         circle at top left,
         transparent 9%,
-        #d7d5fd 10%,
-        #d7d5fd 15%,
+        var(--c5) 10%,
+        var(--c5) 15%,
         transparent 16%
       ),
       radial-gradient(
         circle at bottom left,
         transparent 9%,
-        #d7d5fd 10%,
-        #d7d5fd 15%,
+        var(--c5) 10%,
+        var(--c5) 15%,
         transparent 16%
       ),
       radial-gradient(
         circle at top right,
         transparent 9%,
-        #d7d5fd 10%,
-        #d7d5fd 15%,
+        var(--c5) 10%,
+        var(--c5) 15%,
         transparent 16%
       ),
       radial-gradient(
         circle at bottom right,
         transparent 9%,
-        #d7d5fd 10%,
-        #d7d5fd 15%,
+        var(--c5) 10%,
+        var(--c5) 15%,
         transparent 16%
       ),
-      radial-gradient(circle, transparent 25%, #020317 26%),
-      linear-gradient(0deg, transparent 44%, #d7d5fd 45%, #d7d5fd 55%, transparent 56%),
-      linear-gradient(90deg, transparent 44%, #d7d5fd 45%, #d7d5fd 55%, transparent 56%);
+      radial-gradient(circle, transparent 25%, var(--c6) 26%),
+      linear-gradient(0deg, transparent 44%, var(--c5) 45%, var(--c5) 55%, transparent 56%),
+      linear-gradient(90deg, transparent 44%, var(--c5) 45%, var(--c5) 55%, transparent 56%);
     background-size: 0.8rem 0.8rem;
-    background-color: #020317;
+    background-color: var(--c6);
     opacity: 0.9;
   }
 
@@ -129,7 +138,7 @@
   input:checked + .slider .thumb {
     transform: translateX(26px);
 
-    color: #d7d5fd;
-    background-color: #020317;
+    color: var(--c5);
+    background-color: var(--c6);
   }
 </style>

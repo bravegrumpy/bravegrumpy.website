@@ -30,6 +30,8 @@ scratch*.*
 **/scratch**
 **/scratch/**
 **/scratch/**.*
+**scratch.*
+**/*scratch/*.*
 **old**
 
 # amplify

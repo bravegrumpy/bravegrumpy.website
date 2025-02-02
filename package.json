@@ -3,7 +3,7 @@
   "author": "bravegrumpy",
   "readme": "README.md",
   "private": "true",
-  "version": "0.3.2-2",
+  "version": "0.3.3-0",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
@@ -35,6 +35,7 @@
     "prettier": "^3.4.2",
     "prettier-plugin-svelte": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.10",
+    "super-sitemap": "^1.0.3",
     "svelte": "^5.0.0",
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.0"
@@ -42,5 +43,6 @@
   "dependencies": {
     "amplify-adapter": "^0.2.0"
   },
-  "homepage": "https://new.bravegrumpy.com"
+  "homepage": "https://www.bravegrumpy.com",
+  "license": "SEE LISCENSE IN LICENSE"
 }

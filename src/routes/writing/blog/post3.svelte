@@ -102,7 +102,7 @@
   );
 </script>
 
-<BlogLayout {h2} title={date.toString().slice(0, 10)} open>
+<BlogLayout {h2} title={date.toString().slice(0, 10)}>
   <h3>Even Moar backgrounds</h3>
 
   <p>

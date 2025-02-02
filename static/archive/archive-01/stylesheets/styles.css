@@ -66,7 +66,7 @@
 /************************************/
 /* Ensuring that rows are on a new line */
 .row::after {
-  content: '';
+  content: "";
   clear: both;
   display: table;
 }
@@ -74,7 +74,7 @@
 
 /************************************/
 /* setting up columns to go left */
-[class*='col-'] {
+[class*="col-"] {
   float: left;
   padding: 15px;
 }
@@ -83,7 +83,7 @@
 /************************************/
 /* Generic styling */
 html {
-  font-family: 'Lucida Sans', sans-serif;
+  font-family: "Lucida Sans", sans-serif;
   background-color: var(--light0);
 }
 /************************************/
@@ -121,11 +121,7 @@ html {
   margin-bottom: 10px;
   background-color: var(--accent1B);
   color: var(--dark0);
-  box-shadow:
-    0 1px var(--boxShadowLight),
-    0,
-    1px 2px,
-    var(--boxShadowDark);
+  box-shadow: 0 1px var(--boxShadowLight), 0, 1px 2px, var(--boxShadowDark);
 }
 
 .navbar li a {
@@ -167,9 +163,7 @@ html {
   margin-bottom: 10px;
   background-color: var(--accent1A);
   color: #000000;
-  box-shadow:
-    0 1px var(--boxShadowLight),
-    0 1px 2px var(--boxShadowDark);
+  box-shadow: 0 1px var(--boxShadowLight), 0 1px 2px var(--boxShadowDark);
 }
 
 .menu li a {
@@ -206,7 +200,7 @@ div.construction {
   font-size: 5rem;
   text-align: center;
   color: red;
-  font-family: 'Courier', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Courier", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bolder;
   transform: rotate(-10deg);
   width: 100%;
@@ -218,7 +212,7 @@ p.construction {
   font-size: 1rem;
   text-align: center;
   color: red;
-  font-family: 'Courier', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Courier", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bolder;
   transform: rotate(10deg);
   width: 100%;
@@ -242,9 +236,7 @@ table {
   color: var(--dark0);
   font-size: 14px;
   border-radius: 10%;
-  box-shadow:
-    0 1px 3px var(--boxShadowLight),
-    0 1px 2px var(--boxShadowDark);
+  box-shadow: 0 1px 3px var(--boxShadowLight), 0 1px 2px var(--boxShadowDark);
 }
 
 .aside h2 {
@@ -272,7 +264,7 @@ table {
 
 /************************************/
 /* For mobile phones: */
-[class*='col-'] {
+[class*="col-"] {
   width: 100%;
 }
 /************************************/
@@ -280,7 +272,7 @@ table {
 /*************************************************/
 /* portrait mode */
 @media only screen and (orientation: portrait) {
-  [class*='col-'] {
+  [class*="col-"] {
     width: 100%;
     /* Uncomment the below line to see blocking guides*/
     /*border: 1px solid orange;*/
@@ -292,7 +284,7 @@ table {
 @media only screen and (max-width: 600px) {
   /* xs */
 
-  [class*='col-'] {
+  [class*="col-"] {
     width: 100%;
     /* Uncomment the below line to see blocking guides*/
     /*border: 1px solid rgb(255, 0, 0);*/

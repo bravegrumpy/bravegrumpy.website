@@ -157,7 +157,10 @@
         >List of placeholder image sources</a
       >
     </li>
-    <li>In both of the subsequent resources, when I say "API" I mean a way to specificy requirements in URL></li>
+    <li>
+      In both of the subsequent resources, when I say "API" I mean a way to specificy requirements
+      in URL>
+    </li>
     <li>
       <a href="https://placehold.co/" target="_blank">Blank Placeholder Images with API</a>
     </li>

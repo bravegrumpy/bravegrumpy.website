@@ -4,10 +4,11 @@ date: 2024-12-31
 ---
 
 <script>
-    import BlogLayout from '$lib/components/Blog/BlogLayout.svelte'
+    import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
 </script>
 
-<BlogLayout {h2} title={date.toString().slice(0,10)}>
+<BlogLayout {h2} title={date.toString().slice(0,10)} open>
+
 
 ### Happy New year bitches.
 

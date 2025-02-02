@@ -1,11 +1,13 @@
 <script>
   import Article from "$lib/components/Article.svelte";
   import Section from "$lib/components/Section.svelte";
+
+  import Heading from '$lib/components/Heading.svelte';
 </script>
 
 <Article --articleColumn="1/4">
   <Section>
-    <h2 class="font-heading text-bravegrumpy-brand3 text-3xl">Archives</h2>
+    <h2 class="font-heading text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a text-3xl">Archives</h2>
   </Section>  
   <Section>
 

@@ -1,5 +1,5 @@
-import { mdsvex } from 'mdsvex';
-import adapter from 'amplify-adapter';
+import { mdsvex } from "mdsvex";
+import adapter from "amplify-adapter";
 // import adapter from '@sveltejs/adapter-auto';
 // import adapter from '@sveltejs/adapter-static';
 
@@ -11,17 +11,17 @@ const config = {
     // See https://svelte.dev/docs/kit/adapters for more information about adapters.
     adapter: adapter(),
     files: {
-      assets: 'static'
-    }
+      assets: "static",
+    },
   },
   preprocess: [
     mdsvex({
       smartypants: {
         quotes: true,
-        dashes: 'oldschool'
-      }
-    })
+        dashes: "oldschool",
+      },
+    }),
   ],
-  extensions: ['.svelte', '.svx']
+  extensions: [".svelte", ".svx"],
 };
 export default config;

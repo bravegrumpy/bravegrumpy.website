@@ -30,16 +30,28 @@
 </script>
 
 <Article --articleColumn="2/3">
-  <Section>
-    <h2 class="text-3xl">Coursera Work By Week</h2>
-  </Section>
-  <Section>
-    <Intro />
-  </Section>
   <Main>
     <BaseLayout {TabsDefaultClass} colStart="1" colEnd="4" rowStart="2" {customContentClass}>
       <BaseContent
         open
+        title="Intro"
+        {defaultClass}
+        {activeClasses}
+        {inactiveClasses}
+        h2=""
+        h3=""
+        h4=""
+        h5=""
+        h6=""
+      >
+        <Section>
+          <h2 class="text-3xl">Coursera Work By Week</h2>
+        </Section>
+        <Section>
+          <Intro />
+        </Section>
+      </BaseContent>
+      <BaseContent
         title="Week 1"
         {defaultClass}
         {activeClasses}
