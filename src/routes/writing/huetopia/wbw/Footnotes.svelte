@@ -8,7 +8,7 @@
   [<a href="#ref2">2</a>]: BrightLight(Needs a new name, as this is a real product), is the Huetopia
   equivalent to a computer screen. It developed to allow everybody easy access to color-magic. While
   everybody could use color-magic before, one had to be an Adept to be able procure nuanced flavors.
-  Typically the region of a person’s birth would have a huge effect on the types of colors they
+  Typically the region of a person&apos;s birth would have a huge effect on the types of colors they
   could work with. BrightLite became the great equalizer.
 </p>
 <p id="en3">
