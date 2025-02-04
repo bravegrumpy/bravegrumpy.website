@@ -41,7 +41,9 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "amplify-adapter": "^0.2.0"
+    "amplify-adapter": "^0.2.0",
+    "better-auth": "^1.1.15",
+    "better-sqlite3": "^11.8.1"
   },
   "homepage": "https://www.bravegrumpy.com",
   "license": "SEE LISCENSE IN LICENSE"
