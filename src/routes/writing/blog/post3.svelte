@@ -100,9 +100,11 @@
       four: gen4[index]
     }))
   );
+
+  const { open = false } = $props();
 </script>
 
-<BlogLayout {h2} title={date.toString().slice(0, 10)}>
+<BlogLayout {h2} title={date.toString().slice(0, 10)} {open}>
   <h3>Even Moar backgrounds</h3>
 
   <p>

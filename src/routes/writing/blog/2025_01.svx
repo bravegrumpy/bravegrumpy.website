@@ -4,8 +4,10 @@ import Post2 from './post2.svx';
 import Post3 from './post3.svelte';
 import Post4 from './post4.svelte';
 
+const open = $state(false);
+
 </script>
 
-<Post4 />
-<Post3 />
-<Post2 />
+<Post4 {open} />
+<Post3 {open} />
+<Post2 {open} />
