@@ -6,6 +6,10 @@
   const { open = false } = $props();
 
   import SignUp from '$lib/components/Auth/SignUp.svelte';
+
+  import SignIn from '$lib/components/Auth/SignIn.svelte';
+
+  import User from '$lib/components/Auth/User.svelte';
 </script>
 
 <BaseContent title="2025-02-03" {open}>
@@ -28,6 +32,12 @@
       appropriately.
     </p>
     <SignUp />
+
+    <User />
+  </Section>
+
+  <Section>
+    <SignIn />
   </Section>
 </BaseContent>
 
