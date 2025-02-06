@@ -86,7 +86,7 @@
       </div>
     </div>
     <div>
-      <button> Sign Up </button>
+      <button class={formButtonStyle}> Sign Up </button>
     </div>
   </form>
 </div>

@@ -34,20 +34,8 @@
 
   const cookieChange = data.visited ? 'back' : '';
 
-  import SignUp from "$lib/components/Auth/SignUp.svelte";
-  import SignIn from "$lib/components/Auth/SignIn.svelte";
-  import User from "$lib/components/Auth/User.svelte";
+ 
 </script>
-
-<Article --articleRow="1/2" --articleColumn="1/2">
-  <SignUp />
-</Article>
-<Article --articleRow="1/2" --articleColumn="2/3">
-  <User />
-</Article>
-<Article --articleRow="1/2" --articleColumn="3/4">
-<SignIn />
-</Article>
 
 <Article --articleRow="2/3" --articleColumn="1/4">
   <Section>
