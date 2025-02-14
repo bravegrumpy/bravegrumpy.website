@@ -12,3 +12,4 @@ tools/
 
 pip/**
 **/site-packages/**
+node_modules
