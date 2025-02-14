@@ -1,0 +1,22 @@
+The links to the left point to older iterations of this website. These are wholesale versions of website as it was.  This means that  broken links stay broken, etc.
+
+Right now, I'm leaving all styling as is, however, I may in the future decide to un-hide some of the hidden styles. 
+
+Most interestingly, all of the previous design systems still exist. I find it interesting to see how my design sensibilites have migrated over time.
+
+<em class="font-heading text-sm">I make no guarantees about the validity of the links.</em> 
+The only major change made to either archive is the addition of a link to the "modern day homepage", which is always the most current one.
+
+### First Iteration
+
+The [first iteration](/archive/archive-00/index.html) is just a simple showcase of vanilla html/js/css.  The most fascinating thing about this [first iteration](/archive/archive-00/index.html) it shows where some of pastel colors within the pallette come from. There is very little content of note.
+
+### Second Iteration
+
+The [second iteration](/archive/archive-01/index.html) is the first time this site had genuinne content in it. It is not designed well, but it does have a responsive design.
+
+While the version of the webiste that you are currently viewing is under development some [second iteration](/archive/archive-01/index.html) pages may be referenced. 
+
+Be aware that there are a couple links to php files peppered  in this version. Some of them may be visible. Because I do not know how to make php exist, clicking the link downloads the php file rather than displaying it. The only content within these php files are html content.
+
+You may find links to this iteration peppered into the moden site. This is expected The files linked to here are likely to have edites to ensure all of the links point to the correct location. 

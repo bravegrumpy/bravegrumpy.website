@@ -1,0 +1,3 @@
+<h2 class="text-xl mb-3">Logline</h2>
+
+Enter a world full of bright colors and geometric geographies, where the politics of the past inform the leaders' decisions while oblivious to the ancient magic forces stirring.
