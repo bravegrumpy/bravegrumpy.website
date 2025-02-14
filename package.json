@@ -1,4 +1,9 @@
 {
     "name": "bravegrumpy.website",
-    "version": "0.4.0.0-1"
-}
+    "author": "bravegrumpy",
+    "readme": "README.md",
+    "private": "true",
+    "version": "0.4.0-1",
+    "type": "module",
+    "license": "SEE LISCENSE IN LICENSE"
+  }
