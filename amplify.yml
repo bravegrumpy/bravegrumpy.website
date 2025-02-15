@@ -6,3 +6,7 @@ applications:
       commands:
         - docker build -t my-php-app .
     port: 80
+    frontend:
+      phases:
+        build:
+          commands: [""]
