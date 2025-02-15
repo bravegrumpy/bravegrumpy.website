@@ -11,6 +11,6 @@ applications:
         build:
           commands: [""]
       artifacts: 
-        baseDirectory: /
+        baseDirectory: src
         files:
           - "**/*"
