@@ -2,7 +2,7 @@ version: 1
 applications:
   - appRoot: .
     type: docker
-    build: 
+    build:
       commands:
-        docker build -t bravegrumpy-php .
+        - docker build -t my-php-app .
     port: 80
