@@ -6,6 +6,8 @@ frontend:
         - echo "Nothing to pre-build"
     build:
       commands:
+        - echo "Resetting Environment"
+        - echo "" > /proc emptied/Dockerfile
         - echo "Building Docker image"
         - docker build -t my-php-app .
     postBuild:

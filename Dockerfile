@@ -13,7 +13,9 @@ RUN echo "<FilesMatch \".+\\.html$\">" >> /etc/apache2/conf-enabled/php.conf && 
 
 # Create and set permissions for web root
 WORKDIR /var/www/html
+COPY src/ ./
 RUN rm -rf /var/www/html/*
+
 
 # Copy src contents
 COPY src/ /var/www/html/
