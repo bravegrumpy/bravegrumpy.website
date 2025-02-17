@@ -1,19 +1,44 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - echo "Starting build process"
-    build:
-      commands:
-        - echo "Building Docker image"
-        - docker build -t my-php-app .
-    postBuild:
-      commands:
-        - echo "Build completed"
-  artifacts:
-    baseDirectory: src
-    files:
-      - '**/*'
-  cache:
-    paths: []
+applications:
+  - appRoot: .
+    type: docker
+    settings:
+      runtime: docker
+    buildSpec:
+      version: 1
+      applications:
+        - appRoot: .
+          env:
+            variables:
+              PHP_VERSION: "8.1"
+          backend:
+            phases:
+              preBuild:
+                commands:
+                  - echo "Installing docker"
+                  - npm install -g dockerode
+                  - npm install -g docker-cli
+                  - echo "Installing php"
+                  - npm install php
+              build:
+                commands:
+                  - echo "Starting build process"
+                  - echo "Building Docker image"
+                  - docker build -t my-php-app .
+          frontend:
+            phases:
+              preBuild:
+                commands:
+                  - echo "Starting Frontend build process"
+              build:
+                commands:
+                  - echo "Building front end"
+              postBuild:
+                commands:
+                  - echo "Build completed"
+            artifacts:
+              baseDirectory: src
+              files:
+                - '**/*'
+            cache:
+              paths: []

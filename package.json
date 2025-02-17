@@ -7,6 +7,8 @@
     "type": "module",
     "license": "SEE LISCENSE IN LICENSE",
     "dependencies": {
+        "docker-cli": "^0.0.2",
+        "dockerode": "^4.0.4",
         "php": "^1.1.0"
     }
 }
