@@ -5,5 +5,8 @@
     "private": "true",
     "version": "0.4.0-12",
     "type": "module",
-    "license": "SEE LISCENSE IN LICENSE"
+    "license": "SEE LISCENSE IN LICENSE",
+    "dependencies": {
+        "php": "^1.1.0"
+    }
 }
