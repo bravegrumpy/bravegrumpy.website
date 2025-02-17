@@ -1,23 +1,19 @@
 version: 1
-applications:
-  - appRoot: .
-  backend:
-    phases:
-      build:
-        commands:
-          - docker build -t my-php-app .
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Nothing to pre-build"
+    build:
+      commands:
+        - echo "Building Docker image"
+        - docker build -t my-php-app .
+    postBuild:
+      commands:
+        - echo "Build completed"
   artifacts:
     baseDirectory: src
     files:
       - '**/*'
-  customHeaders:
-    - pattern: '**/*.html'
-    headers:
-      - key: 'Content-Type'
-        value: 'application/x-httpd-php'
-  buildSpec:
-    version: 1
-    artifacts:
-      baseDirectory: src
-      files:
-        - '**/*'
+  cache:
+    paths: []
