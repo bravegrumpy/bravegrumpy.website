@@ -1,16 +1,23 @@
 version: 1
 applications:
-  - appRoot: src
-    type: docker
-    build:
-      commands:
-        - docker build -t my-php-app .
-    port: 80
-    frontend:
-      phases:
-        build:
-          commands: [""]
-      artifacts: 
-        baseDirectory: src
-        files:
-          - "**/*"
+  - appRoot: .
+  backend:
+    phases:
+      build:
+        commands:
+          - docker build -t my-php-app .
+  artifacts:
+    baseDirectory: src
+    files:
+      - '**/*'
+  customHeaders:
+    - pattern: '**/*.html'
+    headers:
+      - key: 'Content-Type'
+        value: 'application/x-httpd-php'
+  buildSpec:
+    version: 1
+    artifacts:
+      baseDirectory: src
+      files:
+        - '**/*'

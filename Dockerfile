@@ -8,4 +8,7 @@ RUN echo "AddType application/x-httpd-php .html .htm" >> /etc/apache2/conf-enabl
 
 RUN chown -R www-data:www-data /var/www/html
 
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost/ || exit 1
+
 EXPOSE 80
