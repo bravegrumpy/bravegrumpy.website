@@ -3,16 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - echo "Nothing to pre-build"
+        - echo "Starting build process"
     build:
       commands:
-        - echo "Resetting Environment"
-        - echo "" > /proc emptied/Dockerfile
         - echo "Building Docker image"
         - docker build -t my-php-app .
     postBuild:
       commands:
-        - docker run my-php-app
         - echo "Build completed"
   artifacts:
     baseDirectory: src
