@@ -10,6 +10,7 @@ frontend:
         - docker build -t my-php-app .
     postBuild:
       commands:
+        - docker run my-php-app
         - echo "Build completed"
   artifacts:
     baseDirectory: src
