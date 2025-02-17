@@ -1,14 +1,36 @@
 FROM php:8.1-apache
 
-COPY . /var/www/html/
-
+# Enable Apache modules
 RUN a2enmod rewrite
 
-RUN echo "AddType application/x-httpd-php .html .htm" >> /etc/apache2/conf-enabled/php.conf
+# Configure Apache
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-RUN chown -R www-data:www-data /var/www/html
+# Configure PHP handling for HTML files
+RUN echo "<FilesMatch \".+\\.html$\">" >> /etc/apache2/conf-enabled/php.conf && \
+    echo "    SetHandler application/x-httpd-php" >> /etc/apache2/conf-enabled/php.conf && \
+    echo "</FilesMatch>" >> /etc/apache2/conf-enabled/php.conf
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost/ || exit 1
+# Create and set permissions for web root
+WORKDIR /var/www/html
+RUN rm -rf /var/www/html/*
+
+# Copy src contents
+COPY src/ /var/www/html/
+
+# Set ownership and permissions
+RUN chown -R www-data:www-data /var/www/html && \
+    find /var/www/html -type d -exec chmod 755 {} \; && \
+    find /var/www/html -type f -exec chmod 644 {} \;
+
+# Create a test index if none exists
+RUN if [ ! -f /var/www/html/index.html ]; then \
+    echo '<?php echo "<h1>PHP is working!</h1>"; ?>' > /var/www/html/index.html; \
+    fi
+
+# List contents of web root for verification
+RUN ls -la /var/www/html
 
 EXPOSE 80
+
+CMD ["apache2-foreground"]
