@@ -3,7 +3,7 @@
     "author": "bravegrumpy",
     "readme": "README.md",
     "private": "true",
-    "version": "0.4.0-15",
+    "version": "0.4.0-16",
     "type": "module",
     "license": "SEE LISCENSE IN LICENSE",
     "dependencies": {
