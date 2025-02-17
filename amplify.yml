@@ -25,20 +25,9 @@ applications:
                   - echo "Starting build process"
                   - echo "Building Docker image"
                   - docker build -t my-php-app .
-          frontend:
-            phases:
-              preBuild:
-                commands:
-                  - echo "Starting Frontend build process"
-              build:
-                commands:
-                  - echo "Building front end"
-              postBuild:
-                commands:
-                  - echo "Build completed"
             artifacts:
               baseDirectory: src
-              files:
-                - '**/*'
+            files:
+              - '**/*'
             cache:
               paths: []
