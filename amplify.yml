@@ -1,25 +1,19 @@
 version: 1
-application:
-  - appRoot: .
-    type: docker
-    settings:
-      runtime: docker
-    buildSpec:
-      version: 1
-      applications:
-        - appRoot: .
-          env: 
-            variables: 
-              PHP_VERSION: "8.1"
-        backend:
-          phases:
-            build:
-              commands:
-                - npm install docker
-                - npm install
-                - sleep 5
-                - docker build -t php-ap .
-        artifacts:
-          baseDirectory: /
-          files:
-            - '**/*'
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Starting build process"
+    build:
+      commands:
+        - echo "Building Docker image"
+        - docker build -t my-php-app .
+    postBuild:
+      commands:
+        - echo "Build completed"
+  artifacts:
+    baseDirectory: src
+    files:
+      - '**/*'
+  cache:
+    paths: []
