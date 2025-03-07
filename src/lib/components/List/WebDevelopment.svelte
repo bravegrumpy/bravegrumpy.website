@@ -21,6 +21,11 @@
       >
     </li>
     <li>
+      <a href="https://www.smashingmagazine.com/2024/01/css-border-image-property/" target="_blank"
+        >CSS border-image explaination</a
+      >
+    </li>
+    <li>
       <a href="https://en.wikipedia.org/wiki/Pythagorean_interval" target="_blank"
         >Useful ratios for heading sizes.</a
       >

@@ -1,6 +1,7 @@
 ---
 h2: Thursday, January 2nd, 2025
 date: 2025-01-02
+title: Adding Custom One-Off CSS to Sveltekit Component system
 ---
 
 <script>
@@ -9,7 +10,11 @@ date: 2025-01-02
 </script>
 
 
-<BlogLayout {h2} title={date.toString().slice(0,10)}>
+<BlogLayout h2={title} title={date.toString().slice(0,10)}>
+
+## {h2}
+
+None of the background patterns below are my own. Look to the links page under the web development tab to find my CSS Background resources.
 
 ## Adding in backgrounds
 

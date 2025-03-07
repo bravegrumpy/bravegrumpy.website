@@ -1,6 +1,7 @@
 ---
 h2: Saturday, February 1st, 2025
 date: 2025-02-01
+title: SvelteKit update Complete
 ---
 
 <script>
@@ -9,7 +10,9 @@ date: 2025-02-01
     import DecoratedSwitch from '$lib/components/DecoratedSwitch.svelte';
 </script>
 
-<BlogLayout {h2} title={date.toString().slice(0,10)} open >
+<BlogLayout h2={title} title={date.toString().slice(0,10)} >
+
+## {h2}
 
 ## Finishing v2
 

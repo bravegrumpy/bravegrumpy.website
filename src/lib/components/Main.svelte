@@ -20,4 +20,11 @@
       grid-template-rows: 1fr 2fr 1fr;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 </style>

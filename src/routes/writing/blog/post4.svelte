@@ -5,7 +5,20 @@
   import { Button, GradientButton } from 'flowbite-svelte';
 </script>
 
-<BaseContent h2="January 4th, 2025" title="2025-01-04">
+<BaseContent h2="Flowbite Buttons Visual Reference" title="2025-01-04">
+  <Section>
+    <h2>January 4th, 2025</h2>
+    <div class="flex w-full flex-row flex-wrap gap-5">
+      <p>
+        This is a reference for all the different visual styles given by Flowbite's <code
+          >Button</code
+        >
+        and <code>GradientButton</code> components. In my opinion, some of the color choices are
+        less than intuitive. These are a good way to see if changes to the
+        <code>tailwind.config.js</code> file have propigated correctly.
+      </p>
+    </div>
+  </Section>
   <Section>
     <div class="flex w-full flex-row flex-wrap gap-5">
       <Button>Default</Button>

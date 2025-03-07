@@ -24,3 +24,16 @@
     <Footer />
   </div>
 </div>
+
+<style>
+  @media screen and (max-width: 1000px) {
+    .w-5\/6 {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 1560px) {
+    .w-5\/6 {
+      width: 100%;
+    }
+  }
+</style>

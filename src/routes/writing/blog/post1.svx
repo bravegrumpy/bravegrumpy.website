@@ -1,14 +1,16 @@
 ---
 h2: Tuesday, December 31st 2024
 date: 2024-12-31
+title: An Unhappy New Year
 ---
 
 <script>
     import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
 </script>
 
-<BlogLayout {h2} title={date.toString().slice(0,10)} open>
+<BlogLayout h2={title} title={date.toString().slice(0,10)} open>
 
+## {h2}
 
 ### Happy New year bitches.
 
