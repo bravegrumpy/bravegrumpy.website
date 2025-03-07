@@ -6,15 +6,15 @@
   import { Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
 
   let breadcrumbClass = $state(
-    'bg-solarized-base-2 dark:bg-nevada-950  dark:text-parchment-500 border-2 border-solid border-current text-flush-orange-800  w-fit px-2 rounded-[5px] py-2'
+    'bg-solarized-base-2 dark:bg-nevada-950  dark:text-chateau-green-600 border-2 border-solid border-current text-flush-orange-800  w-fit px-2 rounded-[5px] py-2'
   );
 
   let bredcrumbItemClass = $state(
-    'bg-solarized-base-2 border-2 border-solid border-current text-flush-orange-800 rounded-[5px] px-10 py-2 text-flush-orange-800'
+    'bg-solarized-base-2 border-2 border-solid border-current text-flush-orange-800 rounded-[5px] px-10 py-2 text-flush-orange-800 dark:text-chateau-green-500 hover:scale-105 hover:hue-rotate-60'
   );
 
   let breadcrumbItemContentClass = $state(
-    'font-navMenuDefault text-xl text-flush-orange-800 hover:hue-rotate-60 hover:scale-105 dark:text-parchment-400'
+    'font-navMenuDefault text-xl text-flush-orange-800 dark:text-chateau-green-500 hover:hue-rotate-60 hover:scale-105'
   );
 </script>
 
