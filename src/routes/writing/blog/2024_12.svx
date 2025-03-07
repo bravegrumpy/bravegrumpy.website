@@ -1,0 +1,7 @@
+<script>
+
+import Post1 from './post1.svx';
+
+</script>
+
+<Post1 />

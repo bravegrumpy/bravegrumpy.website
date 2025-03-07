@@ -1,0 +1,54 @@
+## Blender Physical Based Reality Resources
+
+### Procedural Material Development
+
+#### Lists of IOR values
+
+
+- [Pixel and Poly](https://pixelandpoly.com/ior.html)
+- [CGTalk](https://forums.cgsociety.org/t/a-complete-ior-list/1070401)
+- [Wikipedia](https://en.wikipedia.org/wiki/List_of_refractive_indices)
+- [Blendersauce](http://blendersauce.com/ior-list/)
+- [RefractiveIndex.INFO](https://refractiveindex.info/)
+- [Georgia State University](http://hyperphysics.phy-astr.gsu.edu/hbase/hframe.html)
+                    
+#### Greenhouse
+
+- [DesigningIdea -- Greenhouses](https://designingidea.com/greenhouse-sizes/)
+
+#### Scientific Glassware
+
+- [Beaker Dimensions](#beaker-dimensions)
+- [Erlenmyer Flask dimensions](#erlenmyer-flask-dimensions)
+
+### Lighting
+
+Lighting in Blender is measured in Watts, but this is not light-bulb energy, but *radiant flux**, a measure of brightness. Below is a table of realistic values.
+
+For artificial light sources, divide the lumen rating by the luminous efficacy to get the appropriate value.
+
+For outdoor conditions, directly use the Radiant flux value given.
+
+#### Online Lighting Resources
+
+- [Blender Light Objects](https://docs.blender.org/manual/en/latest/render/lights/light_object.html#common-settings)
+- [Wikipedia Common Energy and Lumens Table](https://en.wikipedia.org/wiki/Lumen_(unit))
+- [Wikipedia Radiant Flux](https://en.wikipedia.org/wiki/Radiant_flux)
+
+
+#### Lighting Value Table
+
+##### Common Lighting Radiant Flux Luminous Efficacy
+
+##### Common Outdoor lighting conditions Radiant Flux
+
+<style>
+    a {
+        color: var(--hawkes-blue-800);
+        text-decoration: wavy;
+    }
+
+    :global(.dark) a {
+        color: var(--hawkes-blue-400);
+    }
+</style>

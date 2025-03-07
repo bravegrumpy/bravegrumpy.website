@@ -1,9 +1,39 @@
-tools/
-.*lint.json/
-.idea/
-.vscode/
-.vs/
-.notes/
-venvs/**
+build
+node_modules/
 
-*scratch*
+.vs**
+.idea**
+
+# IDE specific config
+**/.vs*/
+**/.idea/
+
+# Secrets
+*.env**
+
+# build artifacts
+node_modules
+.npm
+.vite.config.js.timestamp*
+
+## build artifacts from other branches
+.svelte-kit
+.svelte*
+.astro
+
+
+# scratch files and directories
+scratch*
+**scratch**
+scratch*.*
+**/scratch**
+**/scratch/**
+**/scratch/**.*
+**scratch.*
+**/*scratch/*.*
+**old**
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*

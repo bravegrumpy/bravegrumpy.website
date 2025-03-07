@@ -1,0 +1,22 @@
+<script>
+    import Article from '$lib/components/Article.svelte';
+    import Section from '$lib/components/Section.svelte';
+    import Aside from '$lib/components/Aside.svelte';
+    import BaseContent from '$lib/components/BaseContent.svelte';
+    import BaseLayout from '$lib/components/BaseLayout.svelte';
+    import {page} from '$app/stores';
+</script>
+
+<Article --articleColumn="1/4">
+<Section>
+
+## Writing
+
+There are two main types of writing that I do:
+
+    - Fiction
+    - Nonfiction.
+
+Currently, the [Blog](/writing/blog) is where most of the non-fiction work is, and [Fantasy](/writing/huetopia) is where ficiton is.  This may grow as I have more ideas.
+</Section>
+</Article>
