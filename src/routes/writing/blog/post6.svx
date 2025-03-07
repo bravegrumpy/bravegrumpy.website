@@ -8,7 +8,7 @@ title: To Dos and a New Project
     import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
     import Icon from '@iconify/svelte';
     import DecoratedSwitch from '$lib/components/DecoratedSwitch.svelte';
-    let address = $state('https://www.bravegrumpy.com');
+    let address = $state('/writing/blog/2025');
 </script>
 
 <BlogLayout h2={title} title={date.toString().slice(0,10)} open>
@@ -38,15 +38,17 @@ I made the <a href="https://mertherfanfic.neocities.org" target="_blank"> the ne
 
 #### Embedded Copy of Fanfic With Cool Styles
 
+<input bind:value={address} class="text-black w-full">
+
 <div class="iframe-container">
     <iframe src={address}></iframe>
 </div>
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Tribute to Doughnuts" src="https://codepen.io/robin-zollner/embed/wvyBRbz?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<!--iframe height="300" style="width: 100%;" scrolling="no" title="Tribute to Doughnuts" src="https://codepen.io/robin-zollner/embed/wvyBRbz?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/robin-zollner/pen/wvyBRbz">
   Tribute to Doughnuts</a> by robin-zollner (<a href="https://codepen.io/robin-zollner">@robin-zollner</a>)
   on <a href="https://codepen.io">CodePen</a>.
-</iframe>
+</iframe-->
 
 </BlogLayout>
 
