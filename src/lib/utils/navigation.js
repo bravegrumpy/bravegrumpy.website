@@ -5,6 +5,15 @@ export function getCurrentPageData(pathname, links) {
     return links.find((link) => link.href === "/");
   }
 
+  //Handle login
+
+  if (pathname === "/login") {
+    return {
+      pageTitle: "Login",
+      pageSubtitle: "Feel free to sign into bravegrumpy."
+    }
+  }
+
   // Handle direct matches
   const directMatch = links.find((link) => link.href === pathname);
   if (directMatch) {

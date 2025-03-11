@@ -4,4 +4,4 @@ import Post1 from './post1.svx';
 
 </script>
 
-<Post1 />
+<Post1 open={true}/>
