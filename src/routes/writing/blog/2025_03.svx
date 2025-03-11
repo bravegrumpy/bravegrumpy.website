@@ -1,9 +1,9 @@
 <script>
 
-import Post6 from './post6.svx';
 import Post7 from './post7.svx';
+import Post8 from './post8.svx';
 
 </script>
 
+<Post8 />
 <Post7 />
-<Post6 />
