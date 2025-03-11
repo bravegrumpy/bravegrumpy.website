@@ -40,7 +40,19 @@
         >web accessability evaluation tool (WAVE)</a
       >
     </li>
-    <li><a href="contrast-grid.html" target="_blank">Contrast Grid</a></li>
+    <li>
+      <LOL heading="Contrast Checking Grids">
+        <li>
+          <a href="https://contrast-grid.eightshapes.com/" target="_blank">Contrast Grid 1</a>
+        </li>
+        <li><a href="https://contrastgrid.com/" target="_blank">Contrast Grid 2</a></li>
+        <LOL>
+          <li>
+            <a href="/contrast-grid.html">Contrast Grid I made with my color pallete</a>
+          </li>
+        </LOL>
+      </LOL>
+    </li>
     <li>
       <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank"
         >mdn web docs_ARIA</a
