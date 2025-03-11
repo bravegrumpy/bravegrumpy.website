@@ -141,6 +141,22 @@ const links = [
       },
     ],
   },
+  {
+    id: "6",
+    href: "/protected",
+    text: "Auth",
+    pageTitle: "Protected Route",
+    pageSubtitle: "Route for testing auth flow and other things",
+    subnav: [
+      {
+        id: "6-0",
+        href: "/protected/index",
+        text: "Index",
+        pageTitle: "Auth State",
+        pageSubtitle: "Basic Route for Checking Auth state"
+      }
+    ]
+  }
 ];
 
 const currentTab = "/links";

@@ -1,7 +1,8 @@
 import links from "$lib/utils/data.js";
 import { error } from "@sveltejs/kit";
+import { buildClerkProps } from "svelte-clerk/server";
 
-export async function load(event) {
+export async function load({ locals }) {
   if (!links) {
     error(404, { message: "The page you are looking for does not exist" });
   }
@@ -13,6 +14,7 @@ export async function load(event) {
       pageTitle: link.pageTitle,
       pageSubtitle: link.pageSubtitle,
     })),
+    ...buildClerkProps(locals.auth)
   };
 }
 
