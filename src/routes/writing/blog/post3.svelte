@@ -4,6 +4,7 @@
 
   let h2 = $state('Friday, January 3rd 2025');
   let date = $state('2025-01-03');
+  let title = $state('Simulated Annealing Generated Color Pallettes');
 
   let bgPallette = $state([
     '#6e34a2',
@@ -102,22 +103,27 @@
   );
 </script>
 
-<BlogLayout {h2} title={date.toString().slice(0, 10)}>
+<BlogLayout h2={title} title={date.toString().slice(0, 10)}>
+  <h2>{h2}</h2>
   <h3>Even Moar backgrounds</h3>
 
   <p>
-    I am continuing yesterday's exploration of colors. I read [this
-    essay](https://matthewstrom.com/writing/how-to-pick-the-least-wrong-colors/) about using
-    simulated annealing to generate new color pallettes. The algorithm is a pretty good way of
-    generating a fitness function for the colors. It accepts a color pallette, and then generates a
-    new color pallette that is optimized for WEBG contrast ratios, and for each of the
-    color-blindness types. Here is the
-    [code](https://github.com/ilikescience/category-colors/tree/main?tab=readme-ov-file) referenced
-    in the essay. Read the essay before continuing, I input the bravegrumpy pallette, used on this
-    website, and am comparing it to the results given. One of the parameters in the criteria in
-    generating new colors is the similarity to provided color pallette. The output code generates
-    the same number of colors as input. I am manually matching each generated color to the color it
-    is most similar to in the my brand colors.
+    I am continuing yesterday's exploration of colors. I read <a
+      href="https://matthewstrom.com/writing/how-to-pick-the-least-wrong-colors/"
+      target="_blank">this essay</a
+    >
+    about using simulated annealing to generate new color pallettes. The algorithm is a pretty good way
+    of generating a fitness function for the colors. It accepts a color pallette, and then generates
+    a new color pallette that is optimized for WEBG contrast ratios, and for each of the color-blindness
+    types. Here is the
+    <a
+      href="https://github.com/ilikescience/category-colors/tree/main?tab=readme-ov-file"
+      target="_blank">code</a
+    > referenced in the essay. Read the essay before continuing, I input the bravegrumpy pallette, used
+    on this website, and am comparing it to the results given. One of the parameters in the criteria
+    in generating new colors is the similarity to provided color pallette. The output code generates
+    the same number of colors as input. I am manually matching each generated color to the color it is
+    most similar to in the my brand colors.
   </p>
 
   <table>

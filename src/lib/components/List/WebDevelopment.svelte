@@ -21,6 +21,11 @@
       >
     </li>
     <li>
+      <a href="https://www.smashingmagazine.com/2024/01/css-border-image-property/" target="_blank"
+        >CSS border-image explaination</a
+      >
+    </li>
+    <li>
       <a href="https://en.wikipedia.org/wiki/Pythagorean_interval" target="_blank"
         >Useful ratios for heading sizes.</a
       >
@@ -35,7 +40,19 @@
         >web accessability evaluation tool (WAVE)</a
       >
     </li>
-    <li><a href="contrast-grid.html" target="_blank">Contrast Grid</a></li>
+    <li>
+      <LOL heading="Contrast Checking Grids">
+        <li>
+          <a href="https://contrast-grid.eightshapes.com/" target="_blank">Contrast Grid 1</a>
+        </li>
+        <li><a href="https://contrastgrid.com/" target="_blank">Contrast Grid 2</a></li>
+        <LOL>
+          <li>
+            <a href="/contrast-grid.html">Contrast Grid I made with my color pallete</a>
+          </li>
+        </LOL>
+      </LOL>
+    </li>
     <li>
       <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank"
         >mdn web docs_ARIA</a
@@ -87,6 +104,9 @@
       <a href="https://matthewstrom.com/writing/how-to-pick-the-least-wrong-colors/" target="_blank"
         >Mathematical tools for generating color pallettes.</a
       >
+    </li>
+    <li>
+      <a href="https://oklch.com/#69.58,0.1213,293.23,100" target="_blank">OKLCH color Picker</a>
     </li>
   </LOL>
   <LOL heading="Pallete Review and iterative Development">
@@ -158,8 +178,11 @@
       >
     </li>
     <li>
+      <a href="https://jsonplaceholder.typicode.com/" target="_blank">Placeholder JSON data</a>
+    </li>
+    <li>
       In both of the subsequent resources, when I say "API" I mean a way to specificy requirements
-      in URL>
+      in URL
     </li>
     <li>
       <a href="https://placehold.co/" target="_blank">Blank Placeholder Images with API</a>
