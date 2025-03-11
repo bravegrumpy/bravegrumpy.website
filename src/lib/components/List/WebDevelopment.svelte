@@ -88,6 +88,9 @@
         >Mathematical tools for generating color pallettes.</a
       >
     </li>
+    <li>
+      <a href="https://oklch.com/#69.58,0.1213,293.23,100" target="_blank">OKLCH color Picker</a>
+    </li>
   </LOL>
   <LOL heading="Pallete Review and iterative Development">
     <li>
@@ -158,8 +161,11 @@
       >
     </li>
     <li>
+      <a href="https://jsonplaceholder.typicode.com/" target="_blank">Placeholder JSON data</a>
+    </li>
+    <li>
       In both of the subsequent resources, when I say "API" I mean a way to specificy requirements
-      in URL>
+      in URL
     </li>
     <li>
       <a href="https://placehold.co/" target="_blank">Blank Placeholder Images with API</a>
