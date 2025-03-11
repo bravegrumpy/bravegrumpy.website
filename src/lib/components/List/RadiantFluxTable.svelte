@@ -54,11 +54,11 @@
       let:item
     >
       <TableBodyCell
-        class="border-2 border-solid border-solarized-yellow text-black dark:border-solarized-base-0"
+        class="border-2 border-solid border-solarized-yellow text-bravegrumpy-black dark:border-solarized-base-0"
         >{item.lst}</TableBodyCell
       >
       <TableBodyCell
-        class=" border-2 border-solid border-solarized-yellow text-black dark:border-solarized-base-0"
+        class=" border-2 border-solid border-solarized-yellow text-bravegrumpy-black dark:border-solarized-base-0"
         >{item.le}</TableBodyCell
       >
     </TableBodyRow>
