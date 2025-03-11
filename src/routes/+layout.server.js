@@ -1,7 +1,7 @@
 import links from "$lib/utils/data.js";
 import { error } from "@sveltejs/kit";
 
-export function load() {
+export async function load(event) {
   if (!links) {
     error(404, { message: "The page you are looking for does not exist" });
   }
