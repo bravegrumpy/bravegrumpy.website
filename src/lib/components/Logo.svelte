@@ -1,5 +1,9 @@
 <script>
   import '$lib/styles/globals.css';
+  import { UserButton, SignedIn, SignedOut } from 'svelte-clerk/components';
+  import SignInButton from './Auth/SignInButton.svelte';
+  import SignOutButton from './Auth/SignOutButton.svelte';
+  import SignUpButton from './Auth/SignUpButton.svelte';
 </script>
 
 <div id="container">
@@ -14,6 +18,18 @@
     <p id="logoSubtitle" class="text-bravegrumpy-logoPurple dark:text-bravegrumpy-accent1a">
       Welcome to my chaotic castle of curious creations. I hope find some cool stuff.
     </p>
+    <SignedIn>
+      <div>
+        <UserButton />
+        <SignOutButton />
+      </div>
+    </SignedIn>
+    <SignedOut>
+      <div>
+        <SignInButton />
+        <SignUpButton />
+      </div>
+    </SignedOut>
   </div>
 </div>
 

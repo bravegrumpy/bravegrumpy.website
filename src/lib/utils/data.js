@@ -149,11 +149,25 @@ const links = [
     pageSubtitle: "Route for testing auth flow and other things",
     subnav: [
       {
+        id: "6-2",
+        href: "/protected/profile",
+        text: "Profile",
+        pageTitle: "User Profile",
+        pageSubtitle: "User Profile Page"
+      },
+      {
         id: "6-0",
         href: "/protected/index",
         text: "Index",
         pageTitle: "Auth State",
         pageSubtitle: "Basic Route for Checking Auth state"
+      },
+      {
+        id: "6-1",
+        href: "/protected/admin",
+        text: "Private",
+        pageTitle: "Does Protected Work?",
+        pageSubtite: "Role dependant content"
       }
     ]
   }

@@ -5,7 +5,7 @@
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import Main from '$lib/components/Main.svelte';
-
+  
   import { ClerkProvider } from 'svelte-clerk';
 
   const { children } = $props();

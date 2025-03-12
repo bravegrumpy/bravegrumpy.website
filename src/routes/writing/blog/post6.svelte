@@ -5,16 +5,18 @@
   import Heading from '$lib/components/Heading.svelte';
   const { open = false } = $props();
 
-  import SignUp from '$lib/components/Auth/SignUp.svelte';
+  import SignUp from '$lib/components/Auth/Archive/SignUp.svelte';
 
-  import SignIn from '$lib/components/Auth/SignIn.svelte';
+  import SignIn from '$lib/components/Auth/Archive/SignIn.svelte';
 
-  import User from '$lib/components/Auth/User.svelte';
+  import User from '$lib/components/Auth/Archive/User.svelte';
 </script>
 
 <BaseContent title="2025-02-03" {open}>
-  <Heading>Monday, February 3rd 2025</Heading>
   <Heading>Figuring out how to add Auth in 2025.</Heading>
+  <Section>
+    <p>Monday, February 3rd 2025</p>
+  </Section>
   <Section>
     <p>This is supposed to be a sign in or up page.</p>
     <p>

@@ -1,6 +1,6 @@
 <script>
   import Section from '$lib/components/Section.svelte';
-  import Heading from '../Heading.svelte';
+  import Heading from '$lib/components/Heading.svelte';
 </script>
 
 <Section sectionClass="bg-bravegrumpy-accent2b dark:bg-bravegrumpy-logoPurple">
