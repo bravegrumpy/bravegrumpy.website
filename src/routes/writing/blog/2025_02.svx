@@ -2,8 +2,10 @@
 
 import Post5 from './post5.svx';
 import Post6 from './post6.svelte';
+import Post9 from './post9.svx';
 
 </script>
 
+<Post9 open={false} />
 <Post6 open={true}/>
 <Post5 open={false}/>
