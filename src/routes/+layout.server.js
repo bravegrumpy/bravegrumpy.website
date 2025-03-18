@@ -1,6 +1,5 @@
 import links from "$lib/utils/data.js";
 import { error } from "@sveltejs/kit";
-import { buildClerkProps } from "svelte-clerk/server";
 
 export async function load({ locals }) {
   if (!links) {
@@ -14,7 +13,6 @@ export async function load({ locals }) {
       pageTitle: link.pageTitle,
       pageSubtitle: link.pageSubtitle,
     })),
-    ...buildClerkProps(locals.auth)
   };
 }
 
