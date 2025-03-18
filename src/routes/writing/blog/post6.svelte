@@ -5,11 +5,11 @@
   import Heading from '$lib/components/Heading.svelte';
   const { open = false } = $props();
 
-  import SignUp from '$lib/components/Auth/Archive/SignUp.svelte';
+  import SignUp from '$lib/components/Auth/SignUp.svelte';
 
-  import SignIn from '$lib/components/Auth/Archive/SignIn.svelte';
+  import SignIn from '$lib/components/Auth/SignIn.svelte';
 
-  import User from '$lib/components/Auth/Archive/User.svelte';
+  import User from '$lib/components/Auth/User.svelte';
 </script>
 
 <BaseContent title="2025-02-03" {open}>

@@ -27,4 +27,13 @@
     gap: 1rem;
     justify-content: flex-start;
   }
+
+  @media screen and (max-width: 800px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
 </style>

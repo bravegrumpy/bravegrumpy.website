@@ -6,6 +6,5 @@ import Post9 from './post9.svx';
 
 </script>
 
-<Post9 open={false} />
 <Post6 open={true}/>
 <Post5 open={false}/>

@@ -6,6 +6,7 @@
   import Icon from '@iconify/svelte';
 
   import TopNavigation from './TopNavigation.svelte';
+  import BottomNavigation from './BottomNavigation.svelte';
 
   let { links, hidden1 = true } = $props();
   //   let transitionParams = $state({
@@ -28,10 +29,11 @@
 
 <Drawer
   placement="top"
-  class="h-96 w-full bg-dark-fern-300 dark:bg-violet-950"
+  class="h-96 w-full bg-bravegrumpy-accent2a dark:bg-violet-950"
   transitionType="fade"
   bind:hidden={hidden1}
 >
   <CloseButton on:click={() => (hidden1 = !hidden1)} />
   <TopNavigation {links} />
+  <BottomNavigation {links} />
 </Drawer>
