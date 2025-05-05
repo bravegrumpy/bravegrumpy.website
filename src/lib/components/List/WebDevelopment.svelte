@@ -31,6 +31,11 @@
     <li>
       <a href="https://www.cleancss.com/" target="_blank">Kitchen Sink of Utilities</a>
     </li>
+    <li>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout"
+        >Masonry Layout using CSS</a
+      >
+    </li>
   </LOL>
   <LOL title="Accessibility">
     <li>
@@ -142,7 +147,7 @@
     </li>
     <li>
       <a href="https://freefrontend.com/css-background-patterns/" target="_blank"
-        >This is another super long list of css backgrouns.</a
+        >This is another super long list of css backgrounds.</a
       >
       This one is a repeat of a bunch of the previous aggregations of css patterns.
     </li>
