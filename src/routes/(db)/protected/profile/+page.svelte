@@ -1,1 +1,1 @@
-<p>Hello World</p>
+<p class="bg-secondary">Hello World</p>

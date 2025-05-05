@@ -1,6 +1,9 @@
 <script>
   import '$lib/styles/globals.css';
+  import Icon from '@iconify/svelte';
   import NavButton from './NavButton.svelte';
+  import * as DropdownMenu from '$lib/components/ui/dropdown-menu/index.js';
+  import DropdownMenuItem from './ui/dropdown-menu/dropdown-menu-item.svelte';
   let {
     // iconSize = 25,
     links,
@@ -15,7 +18,6 @@
     marginBottom = '10px',
     marginTop = '10px'
   } = $props();
-
   //   const buttonSize = $derived(`size-[${iconSize * 2}px]`);
 </script>
 

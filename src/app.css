@@ -3,6 +3,16 @@
 @import "tailwindcss/utilities";
 
 @layer base {
+    :root {
+        --background: 252 71% 5%;
+        --foreground: 50 83% 93%;
+        --border: "#080418";
+    }
+}
+@layer base {
+    * {
+        @apply border-border;
+    }
     /* ul, ol {
         display: block;
         list-style-type: disc;

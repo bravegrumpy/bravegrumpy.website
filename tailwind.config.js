@@ -1,5 +1,6 @@
 const flowbitePlugin = require("flowbite/plugin");
 const colors = require("tailwindcss/colors");
+import tailwindcssAnimate from "tailwindcss-animate"
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -8,6 +9,7 @@ export default {
     "./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}",
   ],
   darkMode: "class",
+  safelist: ["dark"],
   theme: {
     fontFamily: {
       logo: ["Grenze Gotisch"],
@@ -544,8 +546,17 @@ export default {
         green: "#859900",
       },
     },
+    container: {
+      center: true,
+      padding: "2rem",
+    },
     extend: {
       colors: {
+        border: "hsl(var(--border) / <alpha-value>)",
+        input: "hls(var(--input) / <alpha-value>)",
+        ring: "hsl(var(--ring) / <alpha-value>)",
+        background: "hsl(var(--background) / <alpha-value>",
+        foreground: "hsl(var(--foreground) / <alpha-value>)",
         primary: {
           50: "#faf6fe",
           100: "#f3ebfc",
@@ -559,6 +570,7 @@ export default {
           900: "#54297a",
           950: "#391259",
           DEFAULT: "#6e34a2",
+          foreground: "#080418",
         },
         secondary: {
           50: "#f3faf3",
@@ -573,6 +585,7 @@ export default {
           900: "#244328",
           950: "#102313",
           DEFAULT: "#55ab5e",
+          foreground: "#144614",
         },
         alternative: {
           50: "#f9f8fc",
@@ -768,5 +781,6 @@ export default {
       addVariant("reversed", "&.reversed");
     },
     require("@tailwindcss/typography"),
+    tailwindcssAnimate
   ],
 };

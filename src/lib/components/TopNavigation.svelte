@@ -1,7 +1,8 @@
 <script>
   import '$lib/styles/globals.css';
   import Navigation from './Navigation.svelte';
-  import { DarkMode } from 'flowbite-svelte';
+  import NavButton from './NavButton.svelte';
+  import { DarkMode, Dropdown } from 'flowbite-svelte';
   import Icon from '@iconify/svelte';
   import { page } from '$app/stores';
 
@@ -11,6 +12,8 @@
 
   const iconSize = '25';
   const buttonSize = `size-[${iconSize * 2}px]`;
+
+  import * as DropdownMenu from '$lib/components/ui/dropdown-menu/index.js';
 </script>
 
 <nav>
