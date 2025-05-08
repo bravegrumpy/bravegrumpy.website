@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 :root {
   --royal-purple-50: #faf6fe;
   --royal-purple-100: #f3ebfc;
@@ -428,39 +432,31 @@
   --solarized-cyan: #2aa198;
   --solarized-green: #859900;
 
-  --font-family-logo: "Grenze Gotisch";
-  --font-family-logo-subtitle: "Texturina";
-  --font-family-page-title: "Recursive";
-  --font-family-page-subtitle: "Recursive";
-  --font-family-nav-menu-default: "Recursive";
-  --font-family-nav-menu-active: "Recursive";
-  --font-family-heading: "Recursive";
-  --font-family-body-text: "Recursive";
-  --font-family-sans: "Recursive";
-  --font-family-serif: "Texturina";
+  --font-family-logo: 'Grenze Gotisch';
+  --font-family-logo-subtitle: 'Texturina';
+  --font-family-page-title: 'Recursive';
+  --font-family-page-subtitle: 'Recursive';
+  --font-family-nav-menu-default: 'Recursive';
+  --font-family-nav-menu-active: 'Recursive';
+  --font-family-heading: 'Recursive';
+  --font-family-body-text: 'Recursive';
+  --font-family-sans: 'Recursive';
+  --font-family-serif: 'Texturina';
 
-  --font-family-page-title-variations:
-    "MONO" 0, "CASL" 1, "wght" 600, "slnt" -8, "CRSV" 1;
-  --font-family-page-subtitle-variations:
-    "MONO" 0, "CASL" 1, "wght" 300, "CRSV" 1, "slnt" 0;
-  --font-family-nav-menu-default-variations:
-    "MONO" 0, "CASL" 1, "wght" 600, "CRSV" 1, "slnt" -8;
-  --font-family-nav-menu-active-variations:
-    "MONO" 0.5, "CASL" 1, "wght" 900, "CRSV" 0.5, "slnt" 0;
-  --font-family-heading-variations:
-    "MONO" 0.57, "CASL" 1, "wght" 700, "CRSV" 0.5, "slnt" 0;
-  --font-family-body-text-variations:
-    "MONO" 0, "CASL" 0, "wght" 400, "CRSV" 0, "slnt" 0;
-  --font-family-sans-variations:
-    "MONO" 1, "CASL" 0, "wght" 400, "CRSV" 0, "slnt" 0;
+  --font-family-page-title-variations: 'MONO' 0, 'CASL' 1, 'wght' 600, 'slnt' -8, 'CRSV' 1;
+  --font-family-page-subtitle-variations: 'MONO' 0, 'CASL' 1, 'wght' 300, 'CRSV' 1, 'slnt' 0;
+  --font-family-nav-menu-default-variations: 'MONO' 0, 'CASL' 1, 'wght' 600, 'CRSV' 1, 'slnt' -8;
+  --font-family-nav-menu-active-variations: 'MONO' 0.5, 'CASL' 1, 'wght' 900, 'CRSV' 0.5, 'slnt' 0;
+  --font-family-heading-variations: 'MONO' 0.57, 'CASL' 1, 'wght' 700, 'CRSV' 0.5, 'slnt' 0;
+  --font-family-body-text-variations: 'MONO' 0, 'CASL' 0, 'wght' 400, 'CRSV' 0, 'slnt' 0;
+  --font-family-sans-variations: 'MONO' 1, 'CASL' 0, 'wght' 400, 'CRSV' 0, 'slnt' 0;
 
   --borderRadius: 5px;
 
   --boxShadowLight:
-    -20px -20px 50px 20px rgba(255, 255, 255, 0.6) inset, 20px -10px 35px 10px
-    rgba(0, 0, 0, 0.15), 10px 10px 25px 0px rgba(255, 255, 255, 0.4), 0px 25px
-    30px 15px rgba(101, 77, 134, 0.2), 0px 20px 50px 25px rgba(0, 0, 0, 0.15)
-    inset;
+    -20px -20px 50px 20px rgba(255, 255, 255, 0.6) inset, 20px -10px 35px 10px rgba(0, 0, 0, 0.15),
+    10px 10px 25px 0px rgba(255, 255, 255, 0.4), 0px 25px 30px 15px rgba(101, 77, 134, 0.2),
+    0px 20px 50px 25px rgba(0, 0, 0, 0.15) inset;
   --boxShadowDark: 7px 20px 80px 10px rgba(39, 13, 62, 0.7);
 
   --fontSizeMult: 1.2;
@@ -562,9 +558,9 @@ h6 {
 
 @counter-style links {
   system: cyclic;
-  symbols: "\25C6";
-  suffix: " ";
-  negative: " ";
+  symbols: '\25C6';
+  suffix: ' ';
+  negative: ' ';
 }
 
 .section a,
