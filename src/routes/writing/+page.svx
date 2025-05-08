@@ -18,5 +18,29 @@ There are two main types of writing that I do:
     - Nonfiction.
 
 Currently, the [Blog](/writing/blog) is where most of the non-fiction work is, and [Fantasy](/writing/huetopia) is where ficiton is.  This may grow as I have more ideas.
+
 </Section>
 </Article>
+
+<Article --articleColumn="1/3" --articleRow="2/3" className="hidden">
+<Section>
+
+## Upcoming NSFW fanfiction projects
+
+<div class="innerSection">
+
+I am working on a different project. You can find it [here](/writing/fanfiction).
+Be warned, that the material on the new project contains adult themes, and should be read with caution. Reader discretion is advised.
+More specific content warnings will be on the main page there.
+
+
+</div>
+
+</Section>
+</Article>
+
+<Aside --asideHeight="fit-content" --asideRow="2/3" className="hidden">
+The interesting thing about that project is that I made it using PHP, and LESS, wheras the rest of this site is written with Sveltejs.
+
+I used PHP to generate the static site, and then put it in the static folder of my Sveltekit development environment.
+</Aside>
