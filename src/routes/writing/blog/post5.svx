@@ -8,6 +8,8 @@ title: SvelteKit update Complete
     import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
     import Icon from '@iconify/svelte';
     import DecoratedSwitch from '$lib/components/DecoratedSwitch.svelte';
+
+    const { open = false } = $props();
 </script>
 
 <BlogLayout h2={title} title={date.toString().slice(0,10)} >

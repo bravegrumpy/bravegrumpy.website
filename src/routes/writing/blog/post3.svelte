@@ -101,6 +101,8 @@
       four: gen4[index]
     }))
   );
+
+  const { open = false } = $props();
 </script>
 
 <BlogLayout h2={title} title={date.toString().slice(0, 10)}>

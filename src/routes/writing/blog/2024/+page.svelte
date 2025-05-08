@@ -14,7 +14,7 @@
   );
 
   let breadcrumbItemContentClass = $state(
-    'font-navMenuDefault text-xl text-flush-orange-800 dark:text-chateau-green-500 hover:hue-rotate-60 hover:scale-105'
+    'font-navMenuDefault text-x
   );
 </script>
 

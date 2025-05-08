@@ -7,6 +7,8 @@ title: Adding Custom One-Off CSS to Sveltekit Component system
 <script>
     import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
     import Section from '$lib/components/Section.svelte';
+
+    const { open=false } = $props();
 </script>
 
 
