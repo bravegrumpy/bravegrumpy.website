@@ -3,9 +3,11 @@
   import Section from '$lib/components/Section.svelte';
 
   import { Button, GradientButton } from 'flowbite-svelte';
+
+  const { open = false } = $props();
 </script>
 
-<BaseContent h2="January 4th, 2025" title="2025-01-04">
+<BaseContent h2="January 4th, 2025" title="2025-01-04" {open}>
   <Section>
     <div class="flex w-full flex-row flex-wrap gap-5">
       <Button>Default</Button>

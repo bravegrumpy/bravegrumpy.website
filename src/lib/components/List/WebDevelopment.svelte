@@ -28,6 +28,9 @@
     <li>
       <a href="https://nekocalc.com/px-to-rem-converter" target="_blank">px to rem converter</a>
     </li>
+    <li>
+      <a href="https://www.cleancss.com/" target="_blank">Kitchen Sink of Utilities</a>
+    </li>
   </LOL>
   <LOL title="Accessibility">
     <li>
@@ -87,6 +90,9 @@
       <a href="https://matthewstrom.com/writing/how-to-pick-the-least-wrong-colors/" target="_blank"
         >Mathematical tools for generating color pallettes.</a
       >
+    </li>
+    <li>
+      <a href="https://oklch.com/#69.58,0.1213,293.23,100" target="_blank">OKLCH color Picker</a>
     </li>
   </LOL>
   <LOL heading="Pallete Review and iterative Development">
@@ -158,8 +164,11 @@
       >
     </li>
     <li>
+      <a href="https://jsonplaceholder.typicode.com/" target="_blank">Placeholder JSON data</a>
+    </li>
+    <li>
       In both of the subsequent resources, when I say "API" I mean a way to specificy requirements
-      in URL>
+      in URL
     </li>
     <li>
       <a href="https://placehold.co/" target="_blank">Blank Placeholder Images with API</a>

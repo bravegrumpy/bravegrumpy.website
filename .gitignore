@@ -12,7 +12,6 @@ node_modules/
 *.env**
 
 # build artifacts
-build
 node_modules
 .npm
 .vite.config.js.timestamp*
