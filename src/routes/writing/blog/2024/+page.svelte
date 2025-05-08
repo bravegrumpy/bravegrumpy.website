@@ -13,9 +13,7 @@
     'bg-solarized-base-2 border-2 border-solid border-current text-flush-orange-800 rounded-[5px] px-10 py-2 text-flush-orange-800 dark:text-chateau-green-500 hover:scale-105 hover:hue-rotate-60'
   );
 
-  let breadcrumbItemContentClass = $state(
-    'font-navMenuDefault text-x
-  );
+  let breadcrumbItemContentClass = $state('font-navMenuDefault text-xl');
 </script>
 
 <Breadcrumb class={breadcrumbClass}>
