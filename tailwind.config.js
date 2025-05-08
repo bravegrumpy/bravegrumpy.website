@@ -1,4 +1,4 @@
-const flowbitePlugin = require("flowbite/plugin");
+// const flowbitePlugin = require("flowbite/plugin");
 const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
@@ -760,7 +760,7 @@ export default {
     },
   },
   plugins: [
-    flowbitePlugin,
+    // flowbitePlugin,
     function ({ addVariant }) {
       addVariant("active", "&.active");
     },
