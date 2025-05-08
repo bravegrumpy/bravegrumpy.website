@@ -5,5 +5,5 @@ import Post6 from './post6.svelte';
 
 </script>
 
-<Post6 open={true}/>
+<Post6 open={false}/>
 <Post5 open={false}/>
