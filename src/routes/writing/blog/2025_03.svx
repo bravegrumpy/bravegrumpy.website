@@ -5,5 +5,5 @@ import Post8 from './post8.svx';
 
 </script>
 
-<Post8 />
+<Post8 open={true} />
 <Post7 />
