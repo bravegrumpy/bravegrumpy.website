@@ -1,11 +1,11 @@
-// const flowbitePlugin = require("flowbite/plugin");
+const flowbitePlugin = require("flowbite/plugin");
 const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./src/**/*.{html,js,svelte,ts}",
-    // "./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}",
+    "./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}",
   ],
   darkMode: "class",
   theme: {
@@ -759,14 +759,14 @@ export default {
       },
     },
   },
-  // plugins: [
-  //   // flowbitePlugin,
-  //   function ({ addVariant }) {
-  //     addVariant("active", "&.active");
-  //   },
-  //   function ({ addVariant }) {
-  //     addVariant("reversed", "&.reversed");
-  //   },
-  //   require("@tailwindcss/typography"),
-  // ],
+  plugins: [
+    // flowbitePlugin,
+    function ({ addVariant }) {
+      addVariant("active", "&.active");
+    },
+    function ({ addVariant }) {
+      addVariant("reversed", "&.reversed");
+    },
+    require("@tailwindcss/typography"),
+  ],
 };
