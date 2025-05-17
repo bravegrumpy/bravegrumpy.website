@@ -230,6 +230,12 @@
   </LOL>
 </Section>
 <Section>
+  <LOL section="Documentation" title="Developer Resources" heading="Given by The Odin Project">
+    <li>
+      <a href="https://devdocs.io/">DevDocs</a> A website with all of the API documentation. No more
+      searching for docs! Horray!
+    </li>
+  </LOL>
   <LOL section="Non Javascript Languages" title="PHP language reference" heading="PHP references">
     <li><a href="https://php.org/" target="_blank">Useful Tutorial</a></li>
     <li><a href="https://www.php.net/manual/en/" target="_blank">Official Manual</a></li>
