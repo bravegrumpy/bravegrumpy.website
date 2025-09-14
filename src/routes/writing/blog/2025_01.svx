@@ -4,7 +4,7 @@ import Post2 from './post2.svx';
 import Post3 from './post3.svelte';
 import Post4 from './post4.svelte';
 
-const open = $state(false);
+const { open=false } = $props();
 
 </script>
 

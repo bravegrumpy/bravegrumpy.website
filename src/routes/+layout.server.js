@@ -1,9 +1,9 @@
-import links from "$lib/utils/data.js";
-import { error } from "@sveltejs/kit";
+import links from '$lib/utils/data.js';
+import { error } from '@sveltejs/kit';
 
 export async function load(event) {
   if (!links) {
-    error(404, { message: "The page you are looking for does not exist" });
+    error(404, { message: 'The page you are looking for does not exist' });
   }
   return {
     pages: links.map((link) => ({
@@ -11,8 +11,8 @@ export async function load(event) {
       href: link.href,
       text: link.text,
       pageTitle: link.pageTitle,
-      pageSubtitle: link.pageSubtitle,
-    })),
+      pageSubtitle: link.pageSubtitle
+    }))
   };
 }
 

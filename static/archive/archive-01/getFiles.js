@@ -1,16 +1,13 @@
-import fs from "fs";
-import path from "path";
-import url from "url";
+import fs from 'fs';
+import path from 'path';
+import url from 'url';
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const defaultDirectory = __dirname;
-const html = ".html";
+const html = '.html';
 
-export default function getFilenames(
-  currentDirectory = defaultDirectory,
-  fileType = html,
-) {
+export default function getFilenames(currentDirectory = defaultDirectory, fileType = html) {
   const filenames = fs.readdirSync(currentDirectory).filter((file) => {
     const filePath = path.join(currentDirectory, file);
     const isFile = fs.statSync(filePath).isFile();

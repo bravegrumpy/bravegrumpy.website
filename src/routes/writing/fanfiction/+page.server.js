@@ -1,5 +1,5 @@
-import { redirect } from "@sveltejs/kit";
+import { redirect } from '@sveltejs/kit';
 
 export function load() {
-    redirect(308, "/writing/fanfiction/index.html");
+  redirect(308, '/writing/fanfiction/index.html');
 }
