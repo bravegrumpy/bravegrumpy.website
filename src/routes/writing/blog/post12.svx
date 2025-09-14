@@ -1,0 +1,19 @@
+---
+h2: Something
+date: 2025-09-14
+title: Something about D&D.
+---
+
+<script>
+    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte"
+</script>
+
+<BlogLayout h2={title} title={date.toString().slice(1,10)}>
+
+## DnD
+
+I've been running a DnD campaign, and it has been fun.
+
+One challenge is been keeping myself as an authority figure.
+
+</BlogLayout>

@@ -1,17 +1,17 @@
 // Utility functions for navigation and page data
 export function getCurrentPageData(pathname, links) {
   // Handle root path
-  if (pathname === "/") {
-    return links.find((link) => link.href === "/");
+  if (pathname === '/') {
+    return links.find((link) => link.href === '/');
   }
 
   //Handle login
 
-  if (pathname === "/login") {
+  if (pathname === '/login') {
     return {
-      pageTitle: "Login",
-      pageSubtitle: "Feel free to sign into bravegrumpy."
-    }
+      pageTitle: 'Login',
+      pageSubtitle: 'Feel free to sign into bravegrumpy.'
+    };
   }
 
   // Handle direct matches
@@ -21,7 +21,7 @@ export function getCurrentPageData(pathname, links) {
   }
 
   // Handle nested routes
-  const parentPath = "/" + pathname.split("/")[1];
+  const parentPath = '/' + pathname.split('/')[1];
   const parent = links.find((link) => link.href === parentPath);
 
   if (parent?.subnav) {
@@ -30,7 +30,7 @@ export function getCurrentPageData(pathname, links) {
 
   // Fallback to default values
   return {
-    pageTitle: "Page Not Found",
-    pageSubtitle: "The requested page could not be found",
+    pageTitle: 'Page Not Found',
+    pageSubtitle: 'The requested page could not be found'
   };
 }
