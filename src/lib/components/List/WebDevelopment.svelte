@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Section from '$lib/components/Section.svelte';
   import LOL from '$lib/components/List/ListOfLinks.svelte';
 </script>

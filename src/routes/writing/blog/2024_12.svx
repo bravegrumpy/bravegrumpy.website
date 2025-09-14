@@ -1,7 +1,8 @@
 <script>
 
 import Post1 from './post1.svx';
+let { open = false } = $props();
 
 </script>
 
-<Post1 open={true}/>
+<Post1 {open}/>
