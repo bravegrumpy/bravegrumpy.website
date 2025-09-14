@@ -16,7 +16,9 @@
 <div
   class="w-full bg-solarized-base-2 text-solarized-base-00 dark:bg-solarized-base-02 dark:text-solarized-base-0"
 >
-  <div class="body mx-auto w-5/6 bg-solarized-base-3 dark:bg-solarized-base-03">
+  <div
+    class="body xl:7/12 mx-auto w-full bg-solarized-base-3 dark:bg-solarized-base-03 md:w-10/12 lg:w-9/12"
+  >
     <Header {links} />
     <Main>
       {@render children()}
@@ -26,7 +28,7 @@
 </div>
 
 <style>
-  @media screen and (max-width: 1000px) {
+  /* @media screen and (max-width: 1000px) {
     .w-5\/6 {
       width: 100%;
     }
@@ -35,5 +37,5 @@
     .w-5\/6 {
       width: 100%;
     }
-  }
+  } */
 </style>

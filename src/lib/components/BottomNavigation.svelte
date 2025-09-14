@@ -8,7 +8,7 @@
   );
 
   const mainPage = $derived('/' + $page.url.pathname.split('/')[1]);
-  const { fontSize = '1.5rem' } = $props();
+  const { fontSize = '1.5rem', reversed = false } = $props();
 
   const currentLink = $derived(links.find((link) => link.href === mainPage));
   const hasSubnav = $derived(currentLink?.subnav);
@@ -16,7 +16,7 @@
 
 <nav>
   {#if hasSubnav}
-    <Navigation links={currentLink.subnav} reversed={false} {slug} {fontSize} buttonWidth="200px" />
+    <Navigation links={currentLink.subnav} {reversed} {slug} {fontSize} buttonWidth="200px" />
   {/if}
 </nav>
 

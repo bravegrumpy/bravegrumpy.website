@@ -7,5 +7,6 @@ let { open=false } = $props();
 
 </script>
 
+
 <Post8  {open} />
 <Post7 {open} />
