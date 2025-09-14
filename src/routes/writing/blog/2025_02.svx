@@ -6,5 +6,6 @@ import Post6 from './post6.svelte';
 let { open=false } = $props()
 </script>
 
+
 <Post6 {open} />
 <Post5 {open} />
