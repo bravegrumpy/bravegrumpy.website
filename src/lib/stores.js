@@ -1,5 +1,5 @@
-import { writable } from "svelte/writable";
+import { writable } from 'svelte/writable';
 
-const theme = writable("system");
+const theme = writable('system');
 
 export { theme };

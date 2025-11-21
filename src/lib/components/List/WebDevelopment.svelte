@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Section from '$lib/components/Section.svelte';
   import LOL from '$lib/components/List/ListOfLinks.svelte';
 </script>
@@ -18,6 +18,11 @@
     <li>
       <a href="https://css-tricks.com/" target="_blank"
         >CSS Tricks -> Not as good as joshcomeau, but has css guides.</a
+      >
+    </li>
+    <li>
+      <a href="https://www.smashingmagazine.com/2024/01/css-border-image-property/" target="_blank"
+        >CSS border-image explaination</a
       >
     </li>
     <li>
@@ -43,7 +48,19 @@
         >web accessability evaluation tool (WAVE)</a
       >
     </li>
-    <li><a href="contrast-grid.html" target="_blank">Contrast Grid</a></li>
+    <li>
+      <LOL heading="Contrast Checking Grids">
+        <li>
+          <a href="https://contrast-grid.eightshapes.com/" target="_blank">Contrast Grid 1</a>
+        </li>
+        <li><a href="https://contrastgrid.com/" target="_blank">Contrast Grid 2</a></li>
+        <LOL>
+          <li>
+            <a href="/contrast-grid.html">Contrast Grid I made with my color pallete</a>
+          </li>
+        </LOL>
+      </LOL>
+    </li>
     <li>
       <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank"
         >mdn web docs_ARIA</a

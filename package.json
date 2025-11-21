@@ -23,6 +23,7 @@
     "@sveltejs/kit": "^2.16.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
     "@tailwindcss/typography": "^0.5.16",
+    "amplify-adapter": "^1.2.3",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
@@ -41,7 +42,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "amplify-adapter": "^0.2.0"
+    "amplify-adapter": "^1.1.0"
   },
   "homepage": "https://www.bravegrumpy.com",
   "license": "SEE LISCENSE IN LICENSE"

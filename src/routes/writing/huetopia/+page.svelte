@@ -28,10 +28,10 @@
 </Article>
 
 <Article --articleColumn="3/4">
-  <Aside>
+  <Aside --asideHeight="fit-content">
     <Logline />
   </Aside>
-  <Aside>
+  <Aside --asideHeight="fit-content">
     <DramaticQuestion />
   </Aside>
 </Article>
