@@ -36,6 +36,11 @@
     <li>
       <a href="https://www.cleancss.com/" target="_blank">Kitchen Sink of Utilities</a>
     </li>
+    <li>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout"
+        >Masonry Layout using CSS</a
+      >
+    </li>
   </LOL>
   <LOL title="Accessibility">
     <li>
@@ -142,11 +147,11 @@
     <li>
       <a href="https://css-pattern.com/" target="_blank">Colorful optical illusion CSS patterns</a>
     </li>
-    <lli>
+    <li>
       <a href="https://superdesigner.co/tools/css-backgrounds" target="_blank"
         >Non-colored CSS patterns</a
       >
-    </lli>
+    </li>
     <li>
       <a href="https://10015.io/tools/css-background-pattern-generator" target="_blank"
         >CSS Pattern Generator</a
@@ -159,13 +164,18 @@
     </li>
     <li>
       <a href="https://freefrontend.com/css-background-patterns/" target="_blank"
-        >This is another super long list of css backgrouns.</a
+        >This is another super long list of css backgrounds.</a
       >
       This one is a repeat of a bunch of the previous aggregations of css patterns.
     </li>
     <li>
       <a href="https://designerfeed.org/css-background-patterns/" target="_blank"
         >CSS renders of some common fabric patterns</a
+      >
+    </li>
+    <li>
+      <a href="https://www.svgrepo.com/" target="_blank"
+        >Repo of Open-Liscensed SVG Vector Images and Icons</a
       >
     </li>
   </LOL>
@@ -242,6 +252,12 @@
   </LOL>
 </Section>
 <Section>
+  <LOL section="Documentation" title="Developer Resources" heading="Given by The Odin Project">
+    <li>
+      <a href="https://devdocs.io/">DevDocs</a> A website with all of the API documentation. No more
+      searching for docs! Horray!
+    </li>
+  </LOL>
   <LOL section="Non Javascript Languages" title="PHP language reference" heading="PHP references">
     <li><a href="https://php.org/" target="_blank">Useful Tutorial</a></li>
     <li><a href="https://www.php.net/manual/en/" target="_blank">Official Manual</a></li>
