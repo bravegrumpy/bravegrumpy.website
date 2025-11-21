@@ -130,11 +130,11 @@
     <li>
       <a href="https://css-pattern.com/" target="_blank">Colorful optical illusion CSS patterns</a>
     </li>
-    <lli>
+    <li>
       <a href="https://superdesigner.co/tools/css-backgrounds" target="_blank"
         >Non-colored CSS patterns</a
       >
-    </lli>
+    </li>
     <li>
       <a href="https://10015.io/tools/css-background-pattern-generator" target="_blank"
         >CSS Pattern Generator</a
@@ -154,6 +154,11 @@
     <li>
       <a href="https://designerfeed.org/css-background-patterns/" target="_blank"
         >CSS renders of some common fabric patterns</a
+      >
+    </li>
+    <li>
+      <a href="https://www.svgrepo.com/" target="_blank"
+        >Repo of Open-Liscensed SVG Vector Images and Icons</a
       >
     </li>
   </LOL>
