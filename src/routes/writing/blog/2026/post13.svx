@@ -14,7 +14,7 @@ title: Embedding References
 # Testing Testing 
 One Two Three
 
-[:Link](/)
+[:Link](https://merther.bravegrumpy.com/other/another-blog)
 
 
 </BlogLayout>
