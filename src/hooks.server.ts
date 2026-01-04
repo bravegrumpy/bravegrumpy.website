@@ -14,7 +14,7 @@ function corsHeaders(origin: string | null) {
     const headers = new Headers();
 
     if (origin && allowedOrigins.has(origin)) {
-        headers.set("Access-Control-Allow-Origins", origin)
+        headers.set("Access-Control-Allow-Origin", origin)
         headers.set("Vary", "Origin");
 
         headers.set("Access-Control-Allow-Methods", "GET")
