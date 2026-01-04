@@ -1,0 +1,20 @@
+---
+h2: Nutshell
+date: 2026-01-04
+title: Embedding References
+---
+
+<script>
+    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte"
+    import LOL from "$lib/components/List/ListOfLinks.svelte"
+</script>
+
+<BlogLayout h2={title} title={date.toString().slice(0,10)}>
+
+# Testing Testing 
+One Two Three
+
+[:Link](/)
+
+
+</BlogLayout>
