@@ -1,0 +1,9 @@
+<script>
+
+import Post13 from "./post13.svx"
+
+let { open=false } = $props();
+
+</script>
+
+<Post13 open={true} />

@@ -11,6 +11,7 @@
 
 <svelte:head>
   <title>Home | Bravegrumpy</title>
+  <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
 </svelte:head>
 
 <div
