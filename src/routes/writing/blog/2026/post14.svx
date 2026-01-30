@@ -1,0 +1,17 @@
+---
+h2: Indie Web
+date: 2026-01-30
+title: Static Hosts and the Growth of the "Indie Web"
+---
+
+<script>
+    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte"
+</script>
+
+<BlogLayout>
+
+Ladies and Gentlemn, Boys and Girls
+
+We have a blog post HERE!
+
+</BlogLayout>
