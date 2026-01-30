@@ -258,6 +258,15 @@
       searching for docs! Horray!
     </li>
   </LOL>
+  <LOL heading="Accessing API">
+    <p>This is not necessarily Javascript only, but <em>is</em> useful in all webdev.</p>
+    <li>
+      <a href="https://reqbin.com/req/c-skhwmiil/curl-flags-example" target="_blank" rel="noreferrer">cUrl flag documentation</a>
+      <ul>
+        <li>cURL, or Client-URL is a command line tool for making <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods" target="_blank">HTTP requests</a> within the command line. The flags are options for the libcurl commandline tool. cURL is typically shipped with all shells, terminal emulators and tty software, on any OS.</li>
+      </ul>
+    </li>
+  </LOL>
   <LOL section="Non Javascript Languages" title="PHP language reference" heading="PHP references">
     <li><a href="https://php.org/" target="_blank">Useful Tutorial</a></li>
     <li><a href="https://www.php.net/manual/en/" target="_blank">Official Manual</a></li>

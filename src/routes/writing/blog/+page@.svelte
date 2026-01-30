@@ -37,6 +37,7 @@
     <nav class="flex flex-row gap-5">
       <NavButton href="/writing/blog/2024" slug="/writing/blog" text="2024" />
       <NavButton href="/writing/blog/2025" slug="/writing/blog" text="2025" />
+      <NavButton href="/writing/blog/2026" slug="/writing/blog" text="2026" />
     </nav>
   </Section>
 </Article>
