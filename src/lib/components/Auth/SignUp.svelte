@@ -11,7 +11,7 @@
     'bg-solarized-yellow w-full h-12 text-center pt-2 text-2xl dark:bg-solarized-base-0 dark:text-solarized-base-3'
   );
   let inputStyle = $state(
-    'bg-solarized-base-3 dark:bg-solarized-base-02 w-fit border-[1px] rounded-[5px] border-solid border-solarized-yellow dark:border-solarized-base-01 mb-4 text-lg font-bodyText hover:scale-105 focus:scale-105 focus:ring-2 hover:ring-2 focus:ring-solid hover:ring-solid focus:ring-bravegrumpy-brand1 hover:ring-bravegrumpy-brand1 dark:hover:ring-bravegrumpy-accent2b dark:focus:ring-bravegrumpy-accent2b w-[400px]'
+    'bg-solarized-base-3 dark:bg-solarized-base-02 w-fit border rounded-[5px] border-solid border-solarized-yellow dark:border-solarized-base-01 mb-4 text-lg font-bodyText hover:scale-105 focus:scale-105 focus:ring-2 hover:ring-2 focus:ring-solid hover:ring-solid focus:ring-bravegrumpy-brand1 hover:ring-bravegrumpy-brand1 dark:hover:ring-bravegrumpy-accent2b dark:focus:ring-bravegrumpy-accent2b w-[400px]'
   );
   let labelStyle = $state('mb-2 w-fit text-center font-heading text-xl');
   let fieldStyle = $state(

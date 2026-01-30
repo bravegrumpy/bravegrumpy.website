@@ -50,7 +50,7 @@
   <TableBody tableBodyClass="divide-y">
     <TableBodyRow
       slot="row"
-      class="odd:bg-solarized-base-3 even:bg-solarized-base-2 odd:dark:bg-solarized-base-03 even:dark:bg-solarized-base-02"
+      class="odd:bg-solarized-base-3 even:bg-solarized-base-2 dark:odd:bg-solarized-base-03 dark:even:bg-solarized-base-02"
       let:item
     >
       <TableBodyCell

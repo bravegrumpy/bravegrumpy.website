@@ -81,7 +81,7 @@
     <TableBodyRow
       slot="row"
       let:item
-      class="odd:bg-solarized-base-3 even:bg-solarized-base-2 odd:dark:bg-solarized-base-03 even:dark:bg-solarized-base-02"
+      class="odd:bg-solarized-base-3 even:bg-solarized-base-2 dark:odd:bg-solarized-base-03 dark:even:bg-solarized-base-02"
       ><TableBodyCell class={cellClass}>{item.lstType}</TableBodyCell>
       <TableBodyCell class={cellClass}>{item.lst}</TableBodyCell>
       <TableBodyCell class={cellClass}>{item.rf}</TableBodyCell>

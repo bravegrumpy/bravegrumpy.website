@@ -40,7 +40,7 @@
     <NavDrawer {links} />
 
     <!-- <DarkMode
-      class="{buttonSize} border-[2px] border-solid border-current bg-bravegrumpy-accent2a text-bravegrumpy-logoPurple dark:bg-bravegrumpy-brand6 dark:text-bravegrumpy-accent1a"
+      class="{buttonSize} border-2 border-solid border-current bg-bravegrumpy-accent2a text-bravegrumpy-logoPurple dark:bg-bravegrumpy-brand6 dark:text-bravegrumpy-accent1a"
     >
       <Icon icon="game-icons:sun" slot="lightIcon" width={iconSize} height={iconSize} />
       <Icon icon="game-icons:night-sleep" slot="darkIcon" width={iconSize} height={iconSize} />

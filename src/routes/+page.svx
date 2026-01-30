@@ -1,4 +1,5 @@
 <script>
+  import { page } from "$app/state"
   import Section from '$lib/components/Section.svelte';
   import Aside from '$lib/components/Aside.svelte';
 
@@ -38,6 +39,38 @@
 </script>
 
 <Article --articleRow="2/3" --articleColumn="1/4">
+
+<UnderConstruction>
+
+<div class="notes font-pageTitle">
+
+Obligatory Meme: 
+
+This Site is 
+
+
+~~Being Renovated~~
+
+~~Under Construction~~
+
+__Look a Work in Progress, okay?__
+
+</div>
+
+<style>
+
+.notes {
+  background-color: #e6ffff80;
+}
+
+.notes p {
+  color: black;
+}
+
+</style>
+
+</UnderConstruction>
+
   <Section>
     <h2 class="font-heading text-3xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">
       BraveGrumpy Website
@@ -56,8 +89,10 @@
       nav-links is a theme toggle. For some reason, the icon I placed in it are not showing up.
     </p>
   </Section>
-    <Content />
-  <Section className="hidden">
+  
+  <Content />
+
+<Section>
 
 ## Types of Content
 
