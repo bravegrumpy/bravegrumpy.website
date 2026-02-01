@@ -3,23 +3,26 @@
   import Article from '$lib/components/Article.svelte';
   import Section from '$lib/components/Section.svelte';
 
-  const {
-    text = 'This website is perpetually under construction 😎',
-    constructionHeight = 'fit-content'
-  } = $props();
+  const { text = null, constructionHeight = 'fit-content', children } = $props();
 </script>
 
 <Section className="">
   <div class="construction">
-    <p
+    <div
       style:margin="auto 25px"
-      class="fontBodyText px-4 text-3xl text-bravegrumpy-white"
+      class="fontBodyText text-bravegrumpy-white px-4 text-3xl"
       style:text-align="center"
       style:text-shadow="5px solid pink"
       style:height={constructionHeight}
     >
-      {text}
-    </p>
+      {#if children}
+        {@render children()}
+      {:else if text !== null}
+        <p>{text}</p>
+      {:else}
+        <p>This website is perpetually under construction 😎</p>
+      {/if}
+    </div>
   </div>
 </Section>
 

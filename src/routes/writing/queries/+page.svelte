@@ -7,6 +7,8 @@
 
     let users = $derived(page.data.allUsers || false);
     let todoList = $derived(page.data.todoList);
+
+    import UnderConstruction from "$lib/components/UnderConstruction.svelte";
 </script>
 
 <Article --articleColumn="1/4">
@@ -29,6 +31,10 @@
         </ol>
         {:else if todoList}
         <p>{JSON.stringify(todoList)}</p>
+        {:else}
+        <UnderConstruction>
+            <p>Queries  are In Progress</p>
+        </UnderConstruction>
         {/if}
     </Section>
 </Article>
