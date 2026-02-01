@@ -11,9 +11,11 @@
   import Article from '$lib/components/Article.svelte';
   import Section from '$lib/components/Section.svelte';
   import NavButton from '$lib/components/NavButton.svelte';
+
+  import BC from "$lib/components/Blog/BlogBreadcrumbs.svelte"
 </script>
 
-<Breadcrumb>
+<!-- <Breadcrumb>
   <BreadcrumbItem
     href="/writing/blog"
     class="rounded-[5px] border-2 border-solid border-current bg-solarized-base-2 px-10 py-4 text-flush-orange-800 dark:bg-affair-950 dark:text-chateau-green-600"
@@ -27,9 +29,13 @@
       Blog
     </p>
   </BreadcrumbItem>
-</Breadcrumb>
+</Breadcrumb> -->
 
-<Article --articleColumn="2/3">
+<Article --articleColumn="1/4" --articleRow="1/2">
+<BC root={true} />
+</Article>
+
+<Article --articleColumn="2/3" --articleRow="2/3">
   <Section>
     <h3 class="font-heading text-xl text-bravegrumpy-brand6 dark:text-bravegrumpy-accent2b">
       Choose a year
