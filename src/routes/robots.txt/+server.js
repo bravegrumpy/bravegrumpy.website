@@ -1,5 +1,4 @@
 import * as env from '$env/static/public';
-export const prerender = true;
 
 export async function GET() {
   const body = ['User-agent: *', 'Allow: /', '', `Sitemap: ${env.PUBLIC_ORIGIN}/sitemap.xml`]
