@@ -5,7 +5,7 @@ title: Static Hosts and the Growth of the "Indie Web"
 ---
 
 <script>
-    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte"
+    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte"     
 </script>
 
 <BlogLayout h2={h2} title={date.toString().slice(0, 10)}>
