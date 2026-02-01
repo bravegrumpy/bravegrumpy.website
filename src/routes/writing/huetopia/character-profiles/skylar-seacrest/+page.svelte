@@ -11,9 +11,18 @@
 
   import SkylarSeacrest from '../../wbw/(character_profiles)/SkylarSeacrest.svelte';
   import Article from '$lib/components/Article.svelte';
+
+  import { Breadcrumb } from "flowbite-svelte";
+  import { breadcrumbClass, bci } from "$lib/components/Blog/BlogBreadcrumbs.svelte";
 </script>
 
 <Article --articleColumn="2/3">
+  <Breadcrumb class={breadcrumbClass}>
+    {@render bci("/writing", "Writing", "hugeicons:books-01", "")}
+    {@render bci("/writing/huetopia", "Fantasy", "game-icons:broadsword", "")}
+    {@render bci("/writing/huetopia/character-profiles", "Characters", "game-icons:3d-meeple", "")}
+    {@render bci("/writing/huetopia/character-profiles/skylar-seacrest", "Skylar", "", "")}
+  </Breadcrumb>
   <Section>
     <div style:display="flex" style:flex-direction="row">
       <NavButton

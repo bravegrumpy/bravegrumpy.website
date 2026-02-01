@@ -11,6 +11,8 @@ const config = {
     // See https://svelte.dev/docs/kit/adapters for more information about adapters.
     adapter: adapter(),
   },
+  checkOrigin: true,
+  trustedOrigins: ["https://*.bravegrumpy.com", "*.ncase.me"],
   preprocess: [
     mdsvex({
       smartypants: {
