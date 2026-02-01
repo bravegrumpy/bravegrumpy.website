@@ -26,12 +26,13 @@ const config = {
   ],
   preprocess: [
     mdsvex({
+      extensions: [".svx", ".md"],
       smartypants: {
         quotes: true,
         dashes: 'oldschool'
       }
     })
   ],
-  extensions: ['.svelte', '.svx']
+  extensions: ['.svelte', '.svx', '.md']
 };
 export default config;

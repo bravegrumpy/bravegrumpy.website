@@ -14,6 +14,8 @@
     import { api } from "$lib/../convex/_generated/api"
 
     const query = useQuery(api.tasks.get, {})
+
+    import Commentary from "./Commentary.md";
 </script>
 
 <Article --articleColumn="1/4">
@@ -59,6 +61,9 @@
             </div>
         </UnderConstruction>
         {/if}
+    </Section>
+    <Section>
+        <Commentary />
     </Section>
 </Article>
 
