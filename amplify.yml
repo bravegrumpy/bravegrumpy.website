@@ -4,7 +4,8 @@ frontend:
     preBuild:
       commands:
         - 'echo "installing dependancies..."'
-        - 'npm ci --cache .npm --prefer-offline'
+        # - 'npm ci --cache .npm --prefer-offline'
+        - 'npm ci'
     # IMPORTANT - Please verify your build commands
     build:
       commands:
