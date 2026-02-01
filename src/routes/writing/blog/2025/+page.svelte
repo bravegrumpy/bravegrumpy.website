@@ -16,21 +16,6 @@
   );
 </script>
 
-<Breadcrumb class={breadcrumbClass}>
-  <BreadcrumbItem href="/writing/blog">
-    <svelte:fragment slot="icon">
-      <Icon icon="hugeicons:notebook" width="24" height="24" />
-    </svelte:fragment>
-    <p class={breadcrumbItemContentClass}>Blog</p>
-  </BreadcrumbItem>
-  <BreadcrumbItem href="/writing/blog/2025">
-    <svelte:fragment slot="icon">
-      <Icon icon="hugeicons:arrow-right-01" width="24" height="24" />
-    </svelte:fragment>
-    <p class={breadcrumbItemContentClass}>2025</p>
-  </BreadcrumbItem>
-</Breadcrumb>
-
 <div
   class="-ml-5 flex w-full flex-row content-center justify-center rounded-[5px] rounded-l-none border-[5px] border-l-0 border-solid border-current bg-solarized-base-2 text-solarized-yellow dark:bg-edward-950 dark:text-solarized-base-1"
 >

@@ -1,6 +1,8 @@
 <script lang="ts">
   import Section from '$lib/components/Section.svelte';
   import LOL from '$lib/components/List/ListOfLinks.svelte';
+
+  import entry  from "$lib/components/List/ListOfLinks.svelte";
 </script>
 
 <Section --sectionColumn="2/2" --sectionRow="2/2">
