@@ -41,7 +41,9 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "amplify-adapter": "^1.2.3"
+    "amplify-adapter": "^1.2.3",
+    "convex": "^1.31.7",
+    "convex-svelte": "^0.0.12"
   },
   "homepage": "https://www.bravegrumpy.com",
   "license": "SEE LISCENSE IN LICENSE"

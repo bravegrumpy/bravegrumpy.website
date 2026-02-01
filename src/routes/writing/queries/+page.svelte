@@ -9,6 +9,11 @@
     let todoList = $derived(page.data.todoList);
 
     import UnderConstruction from "$lib/components/UnderConstruction.svelte";
+
+    import { useQuery } from "convex-svelte";
+    import { api } from "$lib/../convex/_generated/api"
+
+    const query = useQuery(api.tasks.get, {})
 </script>
 
 <Article --articleColumn="1/4">
@@ -31,10 +36,35 @@
         </ol>
         {:else if todoList}
         <p>{JSON.stringify(todoList)}</p>
+        {:else if query}
+            {#if query.isLoading}
+                <p>Loading...</p>
+            {:else if query.error}
+                <p>Failed to load: {query.error.toString()}</p>
+            {:else}
+                <ul>
+                    {#each query.data as task}
+                    <li>
+                        {task.isCompleted ? '☑': '🔳'}
+                        <span>{task.text}</span>
+                        <span>assigned by {task.assigner    }</span>
+                    </li>
+                    {/each}
+                </ul>
+            {/if}
         {:else}
         <UnderConstruction>
-            <p>Queries  are In Progress</p>
+            <div class="soon">
+            <p>Queries  are Being Developed</p>
+            </div>
         </UnderConstruction>
         {/if}
     </Section>
 </Article>
+
+<style lang="less">
+    @test: #123321;
+    .soon {
+        background-color: oklch(59.535% 0.1884 279.031 / 0.664);
+    }
+</style>
