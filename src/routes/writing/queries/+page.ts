@@ -13,6 +13,7 @@ export const load: PageLoad = async () => {
     } catch (err) {
         todoList = "Failure"
         return error(511, "Failed to fetch backend")
-    }
+    } finally {
     return todoList;
+    }
 }
