@@ -7,7 +7,7 @@
     import {page} from '$app/stores';
 </script>
 
-<Article --articleColumn="1/4">
+<Article --articleColumn="1/4" --articleRow="2/3">
 <Section>
 
 ## Writing
