@@ -10,6 +10,11 @@
       "StackName": "amplify-bravegrumpywebsite-dev-d016a",
       "StackId": "arn:aws:cloudformation:us-east-1:238711285920:stack/amplify-bravegrumpywebsite-dev-d016a/d1f41780-ffaf-11f0-9573-0affed202a79",
       "AmplifyAppId": "d2r7hcqdui16rs"
+    },
+    "categories": {
+      "function": {
+        "hello": {}
+      }
     }
   }
 }
