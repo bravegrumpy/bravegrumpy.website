@@ -12,7 +12,18 @@ const config = {
     adapter: adapter(),
   },
   checkOrigin: true,
-  trustedOrigins: ["https://*.bravegrumpy.com", "*.ncase.me"],
+  trustedOrigins: [
+    "https://*.bravegrumpy.com", 
+    "*.ncase.me", 
+    "*.scrupulous-albatross-914.convex.site",
+    "https://scrupulous-albatross-914.convex.cloud",
+    "https://scrupulous-albatross-914.convex.site", 
+    "*.scrupulous-albatross-914.convex.cloud",
+    "*.cautious-snake-295.convex.cloud",
+    "https://cautious-snake-295.convex.cloud",
+    "*.cautious-snake-295.convex.site",
+    "https://cautious-snake-295.convex.site"
+  ],
   preprocess: [
     mdsvex({
       smartypants: {
