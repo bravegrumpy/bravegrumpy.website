@@ -43,7 +43,11 @@
             <ul>
                 {#each usersConvex.data as {id, email, name} (id)}
                 <li class="dark:text-bravegrumpy-brand5 text-bravegrumpy-brand3">
-                    Hello
+                    <strong class="font-heading">User {id}:</strong>
+                    <ul class="bg-bravegrumpy-brand2/20 rounded-sm text-bravegrumpy-brand6 dark:text-bravegrumpy-brand4 border-[2px] border-current">
+                        <li class="indent-5">Name: {name}</li>
+                        <li class="indent-5">Email: {email}</li>
+                    </ul>
                 </li>
                 {/each}
             </ul>
