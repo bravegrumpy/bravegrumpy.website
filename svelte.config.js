@@ -22,7 +22,8 @@ const config = {
     "*.cautious-snake-295.convex.cloud",
     "https://cautious-snake-295.convex.cloud",
     "*.cautious-snake-295.convex.site",
-    "https://cautious-snake-295.convex.site"
+    "https://cautious-snake-295.convex.site",
+    "postgresql://postgres:mALNYWQKPCijlwCrQVDTcqaVtjXJnkHr@centerbeam.proxy.rlwy.net"
   ],
   preprocess: [
     mdsvex({

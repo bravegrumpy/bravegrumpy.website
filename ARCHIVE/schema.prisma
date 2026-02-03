@@ -7,13 +7,6 @@ datasource db {
   provider = "postgresql"
 }
 
-model Artist {
-  id         String  @id
-  name       String
-  instrument String?
-  Song       Song[]
-}
-
 model Post {
   id        Int      @id @default(autoincrement())
   title     String
@@ -25,19 +18,26 @@ model Post {
   User      User?    @relation(fields: [authorId], references: [id])
 }
 
-model Song {
-  id       String  @id
-  title    String
-  length   Int?
-  album    String
-  genre    String
-  artistId String?
-  Artist   Artist? @relation(fields: [artistId], references: [id])
-}
-
 model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
   Post  Post[]
+}
+
+model Song {
+  id     String @id @default(uuid())
+  title  String
+  artist Artist? @relation(fields: [artistId], references: [id])
+  artistId String?
+  length Int?
+  genre  String
+  album String
+}
+
+model Artist {
+  id    String      @id @default(uuid())
+  name  String
+  instrument  String?
+  Song    Song[]
 }

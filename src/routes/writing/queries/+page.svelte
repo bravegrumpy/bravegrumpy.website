@@ -49,7 +49,7 @@
                     <li>
                         {task.isCompleted ? '☑': '🔳'}
                         <span>{task.text}</span>
-                        <span>assigned by {task.assigner    }</span>
+                        <span>assigned by {task.assigner}</span>
                     </li>
                     {/each}
                 </ul>
