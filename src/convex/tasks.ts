@@ -1,4 +1,5 @@
-import { query } from "./_generated/server";
+import { query, mutation } from "./_generated/server";
+import { v } from "convex/values"
 
 export const get  = query({
     args: {},
@@ -7,3 +8,14 @@ export const get  = query({
         return tasks.map((task) => ({...task, assigner: "tom"}))
     }
 });
+
+export const createTask = mutation({
+    args: {
+        text: v.string()
+    },
+    handler: async (ctx, args) => {
+        const newTaskId = await ctx.db.insert("tasks", { text: args.text })
+        return newTaskId;
+    }
+})
+
