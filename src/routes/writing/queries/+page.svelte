@@ -16,9 +16,17 @@
     const query = useQuery(api.tasks.get, {})
 
     import Commentary from "./Commentary.md";
+
+    import { Breadcrumb } from "flowbite-svelte"
+    import { breadcrumbClass, bci } from "$lib/components/Blog/BlogBreadcrumbs.svelte";
 </script>
 
 <Article --articleColumn="1/4">
+    <Breadcrumb class={breadcrumbClass}>
+        {@render bci("/", "Home", "", "hugeicons:home-07")}
+        {@render bci("/writing", "Writing", "hugeicons:books-01", "")}
+        {@render bci("/writing/queries", "queries", "hugeicons:search-02", "")}
+    </Breadcrumb>
     <Heading>Using Database</Heading>
     <Section>
         <p>This is my extremely crude attempt at querying a database. I plan to add more crud actions once I figure them out.</p>
