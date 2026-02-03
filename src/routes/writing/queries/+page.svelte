@@ -34,7 +34,7 @@
         <p>I am interfacing with exactly one table in my database</p>
         <p>It is interesting that I initially decided on <a href="https://www.prisma.io" target="_blank" rel="noreferrer nofollow">Prisma</a> as the ORM.  I have been using <a href="https://orm.drizzle.team/" target="_blank" rel="nofollow noreferrer">drizzle</a>. I'm curious to see if it functions in the node server set up by <a href="https://aws.amazon.com/amplify/" target="_blank" rel="nofollow noreferrer">Amplify</a>.</p>
     </Section>
-    <Section>
+    <Section --sectionColumn="1/3" --sectionRow="2/3">
         {#if usersConvex.isLoading}
             <p>Loading...</p>
         {:else if usersConvex.error}
@@ -53,7 +53,7 @@
             </ul>
         {/if}
     </Section>
-    <Section>
+    <Section --sectionColumn="2/4" --sectionRow="2/3">
         {#if users}
         <ol>
         {#each users as {id, email, name} (id)}
@@ -92,7 +92,7 @@
         </UnderConstruction>
         {/if}
     </Section>
-    <Section>
+    <Section --sectionColumn="1/2">
         <Commentary />
     </Section>
 </Article>
