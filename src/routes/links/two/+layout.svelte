@@ -35,6 +35,7 @@
         bind:value={colStart}
         min="1"
         max={Math.min(3, Math.max(colStart, colEnd))}
+        class="bg-bravegrumpy-white dark:bg-bravegrumpy-black"
       />
       <input
         type="range"
@@ -45,7 +46,7 @@
     </label>
     <label>
       <h3>Column End:</h3>
-      <input type="number" bind:value={colEnd} min={Math.max(2, Math.min(colStart, colEnd))} />
+      <input type="number" bind:value={colEnd} min={Math.max(2, Math.min(colStart, colEnd))} class="bg-bravegrumpy-white dark:bg-bravegrumpy-black" />
       <input
         type="range"
         bind:value={colEnd}
@@ -55,7 +56,7 @@
     </label>
     <label>
       <h3>Row start</h3>
-      <input type="number" bind:value={rowStart} min={1} max={4} />
+      <input type="number" bind:value={rowStart} min={1} max={4} class="bg-bravegrumpy-white dark:bg-bravegrumpy-black"/>
       <input type="range" bind:value={rowStart} min={1} max={4} />
     </label>
   </div>

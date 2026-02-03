@@ -1,0 +1,5 @@
+ ## Different Example Content
+
+I created this in order to visually figure out how I wanted the layouts to work on other "real" pages.
+
+Various components allow me to create this with minimal repeated code.
