@@ -49,6 +49,13 @@ const links = [
         text: 'Blog',
         pageTitle: 'Blog',
         pageSubtitle: 'Written works about my thoughts and feelings.'
+      },
+      {
+        id: '2-2',
+        href: '/writing/queries',
+        text: 'DB',
+        pageTite: "Quering A Database",
+        pageSubtitle: "Integrating Prisma, properly this time"
       }
     ]
   },

@@ -32,7 +32,7 @@
 
   let { data } = $props();
 
-  const cookieChange = data.visited ? 'back' : '';
+  const cookieChange = $derived(data.visited ? 'back' : '');
 
  
 </script>
