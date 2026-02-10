@@ -7,9 +7,10 @@ title: Forcing a 500 type error in Sveltekit
 <script>
     import BlogLayout from "$lib/components/Blog/BlogLayout.svelte";
     import Heading from "$lib/components/Heading.svelte"
+    const { open=false } = $props();
 </script>
 
-<BlogLayout h2={h2} title={date.toString().slice(0,10)}>
+<BlogLayout h2={h2} title={date.toString().slice(0,10)} {open}>
 
 <Heading>{title}</Heading>
 

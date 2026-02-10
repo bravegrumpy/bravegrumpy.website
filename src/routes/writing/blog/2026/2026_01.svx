@@ -9,4 +9,4 @@ let { open=false } = $props();
 
 
 <Post14 {open} />
-<Post13 />
+<Post13 {open} />
