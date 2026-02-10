@@ -6,7 +6,7 @@
     import { page } from "$app/state"
 
     let users = $derived(page.data.allUsers || false);
-    let todoList = $derived(page.data.todoList);
+    let todoList = $derived(page.data.todoList || false);
 </script>
 
 <Article --articleColumn="1/4">
