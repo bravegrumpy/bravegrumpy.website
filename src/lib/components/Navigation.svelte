@@ -13,7 +13,8 @@
     justifyContent = 'flex-start',
     buttonWidth = '250px',
     marginBottom = '10px',
-    marginTop = '10px'
+    marginTop = '10px',
+    gap = '0px',
   } = $props();
 
   //   const buttonSize = $derived(`size-[${iconSize * 2}px]`);
@@ -25,8 +26,10 @@
   style:flex-wrap="wrap"
   style:width={navigationWidth}
   style:justify-content={justifyContent}
+  style:gap={gap}
 >
   {#each links as link (link.id)}
+    {#if link.display}
     <NavButton
       href={link.href}
       text={link.text}
@@ -39,5 +42,6 @@
       --marginBottom={marginBottom}
       --buttonWidth={buttonWidth}
     />
+    {/if}
   {/each}
 </div>

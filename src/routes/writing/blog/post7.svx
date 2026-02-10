@@ -8,10 +8,12 @@ title: To Dos and a New Project
     import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
     import Icon from '@iconify/svelte';
     import DecoratedSwitch from '$lib/components/DecoratedSwitch.svelte';
-    let address = $state('https://mertherfanfic.neocities.org/pages/css-expo');
+    let address = $state('https://mertherfanfic.neocities.org/other/css_expo/isolated/');
+
+    let { open=false } = $props();
 </script>
 
-<BlogLayout h2={title} title={date.toString().slice(0,10)}>
+<BlogLayout h2={title} title={date.toString().slice(0,10)} {open}>
 
 {h2}
 
