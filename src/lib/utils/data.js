@@ -54,7 +54,7 @@ const links = [
         id: '2-2',
         href: '/writing/queries',
         text: 'DB',
-        pageTite: "Quering A Database",
+        pageTitle: "Quering A Database",
         pageSubtitle: "Integrating Prisma, properly this time"
       }
     ]
