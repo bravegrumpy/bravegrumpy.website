@@ -17,7 +17,7 @@
     heading = '',
     id = '',
     children
-  }:Props = $props();
+  }: Props = $props();
 </script>
 
 <div class="ListOfLinks" {id}>
@@ -40,10 +40,12 @@
   <div>
     {#if (text !== '') && (typeof text !== "string")}
       {@render text()}
+    {:else if text !== ""}
+      <p>{text}</p>
     {/if}
   </div>
   <ul>
-    {@render children()}
+    {@render children?.()}
   </ul>
 </div>
 
