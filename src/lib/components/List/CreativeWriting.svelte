@@ -69,7 +69,9 @@
       </a>
     </li>
     <li>
-      <a href="https://www.inklestudios.com/ink/" target="_blank">Interactive Fiction Markup Language, ink</a>
+      <a href="https://www.inklestudios.com/ink/" target="_blank"
+        >Interactive Fiction Markup Language, ink</a
+      >
     </li>
   </LOL>
 </Section>

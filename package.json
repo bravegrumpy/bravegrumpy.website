@@ -3,7 +3,7 @@
   "author": "bravegrumpy",
   "readme": "README.md",
   "private": "true",
-  "version": "0.3.3-23",
+  "version": "0.3.3-53",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
@@ -41,7 +41,9 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "amplify-adapter": "^0.2.0"
+    "amplify-adapter": "^1.2.3",
+    "convex": "^1.31.7",
+    "convex-svelte": "^0.0.12"
   },
   "homepage": "https://www.bravegrumpy.com",
   "license": "SEE LISCENSE IN LICENSE"

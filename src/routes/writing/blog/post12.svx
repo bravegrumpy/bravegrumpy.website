@@ -1,0 +1,27 @@
+---
+h2: Dungeons and Dragons
+date: 2025-09-14
+title: Collaborative Storytelling
+---
+
+<script>
+    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte"
+    import LOL from "$lib/components/List/ListOfLinks.svelte"
+</script>
+
+<BlogLayout h2={title} title={date.toString().slice(0,10)}>
+
+## Running a DnD campaign
+
+Lately, I've been game-mastering for a group of people. The collaborative storytelling aspect is super fun.  However it is also challenging because I'm home-brewing a very custom system, so that I can keep track of the fewest "things" possible.
+
+However, this runs into issues when my co-GM, Fig, has other ideas of what is important.  It is normal for this kind of collaboration to happen, but it is still interesting. 
+
+This time, we gave our heros an encouter with some giant baby rats. this is cool and all.  We need to decide what the next encounter is.  
+
+### Challenges
+
+There are a few distinct challenges.  I have one player who is a scribe, keeping notes of every thing I mention.  I have another player who needs to know each any every
+
+
+</BlogLayout>
