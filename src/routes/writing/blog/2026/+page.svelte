@@ -5,7 +5,7 @@
 </script>
 
 <Month Month="February" />
-<February />
+<February open={true}/>
 
 <Month Month="January" />
-<January open={true} />
+<January />
