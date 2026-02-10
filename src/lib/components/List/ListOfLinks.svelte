@@ -53,12 +53,12 @@
 <script module>
   export { entry };
 </script>
-{#snippet entry(href: string, text: string, sublist?: string[],cardStyle?: boolean, divLink?: boolean)}
+{#snippet entry(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean)}
 <li>
     {#if cardStyle}
     <Section className="">
         {#if divLink}
-        <div class="link divLink" aria-label={href} tabindex={0} role="link" onclick={() => window.location.href = href} onkeypress={() => window.location.href = href}>
+        <div class="link divLink" aria-label={href} tabindex={0} role="link" onclick={() => window.open(href, "_blank")} onkeypress={() => window.location.href = href}>
             <p>{text}</p>
             {#if sublist}
                 {#if sublist.length > 0}
@@ -126,10 +126,12 @@
     filter: hue-rotate(-45deg);
   }
   :global(.dark) .link {
-    background-color: var(--solarized-base-03);
+    background-color: var(--bravegrumpy-logoPurple);
+    color: var(--bravegrumpy-brand2);
+    border-color: currentColor;
   }
   :global(.dark) .link a {
-    color: var(--bravegrumpy-brand4)
+    color: var(--bravegrumpy-brand2);
   }
 
   @media (min-width: 300px) {

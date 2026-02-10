@@ -4,7 +4,9 @@ const links = [
     href: '/',
     text: 'Home',
     pageTitle: 'Home Page',
-    pageSubtitle: 'This is the bravegrumpy Homepage!'
+    pageSubtitle: 'This is the bravegrumpy Homepage!',
+    display: true,
+    exists: true
   },
   {
     id: '2',
@@ -12,6 +14,8 @@ const links = [
     text: 'Writing',
     pageTitle: 'Creative  Writing',
     pageSubtitle: 'There is a lot of creative writing here.',
+    display: true,
+    exists: true,
     subnav: [
       {
         id: '2-0',
@@ -19,20 +23,24 @@ const links = [
         text: 'Fantasy',
         pageTitle: 'Huetopia Homepage',
         pageSubtitle: 'A colorful continent within a magical world',
+        display: true,
+        exists: true,
         subnav: [
           {
             id: '2-0-0',
             href: '/writing/huetopia/wbw',
             text: 'Coursera Work by Week',
             pageTitle: 'Coursera Work by Week',
-            pageSubtitle: 'Writing Excercises'
+            pageSubtitle: 'Writing Excercises',
+            display: true, exists: true
           },
           {
             id: '2-0-1',
             href: '/writing/huetopia/character-profiles',
             text: 'Character profiles',
             pageTitle: 'Character Profiles',
-            pageSubtitle: 'Writing excercises'
+            pageSubtitle: 'Writing excercises',
+            display: true, exists: true
           }
           // {
           //   id: '2-0-2',
@@ -48,14 +56,16 @@ const links = [
         href: '/writing/blog',
         text: 'Blog',
         pageTitle: 'Blog',
-        pageSubtitle: 'Written works about my thoughts and feelings.'
+        pageSubtitle: 'Written works about my thoughts and feelings.',
+        display: true, exists: true
       },
       {
         id: '2-2',
         href: '/writing/queries',
         text: 'DB',
         pageTitle: "Quering A Database",
-        pageSubtitle: "Integrating Prisma, properly this time"
+        pageSubtitle: "Integrating Prisma, properly this time",
+        display: true, exists: true
       }
     ]
   },
@@ -101,23 +111,26 @@ const links = [
   //   href: "/visual",
   //   text: 'Gallery',
   //   pageTitle: "Art Gallery",
-  //   pageSubtitle: "Original Artwork. Mostly digial art, some photography & paintings"
+  //   pageSubtitle: "Original Artwork. Mostly digial art, some photography & paintings",
+  //   display: false,
+  //   exists: true
   // },
   {
     id: '4',
     href: '/links',
     text: 'Links',
     pageTitle: 'Link Repository',
-    pageSubtitle: 'This is a list of helpful links'
+    pageSubtitle: 'This is a list of helpful links',
+    display: true, exists: true
     // subnav: [
     //   {
-    //     id: '3-1',
+    //     id: '4-1',
     //     href: '/links/one',
     //     text: 'First',
     //     pageTitle: 'First List Page',
     //     pageSubtitle: 'First page of Links'
     //   },{
-    //     id: '3-2',
+    //     id: '4-2',
     //     href: '/links/two',
     //     text: 'Second',
     //     pageTitle: 'Second List Page',
@@ -131,20 +144,23 @@ const links = [
     text: 'Archives',
     pageTitle: 'Archives',
     pageSubtitle: 'Previous versions of this website',
+    display: true, exists: true,
     subnav: [
       {
         id: '5-0',
         href: '/archive/sites',
         text: 'Sites',
         pageTitle: 'Old Website Versions',
-        pageSubtitle: 'Previous iterations of this website.'
+        pageSubtitle: 'Previous iterations of this website.',
+        display: true, exists: true,
       },
       {
         id: '5-1',
         href: '/archive/content',
         text: 'Content',
         pageTitle: 'Archived Content',
-        pageSubtitle: 'Contnet I no longer stand by'
+        pageSubtitle: 'Contnet I no longer stand by',
+        display: true, exists: true
       }
     ]
   }

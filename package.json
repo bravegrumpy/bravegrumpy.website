@@ -42,5 +42,9 @@
     "vite": "^6.0.0"
   },
   "homepage": "https://www.bravegrumpy.com",
-  "license": "SEE LISCENSE IN LICENSE"
+  "license": "SEE LISCENSE IN LICENSE",
+  "dependencies": {
+    "convex": "^1.31.7",
+    "convex-svelte": "^0.0.12"
+  }
 }

@@ -64,17 +64,17 @@
   --flush-orange-950: oklch(0.2742 0.0709 41.98);
   --flush-orange: oklch(0.7299 0.1783 54.77);
 
-  --affair-50: #f9f8fc;
-  --affair-100: #f2eff8;
-  --affair-200: #e8e2f2;
-  --affair-300: #d5cae8;
-  --affair-400: #baa8d8;
-  --affair-500: #9f85c7;
-  --affair-600: #876ab3;
-  --affair-700: #71559b;
-  --affair-800: #654d86;
-  --affair-900: #4f3c67;
-  --affair-950: #332348;
+  --affair-50: oklch(0.981 0.0054 297.73);
+  --affair-100: oklch(0.957 0.0124 301.28);
+  --affair-200: oklch(0.9222 0.0224 302.92);
+  --affair-300: oklch(0.8572 0.0427 302.17);
+  --affair-400: oklch(76.319% 0.07038 301.857);
+  --affair-500: oklch(66.544% 0.09967 301.839);
+  --affair-600: oklch(58.274% 0.11291 301.278);
+  --affair-700: oklch(50.916% 0.11127 300.982);
+  --affair-800: oklch(47.005% 0.09332 302.351);
+  --affair-900: oklch(39.594% 0.07401 303.532);
+  --affair-950: oklch(29.419% 0.06762 302.39);
   --affair: #654d86;
 
   --fog-50: #f5f3ff;
