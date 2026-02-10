@@ -1,9 +1,9 @@
 <script lang="ts">
-    import Article from "$lib/components/Article.svelte"
+    import Article from "$lib/components/Article.svelte";
     import Section from "$lib/components/Section.svelte";
     import Heading from "$lib/components/Heading.svelte";
 
-    import { page } from "$app/state"
+    import { page } from "$app/state";
 
     let users = $derived(page.data.allUsers || false);
     let todoList = $derived(page.data.todoList || false);
