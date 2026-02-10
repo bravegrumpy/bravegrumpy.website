@@ -1,16 +1,17 @@
 ---
 h2: Using AI as a code reviewer
 date: 2026-02-09
-title: Testing out [Greptile](https://www.greptile.com/)
+title: Testing out AI Code reviewer, 
 ---
 
 <script>
-    import BlogLayout from "$lib/components/BlogLayout.svelte"
+    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte"
     import Heading from "$lib/components/Heading.svelte"
+    const { open=false } = $props();
 </script>
 
-<BlogLayout {h2} title={date.toString().slice(1,10)}>
-    <Heading>{title}</Heading>
+<BlogLayout {h2} title={date.toString().slice(0,10)} {open}>
+    <Heading>{title} <a href="https://www.greptile.com/" target="_blank" rel="noreferrer nofollow">Greptile</a></Heading>
 
     I am in general, not that interested in AI.  That being said, [this particular repository](https://github.com/bravegrumpy/bravegrumpy.website.git) is a tangled web of branches because once upon a time, I decided that making a new branch for every ADHD idea I had made sense.
 
