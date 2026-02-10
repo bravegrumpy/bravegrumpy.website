@@ -1,6 +1,6 @@
 <script>
   import '../app.css';
-  import '$lib/styles/globals.css';
+  // import '$lib/styles/globals.css';
   import links from '$lib/utils/data';
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';

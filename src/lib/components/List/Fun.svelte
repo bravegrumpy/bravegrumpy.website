@@ -4,6 +4,8 @@
     import LOL, { entry } from "$lib/components/List/ListOfLinks.svelte";
     import Heading from "$lib/components/Heading.svelte";
 
+    import Details from "$lib/components/List/Details.svelte";
+
 </script>
 
 <Heading>Fun Links</Heading>
@@ -13,6 +15,26 @@
     <p>I am following a bit of the "indie-web"/"yesterweb" philosophy of linking websites I find cool so that I can find them again.</p>
     <p>Don't take too many of these links too seriously. They could be on here as simple of a reason as I like their color pallette. Otherwise I could like the utility, or some asset.  Who knows.  I don't necessarily endorse everything that every auther writes, just becasue they are on here.  It just means that at one time I thought the website was neat.</p>
     </div>
+    <details class="bg-solarized-base-3 dark:bg-solarized-base-03 rounded-[5px] px-5 py-5 border-[2px] border-solid border-current">
+        <summary>
+            <!-- <h3 class="font-heading my-4 text-2xl inline bg-bravegrumpy-brand4/50 px-5 py-1 rounded-[5px] border-[5px] border-solid border-current text-bravegrumpy-brand1 hover:hue-rotate-180 hover:scale-110">Discovery</h3> -->
+             <h3 class="font-heading text-2xl inline">Discovery</h3>
+        </summary>
+        <LOL title="Websites that aid in finding small websites">
+            {@render entry("https://theuselessweb.com/", "The Useless Web")}
+            {@render entry("https://yesterweb.org/", "The Yesterweb")}
+            {@render entry("https://neocities.org/browse", "Neocities Websites")}
+            {@render entry("https://nekoweb.org/explore?page=1&sort=follows&by=name&q=", "Nekoweb Websites")}
+            {@render entry("https://geekring.net/", "geek webring")}
+        </LOL>
+    </details>
+    <Details section="Discovery" title="Websites that aid in finding small websites">
+        {@render entry("https://theuselessweb.com/", "The Useless Web", [], true, false)}
+        {@render entry("https://yesterweb.org/", "The Yesterweb", [], true, false)}
+        {@render entry("https://neocities.org/browse", "Neocities Websites", [], true, false)}
+        {@render entry("https://nekoweb.org/explore?page=1&sort=follows&by=name&q=", "Nekoweb Websites", [], true, false)}
+        {@render entry("https://geekring.net/", "geek webring", [], true, true)}
+    </Details>
     <LOL section="Discovery" title="Websites that aid in finding small websites">
         {@render entry("https://theuselessweb.com/", "The Useless Web")}
         {@render entry("https://yesterweb.org/", "The Yesterweb")}
@@ -22,9 +44,7 @@
     </LOL>
     <LOL section="Art Projects">
         <p>Literally random single-use sites, typically on personal-web static-hosts such as <a href="https://neocities.org" rel="nofollow noreferrer" target="_blank">Neocities</a> replacements such as or <a href="https://nekoweb.org" target="_blank" rel="noreferrer nofollow">Nekoweb</a> but can also be in other places. I sometimes think of this as my pintrest board for interesting web design.</p>
-        <li>
-            <a href="https://humanknowledge.neocities.org/" target="_blank" rel="nofollow noreferrer">Art Project about Human Knowledge</a>
-        </li>
+        {@render entry("https://humanknowledge.neocities.org/","Art Project about Human Knowledge", [], true, false)}
         {@render entry("https://substack.net/", "Weird Vaporware Art")}
         {@render entry("https://i-land.online/", "i-Land Interactive Art", ["Handrawn point-and-click adventure", "Innovative mixed media approach"])}
     </LOL>
