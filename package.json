@@ -3,7 +3,7 @@
   "author": "bravegrumpy",
   "readme": "README.md",
   "private": "true",
-  "version": "0.3.3-55",
+  "version": "0.3.3-56",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
@@ -42,5 +42,9 @@
     "vite": "^6.0.0"
   },
   "homepage": "https://www.bravegrumpy.com",
-  "license": "SEE LISCENSE IN LICENSE"
+  "license": "SEE LISCENSE IN LICENSE",
+  "dependencies": {
+    "convex": "^1.31.7",
+    "convex-svelte": "^0.0.12"
+  }
 }
