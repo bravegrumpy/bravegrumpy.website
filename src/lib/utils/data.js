@@ -24,7 +24,7 @@ const links = [
             id: '2-0-0',
             href: '/writing/huetopia/wbw',
             text: 'Coursera Work by Week',
-            pageTite: 'Coursera Work by Week',
+            pageTitle: 'Coursera Work by Week',
             pageSubtitle: 'Writing Excercises'
           },
           {
