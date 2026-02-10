@@ -3,7 +3,7 @@
   interface Props {
     chapter?: string;
     title?: string;
-    text?: string | Snippet;
+    text?: Snippet | string;
     section?: string;
     heading?: string;
     id?: string;
@@ -38,7 +38,7 @@
   {/if}
 
   <div>
-    {#if typeof text !== "string"}
+    {#if (text !== '') && (typeof text !== "string")}
       {@render text()}
     {:else if text !== ""}
       <p>{text}</p>
@@ -48,3 +48,21 @@
     {@render children?.()}
   </ul>
 </div>
+
+<script module>
+  export { entry };
+</script>
+{#snippet entry(href: string, text: string, sublist?: string[])}
+<li>
+    <a {href} rel="noreferrer nofollow" target="_blank">{text}</a>
+    {#if sublist}
+        {#if sublist.length > 0}
+            <ul>
+                {#each sublist as item}
+                    <li>{item}</li>
+                {/each}
+            </ul>
+        {/if}
+    {/if}
+</li>
+{/snippet}

@@ -1,7 +1,7 @@
 <script>
   const { className = '', children } = $props();
 
-  const asideClass = $state(`${className} aside`);
+  const asideClass = $derived(`${className} aside`);
 </script>
 
 <aside class={asideClass}>

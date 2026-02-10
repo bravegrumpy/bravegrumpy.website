@@ -1,7 +1,14 @@
 import * as env from '$env/static/public';
 
 export async function GET() {
-  const body = ['User-agent: *', 'Allow: /', '', `Sitemap: ${env.PUBLIC_ORIGIN}/sitemap.xml`]
+  const body = [
+    'User-agent: GPTBot', 
+    'Disallow: /', 
+    'User-agent: GPTBot-User',
+    'Disallow: /',
+    'User-agent: *', 
+    'Allow: /', 
+    `Sitemap: ${import.meta.env.BASE_URL}/sitemap.xml`]
     .join('\n')
     .trim();
 

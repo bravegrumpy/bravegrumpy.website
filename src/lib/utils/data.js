@@ -24,7 +24,7 @@ const links = [
             id: '2-0-0',
             href: '/writing/huetopia/wbw',
             text: 'Coursera Work by Week',
-            pageTite: 'Coursera Work by Week',
+            pageTitle: 'Coursera Work by Week',
             pageSubtitle: 'Writing Excercises'
           },
           {
@@ -49,6 +49,13 @@ const links = [
         text: 'Blog',
         pageTitle: 'Blog',
         pageSubtitle: 'Written works about my thoughts and feelings.'
+      },
+      {
+        id: '2-2',
+        href: '/writing/queries',
+        text: 'DB',
+        pageTitle: "Quering A Database",
+        pageSubtitle: "Integrating Prisma, properly this time"
       }
     ]
   },
