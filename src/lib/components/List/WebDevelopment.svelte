@@ -1,8 +1,6 @@
 <script lang="ts">
   import Section from '$lib/components/Section.svelte';
-  import LOL from '$lib/components/List/ListOfLinks.svelte';
-
-  import entry  from "$lib/components/List/ListOfLinks.svelte";
+  import LOL, { entry } from '$lib/components/List/ListOfLinks.svelte';
 </script>
 
 <Section --sectionColumn="2/2" --sectionRow="2/2">
@@ -12,29 +10,11 @@
 </Section>
 <Section --sectionColumn="2/2" --sectionRow="2/2">
   <LOL section="Online Guides and Tools" title="Interactive CSS Instructions">
-    <li>
-      <a href="https://www.joshwcomeau.com/" target="_blank"
-        >CSS Information! Seriously, this is the GOAT CSS interactive tutorial resource.</a
-      >
-    </li>
-    <li>
-      <a href="https://css-tricks.com/" target="_blank"
-        >CSS Tricks -> Not as good as joshcomeau, but has css guides.</a
-      >
-    </li>
-    <li>
-      <a href="https://www.smashingmagazine.com/2024/01/css-border-image-property/" target="_blank"
-        >CSS border-image explaination</a
-      >
-    </li>
-    <li>
-      <a href="https://en.wikipedia.org/wiki/Pythagorean_interval" target="_blank"
-        >Useful ratios for heading sizes.</a
-      >
-    </li>
-    <li>
-      <a href="https://nekocalc.com/px-to-rem-converter" target="_blank">px to rem converter</a>
-    </li>
+    {@render entry("https://www.joshwcomeau.com/", "CSS Information! Seriously, this is the GOAT CSS interactive tutorial resource.", [], true)}
+    {@render entry("https://css-tricks.com/", "CSS Tricks -> Not as good as joshcomeau, but has css guides.")}
+    {@render entry("https://www.smashingmagazine.com/2024/01/css-border-image-property/", "CSS border-image explaination")}
+    {@render entry("https://en.wikipedia.org/wiki/Pythagorean_interval", "Useful ratios for heading sizes.")}
+    {@render entry("https://nekocalc.com/px-to-rem-converter", "px to rem converter")}
     <li>
       <a href="https://www.cleancss.com/" target="_blank">Kitchen Sink of Utilities</a>
     </li>

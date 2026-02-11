@@ -8,8 +8,8 @@
  * @module
  */
 
+import type * as navigation from "../navigation.js";
 import type * as tasks from "../tasks.js";
-import type * as users from "../users.js";
 
 import type {
   ApiFromModules,
@@ -18,8 +18,8 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  navigation: typeof navigation;
   tasks: typeof tasks;
-  users: typeof users;
 }>;
 
 /**

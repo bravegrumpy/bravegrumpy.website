@@ -1,9 +1,11 @@
 <script>
 
-import Post15 from "./post15.svx"
+import Post15 from "./post15.svx";
+import Post16 from "./post16.svx";
 
 let { open=false } = $props();
 
 </script>
 
-<Post15 />
+<Post16 {open} />
+<Post15 open={false} />
