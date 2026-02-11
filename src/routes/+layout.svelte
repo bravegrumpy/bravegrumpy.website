@@ -5,9 +5,6 @@
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import Main from '$lib/components/Main.svelte';
-  import Section from "$lib/components/Section.svelte";
-  import Heading from "$lib/components/Heading.svelte";
-
   import { PUBLIC_CONVEX_URL } from '$env/static/public';
   import { setupConvex } from 'convex-svelte';
 
@@ -17,7 +14,6 @@
 
   import { useQuery } from 'convex-svelte';
   import { api } from "$lib/../convex/_generated/api"
-    import { Alert } from 'flowbite-svelte';
 
   const query = $derived(useQuery(api.navigation.get))
 </script>
