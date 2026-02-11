@@ -7,37 +7,54 @@
     import { page } from "$app/state";
 
     let users = $derived(page.data.allUsers || false);
-    let todoList = $derived(page.data.todoList || false);
+    const usersConvex = useQuery(api.users.get, {});
+    let todoList = $derived(page.data.todoList);
 
-    import { Breadcrumb } from "flowbite-svelte";
+    import UnderConstruction from "$lib/components/UnderConstruction.svelte";
 
-    import { bci, breadcrumbClass} from "$lib/components/Blog/BlogBreadcrumbs.svelte";
+    import { useQuery } from "convex-svelte";
+    import { api } from "$lib/../convex/_generated/api"
+
+    const query = useQuery(api.tasks.get, {})
+
+    import Commentary from "./Commentary.md";
+
+    import { Breadcrumb } from "flowbite-svelte"
+    import { breadcrumbClass, bci } from "$lib/components/Blog/BlogBreadcrumbs.svelte";
 </script>
 
-<Article --articleRow="1/2" --articleColumn="1/3">
+<Article --articleColumn="1/4">
     <Breadcrumb class={breadcrumbClass}>
-        {@render bci("/", "Home", "hugeicons:home-07")}
+        {@render bci("/", "Home", "", "hugeicons:home-07")}
         {@render bci("/writing", "Writing", "hugeicons:books-01", "")}
-        {@render bci("/writing/queries", "DB", "hugeicons:search-02", "")}
+        {@render bci("/writing/queries", "Queries", "hugeicons:search-02", "")}
     </Breadcrumb>
-</Article>
-<Article --articleRow="2/3" --articleColumn="1/2">
-    <Aside --asideHeight="fit-content">
-        <h3>Why am I treating this as static?</h3>
-        <p>
-            <a href="https://docs.amplify.aws/" target="_blank" rel="noreferrer nofollow">AWS Amplify</a> advertises itself as a fullstack app hosting service. While this is technically true, it is nontrivial to setup a backend when grandfathering in systems that would have been working on the Gen1 version of Amplify.
-        </p>
-    </Aside>
-    <Aside --asideHeight="fit-content">
-        <p>In other words, I need to treat Amplify as I would any other fully static site host, because the Gen1 Amplify backend doesn't play nicely with this version of sveltekit.</p>
-    </Aside>
-</Article>
-<Article --articleColumn="2/4" --articleRow="2/3">
-    <Heading>Using a Database</Heading>
+    <Heading>Using Database</Heading>
     <Section>
         <p>This is my extremely crude attempt at querying a database. I plan to add more crud actions once I figure them out.</p>
         <p>I am interfacing with exactly one table in my database</p>
         <p>It is interesting that I initially decided on <a href="https://www.prisma.io" target="_blank" rel="noreferrer nofollow">Prisma</a> as the ORM.  I have been using <a href="https://orm.drizzle.team/" target="_blank" rel="nofollow noreferrer">drizzle</a>. I'm curious to see if it functions in the node server set up by <a href="https://aws.amazon.com/amplify/" target="_blank" rel="nofollow noreferrer">Amplify</a>.</p>
+    </Section>
+    <Section --sectionColumn="1/3" --sectionRow="2/3">
+        {#if usersConvex.isLoading}
+            <p>Loading...</p>
+        {:else if usersConvex.error}
+            <p>Failed to load: {usersConvex.error.message}</p>
+        {:else}
+            <ul>
+                {#each usersConvex.data as {id, email, name} (id)}
+                <li class="dark:text-bravegrumpy-brand5 text-bravegrumpy-brand3">
+                    <strong class="font-heading">User {id}:</strong>
+                    <ul class="bg-bravegrumpy-brand2/20 rounded-sm text-bravegrumpy-brand6 dark:text-bravegrumpy-brand4 border-[2px] border-current">
+                        <li class="indent-5">Name: {name}</li>
+                        <li class="indent-5">Email: {email}</li>
+                    </ul>
+                </li>
+                {/each}
+            </ul>
+        {/if}
+    </Section>
+    <Section --sectionColumn="2/4" --sectionRow="2/3">
         {#if users}
         <ol>
         {#each users as {id, email, name} (id)}
@@ -52,6 +69,38 @@
         </ol>
         {:else if todoList}
         <p>{JSON.stringify(todoList)}</p>
+        {:else if query}
+            {#if query.isLoading}
+                <p>Loading...</p>
+            {:else if query.error}
+                <p>Failed to load: {query.error.toString()}</p>
+            {:else}
+                <ul>
+                    {#each query.data as task}
+                    <li>
+                        {task.isCompleted ? '☑': '🔳'}
+                        <span>{task.text}</span>
+                        <span>assigned by {task.assigner}</span>
+                    </li>
+                    {/each}
+                </ul>
+            {/if}
+        {:else}
+        <UnderConstruction>
+            <div class="soon">
+            <p>Queries  are Being Developed</p>
+            </div>
+        </UnderConstruction>
         {/if}
     </Section>
+    <Section --sectionColumn="1/2">
+        <Commentary />
+    </Section>
 </Article>
+
+<style lang="less">
+    @test: #123321;
+    .soon {
+        background-color: oklch(59.535% 0.1884 279.031 / 0.664);
+    }
+</style>

@@ -24,6 +24,6 @@
     "editor.colorDecorators": true,
     "editor.fontSize": 16,
     "editor.fontFamily": "'FantasqueSansM Nerd Font','Cedarville_Cursive', 'Daddytime Mono', Consolas, 'Courier New', monospace",
-    "prisma.pinToPrisma6": true
+    "prisma.pinToPrisma6": false
 }
   

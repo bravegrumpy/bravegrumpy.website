@@ -1,0 +1,5 @@
+ ## Example Content
+
+ This is some example content.
+
+ It is placed inside the `<Section>` of this particular page. Play with the sliders to change what the layout looks like.
