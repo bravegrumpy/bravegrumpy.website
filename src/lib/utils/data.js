@@ -219,4 +219,4 @@ const headings = [
 ];
 
 export default links;
-export { headings };
+export { headings, links };

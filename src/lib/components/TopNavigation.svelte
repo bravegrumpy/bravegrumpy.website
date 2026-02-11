@@ -7,7 +7,7 @@
 
   const slug = $derived('/' + $page.url.pathname.split('/')[1]);
 
-  let { links, fontSize = '2rem' } = $props();
+  let { links, fontSize = '2rem', reversed=true } = $props();
 
   const iconSize = '25';
   const buttonSize = `size-[${iconSize * 2}px]`;
@@ -18,7 +18,7 @@
     {links}
     {slug}
     {fontSize}
-    reversed
+    {reversed}
     navigationWidth="55%"
     justifyContent="flex-end"
     buttonWidth="144px"
