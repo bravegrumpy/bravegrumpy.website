@@ -15,13 +15,14 @@ export const get = query({
 
 export const createRoute = mutation({
     args: { 
-        id: v.string(), 
+        id: v.union(v.string(), v.number()), 
         href: v.string(), 
         text: v.string(), 
         pageTitle: v.string(), 
         pageSubtitle: v.string(),
         display: v.boolean(),
         exists: v.boolean(),
+        subnav: v.optional(v.any()), // Add subnav support or use the full nested structure from schema
     },
     handler: async (ctx, args) => {
         const newRoute = await ctx.db.insert("navigation", {
