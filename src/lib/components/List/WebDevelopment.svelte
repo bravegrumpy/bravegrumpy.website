@@ -5,7 +5,7 @@
   import { Checkbox } from 'flowbite-svelte';
 
   let cardStyle = $state(false);
-  const showStyleOption = $state(false);
+  let showStyleOption = $state(false);
 </script>
 
 <Section --sectionColumn="2/2" --sectionRow="2/2">
