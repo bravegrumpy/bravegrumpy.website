@@ -1,9 +1,15 @@
-<script>
-  const { articleClass = '', className = `${articleClass} centerDiv`, children } = $props();
+<script lang="ts">
+  import type { Snippet } from "svelte";
+  interface Props {
+    articleClass?: string;
+    className?: string;
+    children?: Snippet;
+  }
+  const { articleClass = '', className = `${articleClass} centerDiv`, children }: Props = $props();
 </script>
 
-<div class={className}>
-  {@render children()}
+<div class={className} role="article">
+  {@render children?.()}
 </div>
 
 <style>

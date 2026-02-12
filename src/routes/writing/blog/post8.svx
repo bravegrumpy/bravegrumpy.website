@@ -1,0 +1,23 @@
+---
+h2: Monday, March 10th, 2025
+date: 2025-03-10
+title: Rediscovering Clerk & Trying to Solve Auth
+---
+<script>
+    import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
+    import Icon from '@iconify/svelte';
+
+    let { open=false } = $props();
+</script>
+
+<BlogLayout h2={title} title={date.toString().slice(0,10)} {open}>
+
+## Adding in Auth
+
+The next big feature I plan on adding to this website is Auth. However, Auth is famously extremely challenging.
+
+Clerk is the industry standard out-of-the-box authentication / authorization provider. They have pre-built components, and even just do the setp for OAuth apps, such as Google, which are famously a headache. The biggest drawback is they don't have first party support for sveltekit. This site is built with sveltekit.
+
+Thankfully, I found a couple of different community supported adapters for clerk in sveltekit. Now comes the hard part, configuring the auth.
+
+</BlogLayout>

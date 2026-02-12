@@ -4,7 +4,7 @@
   const { href, text, reversed = true, slug = '/', className = '' } = $props();
 
   const baseClass = $state('navButton hover:hue-rotate-15 hover:scale-105');
-  const reverse = reversed;
+  const reverse = $derived(reversed);
   const defaultLight = 'bg-bravegrumpy-brand1 text-bravegrumpy-accent1a border-accent1a';
   const defaultDark =
     'dark:bg-bravegrumpy-accent1a dark:text-bravegrumpy-logoPurple dark:border-bravegrumpy-logoPurple';

@@ -19,12 +19,14 @@
     {slug}
     {fontSize}
     reversed
-    navigationWidth="60%"
+    navigationWidth="55%"
     justifyContent="flex-end"
-    buttonWidth="150px"
+    buttonWidth="144px"
+    gap="0.8rem"
+    marginLeft="0px"
   />
   <DarkMode
-    class="{buttonSize} rounded-[5px] border-[2px] border-solid border-current bg-bravegrumpy-accent2a text-bravegrumpy-logoPurple dark:bg-bravegrumpy-brand6 dark:text-bravegrumpy-accent1a"
+    class="{buttonSize} rounded-[5px] border-[2px] border-solid border-current bg-bravegrumpy-accent2a text-bravegrumpy-logoPurple hover:scale-105 hover:hue-rotate-15 dark:bg-bravegrumpy-brand6 dark:text-bravegrumpy-accent1a"
   >
     <Icon icon="game-icons:sun" slot="lightIcon" height={iconSize} width={iconSize} />
     <Icon icon="game-icons:night-sleep" slot="darkIcon" height={iconSize} width={iconSize} />
@@ -41,5 +43,6 @@
     margin-right: 1rem;
     margin-top: 1rem;
     align-items: center;
+    width: 100%;
   }
 </style>

@@ -1,0 +1,90 @@
+---
+h2: Friday, March 7th 2025
+date: 2025-03-07
+title: To Dos and a New Project
+---
+
+<script>
+    import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
+    import Icon from '@iconify/svelte';
+    import DecoratedSwitch from '$lib/components/DecoratedSwitch.svelte';
+    let address = $state('https://mertherfanfic.neocities.org/other/css_expo/isolated/');
+
+    let { open=false } = $props();
+</script>
+
+<BlogLayout h2={title} title={date.toString().slice(0,10)} {open}>
+
+{h2}
+
+## BraveGrumpy Website Status
+
+This website's design overhaul is complete. I am constantly adding new features, but it is tapering off, now that I have a designed component library that works for most of my needs. 
+
+The next item on the list is to add in reasonable image and gallery components, likely customizing the flowbite components, so I can add in my photography.
+
+Another feature I want to add is making the sidenav, as seen to the right,<Icon class="inline" icon="hugeicons:arrow-left-02" width="24" height="24" />, collapsible somehow. This way I can click to expand the month I'm interested in. Especially since I did manually add in the month headings.  However a challenge with this, is that currently this blog is within a "BlogLayout", which in turn is inside a flowbite tabs component. My first thought is to try using the `&lt;details&gt;` and `&lt;summary&gt;` tags in conjunction. It will take some experimentation to get that working properly. The first step in this process is to look up flowbite's implementation of their `<Tabs>` components.
+
+### Rant about Tabs.
+
+
+## Working on new projects
+
+### NSFW fanfiction website with cool CSS
+
+<div class="hidden">
+
+I started a new project that involved writing and new and interesting web design.
+It is a <a href="https://mertherfanfic.neocities.org/pages/css-expo" target="_blank">NSFW fanfiction website</a>.
+I think the most interesting part about it is the CSS. . I think I might add a page that is "Llorem Ipsum to Show Off Aesthetic". Either that, or I'll just add it in here, maybe as a component. I'm not sure what the correct implementation of that is.
+
+
+I made the <a href="https://mertherfanfic.neocities.org/pages/css-expo" target="_blank"> the new site</a> using php, but I then copied over to the static website host using the "View Page Source" tool in the browser. This method is way more work than using a static site generator built in with Sveltekit. However, the exeperience of making a website, coming as close to manually coding all of the HTML from scratch was a good experience. 
+
+</div>
+
+#### Embedded Copy of Fanfic With Cool Styles
+
+<!--Note that viewer discression is advised when reading the content.-->
+
+<!--input bind:value={address} class="text-black w-full"-->
+
+This page simply displays the output of a few different Llorem Ipsum generators.
+The point of showing this here, is to show off the unique scroll effect I was able to get.
+I also used anchor tags to create a "move to different screen" type effect. 
+
+ Iam most proud of the optical illusion the layered paper.
+
+ My next additions to this project will be to experiment with the using multiple layers of linear gradients on the `background-image` property to try and make my own paper-like texture.
+
+<iframe src={address} title="embedded copy of Fanfic with styles"></iframe>
+
+</BlogLayout>
+
+<style>
+    iframe {
+        width: 100%;
+        height: 600px;
+        border-image-slice: 35;
+        border-image-width: 25px;
+        border-image-outset: 15px;
+        border-image-repeat: stretch;
+        border-radius: var(--borderRadius);
+        border-image-source: linear-gradient(to bottom, rebeccapurple 0%, green 100%);
+        /* filter: hue-rotate(90deg) sepia(80%); */
+        z-index: 1;
+        margin: 15px auto;
+    }
+    h2 {
+        color: var(--bravegrumpy-brand6);
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    :global(.dark) h2 {
+        color: var(--bravegrumpy-accent2b);
+    }
+    h3 {
+        font-size: 1.25rem /* 20px */;
+        line-height: 1.75rem /* 28px */;
+    }
+</style>

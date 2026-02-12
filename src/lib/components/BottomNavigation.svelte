@@ -1,6 +1,6 @@
 <script>
   import Navigation from './Navigation.svelte';
-  import links from '$lib/utils/data.js';
+  // import links from '$lib/utils/data.js';
   import { page } from '$app/stores';
 
   const slug = $derived(
@@ -8,7 +8,7 @@
   );
 
   const mainPage = $derived('/' + $page.url.pathname.split('/')[1]);
-  const { fontSize = '1.5rem' } = $props();
+  const {links, fontSize = '1.5rem', reversed = false } = $props();
 
   const currentLink = $derived(links.find((link) => link.href === mainPage));
   const hasSubnav = $derived(currentLink?.subnav);
@@ -16,7 +16,7 @@
 
 <nav>
   {#if hasSubnav}
-    <Navigation links={currentLink.subnav} reversed={false} {slug} {fontSize} buttonWidth="200px" />
+    <Navigation links={currentLink.subnav} {reversed} {slug} {fontSize} buttonWidth="200px" />
   {/if}
 </nav>
 

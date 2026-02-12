@@ -2,9 +2,9 @@
   import Icon from '@iconify/svelte';
 
   // Toggle state
-  let { checked } = $state(false);
+  // let { checked } = $state(false);
 
-  let { offIcon = 'game-icons:sun', onIcon = 'game-icons:night-sleep' } = $props();
+  let { offIcon = 'game-icons:sun', onIcon = 'game-icons:night-sleep', checked=$bindable() } = $props();
 
   // Customize which icons to show for OFF/ON states
   // let offIcon = 'game-icons:sun'; // or any other Iconify icon (e.g., 'mdi:weather-sunny')
@@ -63,8 +63,9 @@
     --c3: #8fcfcf;
     --c4: #886a06;
 
-    --_g: var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%, var(--c1) 36% 44%,
-      var(--c2) 46% 54%, var(--c1) 56% 64%, var(--c2) 66% 74%, var(--c1) 76% 84%, var(--c2) 86% 94%;
+    --_g:
+      var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%, var(--c1) 36% 44%, var(--c2) 46% 54%,
+      var(--c1) 56% 64%, var(--c2) 66% 74%, var(--c1) 76% 84%, var(--c2) 86% 94%;
     background:
       radial-gradient(100% 100% at 100% 0, var(--c1) 4%, var(--_g), #0008 96%, #0000),
       radial-gradient(100% 100% at 0 100%, #0000, #0008 4%, var(--_g), var(--c1) 96%) var(--c1);
@@ -98,7 +99,8 @@
     --c5: #99ff;
     /* --c6: #020317; */
     --c6: #022f;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         circle at top left,
         transparent 9%,
         var(--c5) 10%,

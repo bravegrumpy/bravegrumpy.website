@@ -1,80 +1,80 @@
 :root {
-  --royal-purple-50: #faf6fe;
-  --royal-purple-100: #f3ebfc;
-  --royal-purple-200: #e8dafa;
-  --royal-purple-300: #d7bdf5;
-  --royal-purple-400: #be92ee;
-  --royal-purple-500: #a568e4;
-  --royal-purple-600: #8f48d5;
-  --royal-purple-700: #7a36ba;
-  --royal-purple-800: #6e34a2;
-  --royal-purple-900: #54297a;
-  --royal-purple-950: #391259;
-  --royal-purple: #6e34a2;
+  --royal-purple-50: oklch(0.9785 0.0114 308.33);
+  --royal-purple-100: oklch(0.9513 0.0241 306.96);
+  --royal-purple-200: oklch(0.9093 0.0455 305.25);
+  --royal-purple-300: oklch(0.8388 0.0816 305.81);
+  --royal-purple-400: oklch(0.7359 0.1366 305.29);
+  --royal-purple-500: oklch(0.6373 0.1846 304.39);
+  --royal-purple-600: oklch(0.559 0.2078 303.4);
+  --royal-purple-700: oklch(0.4929 0.1971 303.37);
+  --royal-purple-800: oklch(0.4579 0.171 304.67);
+  --royal-purple-900: oklch(0.381 0.1339 305.32);
+  --royal-purple-950: oklch(0.2874 0.1202 304.84);
+  --royal-purple: oklch(0.4579 0.171 304.67);
 
-  --tradewind-50: #f3faf9;
-  --tradewind-100: #d9eeec;
-  --tradewind-200: #b2ddd9;
-  --tradewind-300: #84c4bf;
-  --tradewind-400: #61aba8;
-  --tradewind-500: #408c8a;
-  --tradewind-600: #31706f;
-  --tradewind-700: #2b595a;
-  --tradewind-800: #264849;
-  --tradewind-900: #233e3e;
-  --tradewind-950: #102123;
-  --tradewind: #61aba8;
+  --tradewind-50: oklch(0.9796 0.0075 186.9);
+  --tradewind-100: oklch(0.9331 0.0223 189.87);
+  --tradewind-200: oklch(0.8659 0.0451 189.37);
+  --tradewind-300: oklch(0.7758 0.0657 189.71);
+  --tradewind-400: oklch(0.6924 0.0743 192.2);
+  --tradewind-500: oklch(0.5918 0.0751 192.99);
+  --tradewind-600: oklch(0.504 0.0644 193.89);
+  --tradewind-700: oklch(0.4321 0.0504 197.32);
+  --tradewind-800: oklch(0.3764 0.0397 198.05);
+  --tradewind-900: oklch(0.3424 0.033 195.72);
+  --tradewind-950: oklch(0.2338 0.023 205.3);
+  --tradewind: oklch(0.6924 0.0743 192.2);
 
-  --cerulean-blue-50: #f0f6fe;
-  --cerulean-blue-100: #ddebfc;
-  --cerulean-blue-200: #c3dcfa;
-  --cerulean-blue-300: #9ac7f6;
-  --cerulean-blue-400: #6aa9f0;
-  --cerulean-blue-500: #4789ea;
-  --cerulean-blue-600: #326cde;
-  --cerulean-blue-700: #2753c0;
-  --cerulean-blue-800: #2848a5;
-  --cerulean-blue-900: #253f83;
-  --cerulean-blue-950: #1b2850;
-  --cerulean-blue: #2753c0;
+  --cerulean-blue-50: oklch(0.9709 0.0125 255.5);
+  --cerulean-blue-100: oklch(0.9347 0.0275 253.24);
+  --cerulean-blue-200: oklch(0.8857 0.0494 253.08);
+  --cerulean-blue-300: oklch(0.8145 0.0821 249.95);
+  --cerulean-blue-400: oklch(0.7218 0.1229 252.48);
+  --cerulean-blue-500: oklch(0.6344 0.161 258.1);
+  --cerulean-blue-600: oklch(0.5577 0.1849 262.03);
+  --cerulean-blue-700: oklch(0.4797 0.1782 264.11);
+  --cerulean-blue-800: oklch(0.4354 0.1549 265.79);
+  --cerulean-blue-900: oklch(0.3875 0.1188 265.44);
+  --cerulean-blue-950: oklch(0.2888 0.0751 267.95);
+  --cerulean-blue: oklch(0.4797 0.1782 264.11);
 
-  --apple-50: #f4fbf2;
-  --apple-100: #e7f7e1;
-  --apple-200: #cfeec4;
-  --apple-300: #a8df96;
-  --apple-400: #79c860;
-  --apple-500: #56ad3a;
-  --apple-600: #499c2f;
-  --apple-700: #377025;
-  --apple-800: #2e5922;
-  --apple-900: #264a1d;
-  --apple-950: #11280b;
-  --apple: #499c2f;
+  --apple-50: oklch(0.9804 0.0139 138.71);
+  --apple-100: oklch(0.9584 0.0336 137.07);
+  --apple-200: oklch(0.9157 0.0648 137.52);
+  --apple-300: oklch(0.8477 0.1135 138.16);
+  --apple-400: oklch(0.7582 0.1597 138.66);
+  --apple-500: oklch(0.6693 0.1731 139.01);
+  --apple-600: oklch(0.6181 0.1655 139.22);
+  --apple-700: oklch(0.4891 0.1233 139);
+  --apple-800: oklch(0.4189 0.0971 139.3);
+  --apple-900: oklch(0.3701 0.0831 139.66);
+  --apple-950: oklch(0.2497 0.0584 139.56);
+  --apple: oklch(0.6181 0.1655 139.22);
 
-  --flush-orange-50: #fff9ed;
-  --flush-orange-100: #fff1d5;
-  --flush-orange-200: #fedeaa;
-  --flush-orange-300: #fec673;
-  --flush-orange-400: #fca33b;
-  --flush-orange-500: #fa830e;
-  --flush-orange-600: #eb6b0b;
-  --flush-orange-700: #c3510b;
-  --flush-orange-800: #9b4011;
-  --flush-orange-900: #7d3611;
-  --flush-orange-950: #431907;
-  --flush-orange: #fa830e;
+  --flush-orange-50: oklch(0.9835 0.0171 84.59);
+  --flush-orange-100: oklch(0.962 0.0396 84.58);
+  --flush-orange-200: oklch(0.9149 0.0756 79.63);
+  --flush-orange-300: oklch(0.8599 0.1193 75.87);
+  --flush-orange-400: oklch(0.7878 0.1543 65.58);
+  --flush-orange-500: oklch(0.7299 0.1783 54.77);
+  --flush-orange-600: oklch(0.6728 0.1807 47.86);
+  --flush-orange-700: oklch(0.5756 0.1617 44.5);
+  --flush-orange-800: oklch(0.4878 0.1336 43.33);
+  --flush-orange-900: oklch(0.4236 0.1095 44.45);
+  --flush-orange-950: oklch(0.2742 0.0709 41.98);
+  --flush-orange: oklch(0.7299 0.1783 54.77);
 
-  --affair-50: #f9f8fc;
-  --affair-100: #f2eff8;
-  --affair-200: #e8e2f2;
-  --affair-300: #d5cae8;
-  --affair-400: #baa8d8;
-  --affair-500: #9f85c7;
-  --affair-600: #876ab3;
-  --affair-700: #71559b;
-  --affair-800: #654d86;
-  --affair-900: #4f3c67;
-  --affair-950: #332348;
+  --affair-50: oklch(0.981 0.0054 297.73);
+  --affair-100: oklch(0.957 0.0124 301.28);
+  --affair-200: oklch(0.9222 0.0224 302.92);
+  --affair-300: oklch(0.8572 0.0427 302.17);
+  --affair-400: oklch(76.319% 0.07038 301.857);
+  --affair-500: oklch(66.544% 0.09967 301.839);
+  --affair-600: oklch(58.274% 0.11291 301.278);
+  --affair-700: oklch(50.916% 0.11127 300.982);
+  --affair-800: oklch(47.005% 0.09332 302.351);
+  --affair-900: oklch(39.594% 0.07401 303.532);
+  --affair-950: oklch(29.419% 0.06762 302.39);
   --affair: #654d86;
 
   --fog-50: #f5f3ff;
@@ -419,48 +419,40 @@
   --solarized-base-01: #586e75;
   --solarized-base-00: #657b83;
 
-  --solarized-yellow: #b58900;
-  --solarized-orange: #cb4b16;
-  --solarized-red: #dc322f;
-  --solarized-magenta: #d33682;
-  --solarized-violet: #6c71c4;
-  --solarized-blue: #268bd2;
-  --solarized-cyan: #2aa198;
-  --solarized-green: #859900;
+  --solarized-yellow: oklch(0.6545 0.134 85.72);
+  --solarized-orange: oklch(0.5808 0.1732 39.5);
+  --solarized-red: oklch(0.5863 0.2064 27.12);
+  --solarized-magenta: oklch(0.5924 0.2025 355.89);
+  --solarized-violet: oklch(0.5823 0.1261 279.1);
+  --solarized-blue: oklch(0.6149 0.1394 244.93);
+  --solarized-cyan: oklch(0.6437 0.1019 187.38);
+  --solarized-green: oklch(0.6444 0.1508 118.6);
 
-  --font-family-logo: "Grenze Gotisch";
-  --font-family-logo-subtitle: "Texturina";
-  --font-family-page-title: "Recursive";
-  --font-family-page-subtitle: "Recursive";
-  --font-family-nav-menu-default: "Recursive";
-  --font-family-nav-menu-active: "Recursive";
-  --font-family-heading: "Recursive";
-  --font-family-body-text: "Recursive";
-  --font-family-sans: "Recursive";
-  --font-family-serif: "Texturina";
+  --font-family-logo: 'Grenze Gotisch';
+  --font-family-logo-subtitle: 'Texturina';
+  --font-family-page-title: 'Recursive';
+  --font-family-page-subtitle: 'Recursive';
+  --font-family-nav-menu-default: 'Recursive';
+  --font-family-nav-menu-active: 'Recursive';
+  --font-family-heading: 'Recursive';
+  --font-family-body-text: 'Recursive';
+  --font-family-sans: 'Recursive';
+  --font-family-serif: 'Texturina';
 
-  --font-family-page-title-variations:
-    "MONO" 0, "CASL" 1, "wght" 600, "slnt" -8, "CRSV" 1;
-  --font-family-page-subtitle-variations:
-    "MONO" 0, "CASL" 1, "wght" 300, "CRSV" 1, "slnt" 0;
-  --font-family-nav-menu-default-variations:
-    "MONO" 0, "CASL" 1, "wght" 600, "CRSV" 1, "slnt" -8;
-  --font-family-nav-menu-active-variations:
-    "MONO" 0.5, "CASL" 1, "wght" 900, "CRSV" 0.5, "slnt" 0;
-  --font-family-heading-variations:
-    "MONO" 0.57, "CASL" 1, "wght" 700, "CRSV" 0.5, "slnt" 0;
-  --font-family-body-text-variations:
-    "MONO" 0, "CASL" 0, "wght" 400, "CRSV" 0, "slnt" 0;
-  --font-family-sans-variations:
-    "MONO" 1, "CASL" 0, "wght" 400, "CRSV" 0, "slnt" 0;
+  --font-family-page-title-variations: 'MONO' 0, 'CASL' 1, 'wght' 600, 'slnt' -8, 'CRSV' 1;
+  --font-family-page-subtitle-variations: 'MONO' 0, 'CASL' 1, 'wght' 300, 'CRSV' 1, 'slnt' 0;
+  --font-family-nav-menu-default-variations: 'MONO' 0, 'CASL' 1, 'wght' 600, 'CRSV' 1, 'slnt' -8;
+  --font-family-nav-menu-active-variations: 'MONO' 0.5, 'CASL' 1, 'wght' 900, 'CRSV' 0.5, 'slnt' 0;
+  --font-family-heading-variations: 'MONO' 0.57, 'CASL' 1, 'wght' 700, 'CRSV' 0.5, 'slnt' 0;
+  --font-family-body-text-variations: 'MONO' 0, 'CASL' 0, 'wght' 400, 'CRSV' 0, 'slnt' 0;
+  --font-family-sans-variations: 'MONO' 1, 'CASL' 0, 'wght' 400, 'CRSV' 0, 'slnt' 0;
 
   --borderRadius: 5px;
 
   --boxShadowLight:
-    -20px -20px 50px 20px rgba(255, 255, 255, 0.6) inset, 20px -10px 35px 10px
-    rgba(0, 0, 0, 0.15), 10px 10px 25px 0px rgba(255, 255, 255, 0.4), 0px 25px
-    30px 15px rgba(101, 77, 134, 0.2), 0px 20px 50px 25px rgba(0, 0, 0, 0.15)
-    inset;
+    -20px -20px 50px 20px rgba(255, 255, 255, 0.6) inset, 20px -10px 35px 10px rgba(0, 0, 0, 0.15),
+    10px 10px 25px 0px rgba(255, 255, 255, 0.4), 0px 25px 30px 15px rgba(101, 77, 134, 0.2),
+    0px 20px 50px 25px rgba(0, 0, 0, 0.15) inset;
   --boxShadowDark: 7px 20px 80px 10px rgba(39, 13, 62, 0.7);
 
   --fontSizeMult: 1.2;
@@ -562,9 +554,9 @@ h6 {
 
 @counter-style links {
   system: cyclic;
-  symbols: "\25C6";
-  suffix: " ";
-  negative: " ";
+  symbols: '\25C6';
+  suffix: ' ';
+  negative: ' ';
 }
 
 .section a,

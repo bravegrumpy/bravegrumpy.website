@@ -6,16 +6,16 @@
  * The purpose of this website, is to practice responsive web design, and to publish creative writing.
  */
 
-@import url("https://fonts.googleapis.com/css2?family=El+Messiri&family=Fredoka&family=Sacramento&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Fredoka&family=Sacramento&display=swap');
 
 :root {
   --main-bg: #d2c8ff;
   --second-bg: #d1dcff;
   --emp-color: #146414;
   --text-color: #000000;
-  --title-font: "El Messiri", sans-serif;
-  --text-font: "Fredoka", sans-serif;
-  --emp-font: "Sacramento", cursive;
+  --title-font: 'El Messiri', sans-serif;
+  --text-font: 'Fredoka', sans-serif;
+  --emp-font: 'Sacramento', cursive;
 }
 body {
   background-color: var(--main-bg);
@@ -134,8 +134,10 @@ a:hover {
   color: var(--emp-color);
 }
 
-#gameContainer {}
-#gameCanvas {}
+#gameContainer {
+}
+#gameCanvas {
+}
 
 canvas {
   border: 1px solid black;

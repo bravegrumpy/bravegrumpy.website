@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
   import Section from '$lib/components/Section.svelte';
-  import LOL from '$lib/components/List/ListOfLinks.svelte';
+  import LOL, { entry } from '$lib/components/List/ListOfLinks.svelte';
 </script>
 
 <Section --sectionColumn="2/2" --sectionRow="2/2">
@@ -10,26 +10,18 @@
 </Section>
 <Section --sectionColumn="2/2" --sectionRow="2/2">
   <LOL section="Online Guides and Tools" title="Interactive CSS Instructions">
-    <li>
-      <a href="https://www.joshwcomeau.com/" target="_blank"
-        >CSS Information! Seriously, this is the GOAT CSS interactive tutorial resource.</a
-      >
-    </li>
-    <li>
-      <a href="https://css-tricks.com/" target="_blank"
-        >CSS Tricks -> Not as good as joshcomeau, but has css guides.</a
-      >
-    </li>
-    <li>
-      <a href="https://en.wikipedia.org/wiki/Pythagorean_interval" target="_blank"
-        >Useful ratios for heading sizes.</a
-      >
-    </li>
-    <li>
-      <a href="https://nekocalc.com/px-to-rem-converter" target="_blank">px to rem converter</a>
-    </li>
+    {@render entry("https://www.joshwcomeau.com/", "CSS Information! Seriously, this is the GOAT CSS interactive tutorial resource.", [], true)}
+    {@render entry("https://css-tricks.com/", "CSS Tricks -> Not as good as joshcomeau, but has css guides.")}
+    {@render entry("https://www.smashingmagazine.com/2024/01/css-border-image-property/", "CSS border-image explaination")}
+    {@render entry("https://en.wikipedia.org/wiki/Pythagorean_interval", "Useful ratios for heading sizes.")}
+    {@render entry("https://nekocalc.com/px-to-rem-converter", "px to rem converter")}
     <li>
       <a href="https://www.cleancss.com/" target="_blank">Kitchen Sink of Utilities</a>
+    </li>
+    <li>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout"
+        >Masonry Layout using CSS</a
+      >
     </li>
   </LOL>
   <LOL title="Accessibility">
@@ -38,7 +30,19 @@
         >web accessability evaluation tool (WAVE)</a
       >
     </li>
-    <li><a href="contrast-grid.html" target="_blank">Contrast Grid</a></li>
+    <li>
+      <LOL heading="Contrast Checking Grids">
+        <li>
+          <a href="https://contrast-grid.eightshapes.com/" target="_blank">Contrast Grid 1</a>
+        </li>
+        <li><a href="https://contrastgrid.com/" target="_blank">Contrast Grid 2</a></li>
+        <LOL>
+          <li>
+            <a href="/contrast-grid.html">Contrast Grid I made with my color pallete</a>
+          </li>
+        </LOL>
+      </LOL>
+    </li>
     <li>
       <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank"
         >mdn web docs_ARIA</a
@@ -125,11 +129,11 @@
     <li>
       <a href="https://css-pattern.com/" target="_blank">Colorful optical illusion CSS patterns</a>
     </li>
-    <lli>
+    <li>
       <a href="https://superdesigner.co/tools/css-backgrounds" target="_blank"
         >Non-colored CSS patterns</a
       >
-    </lli>
+    </li>
     <li>
       <a href="https://10015.io/tools/css-background-pattern-generator" target="_blank"
         >CSS Pattern Generator</a
@@ -142,13 +146,18 @@
     </li>
     <li>
       <a href="https://freefrontend.com/css-background-patterns/" target="_blank"
-        >This is another super long list of css backgrouns.</a
+        >This is another super long list of css backgrounds.</a
       >
       This one is a repeat of a bunch of the previous aggregations of css patterns.
     </li>
     <li>
       <a href="https://designerfeed.org/css-background-patterns/" target="_blank"
         >CSS renders of some common fabric patterns</a
+      >
+    </li>
+    <li>
+      <a href="https://www.svgrepo.com/" target="_blank"
+        >Repo of Open-Liscensed SVG Vector Images and Icons</a
       >
     </li>
   </LOL>
@@ -225,6 +234,21 @@
   </LOL>
 </Section>
 <Section>
+  <LOL section="Documentation" title="Developer Resources" heading="Given by The Odin Project">
+    <li>
+      <a href="https://devdocs.io/">DevDocs</a> A website with all of the API documentation. No more
+      searching for docs! Horray!
+    </li>
+  </LOL>
+  <LOL heading="Accessing API">
+    <p>This is not necessarily Javascript only, but <em>is</em> useful in all webdev.</p>
+    <li>
+      <a href="https://reqbin.com/req/c-skhwmiil/curl-flags-example" target="_blank" rel="noreferrer">cUrl flag documentation</a>
+      <ul>
+        <li>cURL, or Client-URL is a command line tool for making <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods" target="_blank">HTTP requests</a> within the command line. The flags are options for the libcurl commandline tool. cURL is typically shipped with all shells, terminal emulators and tty software, on any OS.</li>
+      </ul>
+    </li>
+  </LOL>
   <LOL section="Non Javascript Languages" title="PHP language reference" heading="PHP references">
     <li><a href="https://php.org/" target="_blank">Useful Tutorial</a></li>
     <li><a href="https://www.php.net/manual/en/" target="_blank">Official Manual</a></li>
