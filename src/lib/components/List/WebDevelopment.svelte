@@ -1,53 +1,45 @@
 <script lang="ts">
   import Section from '$lib/components/Section.svelte';
   import LOL, { entry } from '$lib/components/List/ListOfLinks.svelte';
+
+  import { Checkbox } from 'flowbite-svelte';
+
+  let cardStyle = $state(false);
+  let showStyleOption = $state(false);
 </script>
 
 <Section --sectionColumn="2/2" --sectionRow="2/2">
-  <h2 class="font-heading text-3xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">
-    Web Development
-  </h2>
+  <div class="flex flex-row w-full justify-between items-center">
+    <h2 class="font-heading text-3xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">Web Development</h2>
+    {#if showStyleOption}
+    <div class="gap-5 flex flex-row justify-between font-pageSubtitle text-lg">
+      Styled List: <Checkbox color="purple" bind:checked={cardStyle} inline />
+    </div>
+    {/if}
+  </div>
 </Section>
 <Section --sectionColumn="2/2" --sectionRow="2/2">
   <LOL section="Online Guides and Tools" title="Interactive CSS Instructions">
-    {@render entry("https://www.joshwcomeau.com/", "CSS Information! Seriously, this is the GOAT CSS interactive tutorial resource.", [], true)}
-    {@render entry("https://css-tricks.com/", "CSS Tricks -> Not as good as joshcomeau, but has css guides.")}
-    {@render entry("https://www.smashingmagazine.com/2024/01/css-border-image-property/", "CSS border-image explaination")}
-    {@render entry("https://en.wikipedia.org/wiki/Pythagorean_interval", "Useful ratios for heading sizes.")}
-    {@render entry("https://nekocalc.com/px-to-rem-converter", "px to rem converter")}
-    <li>
-      <a href="https://www.cleancss.com/" target="_blank">Kitchen Sink of Utilities</a>
-    </li>
-    <li>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout"
-        >Masonry Layout using CSS</a
-      >
-    </li>
+    {@render entry("https://www.joshwcomeau.com/", "CSS Information! Seriously, this is the GOAT CSS interactive tutorial resource.", [], cardStyle)}
+    {@render entry("https://css-tricks.com/", "CSS Tricks -> Not as good as joshcomeau, but has css guides.", [], cardStyle)}
+    {@render entry("https://www.smashingmagazine.com/2024/01/css-border-image-property/", "CSS border-image explaination", [], cardStyle)}
+    {@render entry("https://en.wikipedia.org/wiki/Pythagorean_interval", "Useful ratios for heading sizes.", [], cardStyle)}
+    {@render entry("https://nekocalc.com/px-to-rem-converter", "px to rem converter", [], cardStyle)}
+    {@render entry("https://www.cleancss.com/", "Kitchen Sink of Utilities", [], cardStyle)}
+    {@render entry("https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout", "Masonry Layout using CSS", [], cardStyle)}
   </LOL>
   <LOL title="Accessibility">
-    <li>
-      <a href="https://wave.webaim.org/" target="_blank" style="font-weight: normal"
-        >web accessability evaluation tool (WAVE)</a
-      >
-    </li>
+    {@render entry("https://wave.webaim.org/","web accessability evaluation tool (WAVE)", [], cardStyle)}
     <li>
       <LOL heading="Contrast Checking Grids">
-        <li>
-          <a href="https://contrast-grid.eightshapes.com/" target="_blank">Contrast Grid 1</a>
-        </li>
-        <li><a href="https://contrastgrid.com/" target="_blank">Contrast Grid 2</a></li>
+        {@render entry("https://contrast-grid.eightshapes.com/", "Contrast Grid 1", [], cardStyle)}
+        {@render entry("https://contrastgrid.com/", "Contrast Grid 2", [], cardStyle)}
         <LOL>
-          <li>
-            <a href="/contrast-grid.html">Contrast Grid I made with my color pallete</a>
-          </li>
+          {@render entry("/contrast-grid.html", "Contrast Grid I made with my color pallete", [], cardStyle)}
         </LOL>
       </LOL>
     </li>
-    <li>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank"
-        >mdn web docs_ARIA</a
-      >
-    </li>
+    {@render entry("https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA","mdn web docs_ARIA", [], cardStyle )}
     <li>
       <LOL heading="W3C Accessibility Documentation">
         <li>
@@ -160,6 +152,7 @@
         >Repo of Open-Liscensed SVG Vector Images and Icons</a
       >
     </li>
+    {@render entry("https://incompetech.com/music/royalty-free/music.html", "Royalty-Free Music", [], cardStyle)}
   </LOL>
   <LOL heading="Placeholder Content">
     <li>
