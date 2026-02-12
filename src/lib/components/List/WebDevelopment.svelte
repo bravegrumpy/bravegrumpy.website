@@ -12,7 +12,7 @@
   <div class="flex flex-row w-full justify-between items-center">
     <h2 class="font-heading text-3xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">Web Development</h2>
     {#if showStyleOption}
-    <div class="gap-5 flex-row justify-between font-pageSubtitle text-lg">
+    <div class="gap-5 flex flex-row justify-between font-pageSubtitle text-lg">
       Styled List: <Checkbox color="purple" bind:checked={cardStyle} inline />
     </div>
     {/if}
