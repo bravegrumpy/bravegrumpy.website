@@ -152,7 +152,7 @@
         >Repo of Open-Liscensed SVG Vector Images and Icons</a
       >
     </li>
-    {@render entry("https://incompetech.com/music/royalty-free/music.html", "Royalty-Free Music")}
+    {@render entry("https://incompetech.com/music/royalty-free/music.html", "Royalty-Free Music", [], cardStyle)}
   </LOL>
   <LOL heading="Placeholder Content">
     <li>
