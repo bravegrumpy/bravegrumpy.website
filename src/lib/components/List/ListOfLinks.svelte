@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Self from "$lib/components/List/ListOfLinks.svelte";
   import type { Snippet } from "svelte";
     import Section from "../Section.svelte";
   interface Props {
@@ -51,28 +52,33 @@
 </div>
 
 <script module>
-  export { entry };
+  export { entry, entryWithSublist };
 </script>
-{#snippet entry(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean)}
+{#snippet entry(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string)}
 <li>
     {#if cardStyle}
     <Section className="">
         {#if divLink}
         <div class="link divLink" aria-label={href} tabindex={0} role="link" onclick={() => window.open(href, "_blank")} onkeypress={() => window.location.href = href}>
-            <p>{text}</p>
+            <p>{text}</p> {after}
             {#if sublist}
                 {#if sublist.length > 0}
                 <ul>
                     {#each sublist as item}
-                    <li>{item}</li>
+                    <li>
+                      {#if typeof item === "string"}
+                        {item}
+                      {/if}
+                    </li>
                     {/each}
                 </ul>
                 {/if}
             {/if}
+            {@render children?.()}
         </div>
         {:else}
             <div class="link">
-                <a {href} rel="noreferrer nofollow" target="_blank">{text}</a>
+                <a {href} rel="noreferrer nofollow" target="_blank">{text}</a> {after}
                 {#if sublist}
                     {#if sublist.length > 0}
                         <ul>
@@ -82,11 +88,12 @@
                         </ul>
                     {/if}
                 {/if}
+                {@render children?.()}
             </div>
         {/if}
     </Section>
     {:else}
-    <a {href} rel="noreferrer nofollow" target="_blank">{text}</a>
+    <a {href} rel="noreferrer nofollow" target="_blank">{text}</a> {after}
         {#if sublist}
             {#if sublist.length > 0}
                 <ul>
@@ -96,8 +103,18 @@
                 </ul>
             {/if}
         {/if}
+        {@render children?.()}
     {/if}
 </li>
+{/snippet}
+
+{#snippet entryWithSublist(href: string, text: string, children?: Snippet)}
+  <li>
+    <p>Test</p>
+    <Self>
+      {@render children?.()}
+    </Self>
+  </li>
 {/snippet}
 
 <style>
@@ -169,7 +186,7 @@
       max-width: 90%;
       width: 50vw;
       padding: 10px 50px;
-      margin: 5px auto;
+      margin: 5px 0px 0px -20px;
     }
   }
 </style>
