@@ -5,6 +5,7 @@
   import { Checkbox } from 'flowbite-svelte';
 
   let cardStyle = $state(false);
+  let divAsLink = $state(false);
   let showStyleOption = $state(false);
 </script>
 
@@ -12,76 +13,39 @@
   <div class="flex flex-row w-full justify-between items-center">
     <h2 class="font-heading text-3xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">Web Development</h2>
     {#if showStyleOption}
-    <div class="gap-5 flex flex-row justify-between font-pageSubtitle text-lg">
-      Styled List: <Checkbox color="purple" bind:checked={cardStyle} inline />
+    <div class="gap-5 flex-row justify-between font-pageSubtitle text-lg">
+      <span>Styled List: <Checkbox color="purple" bind:checked={cardStyle} inline /></span>
+      {#if cardStyle}
+        <span>Div as Link <Checkbox color="purple" bind:checked={divAsLink} inline /></span>
+      {/if}
     </div>
     {/if}
   </div>
 </Section>
 <Section --sectionColumn="2/2" --sectionRow="2/2">
   <LOL section="Online Guides and Tools" title="Interactive CSS Instructions">
-    {@render entry("https://www.joshwcomeau.com/", "CSS Information! Seriously, this is the GOAT CSS interactive tutorial resource.", [], cardStyle)}
-    {@render entry("https://css-tricks.com/", "CSS Tricks -> Not as good as joshcomeau, but has css guides.", [], cardStyle)}
-    {@render entry("https://www.smashingmagazine.com/2024/01/css-border-image-property/", "CSS border-image explaination", [], cardStyle)}
-    {@render entry("https://en.wikipedia.org/wiki/Pythagorean_interval", "Useful ratios for heading sizes.", [], cardStyle)}
-    {@render entry("https://nekocalc.com/px-to-rem-converter", "px to rem converter", [], cardStyle)}
-    {@render entry("https://www.cleancss.com/", "Kitchen Sink of Utilities", [], cardStyle)}
-    {@render entry("https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout", "Masonry Layout using CSS", [], cardStyle)}
+    {@render entry("https://www.joshwcomeau.com/", "CSS Information! Seriously, this is the GOAT CSS interactive tutorial resource.", [], cardStyle, divAsLink)}
+    {@render entry("https://css-tricks.com/", "CSS Tricks -> Not as good as joshcomeau, but has css guides.", [], cardStyle, divAsLink)}
+    {@render entry("https://www.smashingmagazine.com/2024/01/css-border-image-property/", "CSS border-image explaination", [], cardStyle, divAsLink)}
+    {@render entry("https://en.wikipedia.org/wiki/Pythagorean_interval", "Useful ratios for heading sizes.", [], cardStyle, divAsLink)}
+    {@render entry("https://nekocalc.com/px-to-rem-converter", "px to rem converter", [], cardStyle, divAsLink)}
+    {@render entry("https://www.cleancss.com/", "Kitchen Sink of Utilities", [], cardStyle, divAsLink)}
+    {@render entry("https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout", "Masonry Layout using CSS", [], cardStyle, divAsLink)}
   </LOL>
   <LOL title="Accessibility">
-    {@render entry("https://wave.webaim.org/","web accessability evaluation tool (WAVE)", [], cardStyle)}
-    <li>
-      <LOL heading="Contrast Checking Grids">
-        {@render entry("https://contrast-grid.eightshapes.com/", "Contrast Grid 1", [], cardStyle)}
-        {@render entry("https://contrastgrid.com/", "Contrast Grid 2", [], cardStyle)}
-        <LOL>
-          {@render entry("/contrast-grid.html", "Contrast Grid I made with my color pallete", [], cardStyle)}
-        </LOL>
-      </LOL>
-    </li>
-    {@render entry("https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA","mdn web docs_ARIA", [], cardStyle )}
-    <li>
-      <LOL heading="W3C Accessibility Documentation">
-        <li>
-          <a href="https://www.w3.org/WAI/standards-guidelines/aria/" target="_blank"
-            >W3C ARIA summary</a
-          >
-        </li>
-      </LOL>
-    </li>
+    {@render entry("https://wave.webaim.org/","web accessability evaluation tool (WAVE)", [], cardStyle, divAsLink, ContrastChecking)}
+    {@render entry("https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA","mdn web docs_ARIA", [], cardStyle, divAsLink, W3CAccessibilityDocumentation )}
   </LOL>
   <LOL title="Web Specifications">
-    <li>
-      <a href="https://spec.commonmark.org/0.31.2/" target="_blank">Official Markdown Spec</a>
-    </li>
+    {@render entry("https://spec.commonmark.org/0.31.2/", "Official Markdown Spec", [], cardStyle, divAsLink)}
   </LOL>
   <LOL title="Color Pallette Tools" heading="Referenced Directly in Tailwind">
-    <li>
-      <a href="https://uicolors.app/create" target="_blank"
-        >Tailwind uicolors app -- makes color in style of tailwind colors</a
-      >
-    </li>
-    <li><a href="https://palettte.app/" target="_blank">palette app</a></li>
-    <li>
-      <a href="https://colorbox.io/" target="_blank">colorbox.io</a>
-
-      <LOL heading="My Color Pallette">
-        <li>
-          <a
-            href="https://colorbox.io/?c0=%26p%24s%24%3D11%26p%24h%24st%24%3D110%26p%24h%24e%24%3D153%26p%24h%24c%24%3Deqo%26p%24sa%24st%24%3D0.08%26p%24sa%24e%24%3D1%26p%24sa%24r%24%3D1%26p%24sa%24c%24%3Deqo%26p%24b%24st%24%3D1%26p%24b%24e%24%3D0.2%26p%24b%24c%24%3Deqti%26o%24n%24%3DGreen%26o%24ms%24%3D0%2C1%26o%24ro%24%3Dcw&c1=%26p%24s%24%3D11%26p%24h%24st%24%3D271%26p%24h%24e%24%3D210%26p%24h%24c%24%3Deqo%26p%24sa%24st%24%3D0.07%26p%24sa%24e%24%3D0.99%26p%24sa%24r%24%3D1%26p%24sa%24c%24%3Deqo%26p%24b%24st%24%3D1%26p%24b%24e%24%3D0.02%26p%24b%24c%24%3Deci%26o%24n%24%3DNew+Purple%26o%24ro%24%3Dcw%26o%24ms%24%3D0%2C1"
-            target="_blank"
-          >
-            I made a pallette here
-          </a>. This was from me experimenting.
-        </li>
-      </LOL>
-    </li>
-    <li>
-      <a href="https://atmos.style/" target="_blank">Atmos color pallette toolset</a>
-    </li>
-    <li>
-      <a href="https://colorandcontrast.com/#/" target="_blank">Interactive Guide to colors</a>
-    </li>
+    {@render entry("https://uicolors.app/create","Tailwind uicolors app -- makes color in style of tailwind colors", [], cardStyle, divAsLink )}
+    {@render entry("https://palettte.app/", "palette app", [], cardStyle, divAsLink)}
+    {@render entry("https://colorbox.io/", "colorbox.io", [], cardStyle, divAsLink, coolorChildren)}
+    {@render entry("https://atmos.style/", "Atmos color pallette toolset", [], cardStyle, divAsLink)}
+    {@render entry("https://colorandcontrast.com/#/", "Interactive Guide to colors")}
+    {@render entry("https://matthewstrom.com/writing/how-to-pick-the-least-wrong-colors/", "Mathematical tools for generating color pallettes." )}
     <li>
       <a href="https://matthewstrom.com/writing/how-to-pick-the-least-wrong-colors/" target="_blank"
         >Mathematical tools for generating color pallettes.</a
@@ -152,7 +116,7 @@
         >Repo of Open-Liscensed SVG Vector Images and Icons</a
       >
     </li>
-    {@render entry("https://incompetech.com/music/royalty-free/music.html", "Royalty-Free Music", [], cardStyle)}
+    {@render entry("https://incompetech.com/music/royalty-free/music.html", "Royalty-Free Music", [], cardStyle, divAsLink)}
   </LOL>
   <LOL heading="Placeholder Content">
     <li>
@@ -178,6 +142,13 @@
     <li>
       <a href="https://placedog.net/" target="_blank">Placeholder Dogs with API</a>
     </li>
+  </LOL>
+  <LOL heading="Useful scripts">
+    {@render entry("https://github.com/MarketingPipeline/Markdown-Tag", "Rendering Markdown in HTML file", [], cardStyle, divAsLink)}
+    {@render entry("https://github.com/ncase/nutshell", "Expandable Explainations", [], cardStyle, divAsLink)}
+    {#snippet text()}
+      <p>Useful javascript utilites that can be "installed" via CDN and script tag.</p>
+    {/snippet}
   </LOL>
   <LOL title="Online Development Environments">
     <li>
@@ -284,4 +255,30 @@
     However, resources for true 3D, will be under the Blender section or a 3D tools section,
     depending on relevancy.
   </p>
+{/snippet}
+
+
+{#snippet coolorChildren()}
+  <LOL heading="My Color Pallette">
+    {@render entry("https://colorbox.io/?c0=%26p%24s%24%3D11%26p%24h%24st%24%3D110%26p%24h%24e%24%3D153%26p%24h%24c%24%3Deqo%26p%24sa%24st%24%3D0.08%26p%24sa%24e%24%3D1%26p%24sa%24r%24%3D1%26p%24sa%24c%24%3Deqo%26p%24b%24st%24%3D1%26p%24b%24e%24%3D0.2%26p%24b%24c%24%3Deqti%26o%24n%24%3DGreen%26o%24ms%24%3D0%2C1%26o%24ro%24%3Dcw&c1=%26p%24s%24%3D11%26p%24h%24st%24%3D271%26p%24h%24e%24%3D210%26p%24h%24c%24%3Deqo%26p%24sa%24st%24%3D0.07%26p%24sa%24e%24%3D0.99%26p%24sa%24r%24%3D1%26p%24sa%24c%24%3Deqo%26p%24b%24st%24%3D1%26p%24b%24e%24%3D0.02%26p%24b%24c%24%3Deci%26o%24n%24%3DNew+Purple%26o%24ro%24%3Dcw%26o%24ms%24%3D0%2C1", "I made a pallette here", [], cardStyle, divAsLink, undefined, "This was from me experimenting.")}
+  </LOL>
+{/snippet}
+
+{#snippet ContrastChecking()}
+  <LOL heading="Contrast Checking Grids">
+    {@render entry("https://contrast-grid.eightshapes.com/", "Contrast Grid 1", [], cardStyle, divAsLink)}
+    {@render entry("https://contrastgrid.com/", "Contrast Grid 2", [], cardStyle, divAsLink, gridImade)}
+  </LOL>
+{/snippet}
+
+{#snippet gridImade()}
+  <LOL>
+    {@render entry("/contrast-grid.html", "Contrast Grid I made with my color pallete", [], cardStyle, divAsLink)}
+  </LOL>
+{/snippet}
+
+{#snippet W3CAccessibilityDocumentation()}
+  <LOL heading="W3C Accessibility Documentation">
+    {@render entry("https://www.w3.org/WAI/standards-guidelines/aria/","W3C ARIA summary", [], cardStyle, divAsLink)}
+  </LOL>
 {/snippet}
