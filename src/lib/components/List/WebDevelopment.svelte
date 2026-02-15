@@ -6,14 +6,14 @@
 
   let cardStyle = $state(false);
   let divAsLink = $state(false);
-  let showStyleOption = $state(false);
+  let showStyleOption = $state(true);
 </script>
 
 <Section --sectionColumn="2/2" --sectionRow="2/2">
   <div class="flex flex-row w-full justify-between items-center">
     <h2 class="font-heading text-3xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">Web Development</h2>
     {#if showStyleOption}
-    <div class="gap-5 flex-row justify-between font-pageSubtitle text-lg">
+    <div class="gap-5 flex flex-row justify-between font-pageSubtitle text-lg">
       <span>Styled List: <Checkbox color="purple" bind:checked={cardStyle} inline /></span>
       {#if cardStyle}
         <span>Div as Link <Checkbox color="purple" bind:checked={divAsLink} inline /></span>
