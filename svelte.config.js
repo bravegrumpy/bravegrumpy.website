@@ -1,26 +1,18 @@
+import adapter from '@sveltejs/adapter-node';
 import { mdsvex } from 'mdsvex';
-import adapter from 'amplify-adapter';
+// import adapter from 'amplify-adapter';
+
 // import adapter from '@sveltejs/adapter-auto';
 // import adapter from '@sveltejs/adapter-static';
-
 /** @type {import('@sveltejs/kit').Config}*/
 const config = {
-  kit: {
-    // adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
-    // If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-    // See https://svelte.dev/docs/kit/adapters for more information about adapters.
-    adapter: adapter(),
-  },
+  kit: { adapter: adapter() },
   checkOrigin: true,
   trustedOrigins: ["https://*.bravegrumpy.com", "*.ncase.me"],
   preprocess: [
-    mdsvex({
-      smartypants: {
-        quotes: true,
-        dashes: 'oldschool'
-      }
-    })
+    mdsvex({ smartypants: { quotes: true, dashes: 'oldschool' } })
   ],
   extensions: ['.svelte', '.svx']
 };
+
 export default config;
