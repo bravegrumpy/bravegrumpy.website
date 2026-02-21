@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+
   import Section from '$lib/components/Section.svelte';
   import Aside from '$lib/components/Aside.svelte';
 
@@ -8,58 +9,73 @@
 
   import UnderConstruction from '$lib/components/UnderConstruction.svelte';
   import Consent from '$lib/components/Root/Consent.svelte';
+  
+  import { Button, Modal, Table, Input } from 'flowbite-svelte';
 
-  import { Button, Modal, Table } from 'flowbite-svelte';
+  let defaultModel = $state<boolean>(true);
 
-  let defaultModel = $state(true);
+  let selectedYear = $state<number>(2025);
 
-  let selectedYear = $state(2025);
+  let currentYear = $state<number>(20205);
 
-  let currentYear = $state(2025);
-
-  let age = $derived(2025 - selectedYear);
+  let age = $derived(currentYear - selectedYear);
 
   function handleClick() {
-    if (selectedYear <= 2004) {
-      defaultModel = !defaultModel;
-      console.log('Toggled, New value:', defaultModel);
+    if (selectedYear <= (currentYear - 18)) {
+        defaultModel = !defaultModel;
+        console.log('Toggled, New value:', defaultModel);
     } else {
-      window.location.href = 'https://www.google.com';
+        window.location.href = 'https://www.google.com';
     }
   }
 
-  // window.alert("I agree that I am over the age of 18, and  consent to being exposed to adult content.");
+  
+  import { page } from "$app/state";
 
-  let { data } = $props();
-
-  const cookieChange = $derived(data.visited ? 'back' : '');
-
- 
+  let cookieChange = $derived(page.data.visited ? 'back' : '');
 </script>
 
-<Article --articleRow="2/3" --articleColumn="1/4">
-  <Section>
-    <h2 class="font-heading text-3xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">
-      BraveGrumpy Website
-    </h2>
-  </Section>
-  <Section>
-    <h3>Welcome {cookieChange} to the Brave Grumpy homepage.</h3>
+<!--Modal bind:open={defaultModel} size={"xs"} dismissable={false}>
+<!--HACK: Decide if I actually want this -->
+<div class="flex flex-col justify-center items-stretch bg-bravegrumpy-accent2a dark:bg-bravegrumpy-black dark:text-bravegrumpy-accent2a rounded-[5px] border-[2px] border-solid border-current text-bravegrumpy-black w-4/5 mx-auto p-5">
 
-    <p>Click on the links to explore content.</p>
+I agree that I am over the age of 18 and consent to being exposed to adult content
 
-    <h4>Notes:</h4>
+<div class="w-full flex flex-row justify-around">
 
-    <p>
-      Be aware that this website is best viewed in a landscape (1440 x 1080) / hd display. I *do*
-      have a mobile format, but it does not work as well. The small square to the right of the
-      nav-links is a theme toggle. For some reason, the icon I placed in it are not showing up.
-    </p>
-  </Section>
+<Button color="green" onclick={() => {defaultModel = !defaultModel}}>YES</Button>
+
+<Button color="red" onclick={() => {window.location.href = "https://www.google.com"}}>No</Button>
+
+</div>
+
+</div>
+
+</Modal-->
+
+
+<!--Button class="font-heading text-3xl" onclick={() => defaultModel = !defaultModel}>Show Modal</Button -->
+
+<Article --articleRow="2/3"  --articleColumn="1/4">
+    <Section>
+        <h2 class="font-heading text-3xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">
+            BraveGrumpy Website
+        </h2>
+    </Section>
+    <Section>
+        <h3>Welcome {cookieChange} to the Brave Grumpy homepage.</h3>
+
+        Click on the links to explore content.
+
+        #### Notes:
+        
+        Be aware that this website is best viewed in a landscape (1440 x 1080) / hd display. I *do* have a mobile format, but it does not work as well. The small square to the right of the nav-links is a theme toggle. For some reason, the icon I placed in it are not showing up.
+
+    </Section>
     <Content />
-  <Section className="hidden">
-
-## Types of Content
+    <Section className="hidden">
+    
+<h2>Types of Content</h2>
 
 I only want people over the age of 18 to view this site. Adult content will have content warnings before they occur, but I also do not want to be liable for a minor reading the content of this website. 
 
@@ -70,16 +86,14 @@ Types of Adult Content Present
 | explicit language | stream of conciousness, llorem ipsum filler text | WRITTEN | ad-hoc not meant to be crude. |
 | graphic sex / violence | creative writing, fan fiction, will be tagged ahead of time | WRITTEN | often drafts for or cross-posted on [AO3](https://archiveofourown.org/), under the <q>Explicit</q> or <q>Creator chose Not to Use Archvie Warnings</q> tags.|
 | veiled sexual references & innuendo | assets within renders | visual | Used as visual gags, or easter eggs. Often hidden or obscured. Not meant to be suggestive |
-  
-  </Section>
+    </Section>
 </Article>
 
+<!--Aside --crsv="0" --slnt="0" --asideHeight="fit-content">
 
-<!--Aside --crsv="0" --slnt="0" --asideHeight="fit-content"  >
-  
 <h2>Crafts shown off here:</h2>
 
 Writing
 
-Resources to Enhanace Creativity
+Resources to Enhance Creativity
 </Aside-->
