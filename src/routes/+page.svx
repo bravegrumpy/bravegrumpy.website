@@ -36,7 +36,7 @@
 </script>
 
 <!--Modal bind:open={defaultModel} size={"xs"} dismissable={false}>
-<!--HACK: Decide if I actually want this -->
+<!--HACK: #309 Decide if I actually want this -->
 <div class="flex flex-col justify-center items-stretch bg-bravegrumpy-accent2a dark:bg-bravegrumpy-black dark:text-bravegrumpy-accent2a rounded-[5px] border-[2px] border-solid border-current text-bravegrumpy-black w-4/5 mx-auto p-5">
 
 I agree that I am over the age of 18 and consent to being exposed to adult content
