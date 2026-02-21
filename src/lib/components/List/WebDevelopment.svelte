@@ -7,8 +7,6 @@
   let cardStyle = $state(false);
   let divLink = $state(false);
   let showStyleOption = $state(false);
-
-  //TODO: #310 Continue converting list elements into entry snippet components
 </script>
 
 <Section --sectionColumn="2/2" --sectionRow="2/2">
