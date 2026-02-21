@@ -6,7 +6,7 @@
 
   let cardStyle = $state(false);
   let divAsLink = $state(false);
-  let showStyleOption = $state(false);
+  let showStyleOption = $state(true);
 </script>
 
 <Section --sectionColumn="2/2" --sectionRow="2/2">
