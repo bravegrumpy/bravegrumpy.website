@@ -1,5 +1,6 @@
 <script lang="ts">
   import Self from "$lib/components/List/ListOfLinks.svelte";
+  import Entry from "$lib/components/List/ListEntry.svelte";
   import type { Snippet } from "svelte";
     import Section from "../Section.svelte";
   interface Props {
@@ -24,19 +25,19 @@
 
 <div class="ListOfLinks" {id}>
   {#if chapter !== ''}
-    <h2 class="font-heading text-3xl text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a">
+    <h2 class="font-heading text-bravegrumpy-brand3 dark:text-bravegrumpy-accent2a text-3xl">
       {chapter}
     </h2>
   {/if}
   {#if section !== ''}
-    <h3 class="fontHeading my-4 text-2xl">{section}</h3>
+    <h3 class="my-4 text-2xl fontHeading">{section}</h3>
   {/if}
   {#if title !== ''}
-    <h4 class="fontHeading text-xl">{title}</h4>
+    <h4 class="text-xl fontHeading">{title}</h4>
   {/if}
 
   {#if heading !== ''}
-    <h5 class="fontHeading text-lg">{heading}</h5>
+    <h5 class="text-lg fontHeading">{heading}</h5>
   {/if}
 
   <div>
@@ -52,9 +53,14 @@
 </div>
 
 <script module>
-  export { entry, entryWithSublist };
+  export { entry };
 </script>
-{#snippet entry(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string)}
+
+{#snippet entryNew(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string, local?: boolean)}
+  <Entry {href} {text} {sublist} {cardStyle} {divLink} {children} {after} {local} />
+{/snippet}
+
+{#snippet entry(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string, local?: boolean)}
 <li>
     {#if cardStyle}
     <Section className="">
@@ -106,15 +112,6 @@
         {@render children?.()}
     {/if}
 </li>
-{/snippet}
-
-{#snippet entryWithSublist(href: string, text: string, children?: Snippet)}
-  <li>
-    <p>Test</p>
-    <Self>
-      {@render children?.()}
-    </Self>
-  </li>
 {/snippet}
 
 <style>
