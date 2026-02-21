@@ -2,7 +2,10 @@
 @component
 List Entry component
 @prop {string} [text] - The text to display
-
+@prop {href} [string] - The location the link points to
+@prop text [string] - The displayed text for the `<a>`
+@prop sublist [Array<string | Snippet>] This list goes within a new `<ul>` that is placed inside *this* `<li>`.
+@prop cardStyle [boolean] - card-like styling for each list item
 -->
 
 <script lang="ts">
@@ -14,9 +17,11 @@ List Entry component
         href: string;
         /** the "text" for the link*/
         text: string;
-        /** an array that */
+        /** an array to hold items in a new unordered list */
         sublist?: Array<string | Snippet>;
+        /** Do you want card-like styling on each list item? */
         cardStyle?: boolean;
+        /** Do you want a `<div>` element to act as the anchor tag typically does? */
         divLink?: boolean;
         children?: Snippet;
         after?: string;
@@ -39,6 +44,7 @@ List Entry component
 </script>
 
 <li>
+<!--TODO: #311 properly implement this!-->
   <p>This is a <code class="text-gray-800 dark:text-gray-200">&lt;li&gt;</code> tag.</p>
   {#if cardStyle}
   <div><p>Card Style</p></div>

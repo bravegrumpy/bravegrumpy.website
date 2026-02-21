@@ -56,6 +56,7 @@
   export { entry };
 </script>
 
+<!--HACK: #312 I'm using the snippet name to decide whether I see the working implementation or the new implementation.-->
 {#snippet entryNew(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string, local?: boolean)}
   <Entry {href} {text} {sublist} {cardStyle} {divLink} {children} {after} {local} />
 {/snippet}
