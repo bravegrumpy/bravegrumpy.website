@@ -56,8 +56,8 @@
   export { entry };
 </script>
 
-{#snippet entryNew(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string, local?: boolean)}
-  <Entry {href} {text} {sublist} {cardStyle} {divLink} {children} {after} {local} />
+{#snippet entryNew(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string, local?: boolean, lnk?: boolean)}
+  <Entry {href} {text} {sublist} {cardStyle} {divLink} {children} {after} {local} {lnk} />
 {/snippet}
 
 {#snippet entry(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string, local?: boolean)}

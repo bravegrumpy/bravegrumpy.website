@@ -1,6 +1,7 @@
 <script lang="ts">
   import Section from '$lib/components/Section.svelte';
   import LOL, { entry } from '$lib/components/List/ListOfLinks.svelte';
+  import Entry from "$lib/components/List/ListEntry.svelte";
 
   import { Checkbox } from 'flowbite-svelte';
 
@@ -68,29 +69,12 @@
     {@render entry("https://incompetech.com/music/royalty-free/music.html", "Royalty-Free Music", [], cardStyle, divLink)}
   </LOL>
   <LOL heading="Placeholder Content">
-    <li>
-      <a href="https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators" target="_blank"
-        >List of Placeholder text generators</a
-      >
-    </li>
-    <li>
-      <a href="https://loremipsum.io/21-of-the-best-placeholder-image-generators" target="_blank"
-        >List of placeholder image sources</a
-      >
-    </li>
-    <li>
-      <a href="https://jsonplaceholder.typicode.com/" target="_blank">Placeholder JSON data</a>
-    </li>
-    <li>
-      In both of the subsequent resources, when I say "API" I mean a way to specificy requirements
-      in URL
-    </li>
-    <li>
-      <a href="https://placehold.co/" target="_blank">Blank Placeholder Images with API</a>
-    </li>
-    <li>
-      <a href="https://placedog.net/" target="_blank">Placeholder Dogs with API</a>
-    </li>
+    {@render entry("https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators", "List of Placeholder text generators", [], cardStyle, divLink)}
+    {@render entry("https://loremipsum.io/21-of-the-best-placeholder-image-generators", "List of placeholder image sources", [], cardStyle, divLink)}
+    {@render entry("https://jsonplaceholder.typicode.com/", "Placeholder JSON data", [], cardStyle, divLink)}
+    {@render entry("", "In both of the subsequent resources, when I say \"API\" I mean a way to specificy requirements in URL", [], cardStyle, divLink, undefined, "", true, false)}
+    {@render entry("https://placehold.co/", "Blank Placeholder Images with API", [], cardStyle, divLink)}
+    {@render entry("https://placedog.net/", "Placeholder Dogs with API", [], cardStyle, divLink)}
   </LOL>
   <LOL heading="Useful scripts">
     {@render entry("https://github.com/MarketingPipeline/Markdown-Tag", "Rendering Markdown in HTML file", [], cardStyle, divLink)}
@@ -100,29 +84,14 @@
     {/snippet}
   </LOL>
   <LOL title="Online Development Environments">
-    <li>
-      <a href="https://codepen.io/" target="_blank">Codepen -- Easy, can fit in iframe, static</a>
-    </li>
-    <li>
-      <a href="https://stackblitz.com/" target="_blank"
-        >Stackblitz -- Full blown IDE-- Fits in iframe</a
-      >
-    </li>
-    <li>
-      <a href="https://jsfiddle.net/" target="_blank"
-        >JSFiddle -- Full blown IDE, no need to sign in</a
-      >
-    </li>
-    <li>
-      <a href="https://playcode.io/html" target="_blank"
-        >PlayCode -- Has some boilerplate, no need to sign in</a
-      >
-    </li>
+    {@render entry("https://codepen.io/", "Codepen -- Easy, can fit in iframe, static", [], cardStyle, divLink)}
+    {@render entry("https://stackblitz.com/", "Stackblitz -- Full blown IDE-- Fits in iframe", [], cardStyle, divLink)}
+    {@render entry("https://jsfiddle.net/", "JSFiddle -- Full blown IDE, no need to sign in", [], cardStyle, divLink)}
+    {@render entry("https://playcode.io/html", "PlayCode -- Has some boilerplate, no need to sign in", [], cardStyle, divLink)}
   </LOL>
   <LOL title="Links to Unicode and ascii characters" heading="Unicode">
-    <li>
-      <a href="https://symbl.cc/en/unicode-table/" target="_blank">All unicode symbols</a>
-    </li>
+  {@render entry("https://symbl.cc/en/unicode-table/", "All unicode symbols", [], cardStyle, divLink)}
+  {@render entry("https://symbl.cc/en/unicode-table/#box-drawing", "Box Drawing Unicode Symbols (good for representing file trees)", [], cardStyle, divLink)}
     <li>
       <a href="https://symbl.cc/en/unicode-table/#box-drawing" target="_blank"
         >Box Drawing Unicode Symbols (good for representing file trees)
@@ -187,11 +156,7 @@
     </li>
   </LOL>
   <LOL title="Understanding Containerization and Docker">
-    <li>
-      <a href="https://depot.dev/blog/docker-clear-cache" target="_blank">
-        Deleting unwanted Docker data
-      </a>
-    </li>
+    {@render entry("https://depot.dev/blog/docker-clear-cache", "Deleting unwanted Docker data", [], cardStyle, divLink)}
   </LOL>
 </Section>
 
@@ -222,7 +187,7 @@
 
 {#snippet gridImade()}
   <LOL>
-    {@render entry("/contrast-grid.html", "Contrast Grid I made with my color pallete", [], cardStyle, divLink)}
+    <Entry href="/contrast-grid.html" text="Contrast Grid I made with my color pallete" local/>
   </LOL>
 {/snippet}
 
