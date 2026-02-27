@@ -44,7 +44,6 @@ scratch*.*
 .amplify
 amplify_outputs*
 amplifyconfiguration*
-/generated/prisma
 
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
