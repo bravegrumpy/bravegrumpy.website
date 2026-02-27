@@ -7,11 +7,17 @@
     import { page } from "$app/state";
 
     let users = $derived(page.data.allUsers || false);
-    let todoList = $derived(page.data.todoList || false);
+    // let todoList = $derived(page.data.todoList || false);
 
-    import { Breadcrumb } from "flowbite-svelte";
+    import { Breadcrumb, Input, Button } from "flowbite-svelte";
 
     import { bci, breadcrumbClass} from "$lib/components/Blog/BlogBreadcrumbs.svelte";
+
+    import { useQuery } from "convex-svelte";
+    import { api } from "$lib/../convex/_generated/api"
+
+    const query = $derived(useQuery(api.tasks.get));
+    let todoList = $derived(query.data);
 </script>
 
 <Article --articleRow="1/2" --articleColumn="1/3">
@@ -33,8 +39,7 @@
     </Aside>
 </Article>
 <Article --articleColumn="2/4" --articleRow="2/3">
-    <Heading>Using a Database</Heading>
-    <Section>
+    <Heading>Using a Database</Heading>  <Section>
         <p>This is my extremely crude attempt at querying a database. I plan to add more crud actions once I figure them out.</p>
         <p>I am interfacing with exactly one table in my database</p>
         <p>It is interesting that I initially decided on <a href="https://www.prisma.io" target="_blank" rel="noreferrer nofollow">Prisma</a> as the ORM.  I have been using <a href="https://orm.drizzle.team/" target="_blank" rel="nofollow noreferrer">drizzle</a>. I'm curious to see if it functions in the node server set up by <a href="https://aws.amazon.com/amplify/" target="_blank" rel="nofollow noreferrer">Amplify</a>.</p>
@@ -43,7 +48,7 @@
         {#each users as {id, email, name} (id)}
         <li class="dark:text-bravegrumpy-brand5 text-bravegrumpy-brand3">
             <strong class="font-heading">User {id}:</strong>
-            <ul class="bg-bravegrumpy-brand2/20 rounded-sm text-bravegrumpy-brand6 dark:text-bravegrumpy-brand4 border-[2px] border-current">
+            <ul class="bg-bravegrumpy-brand2/20 rounded-[5px] text-bravegrumpy-brand6 dark:text-bravegrumpy-brand4 border-[2px] border-current">
                 <li class="indent-5">Name: {name}</li>
                 <li class="indent-5"> Email: {email}</li>
             </ul>
@@ -53,5 +58,20 @@
         {:else if todoList}
         <p>{JSON.stringify(todoList)}</p>
         {/if}
+    </Section>
+</Article>
+<Article ----articleColumn="2/3" --articleRow="3/4">
+    <Section>
+        <form method="POST" action="?/add">
+            <label class="flex flex-row gap-5 items-center my-5 border-2 border-solid border-current rounded-[5px] px-5 py-2">
+                Name: 
+                <Input type="text" name="name" class="inline" />
+            </label>
+            <label class="flex flex-row gap-5 items-center my-5 border-2 border-solid border-current rounded-[5px] px-5 py-2">
+                Email:
+                <Input name="email" type="email" class="inline" />
+            </label>
+            <Button type="submit">Submit </Button>
+        </form>
     </Section>
 </Article>

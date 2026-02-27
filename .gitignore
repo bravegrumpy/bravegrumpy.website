@@ -32,6 +32,13 @@ scratch*.*
 **scratch.*
 **/*scratch/*.*
 **old**
+**archive**
+**/archive**
+**/archive/**
+**archive.*
+**/*archive**
+**/*archive.*
+**/*archive*/*.*
 
 # amplify
 .amplify
