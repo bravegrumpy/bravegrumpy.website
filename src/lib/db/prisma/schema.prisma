@@ -1,0 +1,145 @@
+generator client {
+  provider = "prisma-client"
+  output   = "./_generated"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Artist {
+  id         String  @id
+  name       String
+  instrument String?
+  Song       Song[]
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+  published Boolean  @default(false)
+  authorId  String?
+  User      User?    @relation(fields: [authorId], references: [id])
+}
+
+model Song {
+  id       String   @id
+  title    String
+  length   Int?
+  album    String
+  genre    String
+  artistId String?
+  lyrics   String[]
+  Artist   Artist?  @relation(fields: [artistId], references: [id])
+}
+
+model User {
+  id    String     @id @default(uuid())
+  name  String?
+  email String  @unique
+  emailVerified DateTime?
+  image String?
+  accounts  Account[]
+  sessions  Session[]
+  Authenticator Authenticator[]
+
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  role  Role    @default(USER)
+  Post  Post[]
+}
+
+model Account {
+  userId      String
+  type        String
+  provider    String
+  providerAccountId String
+  refresh_token   String?
+  access_token    String?
+  expires_at      Int?
+  token_type      String?
+  scope           String?
+  id_token        String?
+  session_state   String?
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  user User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([provider, providerAccountId])
+}
+
+model Session {
+  sessionToken    String    @unique
+  userId          String
+  expires         DateTime
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model VerificationToken {
+  identifier    String
+  token         String
+  expires       DateTime
+
+  @@id([identifier, token])
+}
+
+model Authenticator {
+  credentialID          String    @unique
+  userId                String
+  providerAccountId     String
+  credentialPublicKey   String
+  counter               Int
+  credentialDeviceType  String
+  credentialBackedUp    Boolean
+  transports            String?
+
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, credentialID])
+}
+
+enum Role {
+  USER
+  ADMIN
+  LIMITED
+}
+
+model Instrument {
+  id          String              @id @default(uuid())
+  family      IntrumentFamily?
+}
+
+enum IntrumentFamily {
+  WOODWIND
+  BRASS
+  STRINGS
+  PRECUSSION
+}
+
+enum MusicalKey {
+  Ab
+  A
+  Ash
+  Bb
+  B
+  C
+  Csh
+  Db
+  D
+  Dsh
+  Eb
+  E
+  F
+  Fsh
+  Gb
+  G
+  Gsh
+}

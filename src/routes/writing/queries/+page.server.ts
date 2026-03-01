@@ -1,14 +1,19 @@
 import type { PageServerLoad } from "./$types";
 import type { Actions } from "./$types";
-import { fail } from "@sveltejs/kit";
+import { fail, error } from "@sveltejs/kit";
 
 import { prisma } from "$lib/db/prisma";
 
 export const load: PageServerLoad = async () => {
-    const allUsers = await prisma.user.findMany();
-    return {
-        allUsers
+    if (! (await prisma )) {
+        return error(500, { message: "Prisma instance not loaded"})
     }
+    if (! (await prisma.user)) {
+        return error(505, { message: "Cannot Query User Table"})
+    }
+
+    const allUsers = await prisma.user.findMany();
+    return { allUsers }
 }
 
 export const actions = {

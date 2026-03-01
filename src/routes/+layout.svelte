@@ -16,8 +16,8 @@
   setupConvex(PUBLIC_CONVEX_URL);
 
   import { useQuery } from 'convex-svelte';
-  import { api } from "$lib/../convex/_generated/api"
-    import { Alert } from 'flowbite-svelte';
+  import { api } from "$lib/db/convex/_generated/api"
+  import { Alert } from 'flowbite-svelte';
 
   const query = $derived(useQuery(api.navigation.get))
 </script>

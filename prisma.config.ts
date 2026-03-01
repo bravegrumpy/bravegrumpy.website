@@ -4,9 +4,9 @@ import "dotenv/config";
 import { defineConfig } from "prisma/config";
 
 export default defineConfig({
-  schema: "prisma/schema.prisma",
+  schema: "src/lib/db/prisma/schema.prisma",
   migrations: {
-    path: "prisma/migrations",
+    path: "src/lib/db/prisma/migrations",
   },
   datasource: {
     url: process.env["DATABASE_URL"],

@@ -23,16 +23,20 @@
         text: 'This is the third link'
       }
     ],
-    slug = '/'
+    slug = '/',
+    borderLeft = '0px',
+    borderRight = '5px',
+    borderRadiusLeft = '0px',
+    borderRadiusRight = '5px'
   } = $props();
 </script>
 
 <aside class="aside">
   {#each references as ref (ref.id)}
     {#if ref.active != undefined}
-      <SideNavButton id={ref.id} href={ref.href} text={ref.text} active={ref.active} />
+      <SideNavButton id={ref.id} href={ref.href} text={ref.text} data-active={ref.active} --borderLeft={borderLeft} --borderRight={borderRight} --borderRadiusLeft={borderRadiusLeft} --borderRadiusRight={borderRadiusRight}/>
     {:else}
-      <SideNavButton id={ref.id} href={ref.href} text={ref.text} {slug} />
+      <SideNavButton id={ref.id} href={ref.href} text={ref.text} {slug} --borderLeft={borderLeft} --borderRight={borderRight} --borderRadiusLeft={borderRadiusLeft} --borderRadiusRight={borderRadiusRight}/>
     {/if}
   {/each}
 </aside>
@@ -43,7 +47,7 @@
     display: flex;
     flex-direction: column;
     gap: 13px;
-    margin-left: -20px;
+    margin-left: var(--marginLeft, -20px);
     grid-column: 1 / 1;
     grid-row: var(--sidenavRow, '1/1');
   }

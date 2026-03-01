@@ -64,9 +64,14 @@
     width: 100%;
     font-size: var(--fontSize, 1.5rem);
     border: 5px solid currentColor;
-    border-left: 0px;
+    border-left: var(--borderLeft, 0px) solid currentColor;
+    border-right: var(--borderRight, 5px) solid currentColor;
     padding-left: var(--paddingLeft, 35px);
-    border-radius: 0px var(--borderRadius) var(--borderRadius) 0px;
+    border-top-left-radius: var(--borderRadiusLeft, 0px);
+    border-top-right-radius: var(--borderRadiusRight, 5px);
+    border-bottom-left-radius: var(--borderRadiusLeft, 0px);
+    border-bottom-right-radius: var(--borderRadiusRight, 5px);
+    /* border-radius: 0px var(--borderRadius) var(--borderRadius) 0px; */
   }
 
   [data-active='false'] {

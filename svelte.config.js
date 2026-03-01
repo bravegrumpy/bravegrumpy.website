@@ -6,7 +6,12 @@ import { mdsvex } from 'mdsvex';
 // import adapter from '@sveltejs/adapter-static';
 /** @type {import('@sveltejs/kit').Config}*/
 const config = {
-  kit: { adapter: adapter() },
+  kit: { 
+    alias: {
+      "$/*": './src/*'
+    },
+    adapter: adapter() 
+  },
   checkOrigin: true,
   trustedOrigins: ["https://*.bravegrumpy.com", "*.ncase.me"],
   preprocess: [
