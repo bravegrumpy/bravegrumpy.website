@@ -33,7 +33,37 @@ export type Post = Prisma.PostModel
  */
 export type Song = Prisma.SongModel
 /**
+ * Model ManualUser
+ * 
+ */
+export type ManualUser = Prisma.ManualUserModel
+/**
  * Model User
  * 
  */
 export type User = Prisma.UserModel
+/**
+ * Model Account
+ * 
+ */
+export type Account = Prisma.AccountModel
+/**
+ * Model Session
+ * 
+ */
+export type Session = Prisma.SessionModel
+/**
+ * Model VerificationToken
+ * 
+ */
+export type VerificationToken = Prisma.VerificationTokenModel
+/**
+ * Model Authenticator
+ * 
+ */
+export type Authenticator = Prisma.AuthenticatorModel
+/**
+ * Model Instrument
+ * 
+ */
+export type Instrument = Prisma.InstrumentModel

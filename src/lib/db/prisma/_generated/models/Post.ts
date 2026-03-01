@@ -236,7 +236,7 @@ export type PostWhereInput = {
   updatedAt?: Prisma.DateTimeFilter<"Post"> | Date | string
   published?: Prisma.BoolFilter<"Post"> | boolean
   authorId?: Prisma.IntNullableFilter<"Post"> | number | null
-  User?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
+  User?: Prisma.XOR<Prisma.ManualUserNullableScalarRelationFilter, Prisma.ManualUserWhereInput> | null
 }
 
 export type PostOrderByWithRelationInput = {
@@ -247,7 +247,7 @@ export type PostOrderByWithRelationInput = {
   updatedAt?: Prisma.SortOrder
   published?: Prisma.SortOrder
   authorId?: Prisma.SortOrderInput | Prisma.SortOrder
-  User?: Prisma.UserOrderByWithRelationInput
+  User?: Prisma.ManualUserOrderByWithRelationInput
 }
 
 export type PostWhereUniqueInput = Prisma.AtLeast<{
@@ -261,7 +261,7 @@ export type PostWhereUniqueInput = Prisma.AtLeast<{
   updatedAt?: Prisma.DateTimeFilter<"Post"> | Date | string
   published?: Prisma.BoolFilter<"Post"> | boolean
   authorId?: Prisma.IntNullableFilter<"Post"> | number | null
-  User?: Prisma.XOR<Prisma.UserNullableScalarRelationFilter, Prisma.UserWhereInput> | null
+  User?: Prisma.XOR<Prisma.ManualUserNullableScalarRelationFilter, Prisma.ManualUserWhereInput> | null
 }, "id">
 
 export type PostOrderByWithAggregationInput = {
@@ -298,7 +298,7 @@ export type PostCreateInput = {
   createdAt?: Date | string
   updatedAt: Date | string
   published?: boolean
-  User?: Prisma.UserCreateNestedOneWithoutPostInput
+  User?: Prisma.ManualUserCreateNestedOneWithoutPostsInput
 }
 
 export type PostUncheckedCreateInput = {
@@ -317,7 +317,7 @@ export type PostUpdateInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   published?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  User?: Prisma.UserUpdateOneWithoutPostNestedInput
+  User?: Prisma.ManualUserUpdateOneWithoutPostsNestedInput
 }
 
 export type PostUncheckedUpdateInput = {
@@ -624,7 +624,7 @@ export type PostIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensi
 export type $PostPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Post"
   objects: {
-    User: Prisma.$UserPayload<ExtArgs> | null
+    User: Prisma.$ManualUserPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: number
@@ -1028,7 +1028,7 @@ readonly fields: PostFieldRefs;
  */
 export interface Prisma__PostClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  User<T extends Prisma.Post$UserArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Post$UserArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  User<T extends Prisma.Post$UserArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Post$UserArgs<ExtArgs>>): Prisma.Prisma__ManualUserClient<runtime.Types.Result.GetResult<Prisma.$ManualUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1465,18 +1465,18 @@ export type PostDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
  */
 export type Post$UserArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the User
+   * Select specific fields to fetch from the ManualUser
    */
-  select?: Prisma.UserSelect<ExtArgs> | null
+  select?: Prisma.ManualUserSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the User
+   * Omit specific fields from the ManualUser
    */
-  omit?: Prisma.UserOmit<ExtArgs> | null
+  omit?: Prisma.ManualUserOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.UserInclude<ExtArgs> | null
-  where?: Prisma.UserWhereInput
+  include?: Prisma.ManualUserInclude<ExtArgs> | null
+  where?: Prisma.ManualUserWhereInput
 }
 
 /**

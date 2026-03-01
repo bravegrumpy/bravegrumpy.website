@@ -21,8 +21,8 @@ model Post {
   createdAt DateTime @default(now())
   updatedAt DateTime
   published Boolean  @default(false)
-  authorId  String?
-  User      User?    @relation(fields: [authorId], references: [id])
+  authorId  Int?
+  User      ManualUser?    @relation(fields: [authorId], references: [id])
 }
 
 model Song {
@@ -34,6 +34,13 @@ model Song {
   artistId String?
   lyrics   String[]
   Artist   Artist?  @relation(fields: [artistId], references: [id])
+}
+
+model ManualUser {
+  id Int @id @default(autoincrement())
+  name String?
+  email String @unique
+  posts Post[]
 }
 
 model User {
@@ -49,7 +56,6 @@ model User {
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   role  Role    @default(USER)
-  Post  Post[]
 }
 
 model Account {

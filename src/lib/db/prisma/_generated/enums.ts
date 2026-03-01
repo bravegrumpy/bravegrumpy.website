@@ -16,3 +16,36 @@ export const Role = {
 } as const
 
 export type Role = (typeof Role)[keyof typeof Role]
+
+
+export const IntrumentFamily = {
+  WOODWIND: 'WOODWIND',
+  BRASS: 'BRASS',
+  STRINGS: 'STRINGS',
+  PRECUSSION: 'PRECUSSION'
+} as const
+
+export type IntrumentFamily = (typeof IntrumentFamily)[keyof typeof IntrumentFamily]
+
+
+export const MusicalKey = {
+  Ab: 'Ab',
+  A: 'A',
+  Ash: 'Ash',
+  Bb: 'Bb',
+  B: 'B',
+  C: 'C',
+  Csh: 'Csh',
+  Db: 'Db',
+  D: 'D',
+  Dsh: 'Dsh',
+  Eb: 'Eb',
+  E: 'E',
+  F: 'F',
+  Fsh: 'Fsh',
+  Gb: 'Gb',
+  G: 'G',
+  Gsh: 'Gsh'
+} as const
+
+export type MusicalKey = (typeof MusicalKey)[keyof typeof MusicalKey]

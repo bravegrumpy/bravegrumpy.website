@@ -8,11 +8,11 @@ export const load: PageServerLoad = async () => {
     if (! (await prisma )) {
         return error(500, { message: "Prisma instance not loaded"})
     }
-    if (! (await prisma.user)) {
+    if (! (await prisma.manualUser)) {
         return error(505, { message: "Cannot Query User Table"})
     }
 
-    const allUsers = await prisma.user.findMany();
+    const allUsers = await prisma.manualUser.findMany();
     return { allUsers }
 }
 
@@ -26,6 +26,6 @@ export const actions = {
 
         const data = { name, email }
         console.log(data);
-        await prisma.user.create({ data })
+        await prisma.manualUser.create({ data })
     }
 } satisfies Actions
