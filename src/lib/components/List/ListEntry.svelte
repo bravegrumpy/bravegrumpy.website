@@ -2,10 +2,16 @@
 @component
 List Entry component
 @prop {string} [text] - The text to display
-@prop {href} [string] - The location the link points to
-@prop text [string] - The displayed text for the `<a>`
-@prop sublist [Array<string | Snippet>] This list goes within a new `<ul>` that is placed inside *this* `<li>`.
-@prop cardStyle [boolean] - card-like styling for each list item
+@prop {string} [href]
+@prop {string} [text]
+@prop {Array<string|Snippet>} [sublist]
+@prop {boolean} [cardStyle]
+@prop {boolean} [divLink]
+@prop {children} [Snippet]
+@prop {string} [after]
+@prop {boolean} [local]
+@prop {boolean} [lnk]
+
 -->
 
 <script lang="ts">
@@ -17,15 +23,20 @@ List Entry component
         href: string;
         /** the "text" for the link*/
         text: string;
-        /** an array to hold items in a new unordered list */
+        /** an array that renders an &lt;ul&gt; */
         sublist?: Array<string | Snippet>;
-        /** Do you want card-like styling on each list item? */
+        /** is the link styled as a "card"? */
         cardStyle?: boolean;
-        /** Do you want a `<div>` element to act as the anchor tag typically does? */
+        /** Using a &lt;div&gt; instead of an `anchor`*/
         divLink?: boolean;
+        /** any other children */
         children?: Snippet;
+        /** text directly after link*/
         after?: string;
+        /** true: removes `rel="noopener noreferrer nofollow"` and `target="_blank"` */
         local?: boolean;
+        /** does this &lt;li&gt; include a link? Default: true*/
+        lnk?: boolean;
     }
 
     let { 
@@ -36,7 +47,8 @@ List Entry component
         divLink = false, 
         children, 
         after = '',
-        local = false
+        local = false,
+        lnk = true
     }: Props = $props();
 
     const localTarget = $derived(local ? "_self" : "_target");
@@ -44,18 +56,76 @@ List Entry component
 </script>
 
 <li>
-<!--TODO: #311 properly implement this!-->
-  <p>This is a <code class="text-gray-800 dark:text-gray-200">&lt;li&gt;</code> tag.</p>
+{#if lnk}
   {#if cardStyle}
-  <div><p>Card Style</p></div>
+  <Section className="">
     {#if divLink}
-      <div><p>The <code class="text-gray-800 dark:text-gray-200">&lt;div&gt;</code> acts as the <code class="text-gray-800 dark:text-gray-200">&lt;a&gt;</code> tag.</p></div>
+    <div class="link divLink" aria-label={href} tabindex={0} role="link" onclick={() => window.open(href, "_blank")} onkeydown={() => window.open(href, "_blank")}>
+        <p>{text}</p> {after}
+        {#if sublist}
+            {#if sublist.length > 0}
+            <ul>
+                {#each sublist as item}
+                <li>
+                    {#if typeof item === "string"}
+                        {item}
+                    {:else}
+                        {@render item?.()}
+                    {/if}
+                </li>
+                {/each}
+            </ul>
+            {/if}
+        {/if}
+        {@render children?.()}
+    </div>
     {:else}
-      <div><p>The <code class="text-gray-800 dark:text-gray-200">&lt;a&gt;</code> functions normally.</p></div>
+    <div class="link">
+        <a {href} rel={local ? "" : "noreferrer nofollow noopen"} target={local ? "_self" : "_blank"}>{text}</a> {after}
+        {#if sublist}
+            {#if sublist.length > 0}
+                <ul>
+                    {#each sublist as item}
+                        <li>
+                            {#if typeof item === "string"}
+                                {item}
+                            {:else}
+                                {@render item?.()}
+                            {/if}
+                        </li>
+                    {/each}
+                </ul>
+            {/if}
+        {/if}
+        {@render children?.()}
+    </div>
     {/if}
+    </Section>
   {:else}
-  <div><p>Anchor Style</p></div>
+  <a {href} rel={local ? "" : "noreferrer nofollow noopen"} target={local ? "_self" : "_blank"}>{text}</a>{after}
+    {#if sublist}
+        {#if sublist.length > 0}
+            <ul>
+                {#each sublist as item}
+                    <li>
+                        {#if typeof item === "string"}
+                            {item}
+                        {:else}
+                            {@render item?.()}
+                        {/if}
+                    </li>
+                {/each}
+            </ul>
+        {/if}
+    {/if}
+    {@render children?.()}
   {/if}
+{:else}
+  {@render children?.()}
+  {#if text}
+    {text}
+  {/if}
+{/if}
 </li>
 
 
