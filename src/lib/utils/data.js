@@ -57,7 +57,7 @@ const links = [
         pageTitle: "Robin Zollner",
         pageSubtitle: "Materials Engineer Open to Work"
       }
-    ],
+    ]
   },
   //   {
   //     id: '2',
