@@ -51,7 +51,7 @@ const links = [
         pageSubtitle: "Written works about my thoughts and feelings.",
       },
       {
-        id: "2-2",
+        id: "2-3",
         href: "/writing/resume",
         text: "Professional",
         pageTitle: "Robin Zollner",
