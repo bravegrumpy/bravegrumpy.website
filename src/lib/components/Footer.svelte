@@ -12,7 +12,7 @@
     </p>
     <p>
       <img
-        src="https://cdn.bravegrumpy.com/static/assets/images/BraveGrumpyRectange_color_typed.png"
+        src="https://cdn.bravegrumpy.com/static/assets/images/BraveGrumpyRectangle_color_typed.png"
         alt="BraveGrumpy Logo"
       />
     </p>

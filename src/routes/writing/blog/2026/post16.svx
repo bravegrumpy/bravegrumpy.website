@@ -1,0 +1,21 @@
+---
+h2: Using AI as a code reviewer
+date: 2026-02-09
+title: Testing out
+---
+
+<script>
+    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte"
+    import Heading from "$lib/components/Heading.svelte"
+    const { open=false } = $props();
+</script>
+
+<BlogLayout {h2} title={date.toString().slice(0,10)} {open}>
+    <Heading>{title} <a href="https://www.greptile.com/" target="_blank" rel="noreferrer nofollow">Greptile</a></Heading>
+
+    I am in general, not that interested in AI.  That being said, [this particular repository](https://github.com/bravegrumpy/bravegrumpy.website.git) is a tangled web of branches because once upon a time, I decided that making a new branch for every ADHD idea I had made sense.
+
+    I am not totally opposed to the structure I have, even though it is very much the *wrong* architecture for something as simple as a personal blog website or whatever.  However, one thing I've found is that it is sometimes challenging to effectively summarize what changed, especially if the changes involve optimizing a bunch of things in order to accomplish one thing.  For example, when I was adding the 2026 year to this blog, I changed the Under Construction component to make it a little more reusable.  I wouldn't have thought of that. 
+
+    I also want to ensure that automerge will wait for greptile.
+</BlogLayout>

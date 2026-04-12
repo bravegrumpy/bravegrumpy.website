@@ -1,4 +1,14 @@
-<script>
+<script lang="ts">
+  import type { Snippet } from "svelte";
+  interface Props {
+    chapter?: string;
+    title?: string;
+    text?: Snippet | string;
+    section?: string;
+    heading?: string;
+    id?: string;
+    children?: Snippet;
+  }
   const {
     chapter = '',
     title = '',
@@ -7,7 +17,7 @@
     heading = '',
     id = '',
     children
-  } = $props();
+  }:Props = $props();
 </script>
 
 <div class="ListOfLinks" {id}>
@@ -28,7 +38,7 @@
   {/if}
 
   <div>
-    {#if text !== ''}
+    {#if (text !== '') && (typeof text !== "string")}
       {@render text()}
     {/if}
   </div>
@@ -36,3 +46,21 @@
     {@render children()}
   </ul>
 </div>
+
+<script module>
+  export { entry };
+</script>
+{#snippet entry(href: string, text: string, sublist?: string[])}
+<li>
+    <a {href} rel="noreferrer nofollow" target="_blank">{text}</a>
+    {#if sublist}
+        {#if sublist.length > 0}
+            <ul>
+                {#each sublist as item}
+                    <li>{item}</li>
+                {/each}
+            </ul>
+        {/if}
+    {/if}
+</li>
+{/snippet}

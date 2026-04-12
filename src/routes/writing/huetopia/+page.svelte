@@ -10,9 +10,17 @@
   import SideNavButton from '$lib/components/SideNavButton.svelte';
 
   import { page } from '$app/stores';
+
+  import { Breadcrumb } from "flowbite-svelte";
+  import { bci, breadcrumbClass } from "$lib/components/Blog/BlogBreadcrumbs.svelte";
 </script>
 
 <Article>
+  <Breadcrumb class={breadcrumbClass}>
+    {@render bci("/", "Home", "hugeicons:home-07")}
+    {@render bci("/writing", "Writing", "hugeicons:books-01", "")}
+    {@render bci("/writing/huetopia", "Fantasy", "game-icons:broadsword", "")}
+  </Breadcrumb>
   <Section sectionClass="font-heading text-3xl">
     <h2>Welcome to Huetopia</h2>
   </Section>

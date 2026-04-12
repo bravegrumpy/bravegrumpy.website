@@ -1,18 +1,18 @@
 //import { response } from 'express';
-import App from "./components/App.svelte";
+import App from './components/App.svelte';
 
 export async function fetchHtmlFiles() {
-  const response = await fetch("/api/files");
+  const response = await fetch('/api/files');
   return await response.json();
 }
 
 async function initalizeApp() {
   const htmlFiles = await fetchHtmlFiles();
   const app = new App({
-    target: document.getElementById("svelte-app"),
+    target: document.getElementById('svelte-app'),
     props: {
-      htmlFiles: htmlFiles,
-    },
+      htmlFiles: htmlFiles
+    }
   });
 
   return app;

@@ -6,6 +6,8 @@ title: An Unhappy New Year
 
 <script>
     import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
+
+    const { open=false } = $props();
 </script>
 
 <BlogLayout h2={title} title={date.toString().slice(0,10)} open>

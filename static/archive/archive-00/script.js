@@ -6,4 +6,4 @@
  * The purpose of this website, is to practice responsive web design, and to publish creative writing.
  */
 
-window.alert("JavaScript successfully Linked");
+window.alert('JavaScript successfully Linked');

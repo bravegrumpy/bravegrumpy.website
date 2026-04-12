@@ -3,6 +3,8 @@
   import Section from '$lib/components/Section.svelte';
 
   import { Button, GradientButton } from 'flowbite-svelte';
+
+  const { open = false } = $props();
 </script>
 
 <BaseContent h2="Flowbite Buttons Visual Reference" title="2025-01-04">

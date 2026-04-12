@@ -6,6 +6,7 @@
   import Icon from '@iconify/svelte';
 
   import TopNavigation from './TopNavigation.svelte';
+  import BottomNavigation from './BottomNavigation.svelte';
 
   let { links, hidden1 = true } = $props();
   //   let transitionParams = $state({
@@ -34,4 +35,5 @@
 >
   <CloseButton on:click={() => (hidden1 = !hidden1)} />
   <TopNavigation {links} />
+  <BottomNavigation reversed={true} />
 </Drawer>

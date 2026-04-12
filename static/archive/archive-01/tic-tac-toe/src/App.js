@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function Square() {
   const [value, setValue] = useState(null);
   function handleClick() {
-    setValue("X");
+    setValue('X');
   }
   return (
     <>

@@ -1,0 +1,40 @@
+---
+h2: Forcing an Error
+date: 2026-02-01
+title: Forcing a 500 type error in Sveltekit
+---
+
+<script>
+    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte";
+    import Heading from "$lib/components/Heading.svelte"
+    const { open=false } = $props();
+</script>
+
+<BlogLayout h2={h2} title={date.toString().slice(0,10)} {open}>
+
+<Heading>{title}</Heading>
+
+Placing the following code in a `page.server.js` file will force a 500 internal error.  
+To get friendly errors, use try/catch and throw errors where needed.
+
+This trick can be useful for setting styling for custom error pages. 
+
+```js
+export async function load({fetch, params}){
+    const res = await fetch("http://localhost:8000/");
+    const posts = await res.json();
+    return { posts }
+}
+```
+
+If you would like the code to not produce the error, instead use a working api.
+
+```js
+export async function load({fetch, params}){
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const posts = await res.json();
+    return { posts }
+}
+```
+
+</BlogLayout>

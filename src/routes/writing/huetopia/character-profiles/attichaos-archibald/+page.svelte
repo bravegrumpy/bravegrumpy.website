@@ -5,12 +5,21 @@
   import AttichaosArchibald from '../../wbw/(character_profiles)/AttichaosArchibald.svelte';
   import NavButton from '$lib/components/NavButton.svelte';
 
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
+  let currSlug = $derived(page.url.pathname)
 
-  let currSlug = $state($page.url.pathname);
+  import { Breadcrumb } from "flowbite-svelte";
+  import { breadcrumbClass, bci } from "$lib/components/Blog/BlogBreadcrumbs.svelte";
+
 </script>
 
 <Article --articleColumn="2/3">
+  <Breadcrumb class={breadcrumbClass}>
+    {@render bci("/writing", "Writing", "hugeicons:books-01", "")}
+    {@render bci("/writing/huetopia", "Fantasy", "game-icons:broadsword", "")}
+    {@render bci("/writing/huetopia/character-profiles", "Characters", "game-icons:3d-meeple", "")}
+    {@render bci("/writing/huetopia/character-profiles/attichaos-archibald", "Arch", "", "")}
+  </Breadcrumb>
   <Section>
     <div style:display="flex" style:flex-direction="row">
       <NavButton

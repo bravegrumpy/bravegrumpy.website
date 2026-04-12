@@ -1,0 +1,7 @@
+<script>
+import Post12 from "./post12.svx"
+
+let { open = false } = $props()
+</script>
+
+<Post12 {open} />

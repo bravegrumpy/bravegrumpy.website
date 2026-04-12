@@ -1,8 +1,9 @@
 <script>
-    const { children } = $props();
+  const { children } = $props();
 </script>
+
 <svelte:head>
-    <title>Archive | Bravegrumpy</title>
+  <title>Archive | Bravegrumpy</title>
 </svelte:head>
 
 {@render children()}

@@ -25,7 +25,7 @@
     gap: 10px;
     grid-column: var(--sectionColumn, ' 2 / 2');
     grid-row: var(--sectionRow, ' 1 / 1');
-    border: 2px solid currentColor;
+    border: 2px solid var(--borderColor, currentColor);
     border-radius: var(--borderRadius);
     justify-content: flex-start;
     align-items: flex-start;

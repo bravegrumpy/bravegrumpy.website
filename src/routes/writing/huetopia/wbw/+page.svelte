@@ -27,9 +27,18 @@
   let TabsDefaultClass = $state(
     'flex flex-row gap-4 p-5 col-start-1 col-end-4 flex-wrap bg-bravegrumpy-accent2a rounded-[5px] border-2 border-solid border-bravegrumpy-black dark:border-bravegrumpy-accent2b dark:bg-bravegrumpy-black'
   );
+
+  import { Breadcrumb } from "flowbite-svelte"
+  import { bci, breadcrumbClass } from "$lib/components/Blog/BlogBreadcrumbs.svelte";
 </script>
 
 <Article --articleColumn="2/3">
+  <Breadcrumb class={breadcrumbClass}>
+    {@render bci("/", "Home", "hugeicons:home-07")}
+    {@render bci("/writing", "Writing", "hugeicons:books-01", "")}
+    {@render bci("/writing/huetopia", "Fantasy", "game-icons:broadsword", "")}
+    {@render bci("/writing/huetopia/wbw", "WBW", "hugeicons:pencil-edit-02", "")}
+  </Breadcrumb>
   <Main>
     <BaseLayout {TabsDefaultClass} colStart="1" colEnd="4" rowStart="2" {customContentClass}>
       <BaseContent

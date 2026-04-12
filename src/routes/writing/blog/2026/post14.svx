@@ -1,0 +1,36 @@
+---
+h2: Indie Web
+date: 2026-01-30
+title: Static Hosts and the Growth of the "Indie Web"
+---
+
+<script>
+    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte"
+    const { open=false } = $props();
+</script>
+
+<BlogLayout h2={h2} title={date.toString().slice(0, 10)} {open}>
+
+### {title}
+
+I've noticed two distinct groups of people doing website design: the "webdev" people, aiming for the corporate aesthetic.  
+
+#### Corporate aesthetic
+
+These people very clearly have used a [shadcn ui](https://ui.shadcn.com/blocks), [Bootstrap](https://getbootstrap.com/) or [MUI](https://mui.com/material-ui/), and keep their design to the minimalist corporate format that can be seen literally anywere there is a business.  This has gotten so bad that Shadcn has even created a way to easily customize your aesthetic, and to register new "shadcns" for different use-cases. Even still, a lot of the either AI slop or corporate web pages look kind of the same. [This github](https://github.com/emmabostian/developer-portfolios) has loads of examples of what I mean.
+
+To analyze one specific example, I'm choosing [this website](https://portfolio-site-git-main-akash-kumar5s-projects.vercel.app/) from the aforementioned list. To be clear, this person is not trying to advertise web design skills, but still chose to publically list their site.  The extensive use of ShadCN components, with little-to-know customization gives it the same vibes of the [generic bootstrap template](https://getbootstrap.com/docs/4.0/examples/starter-template/) but 2020s style. 
+
+That being said, this "corporate" version of weeb design is noted by its sleek minimalist framing, shadcn components, specific sleek hover animations, ronded cornders, and a call-to-action on the landing page. There may sometimes be a single accent color, but often there is not. The use of a gradient background is optional.  Once you see one of these sites, you have seen them all.
+
+Look, I'm guilty of using genericness before getting here. [Look at my first iteration](/archive/archive-00/index.html)
+
+#### Indie-web aesthetic
+
+This aesthetic tries very hard to be unique.  This post is not to discount the many extremely talented web developers out there.  However, with resources such as as [Teppys Layouts](https://teppyslayouts.neocities.org/) and [classic stylesheets](https://nielssp.github.io/classic-stylesheets/) I'm starting to see a trend websites that tend to look like one of the archetypes. Tools like [eleventy](https://www.11ty.dev/) and Nekoweb's Server Side Includes are making it easier to use templates and layouts.  Again, I am not the only one to use these tools.  This site is made using Svelte. However, I am noticing that even "indie-web" "unique" websites are tending to follow the trend of bright patterned background, with links on the side etc.  I mean, I'm even following this trend.  There are only so many ways you can lay out links on a text page.  The indie-web aesthetic is also known with lots of buttons, reminiscent of the early-web.
+
+However, I guess there is no such thing as original art or whatever, because I made this particular design before I had a ton of the indie-web influences, but was attempting an anit-pattern from the corporate influences.
+
+This concept deserves another blog post with some deeper analysis.
+
+</BlogLayout>
