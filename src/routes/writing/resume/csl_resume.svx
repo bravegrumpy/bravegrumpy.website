@@ -1,0 +1,89 @@
+# Robin Zollner
+U.S. Citizen | North Charleston, SC 29405
++1 (845) 527-3982 | robin.zollner@protonmail.com
+
+---
+
+## Summary
+
+Detail-oriented materials and production coordinator with experience in ERP
+systems, BOM validation, inventory reconciliation, and cross-functional
+coordination in regulated manufacturing environments. Comfortable working
+across engineering, QA, purchasing, and production teams to keep jobs on
+track and data accurate. Stays organized and communicates clearly when
+priorities shift fast.
+
+---
+
+## Skills
+
+- **ERP Systems:** Epicor, ENOVIA, SQL-based systems; job creation and
+  management, inventory tracking, job check-in/check-out, PO tracking
+- **Materials & Production:** BOM validation, inventory reconciliation,
+  shortage identification, PO coordination, incoming material QA
+- **Data & Reporting:** Excel (pivot tables, VLOOKUPs), Tableau, SQL;
+  production status tracking and stakeholder reporting
+- **Documentation & Compliance:** SOPs, lifecycle traceability, change
+  control, QA documentation
+- **Cross-Functional Coordination:** Engineering, purchasing, production,
+  warehouse, and QA teams
+
+---
+
+## Experience
+
+### The Boeing Company – Boeing Research & Technology (BR&T)
+**Materials Engineer** | August 2019 – January 2024
+
+**Materials, BOM & Inventory**
+- Validated BOMs against material specification sheets to identify and
+  resolve conflicts between qualified materials and aircraft configurations,
+  ensuring production readiness before jobs were initiated.
+- Reviewed inventory against BOMs during production floor rotations to
+  identify shortages and coordinate resolution before work began.
+- Coordinated purchase orders for project materials; tracked open POs and
+  followed up with suppliers and procurement on delays.
+
+**Production Tracking & Reporting**
+- Used Excel pivot tables to track and summarize the status of hundreds of
+  test samples across treatment types, manufacturers, and test stages;
+  delivered regular status reports to engineering stakeholders.
+- Managed two enterprise dashboard projects (SQL/Tableau) supporting
+  production KPIs; worked with stakeholders to define data requirements and
+  validate outputs.
+
+**Documentation, Compliance & Change Control**
+- Maintained lifecycle traceability and documentation for configuration
+  changes impacting production-critical processes.
+- Performed end-to-end testing to validate configuration rules, ensuring
+  only approved material combinations were available to production
+  engineers.
+- Used Jira to track open issues, manage test planning, and report
+  discrepancies across concurrent workstreams.
+
+**Cross-Functional Coordination**
+- Served as point of contact between R&D engineers, QA, and production
+  teams to communicate material status, requirements, and risks.
+- Produced SOPs, wikis, and training documentation; onboarded new team
+  members on lab, QA, and production processes.
+
+---
+
+### Metalized Carbon Corporation
+**Manufacturing & QA Intern** | May 2018 – August 2018
+
+- Used Epicor ERP daily for shipping and receiving, order fulfillment, and
+  inventory reconciliation — ensuring system records matched physical stock
+  on hand.
+- Checked parts in and out of manufacturing process steps in Epicor and
+  marked associated QA steps complete, keeping job status accurate
+  throughout production.
+- Worked in the incoming QA lab inspecting and approving raw material
+  batches against spec; updated Epicor records upon approval.
+
+---
+
+## Education
+
+University of Massachusetts Amherst
+B.S. Chemical Engineering, 2019
