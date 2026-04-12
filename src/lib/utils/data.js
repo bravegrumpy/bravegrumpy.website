@@ -50,6 +50,13 @@ const links = [
         pageTitle: "Blog",
         pageSubtitle: "Written works about my thoughts and feelings.",
       },
+      {
+        id: "2-2",
+        href: "/writing/resume",
+        text: "Professional",
+        pageTitle: "Robin Zollner",
+        pageSubtitle: "Materials Engineer Open to Work"
+      }
     ],
   },
   //   {
