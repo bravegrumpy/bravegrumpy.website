@@ -15,12 +15,13 @@ const config = {
   trustedOrigins: ["https://*.bravegrumpy.com", "*.ncase.me"],
   preprocess: [
     mdsvex({
+      extensions: ['.svx', '.md'],
       smartypants: {
         quotes: true,
         dashes: 'oldschool'
       }
     })
   ],
-  extensions: ['.svelte', '.svx']
+  extensions: ['.svelte', '.svx', '.md']
 };
 export default config;
