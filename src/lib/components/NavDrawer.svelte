@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+  import type { Link } from "$lib/../convex/navigation";
   //   import { Drawer, Button, GradientButton, CloseButton, ToolbarButton } from 'flowbite-svelte';
   import { Button, Drawer, CloseButton } from 'flowbite-svelte';
   //   import { sineIn } from 'svelte/easing';
@@ -8,7 +9,11 @@
   import TopNavigation from './TopNavigation.svelte';
   import BottomNavigation from './BottomNavigation.svelte';
 
-  let { links, hidden1 = true } = $props();
+  interface Props {
+    links: Link[];
+    hidden1?: boolean;
+  }
+  let { links, hidden1 = true }: Props = $props();
   //   let transitionParams = $state({
   //     y: -400,
   //     duration: 0.3,
@@ -35,5 +40,5 @@
 >
   <CloseButton on:click={() => (hidden1 = !hidden1)} />
   <TopNavigation {links} />
-  <BottomNavigation reversed={true} />
+  <BottomNavigation {links} reversed={true} />
 </Drawer>

@@ -2,9 +2,9 @@
   import Icon from '@iconify/svelte';
 
   // Toggle state
-  let { checked } = $state(false);
+  // let { checked } = $state(false);
 
-  let { offIcon = 'game-icons:sun', onIcon = 'game-icons:night-sleep' } = $props();
+  let { offIcon = 'game-icons:sun', onIcon = 'game-icons:night-sleep', checked=$bindable() } = $props();
 
   // Customize which icons to show for OFF/ON states
   // let offIcon = 'game-icons:sun'; // or any other Iconify icon (e.g., 'mdi:weather-sunny')

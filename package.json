@@ -3,7 +3,7 @@
   "author": "bravegrumpy",
   "readme": "README.md",
   "private": "true",
-  "version": "0.3.3-55",
+  "version": "0.3.3-57",
   "type": "module",
   "scripts": {
     "dev": "vite dev",
@@ -20,7 +20,7 @@
     "@iconify/svelte": "^4.2.0",
     "@sveltejs/adapter-auto": "^4.0.0",
     "@sveltejs/adapter-static": "^3.0.8",
-    "@sveltejs/kit": "^2.16.0",
+    "@sveltejs/kit": "^2.53.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
     "@tailwindcss/typography": "^0.5.16",
     "amplify-adapter": "^1.2.3",
@@ -32,15 +32,19 @@
     "flowbite-svelte": "^0.47.4",
     "flowbite-svelte-icons": "^2.0.2",
     "globals": "^15.14.0",
-    "mdsvex": "^0.12.3",
+    "mdsvex": "^0.12.6",
     "prettier": "^3.4.2",
     "prettier-plugin-svelte": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.10",
     "super-sitemap": "^1.0.3",
-    "svelte": "^5.0.0",
+    "svelte": "^5.53.2",
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.0"
   },
   "homepage": "https://www.bravegrumpy.com",
-  "license": "SEE LISCENSE IN LICENSE"
+  "license": "SEE LISCENSE IN LICENSE",
+  "dependencies": {
+    "convex": "^1.31.7",
+    "convex-svelte": "^0.0.12"
+  }
 }

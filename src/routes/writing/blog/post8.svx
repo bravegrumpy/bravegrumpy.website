@@ -6,9 +6,11 @@ title: Rediscovering Clerk & Trying to Solve Auth
 <script>
     import BlogLayout from '$lib/components/Blog/BlogLayout.svelte';
     import Icon from '@iconify/svelte';
+
+    let { open=false } = $props();
 </script>
 
-<BlogLayout h2={title} title={date.toString().slice(0,10)} open>
+<BlogLayout h2={title} title={date.toString().slice(0,10)} {open}>
 
 ## Adding in Auth
 

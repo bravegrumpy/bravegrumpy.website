@@ -2,15 +2,38 @@
     import Article from "$lib/components/Article.svelte";
     import Section from "$lib/components/Section.svelte";
     import Heading from "$lib/components/Heading.svelte";
+    import Aside from "$lib/components/Aside.svelte";
 
     import { page } from "$app/state";
 
     let users = $derived(page.data.allUsers || false);
     let todoList = $derived(page.data.todoList || false);
+
+    import { Breadcrumb } from "flowbite-svelte";
+
+    import { bci, breadcrumbClass} from "$lib/components/Blog/BlogBreadcrumbs.svelte";
 </script>
 
-<Article --articleColumn="1/4">
-    <Heading>Using Database</Heading>
+<Article --articleRow="1/2" --articleColumn="1/3">
+    <Breadcrumb class={breadcrumbClass}>
+        {@render bci("/", "Home", "hugeicons:home-07")}
+        {@render bci("/writing", "Writing", "hugeicons:books-01", "")}
+        {@render bci("/writing/queries", "DB", "hugeicons:search-02", "")}
+    </Breadcrumb>
+</Article>
+<Article --articleRow="2/3" --articleColumn="1/2">
+    <Aside --asideHeight="fit-content">
+        <h3>Why am I treating this as static?</h3>
+        <p>
+            <a href="https://docs.amplify.aws/" target="_blank" rel="noreferrer nofollow">AWS Amplify</a> advertises itself as a fullstack app hosting service. While this is technically true, it is nontrivial to setup a backend when grandfathering in systems that would have been working on the Gen1 version of Amplify.
+        </p>
+    </Aside>
+    <Aside --asideHeight="fit-content">
+        <p>In other words, I need to treat Amplify as I would any other fully static site host, because the Gen1 Amplify backend doesn't play nicely with this version of sveltekit.</p>
+    </Aside>
+</Article>
+<Article --articleColumn="2/4" --articleRow="2/3">
+    <Heading>Using a Database</Heading>
     <Section>
         <p>This is my extremely crude attempt at querying a database. I plan to add more crud actions once I figure them out.</p>
         <p>I am interfacing with exactly one table in my database</p>
