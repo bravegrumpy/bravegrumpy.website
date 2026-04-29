@@ -68,6 +68,7 @@
     {@render entry("https://freefrontend.com/css-background-patterns/", "This is another super long list of css backgrounds.", [], cardStyle, divLink)}
     {@render entry("https://designerfeed.org/css-background-patterns/", "CSS renders of some common fabric patterns", [], cardStyle, divLink)}
     {@render entry("https://www.svgrepo.com/", "Repo of Open-Liscensed SVG Vector Images and Icons", [], cardStyle, divLink)}
+    {@render entry("https://svgl.app/", "More SVGs specifically for Brands", [], cardStyle, divLink)}
     {@render entry("https://incompetech.com/music/royalty-free/music.html", "Royalty-Free Music", [], cardStyle, divLink)}
   </LOL>
   <LOL heading="Placeholder Content">
