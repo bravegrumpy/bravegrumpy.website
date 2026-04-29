@@ -7,7 +7,7 @@
 
   const slug = $derived('/' + $page.url.pathname.split('/')[1]);
 
-  let { links, fontSize = '2rem' } = $props();
+  let { links, fontSize = '2rem', reversed=true } = $props();
 
   const iconSize = '25';
   const buttonSize = `size-[${iconSize * 2}px]`;
@@ -18,10 +18,12 @@
     {links}
     {slug}
     {fontSize}
-    reversed
-    navigationWidth="60%"
+    {reversed}
+    navigationWidth="55%"
     justifyContent="flex-end"
-    buttonWidth="150px"
+    buttonWidth="144px"
+    gap="0.8rem"
+    marginLeft="0px"
   />
   <DarkMode
     class="{buttonSize} rounded-[5px] border-[2px] border-solid border-current bg-bravegrumpy-accent2a text-bravegrumpy-logoPurple hover:scale-105 hover:hue-rotate-15 dark:bg-bravegrumpy-brand6 dark:text-bravegrumpy-accent1a"
@@ -41,5 +43,6 @@
     margin-right: 1rem;
     margin-top: 1rem;
     align-items: center;
+    width: 100%;
   }
 </style>

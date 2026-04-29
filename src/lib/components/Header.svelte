@@ -26,10 +26,12 @@
 >
   <div id="top">
     <div id="topnav">
-      <TopNavigation {links} reversed={true} fontSize="1.6rem" ) />
+      <TopNavigation {links} reversed={true} fontSize="1.6rem" />
     </div>
     <div id="logo">
+      <a href="/">
       <Logo />
+      </a>
     </div>
   </div>
   <div class="w-full bg-bravegrumpy-logoPurple dark:bg-bravegrumpy-accent2a" id="bottomBar">
