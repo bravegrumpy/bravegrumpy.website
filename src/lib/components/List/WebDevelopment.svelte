@@ -75,7 +75,7 @@
     {@render entry("https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators", "List of Placeholder text generators", [], cardStyle, divLink)}
     {@render entry("https://loremipsum.io/21-of-the-best-placeholder-image-generators", "List of placeholder image sources", [], cardStyle, divLink)}
     {@render entry("https://jsonplaceholder.typicode.com/", "Placeholder JSON data", [], cardStyle, divLink)}
-    {@render entry("", "In both of the subsequent resources, when I say \"API\" I mean a way to specificy requirements in URL", [], cardStyle, divLink, undefined, "", true, false)}
+    {@render entry("", "In both of the subsequent resources, when I say \"API\" I mean a way to specificy requirements in URL", [], cardStyle, divLink, undefined, "", true)}
     {@render entry("https://placehold.co/", "Blank Placeholder Images with API", [], cardStyle, divLink)}
     {@render entry("https://placedog.net/", "Placeholder Dogs with API", [], cardStyle, divLink)}
   </LOL>
