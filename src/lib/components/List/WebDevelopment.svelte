@@ -68,13 +68,14 @@
     {@render entry("https://freefrontend.com/css-background-patterns/", "This is another super long list of css backgrounds.", [], cardStyle, divLink)}
     {@render entry("https://designerfeed.org/css-background-patterns/", "CSS renders of some common fabric patterns", [], cardStyle, divLink)}
     {@render entry("https://www.svgrepo.com/", "Repo of Open-Liscensed SVG Vector Images and Icons", [], cardStyle, divLink)}
+    {@render entry("https://svgl.app/", "More SVGs specifically for Brands", [], cardStyle, divLink)}
     {@render entry("https://incompetech.com/music/royalty-free/music.html", "Royalty-Free Music", [], cardStyle, divLink)}
   </LOL>
   <LOL heading="Placeholder Content">
     {@render entry("https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators", "List of Placeholder text generators", [], cardStyle, divLink)}
     {@render entry("https://loremipsum.io/21-of-the-best-placeholder-image-generators", "List of placeholder image sources", [], cardStyle, divLink)}
     {@render entry("https://jsonplaceholder.typicode.com/", "Placeholder JSON data", [], cardStyle, divLink)}
-    {@render entry("", "In both of the subsequent resources, when I say \"API\" I mean a way to specificy requirements in URL", [], cardStyle, divLink, undefined, "", true, false)}
+    {@render entry("", "In both of the subsequent resources, when I say \"API\" I mean a way to specificy requirements in URL", [], cardStyle, divLink, undefined, "", true)}
     {@render entry("https://placehold.co/", "Blank Placeholder Images with API", [], cardStyle, divLink)}
     {@render entry("https://placedog.net/", "Placeholder Dogs with API", [], cardStyle, divLink)}
   </LOL>
