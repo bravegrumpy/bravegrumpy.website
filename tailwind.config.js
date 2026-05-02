@@ -48,6 +48,12 @@ export default {
           fontVariationSettings: '"MONO" 0, "CASL" 0, "wght" 400, "CRSV" 0, "slnt" 0'
         }
       ],
+      bodyEmphasis: [
+        "Recursive",
+        {
+          fontVariationSettings: '"MONO" 0, "CASL" 0.5, "wght" 375, "CRSV" 0, "slnt" -4'
+        }
+      ],
       sans: [
         'Recursive',
         {
