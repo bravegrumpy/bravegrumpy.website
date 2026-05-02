@@ -12,6 +12,7 @@ Section Component
 @prop {boolean} [section] - controlls whether the local CSS styling that controlls border, padding, margins, flexbox properties are in fact applied. Defaults to `true`. Only use if you want to style the section, or may otherwise use `class=""`.
 @prop {string} [class] - defauls value: `${sectionClass} ${colors} section`, unless section is false.
 -->
+<!-- TODO: #326 Update this interface for other wrapper components, such as Article, Aside, etc.-->
 <script lang="ts">
   import { type Snippet } from "svelte";
   import { type SvelteHTMLElements } from "svelte/elements";
