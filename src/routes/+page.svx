@@ -73,7 +73,7 @@ I agree that I am over the age of 18 and consent to being exposed to adult conte
 
     </Section>
     <Content />
-    <Section className="hidden">
+    <Section class="hidden">
     
 <h2>Types of Content</h2>
 
