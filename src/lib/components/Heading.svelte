@@ -1,6 +1,11 @@
-<script>
-  import Section from './Section.svelte';
-  const { children } = $props();
+<script lang="ts">
+  import { type Snippet } from 'svelte';
+  import Section from '$lib/components/Section.svelte';
+
+  interface Props {
+    children: Snippet;
+  }
+  const { children }: Props = $props();
 </script>
 
 <Section>
