@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Link } from "$lib/../convex/navigation";
+  import type { Link } from "$lib/db/convex/navigation";
   //   import { Drawer, Button, GradientButton, CloseButton, ToolbarButton } from 'flowbite-svelte';
   import { Button, Drawer, CloseButton } from 'flowbite-svelte';
   //   import { sineIn } from 'svelte/easing';
@@ -23,8 +23,8 @@
 
 <div class="text-center">
   <Button
-    size="xxs"
-    color="default"
+    size="sm"
+    color="primary"
     class="h-[50px] w-[50px] border-2 border-solid border-current bg-bravegrumpy-accent2a text-bravegrumpy-logoPurple dark:bg-bravegrumpy-brand6 dark:text-bravegrumpy-accent1a"
     onclick={() => (hidden1 = false)}
   >
