@@ -30,8 +30,8 @@
                     <Toggle size="small" color="primary" bind:checked={showDevNotes}>
                         <span>Show ephemeral developer notes</span>
                     </Toggle>
+                </Label>
                 {/if}
-            </Label>
             {:else}
             <h3>Admin Password</h3>
             <Label color="green" class="flex flex-row gap5 justify-between items-center w-full *:text-xs border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20">
