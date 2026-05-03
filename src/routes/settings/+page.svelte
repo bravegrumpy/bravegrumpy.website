@@ -8,7 +8,7 @@
 
     const password = "Abracadabra"
 
-    let inputPassword = $state("Abracadabra");
+    let inputPassword = $state("");
 
     const devNotesExist = false;
     let showDevNotes = $state(true);
