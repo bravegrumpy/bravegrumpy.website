@@ -1,0 +1,44 @@
+---
+h2: Working on The Odin Project
+date: 2026-02-22
+title: Recipe page
+---
+
+<script>
+    import BlogLayout from "$lib/components/Blog/BlogLayout.svelte"
+    import Heading from "$lib/components/Heading.svelte"
+    const { open=false } = $props();
+</script>
+
+<BlogLayout {h2} title={date.toString().slice(0,10)} {open}>
+
+<Heading>{title}</Heading>
+
+## Recipe page
+
+The first project I made:
+
+<iframe class="recipes" src="https://bravegrumpy.github.io/odin-recipes"></iframe>
+
+The second project I made: 
+
+<Heading>Landing Page</Heading>
+
+<iframe class="landing" src="https://bravegrumpy.github.io/odin-landing-page"></iframe>
+
+</BlogLayout>
+
+<style>
+
+.recipes {
+    width: 500px;
+    height: 600px;
+}
+
+.landing {
+    width: 1000px;
+    height: 2400px;
+    overflow-x: hidden;
+}
+
+</style>

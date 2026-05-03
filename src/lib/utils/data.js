@@ -66,6 +66,14 @@ const links = [
         pageTitle: "Quering A Database",
         pageSubtitle: "Integrating Prisma, properly this time",
         display: true, exists: true
+      },
+      {
+        id: "2-3",
+        href: "/writing/resume",
+        text: "Professional",
+        pageTitle: "Robin Zollner",
+        pageSubtitle: "Materials Engineer Open to Work",
+        display: true, exists: true
       }
     ]
   },
