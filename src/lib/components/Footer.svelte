@@ -8,7 +8,7 @@
 <footer>
   <div class="copyright">
     <p>
-      Copyright &copy; {currentYear}
+      Copyright &copy; 2022 - {currentYear}
     </p>
     <p>
       <img

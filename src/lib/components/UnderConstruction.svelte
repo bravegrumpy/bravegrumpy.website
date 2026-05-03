@@ -9,7 +9,7 @@
   } = $props();
 </script>
 
-<Section className="">
+<Section class="">
   <div class="construction">
     <p
       style:margin="auto 25px"
