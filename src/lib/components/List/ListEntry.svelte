@@ -2,40 +2,41 @@
 @component
 List Entry component
 @prop {string} [text] - The text to display
-@prop {string} [href]
+@prop {string} [href] - href for link
 @prop {string} [text]
-@prop {Array<string|Snippet>} [sublist]
-@prop {boolean} [cardStyle]
-@prop {boolean} [divLink]
-@prop {children} [Snippet]
-@prop {string} [after]
-@prop {boolean} [local]
-@prop {boolean} [lnk]
-
+@prop {Array<string|Snippet>} [sublist] - an array that renders an &lt;ul&gt;
+@prop {boolean} [cardStyle] - is the link styled as a "card"?
+@prop {boolean} [divLink] - Using a &lt;div&gt; instead of an `anchor`
+@prop {children} [Snippet] - any other children
+@prop {string} [after] - text directly after link
+@prop {boolean} [local] - true: removes `rel="noopener noreferrer nofollow"` and `target="_blank"`
+@prop {boolean} [lnk] - does this &lt;li&gt; include a link? Default: true
 -->
 
 <script lang="ts">
     import type { Snippet } from "svelte";
     import Section from "$lib/components/Section.svelte";
 
-    interface Props {
+    import type { HTMLLiAttributes } from "svelte/elements";
+
+    interface Props extends HTMLLiAttributes {
         /** href for link */
         href: string;
-        /** the "text" for the link*/
+        /** the "text" for the link */
         text: string;
         /** an array that renders an &lt;ul&gt; */
         sublist?: Array<string | Snippet>;
         /** is the link styled as a "card"? */
         cardStyle?: boolean;
-        /** Using a &lt;div&gt; instead of an `anchor`*/
+        /** Using a &lt;div&gt; instead of an `anchor` */
         divLink?: boolean;
         /** any other children */
         children?: Snippet;
-        /** text directly after link*/
+        /** text directly after link */
         after?: string;
         /** true: removes `rel="noopener noreferrer nofollow"` and `target="_blank"` */
         local?: boolean;
-        /** does this &lt;li&gt; include a link? Default: true*/
+        /** does this &lt;li&gt; include a link? Default: true */
         lnk?: boolean;
     }
 
@@ -48,20 +49,21 @@ List Entry component
         children, 
         after = '',
         local = false,
-        lnk = true
+        lnk = true,
+        class: liClass
     }: Props = $props();
 
     const localTarget = $derived(local ? "_self" : "_target");
     const localRel = $derived(local ? "rel=noopener,noreferrer,nofollow" : undefined);
 </script>
 
-<li>
+<li class={liClass}>
 {#if lnk}
   {#if cardStyle}
-  <Section className="">
+  <Section class="">
     {#if divLink}
     <div class="link divLink" aria-label={href} tabindex={0} role="link" onclick={() => window.open(href, "_blank")} onkeydown={() => window.open(href, "_blank")}>
-        <p>{text}</p> {after}
+        <p>{text} <span class="font-bodyEmphasis">{@html after}</span></p>
         {#if sublist}
             {#if sublist.length > 0}
             <ul>
@@ -81,7 +83,8 @@ List Entry component
     </div>
     {:else}
     <div class="link">
-        <a {href} rel={local ? "" : "noreferrer nofollow noopen"} target={local ? "_self" : "_blank"}>{text}</a> {after}
+        <a {href} rel={local ? "" : "noreferrer nofollow noopen"} target={local ? "_self" : "_blank"}>{text}</a> 
+        {@html after}
         {#if sublist}
             {#if sublist.length > 0}
                 <ul>
@@ -102,7 +105,7 @@ List Entry component
     {/if}
     </Section>
   {:else}
-  <a {href} rel={local ? "" : "noreferrer nofollow noopen"} target={local ? "_self" : "_blank"}>{text}</a>{after}
+  <a {href} rel={local ? "" : "noreferrer nofollow noopen"} target={local ? "_self" : "_blank"}>{text}</a>{@html after}
     {#if sublist}
         {#if sublist.length > 0}
             <ul>
