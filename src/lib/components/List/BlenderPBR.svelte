@@ -1,5 +1,5 @@
 <script>
-  import Heading from '$lib/components/Heading.svelte';
+  import Heading from "$lib/components/List/ListHeadingInteractive.svelte"
   import IOR from './ListsOfIORValues.svelte';
   import RS from './RealisticScaleResources.svelte';
   import Lighting from './Lighting.svelte';

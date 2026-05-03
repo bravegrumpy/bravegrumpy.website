@@ -2,7 +2,7 @@
   import Self from "$lib/components/List/ListOfLinks.svelte";
   import Entry from "$lib/components/List/ListEntry.svelte";
   import type { Snippet } from "svelte";
-    import Section from "../Section.svelte";
+  import Section from "$lib/components/Section.svelte";
   interface Props {
     chapter?: string;
     title?: string;
@@ -56,17 +56,17 @@
   export { entry };
 </script>
 
-{#snippet entryNew(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string, local?: boolean, lnk?: boolean)}
-  <Entry {href} {text} {sublist} {cardStyle} {divLink} {children} {after} {local} {lnk} />
+{#snippet entry(href: string, text: string, sublist?: string[] | Snippet[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string, local?: boolean, lnk?: boolean, liClass?: string)}
+  <Entry class={liClass} {href} {text} {sublist} {cardStyle} {divLink} {children} {after} {local} {lnk} />
 {/snippet}
 
-{#snippet entry(href: string, text: string, sublist?: string[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string, local?: boolean)}
+{#snippet entryOld(href: string, text: string, sublist?: string[] | Snippet[], cardStyle?: boolean, divLink?: boolean, children?: Snippet, after?: string, local?: boolean)}
 <li>
     {#if cardStyle}
-    <Section className="">
+    <Section class="">
         {#if divLink}
         <div class="link divLink" aria-label={href} tabindex={0} role="link" onclick={() => window.open(href, "_blank")} onkeypress={() => window.location.href = href}>
-            <p>{text}</p> {after}
+            <p>{text} <span class="font-bodyEmphasis">{after}</span></p>
             {#if sublist}
                 {#if sublist.length > 0}
                 <ul>
@@ -74,6 +74,8 @@
                     <li>
                       {#if typeof item === "string"}
                         {item}
+                      {:else}
+                        {@render item()}
                       {/if}
                     </li>
                     {/each}
