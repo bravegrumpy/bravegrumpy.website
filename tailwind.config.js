@@ -60,6 +60,12 @@ export default {
           fontVariationSettings: '"MONO" 1, "CASL" 0, "wght" 400, "CRSV" 0, "slnt" 0'
         }
       ],
+      mono: [
+        'Recursive',
+        {
+          fontVariationSettings: '"MONO" 1, "CASL" 1, "wght" 300, "CRSV" 1, "slnt" 0'
+        }
+      ],
       serif: ['Texturina']
     },
     colors: {

@@ -1,0 +1,14 @@
+<script lang="ts">
+    import { type Snippet } from "svelte";
+    import { type SvelteHTMLElements } from "svelte/elements";
+    type CodeProps = SvelteHTMLElements["code"];
+    interface Props extends CodeProps {
+        children?: Snippet;
+    }
+
+    const { children, class:className ="bg-gray-200 dark:bg-gray-600 shadow-sm border-b-2 border-black/50 rounded-md px-2 inline font-mono", ...props }:Props = $props();
+</script>
+
+<code class={className} {...props}>
+    {@render children?.()}
+</code>
