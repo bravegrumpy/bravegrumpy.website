@@ -6,12 +6,11 @@
     import Heading from "$lib/components/Heading.svelte";
     import Code from "$lib/components/Code.svelte";
 
-    import PR from "./pr.md";
-
     const password = "Abracadabra"
 
     let inputPassword = $state("Abracadabra");
 
+    const devNotesExist = false;
     let showDevNotes = $state(true);
 </script>
 
@@ -26,10 +25,12 @@
                 <span>Show style options on <Code>h2</Code> heading click.</span>
                 </Toggle>
             </Label>
-            <Label color="green" class='flex flex-row gap-5 justify-between items-center w-full *:text-xs border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20'>
-                <Toggle size="small" color="primary" bind:checked={showDevNotes}>
-                <span>Show ephemeral developer notes</span>
-                </Toggle>
+                {#if devNotesExist}
+                <Label color="green" class='flex flex-row gap-5 justify-between items-center w-full *:text-xs border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20'>
+                    <Toggle size="small" color="primary" bind:checked={showDevNotes}>
+                        <span>Show ephemeral developer notes</span>
+                    </Toggle>
+                {/if}
             </Label>
             {:else}
             <h3>Admin Password</h3>
@@ -39,7 +40,7 @@
             {/if}
         </Card>
     </Section>
-    {#if showDevNotes}
+    {#if showDevNotes && devNotesExist}
     <Heading>Ephemeral Developer Notes</Heading>
     <Section>
         <div class='flex flex-row gap-5 justify-between items-center w-full *:text-xs border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20'>
@@ -47,9 +48,6 @@
             <p>
                 finished converting list elements to rendering via snippet. Completes #310
             </p>
-        </div>
-        <div class='prose dark:prose-invert dark:prose-headings:text-bravegrumpy-accent2a dark:prose-p:text-bravegrumpy-accent2a dark:prose-li:text-bravegrumpy-accent2a w-full border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20'>
-            <PR />
         </div>
     </Section>
     {/if}
