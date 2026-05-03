@@ -1,6 +1,7 @@
 <script>
   import BaseContent from '$lib/components/BaseContent.svelte';
   import Section from '$lib/components/Section.svelte';
+  import Code from "$lib/components/Code.svelte";
 
   import { Button, GradientButton } from 'flowbite-svelte';
 
@@ -12,12 +13,12 @@
     <h2>January 4th, 2025</h2>
     <div class="flex w-full flex-row flex-wrap gap-5">
       <p>
-        This is a reference for all the different visual styles given by Flowbite's <code
-          >Button</code
+        This is a reference for all the different visual styles given by Flowbite's <Code
+          >Button</Code
         >
-        and <code>GradientButton</code> components. In my opinion, some of the color choices are
+        and <Code>GradientButton</Code> components. In my opinion, some of the color choices are
         less than intuitive. These are a good way to see if changes to the
-        <code>tailwind.config.js</code> file have propigated correctly.
+        <Code>tailwind.config.js</Code> file have propigated correctly.
       </p>
     </div>
   </Section>

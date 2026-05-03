@@ -1,9 +1,11 @@
 <script>
-  import LOL from './ListOfLinks.svelte';
+  import LOL, { entry } from './ListOfLinks.svelte';
   import RF from './RadiantFluxTable.svelte';
   import ILL from './IlluminanceTable.svelte';
 
   import { Tabs, TabItem } from 'flowbite-svelte';
+
+  import { cardStyle, divLink } from '$lib/stores';
 </script>
 
 <LOL id="lighting" section="Lighting" text={someContext}>
@@ -11,20 +13,9 @@
 </LOL>
 
 <LOL id="lightingOnline" title="Online Lighting Resources">
-  <li>
-    <a
-      href="https://docs.blender.org/manual/en/latest/render/lights/light_object.html#common-settings"
-      target="_blank">Blender Light Objects</a
-    >
-  </li>
-  <li>
-    <a href="https://en.wikipedia.org/wiki/Lumen_(unit)" target="_blank"
-      >Wikipedia Common Energy and Lumens Table</a
-    >
-  </li>
-  <li>
-    <a href="https://en.wikipedia.org/wiki/Radiant_flux" target="_blank">Wikipedia Radiant Flux</a>
-  </li>
+  {@render entry("https://docs.blender.org/manual/en/latest/render/lights/light_object.html#common-settings", "Blender Light Objects", [], $cardStyle, $divLink)}
+  {@render entry("https://en.wikipedia.org/wiki/Lumen_(unit)", "Wikipedia Common Energy and Lumens Table", [], $cardStyle, $divLink)}
+  {@render entry("https://en.wikipedia.org/wiki/Radiant_flux", "Wikipedia Radiant Flux", [], $cardStyle, $divLink)}
 </LOL>
 <LOL title="Common Real Life Lighting Values"><p></p></LOL>
 
