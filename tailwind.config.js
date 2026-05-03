@@ -48,10 +48,22 @@ export default {
           fontVariationSettings: '"MONO" 0, "CASL" 0, "wght" 400, "CRSV" 0, "slnt" 0'
         }
       ],
+      bodyEmphasis: [
+        "Recursive",
+        {
+          fontVariationSettings: '"MONO" 0, "CASL" 0.5, "wght" 375, "CRSV" 0, "slnt" -4'
+        }
+      ],
       sans: [
         'Recursive',
         {
           fontVariationSettings: '"MONO" 1, "CASL" 0, "wght" 400, "CRSV" 0, "slnt" 0'
+        }
+      ],
+      mono: [
+        'Recursive',
+        {
+          fontVariationSettings: '"MONO" 1, "CASL" 1, "wght" 300, "CRSV" 1, "slnt" 0'
         }
       ],
       serif: ['Texturina']

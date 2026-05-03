@@ -57,7 +57,7 @@
     </p>
   </Section>
     <Content />
-  <Section className="hidden">
+  <Section class="hidden">
 
 ## Types of Content
 

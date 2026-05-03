@@ -22,7 +22,7 @@ None of the background patterns below are my own. Look to the links page under t
 
 Ultimately it looks like that some of these patterns will be extremely useful when putting together my mobile whatnot. It will also be fun when I do some "cutout" and  "paralax" with titles.
 
-<Section className="">
+<Section class="">
 <div class="paper-wave">
 
 
@@ -46,7 +46,7 @@ It is also useful to have these posts here, as a clear challenge is in figuring 
 </div>
 </Section>
 
-<Section className="">
+<Section class="">
 <div class="tartan">
 
 ### This is a thing.
@@ -69,7 +69,7 @@ Either Way, this is an interesting excercise.
 </div>
 </Section>
 
-<Section className="">
+<Section class="">
 <div class="cross-dots">
 
 This is another background.  I rather ejoy that I can experiment with overriding my base themes here.
@@ -81,7 +81,7 @@ Who knows?
 </div>
 </Section>
 
-<Section className="">
+<Section class="">
 <div class="chocolate-weave">
 
 ## I am particularly worried about hwo this one looks. 

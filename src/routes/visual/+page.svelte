@@ -153,7 +153,7 @@
     <h2>it'll be here soooooon</h2>
     <p>Please be patient with me.</p>
   </Section>
-  <Section className="w-fit self-center">
+  <Section class="w-fit self-center">
     <Gallery items={dogPlaceholder} />
   </Section>
 </Article>
