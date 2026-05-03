@@ -1,4 +1,4 @@
-import { query } from "$lib/../convex/_generated/server"
+import { query } from "$lib/db/convex/_generated/server"
 
 export const get = query({
     args: {},

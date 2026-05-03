@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { isHeadingInteractive } from "$lib/stores";
+    import { isHeadingInteractive, showDebug } from "$lib/stores";
     import { Card, Toggle, Label, Input } from "flowbite-svelte";
     import Article from "$lib/components/Article.svelte";
     import Section from "$lib/components/Section.svelte";
@@ -25,6 +25,11 @@
                 <span>Show style options on <Code>h2</Code> heading click.</span>
                 </Toggle>
             </Label>
+            <Label color="green" class='flex flex-row gap-5 justify-between items-center w-full *:text-xs border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20'>
+                <Toggle size="small" color="primary" bind:checked={$showDebug}>
+                <span>Show rendered debug output</span>
+                </Toggle>
+            </Label>
                 {#if devNotesExist}
                 <Label color="green" class='flex flex-row gap-5 justify-between items-center w-full *:text-xs border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20'>
                     <Toggle size="small" color="primary" bind:checked={showDevNotes}>
@@ -44,10 +49,6 @@
     <Heading>Ephemeral Developer Notes</Heading>
     <Section>
         <div class='flex flex-row gap-5 justify-between items-center w-full *:text-xs border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20'>
-            <h3>Commit Message</h3>
-            <p>
-                finished converting list elements to rendering via snippet. Completes #310
-            </p>
         </div>
     </Section>
     {/if}

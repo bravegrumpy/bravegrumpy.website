@@ -47,5 +47,27 @@ export default defineSchema({
     users: defineTable({
         email: v.string(),
         name: v.string()
-    })
+    }),
+
+    linkCategories: defineTable({
+        name: v.string(),
+        slug: v.string(),
+        order: v.float64()
+    }),
+
+    linkNodeTypes: defineTable({
+        name: v.string(),
+        order: v.float64()
+    }),
+
+    linkNodes: defineTable({
+        categoryId: v.id('linkCategories'),
+        parentId: v.optional(v.id("linkNodes")),
+        typeId: v.id('linkNodeTypes'),
+
+        title: v.optional(v.string()),
+        url: v.optional(v.string()),
+        content: v.optional(v.string()),
+        order: v.float64(),
+    }).index("by_category", ["categoryId"]).index("by_parent", ["parentId"]).index("by_type", ["typeId"])
 });

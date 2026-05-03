@@ -1,4 +1,4 @@
-import { query, mutation } from "$lib/../convex/_generated/server"
+import { query, mutation } from "$lib/db/convex/_generated/server"
 import { type Infer, v } from "convex/values"
 
 export const get = query({

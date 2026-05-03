@@ -4,12 +4,31 @@
   import LOL, { entry } from '$lib/components/List/ListOfLinks.svelte';
   import Entry from "$lib/components/List/ListEntry.svelte";
 
-  import { Checkbox } from 'flowbite-svelte';
+  import { showDebug } from '$lib/stores';
 
-  import { cardStyle, divLink, showStyleOption } from '$lib/stores';
+  import { cardStyle, divLink } from '$lib/stores';
+
+  import { useQuery } from 'convex-svelte';
+  import { api } from "$lib/db/convex/_generated/api"
+
+  // const categories = $derived(useQuery(api.links.getCategories));
+  // const webDev = $derived(categories.data.filter((c) => c.slug === "web-dev"));
+  // const webDevId = $derived(webDev[0]._id)
+  // const nodes = $derived(useQuery(api.links.getNodesByCategory, { categoryId: webDevId}));
+
+// TODO: #337 Finish debugging this new convex approach
+// TODO: #338 implement the convex approach throughout `List`.
 </script>
 
+
+
 <Heading>Web Development</Heading>
+{#if $showDebug}
+<Section>
+  <!-- <p>{JSON.stringify(categories)}</p> -->
+  <!-- <p>{JSON.stringify(nodes)}</p> -->
+</Section>
+{/if}
 <Section --sectionColumn="2/2" --sectionRow="2/2">
   <LOL section="Online Guides and Tools" title="Interactive CSS Instructions">
     {@render entry("https://www.joshwcomeau.com/", "CSS Information! Seriously, this is the GOAT CSS interactive tutorial resource.", [], $cardStyle, $divLink)}

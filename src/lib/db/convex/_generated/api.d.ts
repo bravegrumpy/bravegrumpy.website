@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as links from "../links.js";
 import type * as navigation from "../navigation.js";
 import type * as tasks from "../tasks.js";
 
@@ -18,6 +19,7 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  links: typeof links;
   navigation: typeof navigation;
   tasks: typeof tasks;
 }>;
