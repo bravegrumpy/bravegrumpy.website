@@ -41,7 +41,7 @@
       {darkBackground}
       {darkColors}
       {colors}
-      {className}
+      class={className}
       --sectionColumn={sectionColumn}
     >
       {@render children()}
