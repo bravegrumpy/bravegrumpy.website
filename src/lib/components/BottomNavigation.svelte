@@ -3,7 +3,7 @@
   import  { links as lnks } from '$lib/utils/data.js';
   import { page } from '$app/state';
 
-  import type { Link } from "$lib/../convex/navigation"
+  import type { Link } from "$lib/db/convex/navigation"
 
   let slug = $derived(
     '/' + page.url.pathname.split('/')[1] + '/' + page.url.pathname.split('/')[2]
