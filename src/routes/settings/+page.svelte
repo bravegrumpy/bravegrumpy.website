@@ -8,10 +8,10 @@
 
     const password = "Abracadabra"
 
-    let inputPassword = $state("");
+    let inputPassword = $state("Abracadabra");
 
     const devNotesExist = false;
-    let showDevNotes = $state(true);
+    let showDevNotes = $state(false);
 </script>
 
 <Article --articleColumn="2 / 3">

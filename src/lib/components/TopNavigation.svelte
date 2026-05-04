@@ -1,6 +1,7 @@
 <script>
   import '$lib/styles/globals.css';
   import Navigation from './Navigation.svelte';
+  import Settings  from "$lib/components/Settings.svelte"
   import { DarkMode } from 'flowbite-svelte';
   import Icon from '@iconify/svelte';
   import { page } from '$app/stores';
@@ -9,7 +10,7 @@
 
   let { links, fontSize = '2rem', reversed=true } = $props();
 
-  const iconSize = '25';
+  const iconSize = 25;
   const buttonSize = `size-[${iconSize * 2}px]`;
 </script>
 
@@ -31,6 +32,8 @@
     <Icon icon="game-icons:sun" slot="lightIcon" height={iconSize} width={iconSize} />
     <Icon icon="game-icons:night-sleep" slot="darkIcon" height={iconSize} width={iconSize} />
   </DarkMode>
+  <Settings />
+  <!-- TODO: #339 Turn `DarkMode` and `Settings` into a dropdown menu -->
 </nav>
 
 <style>
