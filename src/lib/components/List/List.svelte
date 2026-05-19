@@ -4,6 +4,7 @@
   import GeneralCoding from './GeneralCoding.svelte';
   import CreativeWriting from './CreativeWriting.svelte';
   import Fun from "./Fun.svelte"
+  import Crafts from "./Crafts.svelte"
 
   import BaseLayout from '$lib/components/BaseLayout.svelte';
   import BaseContent from '$lib/components/BaseContent.svelte';
@@ -24,5 +25,8 @@
   </BaseContent>
   <BaseContent title="Small-Web Community">
     <Fun />
+  </BaseContent>
+  <BaseContent title="Arts & Crafts">
+    <Crafts />
   </BaseContent>
 </BaseLayout>
