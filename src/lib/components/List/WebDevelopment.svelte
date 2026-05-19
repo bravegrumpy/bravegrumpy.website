@@ -101,6 +101,7 @@
   {@render entry("https://symbl.cc/en/unicode-table/#box-drawing", "Box Drawing Unicode Symbols (good for representing file trees)", [], $cardStyle, $divLink)}
   {@render entry("https://unicodeplus.com/", "Symbol to Unicode search", [], $cardStyle, $divLink)}
   {@render entry("https://www.unicode.org/charts/", "Official Unicode List of characters", [], $cardStyle, $divLink)}
+  {@render entry("https://www.accentletters.com/", "Accent Letters", [], $cardStyle, $divLink)}
   </LOL>
   <LOL heading="ASCII">
     {@render entry("https://www.ascii-code.com/", "ASCII table", [], $cardStyle, $divLink)}
