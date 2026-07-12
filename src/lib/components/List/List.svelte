@@ -3,14 +3,21 @@
   import WebDevelopment from './WebDevelopment.svelte';
   import GeneralCoding from './GeneralCoding.svelte';
   import CreativeWriting from './CreativeWriting.svelte';
-  import Fun from "./Fun.svelte"
-  import Crafts from "./Crafts.svelte"
-  import Media from "./Media.svelte"
+  import Fun from './Fun.svelte';
+  import Crafts from './Crafts.svelte';
+  import Media from './Media.svelte';
 
   import BaseLayout from '$lib/components/BaseLayout.svelte';
   import BaseContent from '$lib/components/BaseContent.svelte';
+
+  import { page } from '$app/state';
+
+  let tabs = ['Blender', 'Web Dev', 'Coding', 'CreativeWriting', 'Fun', 'Crafts', 'Media'];
+
+  let activeTab = $derived(page.url.searchParams.get('tab'));
 </script>
 
+<p>{activeTab}</p>
 <BaseLayout colEnd="4">
   <BaseContent title="Blender PBR" open>
     <BlenderPBR />
