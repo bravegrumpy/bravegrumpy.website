@@ -14,7 +14,7 @@
 </Article>
 <Article --articleColumn="2/4">
     <Heading>List Of Planned Shows</Heading>
-    <Section>
+    <Section sectionClass="prose">
         <ShowList />
     </Section>
 </Article>
