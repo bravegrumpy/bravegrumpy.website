@@ -5,6 +5,7 @@
   import CreativeWriting from './CreativeWriting.svelte';
   import Fun from "./Fun.svelte"
   import Crafts from "./Crafts.svelte"
+  import Media from "./Media.svelte"
 
   import BaseLayout from '$lib/components/BaseLayout.svelte';
   import BaseContent from '$lib/components/BaseContent.svelte';
@@ -28,5 +29,8 @@
   </BaseContent>
   <BaseContent title="Arts & Crafts">
     <Crafts />
+  </BaseContent>
+  <BaseContent title="Media">
+    <Media />
   </BaseContent>
 </BaseLayout>

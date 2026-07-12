@@ -149,6 +149,8 @@
                 href="https://webtor.io"
                 text="WebTor.io"
                 after="Streams From Magnet Links"
+                cardStyle={$cardStyle}
+                divLink={$divLink}
             />
         </LOL>
     </Details>
