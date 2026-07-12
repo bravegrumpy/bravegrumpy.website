@@ -32,6 +32,8 @@
     </Details>
     <Details summary="Shows" Section="Planned Shows" stl>
         <p><a href="/links/media/shows">View Show List</a></p>
+        <div class="prose prose-headings:text-current prose-ul:text-current">    
             <ShowList />
+        </div>
     </Details>
 </Section>
