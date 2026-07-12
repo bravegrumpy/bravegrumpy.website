@@ -30,7 +30,7 @@
             />
         </LOL>
     </Details>
-    <div class="w-fit mx-auto px-5 py-2">
+    <div class="w-fit mx-auto !px-5 !py-2">
         <NavButton className="px-5 py-2" href="/links/media/shows" text="Shows" slug="/list/media/shows" />
     </div>
 </Section>

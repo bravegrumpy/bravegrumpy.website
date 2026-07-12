@@ -19,7 +19,7 @@
 <Article --articleColumn="2/4">
     <Heading>List Of Planned Shows</Heading>
     <div class="w-fit mx-auto px-5 py-2">
-        <NavButton className="px-5 py-2" href="/links" text="Go Back"/>
+        <NavButton className="!px-5 !py-2" href="/links" text="Go Back"/>
     </div>
     <Section sectionClass="prose !max-w-none prose-headings:text-current prose-ul:marker:text-current">
         <ShowList />
