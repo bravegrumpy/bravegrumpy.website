@@ -6,7 +6,7 @@
   import Entry from '$lib/components/List/ListEntry.svelte';
   import { cardStyle, divLink } from "$lib/stores"
 
-  import ShowList from "$lib/components/List/media/shows.svx"
+  import NavButton from '$lib/components/NavButton.svelte';
 </script>
 
 <Heading>Media</Heading>
@@ -30,12 +30,5 @@
             />
         </LOL>
     </Details>
-    <Details summary="Shows" Section="Planned Shows" stl>
-        <p>
-            <a href="/links/media/shows">View Formatted Show List</a>
-        </p>
-        <div class="*:list-decimal *:*:text-current">
-            <ShowList />
-        </div>
-    </Details>
+    <NavButton href="/list/media/shows" text="Shows" slug="/list/media/shows" />
 </Section>
