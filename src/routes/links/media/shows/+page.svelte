@@ -5,7 +5,9 @@
     import ShowList from "$lib/components/List/media/shows.svx"
 </script>
 
-<Heading>List Of Planned Shows</Heading>
-<Section sectionClass="prose">
+<Article --articleColumn="2/3">
+    <Heading>List Of Planned Shows</Heading>
+    <Section sectionClass="prose">
         <ShowList />
-</Section>
+    </Section>
+</Article>
