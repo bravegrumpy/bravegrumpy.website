@@ -30,7 +30,7 @@
                 divLink={$divLink}
             >
             <h3>Note</h3>
-            <p>This is trusted OSS.</p>    
+            <p>This claims to be trusted OSS. It is not. However, it does do what it claims to do. However, it does push for an account and to pay.  I need to do more research as to who is behind this, and where teh codebase is stored. </p>    
         </Entry>
         </LOL>
     </Details>
