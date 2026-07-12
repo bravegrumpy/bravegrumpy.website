@@ -31,6 +31,7 @@
         </LOL>
     </Details>
     <Details summary="Shows" stl>
+        <p><a href="/links/media/shows">View Show List</a></p>
         <ShowList />
     </Details>
 </Section>
