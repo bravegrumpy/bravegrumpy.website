@@ -30,7 +30,5 @@
             />
         </LOL>
     </Details>
-    <div class="w-fit mx-auto">
-    <NavButton href="/links/media/shows" text="Shows" slug="/list/media/shows" />
-    </div>
+    <NavButton className="mx-auto" href="/links/media/shows" text="Shows" slug="/list/media/shows" />
 </Section>
