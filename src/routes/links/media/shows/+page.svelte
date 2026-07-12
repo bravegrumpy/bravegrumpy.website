@@ -7,7 +7,7 @@
 
 <Article --articleColumn="2/3">
     <Heading>List Of Planned Shows</Heading>
-    <Section sectionClass="prose !max-w-none">
+    <Section sectionClass="prose !max-w-none prose-headings:text-current">
         <ShowList />
     </Section>
 </Article>
