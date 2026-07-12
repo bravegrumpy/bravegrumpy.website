@@ -2,7 +2,8 @@
     import type { Snippet } from "svelte"
     import Section from "$lib/components/Section.svelte"
     import LOL, { entry } from "$lib/components/List/ListOfLinks.svelte";
-    import Heading from "$lib/components/Heading.svelte";
+    // import Heading from "$lib/components/Heading.svelte";
+    import Heading from "$lib/components/List/ListHeadingInteractive.svelte"
     import Entry from "$lib/components/List/ListEntry.svelte";
 
     import Details from "$lib/components/List/Details.svelte";
@@ -130,4 +131,25 @@
             local
         />
     </LOL>
+</Section>
+
+<Heading>Streaming Media</Heading>
+<Section>
+    <Details section="Watching Media">
+        <p>The easiest Way to stream anything for free, atm, is to get a Magnet Link from a torrenting site, and then stream it through a website that can stream from torrent links.</p>
+        <LOL>
+            <Entry 
+                href="https://ext.to"
+                text="Ext.TO -- Torrenting WebSite"
+                after="Provides Magnet Links"
+                cardStyle={$cardStyle}
+                divLink={$divLink}
+            />
+            <Entry 
+                href="https://webtor.io"
+                text="WebTor.io"
+                after="Streams From Magnet Links"
+            />
+        </LOL>
+    </Details>
 </Section>
