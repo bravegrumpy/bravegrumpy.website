@@ -1,37 +1,16 @@
+<div class="prose !max-w-none prose-headings:text-current prose-ul:marker:text-current">
+
 ## Shows
 
-1. Life on Mars
-2. Santa Clarita Diet 
-3. Arrow
-4. Rookie
-5. Supernatural
-6. Castle
-7. Mr. In Between
-8. Mash
-9. Better Call Saul
-10. Reacher
-11. Arrow
-12. The Walking Dead
-13. Primeval
-14. Outlander
-15. Torchwood
-16. Star Trek Lower Decks ---> Contingent on my finishing SW
-17. Fellow Travelers (tlk to him first)
-18. Expanse
-19. Daredevil
-20. Jessica Jones
-21. Sons of Anarchy
-22. Only Sons and Horsea (Randy)
-23. Peacemaker
-24. Resident Alien
-25. Black Adder
-26. Black Books
-27. Black Sails
+1. A List
+1. Of Shows
+1. I Plan
+1. To Watch
 
 ### In Media Res
 
-1. Dr. Who S4?
-2. Preacher
-3. How I met Your Mother S2?
-4. Breaking Bad S2E1
-5. Red dwarf S1E5
+1. Shows
+1. I am currently 
+1. Watching
+
+</div>

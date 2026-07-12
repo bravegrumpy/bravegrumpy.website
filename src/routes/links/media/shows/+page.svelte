@@ -12,7 +12,8 @@
 
 <Article --articleColumn="2/3">
 <Heading>List Of Planned Shows</Heading>
-<Section sectionClass="prose !max-w-none prose-headings:text-current">
+<!-- <Section sectionClass="prose !max-w-none prose-headings:text-current prose-ul:marker:text-current"> -->
+<Section>    
     <ShowList />
 </Section>
 </Article>
