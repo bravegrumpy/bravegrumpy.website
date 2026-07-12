@@ -9,16 +9,19 @@
 
 <Article --articleColumn="1/2">
     <SideNavButton href="/links" text="Back To Links"/>
-    <Aside --asideHeight="fit-content" --asideColumn="1/2">
-        <h3>How To Watch</h3>
-        <p>I typically find the show I want to watch on <a href="https://ext.to" target="_blank">Ext.TO</a>, copy the magnet link, and then use <a href="https://webtor.io" target="_blank">WebTor</a> to watch the show.</p>
-        <p>However, there are many ways to achieve the same goal. I know that there are single websites that do the whole thing.</p>
-    </Aside>
 </Article>
 
-<Article --articleColumn="2/4">
+<Article --articleColumn="2/3">
     <Heading>List Of Planned Shows</Heading>
     <Section sectionClass="prose !max-w-none prose-headings:text-current prose-ul:marker:text-current">
         <ShowList />
     </Section>
+</Article>
+
+<Article --articleColumn="3/4">
+    <Aside --asideHeight="fit-content" --asideColumn="1/2">
+        <h3>How To Watch</h3>
+        <p>I typically find the show I want to watch on <a href="https://ext.to" target="_blank">Ext.TO</a>, copy the magnet link, and then use <a href="https://webtor.io" target="_blank">WebTor</a> to stream the show.</p>
+        <p>However, there are many ways to achieve the same goal. I know that there are single websites that do the whole thing.</p>
+    </Aside>
 </Article>
