@@ -12,6 +12,8 @@
     <Aside --asideHeight="fit-content" --asideColumn="1/2">
         <h3>How To Watch</h3>
         <p>I typically find the show I want to watch on <a href="https://ext.to" target="_blank">Ext.TO</a>, copy the magnet link, and then use <a href="https://webtor.io" target="_blank">WebTor</a> to stream the show.</p>
+        <p></p>
+        <p>Be sure to check <a href="/links">the links/media</a> tab to reference any relevant warnings.</p>
     </Aside>
     <SideNavButton href="/links" text="Back To Links"/>
 </Article>

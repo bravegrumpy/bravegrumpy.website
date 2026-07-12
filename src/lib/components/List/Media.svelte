@@ -19,15 +19,19 @@
                 text="Ext.to: Torrenting Website "
                 after="Provides Magnet Links"
                 cardStyle={$cardStyle}
-                divLink={$divLink}
-            />
+                divLink={$divLink}>
+             <p>Be careful with this website. It is not a trusted site. If you aren't extremely careful random stuff will download. Do not use w/o VPN or and w/o No Script and uMatrix installed and activated.</p>    
+            </Entry>
             <Entry 
                 href="https://webtor.io"
                 text="WebTor.io "
                 after="Streams From Magnet Links"
                 cardStyle={$cardStyle}
                 divLink={$divLink}
-            />
+            >
+            <h3>Note</h3>
+            <p>This is trusted OSS.</p>    
+        </Entry>
         </LOL>
     </Details>
     <div class="w-fit mx-auto !px-5 !py-2">
