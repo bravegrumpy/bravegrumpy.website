@@ -34,7 +34,7 @@
         <p>
             <a href="/links/media/shows">View Formatted Show List</a>
         </p>
-        <div class="prose !max-w-none prose-headings:text-current prose-ul:marker:text-current dark:!text-bravegrumpy-accent2a">
+        <div class="prose !max-w-none prose-headings:text-current prose-ul:marker:text-current dark:!text-bravegrumpy-accent2a !list-decimal">
             <ShowList />
         </div>
     </Details>
