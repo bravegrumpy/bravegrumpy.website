@@ -15,7 +15,7 @@
     <SideNavButton href="/links" text="Back To Links"/>
 </Article>
 
-<Article --articleColumn="2/3">
+<Article --articleColumn="2/4">
     <Heading>List Of Planned Shows</Heading>
     <Section sectionClass="prose !max-w-none prose-headings:text-current prose-ul:marker:text-current">
         <ShowList />
