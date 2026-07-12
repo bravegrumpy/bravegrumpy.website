@@ -29,8 +29,7 @@
                 cardStyle={$cardStyle}
                 divLink={$divLink}
             >
-            <h3>Note</h3>
-            <p>This claims to be trusted OSS. It is not. However, it does do what it claims to do. However, it does push for an account and to pay.  I need to do more research as to who is behind this, and where teh codebase is stored. </p>    
+            <p>This is a trusted Open Source Project that does exactly what it claims to do. It also provides a ton of education on using torrents</p>    
         </Entry>
         </LOL>
     </Details>
