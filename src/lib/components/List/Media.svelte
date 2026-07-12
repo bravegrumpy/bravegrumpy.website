@@ -34,6 +34,8 @@
         <p>
             <a href="/links/media/shows">View Formatted Show List</a>
         </p>
-        <ShowList />
+        <div class="prose !max-w-none prose-headings:text-current prose-ul:marker:text-current">
+            <ShowList />
+        </div>
     </Details>
 </Section>
