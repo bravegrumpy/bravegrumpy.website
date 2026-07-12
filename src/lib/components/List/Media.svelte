@@ -15,7 +15,7 @@
     <Details summary="How To Watch" stl>
         <LOL>
             <Entry 
-                href="https://ext.io"
+                href="https://ext.to"
                 text="Ext.to: Torrenting Website "
                 after="Provides Magnet Links"
                 cardStyle={$cardStyle}
