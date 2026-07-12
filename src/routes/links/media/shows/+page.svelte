@@ -5,6 +5,7 @@
     import Aside from "$lib/components/Aside.svelte"
     import Article from "$lib/components/Article.svelte";
     import SideNavButton from "$lib/components/SideNavButton.svelte";
+    import NavButton from "$lib/components/NavButton.svelte";
 </script>
 
 <Article --articleColumn="1/2">
@@ -17,6 +18,9 @@
 
 <Article --articleColumn="2/4">
     <Heading>List Of Planned Shows</Heading>
+    <div class="w-fit mx-auto">
+        <NavButton href="/links" text="Go Back" />
+    </div>
     <Section sectionClass="prose !max-w-none prose-headings:text-current prose-ul:marker:text-current">
         <ShowList />
     </Section>
