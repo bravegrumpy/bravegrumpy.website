@@ -17,7 +17,6 @@
   let activeTab = $derived(page.url.searchParams.get('tab'));
 </script>
 
-<p>{activeTab}</p>
 <BaseLayout colEnd="4">
   <BaseContent title="Blender PBR" open>
     <BlenderPBR />

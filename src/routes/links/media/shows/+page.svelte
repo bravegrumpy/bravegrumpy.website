@@ -8,7 +8,7 @@
     import NavButton from "$lib/components/NavButton.svelte";
 </script>
 
-<Article --articleColumn="1/2">
+<Article --articleColumn="1/2" --articleRow="1/2">
     <Aside --asideHeight="fit-content" --asideColumn="1/2">
         <h3>How To Watch</h3>
         <p>I typically find the show I want to watch on <a href="https://ext.to" target="_blank">Ext.TO</a>, copy the magnet link, and then use <a href="https://webtor.io" target="_blank">WebTor</a> to stream the show.</p>
@@ -18,7 +18,7 @@
     <SideNavButton href="/links" text="Back To Links"/>
 </Article>
 
-<Article --articleColumn="2/4">
+<Article --articleColumn="2/4" --articleRow="1/2">
     <Heading>List Of Planned Shows</Heading>
     <div class="w-fit mx-auto px-5 py-2">
         <NavButton className="!px-5 !py-2" href="/links" text="Go Back"/>

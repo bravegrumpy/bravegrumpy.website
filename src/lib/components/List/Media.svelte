@@ -31,9 +31,19 @@
             >
             <p>This is a trusted Open Source Project that does exactly what it claims to do. It also provides a ton of education on using torrents</p>    
         </Entry>
+        <hr />
+        <Entry
+            href="https://ww1.ytstv.hair"
+            text="Torrenting/streaming Site"
+            after=" Has lots of 'sources'"
+            cardStyle={$cardStyle}
+            divLink={$divLink}
+        >
+            <p>This is a sketchy site.  Do not use it without at least a VPN AND 2 layers of adblock.</p>
+        </Entry>
         </LOL>
     </Details>
-    <div class="w-fit mx-auto !px-5 !py-2">
+    <!-- <div class="w-fit mx-auto !px-5 !py-2">
         <NavButton className="px-5 py-2" href="/links/media/shows" text="Shows" slug="/list/media/shows" />
-    </div>
+    </div> -->
 </Section>
