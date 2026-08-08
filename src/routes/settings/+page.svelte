@@ -8,9 +8,10 @@
 
     const password = "Abracadabra"
 
-    let inputPassword = $state("");
+    let inputPassword = $state("Abracadabra");
 
     const devNotesExist = false;
+    const debugOutput = false;
     let showDevNotes = $state(false);
 </script>
 
@@ -25,11 +26,13 @@
                 <span>Show style options on <Code>h2</Code> heading click.</span>
                 </Toggle>
             </Label>
+            {#if debugOutput}
             <Label color="green" class='flex flex-row gap-5 justify-between items-center w-full *:text-xs border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20'>
                 <Toggle size="small" color="primary" bind:checked={$showDebug}>
                 <span>Show rendered debug output</span>
                 </Toggle>
             </Label>
+            {/if}
                 {#if devNotesExist}
                 <Label color="green" class='flex flex-row gap-5 justify-between items-center w-full *:text-xs border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20'>
                     <Toggle size="small" color="primary" bind:checked={showDevNotes}>
