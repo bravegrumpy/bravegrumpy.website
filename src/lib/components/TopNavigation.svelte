@@ -2,9 +2,12 @@
   import '$lib/styles/globals.css';
   import Navigation from './Navigation.svelte';
   import Settings  from "$lib/components/Settings.svelte"
+  import Btn from "$lib/components/IconButtonBase.svelte"
   import { DarkMode } from 'flowbite-svelte';
   import Icon from '@iconify/svelte';
   import { page } from '$app/stores';
+
+  import { settingsMode } from '$lib/stores';
 
   const slug = $derived('/' + $page.url.pathname.split('/')[1]);
 
@@ -26,13 +29,16 @@
     gap="0.8rem"
     marginLeft="0px"
   />
-  <DarkMode
-    class="{buttonSize} rounded-[5px] border-[2px] border-solid border-current bg-bravegrumpy-accent2a text-bravegrumpy-logoPurple hover:scale-105 hover:hue-rotate-15 dark:bg-bravegrumpy-brand6 dark:text-bravegrumpy-accent1a"
-  >
-    <Icon icon="game-icons:sun" slot="lightIcon" height={iconSize} width={iconSize} />
-    <Icon icon="game-icons:night-sleep" slot="darkIcon" height={iconSize} width={iconSize} />
-  </DarkMode>
-  <Settings />
+  {#if $settingsMode === "dropdown"}
+    <Settings mode="dropdown" icon="hugeicons:arrow-down-double" class="mt-2" />
+  {:else if $settingsMode === "buttons"}
+    <Settings mode="buttons" class="mt-2" />
+  {:else}
+    <Settings mode="group" class="mt-2" />
+  {/if}
+  <!-- <Settings mode="buttons" icon="hugeicons:arrow-down-double" class="mt-2"/> -->
+  <!-- <Settings mode="group" icon="hugeicons:arrow-down-double" class="mt-2" /> -->
+  <!-- <Settings mode="dropdown" icon="hugeicons:arrow-down-double" class="mt-2 bg-solarized-yellow"/> -->
   <!-- TODO: #339 Turn `DarkMode` and `Settings` into a dropdown menu -->
 </nav>
 
@@ -47,5 +53,6 @@
     margin-top: 1rem;
     align-items: center;
     width: 100%;
+    padding-right: 15px;
   }
 </style>

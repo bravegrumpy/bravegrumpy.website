@@ -10,7 +10,8 @@ Section Component
 @prop {string} [colors] - tailwind class - combination of `lightColors` and `darkColors`
 @prop {string} [colors] - tailwind class - controlls default font family.
 @prop {boolean} [section] - controlls whether the local CSS styling that controlls border, padding, margins, flexbox properties are in fact applied. Defaults to `true`. Only use if you want to style the section, or may otherwise use `class=""`.
-@prop {string} [class] - defauls value: `${sectionClass} ${colors} section`, unless section is false.
+@prop {string} [class] - default value: `${sectionClass} ${colors} section`, unless section is false.
+@prop {string}[--sectionColumn] - specifies which column within the grid this component lands in. default value: `2/2`, or the second column.
 -->
 <!-- TODO: #326 Update this interface for other wrapper components, such as Article, Aside, etc.-->
 <script lang="ts">
@@ -45,7 +46,7 @@ Section Component
 </script>
 
 <section class={className}>
-  {@render children()}
+  {@render children?.()}
 </section>
 
 <style>

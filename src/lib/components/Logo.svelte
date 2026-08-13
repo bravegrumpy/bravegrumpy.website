@@ -2,6 +2,7 @@
   import '$lib/styles/globals.css';
 </script>
 
+<!-- TODO: #340 Add a tooltip with "Go Home" on the logo. -->
 <div id="container">
   <img
     src="https://cdn.bravegrumpy.com/static/assets/images/BG_logo.png"
