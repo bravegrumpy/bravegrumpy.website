@@ -12,7 +12,7 @@
 <Heading>Media</Heading>
 
 <Section>
-    <Details summary="How To Watch" stl>
+    <Details summary="How To Watch" stl open>
         <LOL>
             <Entry 
                 href="https://ext.to"
