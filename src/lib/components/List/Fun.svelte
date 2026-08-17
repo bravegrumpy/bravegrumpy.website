@@ -135,7 +135,7 @@
 
 <!-- <Heading>Streaming Media</Heading> -->
 <Section>
-    <Details summary="Streaming Media" Section="Watching Media" stl>
+    <Details summary="Streaming Media" Section="Watching Media" stl open>
     <!-- <Details Summary="Watching Media" stl> -->
         <p>The easiest Way to stream anything for free, atm, is to get a Magnet Link from a torrenting site, and then stream it through a website that can stream from torrent links.</p>
         <LOL>
