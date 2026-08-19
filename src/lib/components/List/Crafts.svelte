@@ -11,13 +11,14 @@
 
 <Heading>Arts and Crafts</Heading>
 <Section>
-<Details summary="Art" stl>
+<Details summary="Art" stl open>
     <LOL section="Graphic Design" title="Calligraphy">
         <Entry href="https://www.calligraphy-skills.com/gothic-alphabet.html" text="Calligraphy Resource" cardStyle={$cardStyle} divLink={$divLink} />
     </LOL>
 </Details>
-<!-- <Details summary="Crafts" stl> -->
-    <LOL chapter="Crafts" section="Paper" title="Oragami" heading="Oragami Envelopes">
+<Details summary="Crafts" stl open>
+    <!-- <LOL chapter="Crafts" section="Paper" title="Oragami" heading="Oragami Envelopes"> -->
+    <LOL section="Paper" title="Oragami" heading="Oragami Envelopes">
         <Entry href="https://origami.me/envelope/" text="Mildly Complicated envelope" cardStyle={$cardStyle} divLink={$divLink}>
             <ul>
                 <li>Starts with square</li>
@@ -28,5 +29,5 @@
         <Entry href="http://www.origami-instructions.com/origami-envelope.html?no_redirect=true" text="Simple Envelope from rectangular A4 paper" after="I actually used this one" cardStyle={$cardStyle} divLink={$divLink}/>
         <Entry href="https://www.cristinacolli.com/how-to-make-an-origami-envelope/" text="Decorative Envelope" cardStyle={$cardStyle} divLink={$divLink} />
     </LOL>
-<!-- </Details> -->
+</Details>
 </Section>

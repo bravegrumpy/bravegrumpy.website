@@ -134,25 +134,25 @@
 </Section>
 
 <!-- <Heading>Streaming Media</Heading> -->
-<Section>
-    <Details summary="Streaming Media" Section="Watching Media" stl open>
+<!-- <Section> -->
+    <!-- <Details summary="Streaming Media" section="Watching Media" stl open> -->
     <!-- <Details Summary="Watching Media" stl> -->
-        <p>The easiest Way to stream anything for free, atm, is to get a Magnet Link from a torrenting site, and then stream it through a website that can stream from torrent links.</p>
-        <LOL>
-            <Entry 
+        <!-- <p>The easiest Way to stream anything for free, atm, is to get a Magnet Link from a torrenting site, and then stream it through a website that can stream from torrent links.</p> -->
+        <!-- <LOL> -->
+            <!-- <Entry 
                 href="https://ext.to"
                 text="Ext.TO -- Torrenting WebSite"
                 after="Provides Magnet Links"
                 cardStyle={$cardStyle}
                 divLink={$divLink}
-            />
-            <Entry 
+            /> -->
+            <!-- <Entry 
                 href="https://webtor.io"
                 text="WebTor.io"
                 after="Streams From Magnet Links"
                 cardStyle={$cardStyle}
                 divLink={$divLink}
-            />
-        </LOL>
-    </Details>
-</Section>
+            /> -->
+        <!-- </LOL> -->
+    <!-- </Details> -->
+<!-- </Section> -->
