@@ -55,6 +55,7 @@
     {@render entry("https://mycolor.space/", "My Color Space", ["Color Gradient and color palette generator"], $cardStyle, $divLink)}
     {@render entry("https://matthewstrom.com/writing/how-to-pick-the-least-wrong-colors/", "Mathematical tools for generating color pallettes.", [], $cardStyle, $divLink)}
     {@render entry("https://oklch.com/#69.58,0.1213,293.23,100", "OKLCH color Picker", [], $cardStyle, $divLink)}
+    {@render entry("https://colorpicker.dev", "Multimodal Color Picker", [], $cardStyle, $divLink)}
   </LOL>
   <LOL heading="Pallete Review and iterative Development">
     {@render entry("https://www.realtimecolors.com", "View colors and fonts on real website", [interactiveWebsiteTheme], $cardStyle, $divLink)}
