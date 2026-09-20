@@ -7,6 +7,10 @@
     import Code from "$lib/components/Code.svelte";
     import Icon from "@iconify/svelte"
 
+    import { getBrowser } from "$lib/components/Settings.svelte"
+    import { page } from "$app/state"
+    let uA = $derived(page.data.userAgent)
+
     const password = "Abracadabra"
 
     let inputPassword = $state("Abracadabra");
@@ -54,7 +58,11 @@
                 <p class="text-xs">Earliest accessible year in blog</p>
                 <Label color="green" class='flex flex-row gap-5 justify-between items-center w-full *:text-xs border-y border-solid border-bravegrumpy-black/5 dark:border-bravegrumpy-white/20'>
                     {$earliestYear}
+                    {#if getBrowser(uA) === 'Chrome'}
                     <input type="range" bind:value={$earliestYear} min={Math.min(...years)} max={thisYear} list="markers" id="blogYears"/>
+                    {:else}
+                    <div class="h-3 w-full bg-granny-smith-600/20 dark:bg-granny-smith-200/10"></div>
+                    {/if}
                     <Input type="number" bind:value={$earliestYear} min={$earliestAllowedYear} max={thisYear} class="w-18 text-center" />
                     <datalist id="markers">
                         {#each years as yr}

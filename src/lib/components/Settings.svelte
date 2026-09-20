@@ -14,6 +14,8 @@
         currentPage.split("/").slice(0,3).join("/")
     )
 
+    const uA = $derived(page.data.userAgent);
+
     const iconSize = 25;
     const buttonSize = `size-[${iconSize * 4}px]`
 
@@ -52,6 +54,20 @@
 
 
     const radioButtonStyles =  `${buttonSize} rounded-[5px] border-[2px] border-solid border-current bg-bravegrumpy-accent2a text-bravegrumpy-logoPurple hover:scale-105 hover:hue-rotate-15 dark:bg-bravegrumpy-brand6 dark:text-bravegrumpy-accent1a p-[10px] border-[2px] border-solid`
+</script>
+
+<script module>
+    function getBrowser(uA: any) {
+        if ( uA.indexOf('Chrome') != -1) {
+            return 'Chrome'
+        } else if (uA.indexOf('Firefox') != -1) {
+            return 'Firefox'
+        } else {
+            return 'OTHER'
+        }
+    }
+
+    export { getBrowser }
 </script>
 
 {#if mode==='buttons'}
@@ -95,7 +111,9 @@
     {:else if currentPage2Deep === "/writing/blog"}
         {#if $showBlogOptions}
         <DropdownItem class={dropdownItemStyles}>
+            {#if getBrowser(uA) === 'Chrome'}
             <input type="range" bind:value={$earliestYear} min={Math.min(...years)} max={thisYear} list="markers" id="blogYears"/>
+            {/if}
             <Input type="number" bind:value={$earliestYear} min={Math.min(...years)} max={thisYear} class="w-18 text-center" />
             <datalist id="markers">
                 {#each years as yr}
@@ -186,12 +204,14 @@
         background-color: var(--bravegrumpy-logoPurple);
         border: 2px solid var(--bravegrumpy-accent1a);
     }
-    input[type="range" i]::-webkit-slider-runnable-track{
+    input[type="range" i]::-webkit-slider-runnable-track,
+    input[type="range"]::-moz-range-track {
         background-color: var(--bravegrumpy-accent1b);
         border-radius: 500px;
         height: 20px;
     }
-    :global(.dark) input[type="range" i]::-webkit-slider-runnable-track {
+    :global(.dark) input[type="range" i]::-webkit-slider-runnable-track,
+    :global(.dark) input[type="range" i]::-moz-range-track {
         background-color: var(--bravegrumpy-brand6);
     }
     input[type="range"]::-webkit-slider-thumb {
