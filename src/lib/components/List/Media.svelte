@@ -45,5 +45,26 @@
     </Details>
     <!-- <div class="w-fit mx-auto !px-5 !py-2">
         <NavButton className="px-5 py-2" href="/links/media/shows" text="Shows" slug="/list/media/shows" />
+        <NavButton className="px-5 py-2" href="/links/media/yt" text="YouTube" slug="/list/media/yt" />
     </div> -->
+  <Details summary="YouTube" stl open>
+    <Entry 
+        href="https://docs.google.com/document/d/1NRMfJo7UrTUuQOacSx2EdxMtQ2PMvdU1GTpCEHqk5Tw/edit?pli=1&tab=t.0"
+        text="Sourcedoc"
+        after=" to a youtube video."
+        cardStyle={$cardStyle}
+        divLink={$divLink}
+    >  
+        <p> 
+            The <a href="https://youtu.be/VTsBP21-XpI?si=KS1iwXfqD88ptdk-" target="_blank">YouTube video</a> is an investigation into ReCaptcha. The TLDR of the video is that Google is looking to know who you, specifically, are, in order order to let you through ReCaptcha.  If they cannot figure out which specific human you are, they will make you solve a gazillion puzzles. <a href="https://arxiv.org/pdf/2311.10911" target="_blank">This research paper</a> goes into more specific detail as to the entire snapshot that Google can percieve from ReCpatcha.
+        </p>
+        <Entry 
+            href="https://arxiv.org/pdf/2311.10911"
+            text="Dazed & Confused"
+            after="The same paper mentioned above."
+            cardStyle={$cardStyle}
+            divLink={$divLink}
+        />
+    </Entry>
+  </Details>
 </Section>

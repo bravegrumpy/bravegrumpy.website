@@ -1,0 +1,7 @@
+## YouTube Videos
+
+Below are some random youtube video that I want to be able to refer back to. It also includes some cool links sourced from the youtube vidos.  They can be anything from a game, to a sourcedoc, to anything in between.
+
+1. [ReCaptcha](https://youtu.be/VTsBP21-XpI?si=J600WRy5p9PCRIM6)
+    1. [Sourcedoc](https://docs.google.com/document/d/1NRMfJo7UrTUuQOacSx2EdxMtQ2PMvdU1GTpCEHqk5Tw/edit?pli=1&tab=t.0)
+    1. [Dazed & Confused: A Large-Scale Real-World User Study of reCAPTCHAv2](https://arxiv.org/pdf/2311.10911)
