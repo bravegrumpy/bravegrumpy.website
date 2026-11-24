@@ -4,8 +4,8 @@
   import Section from '$lib/components/Section.svelte';
   import LOL from '$lib/components/List/ListOfLinks.svelte';
   import Entry from '$lib/components/List/ListEntry.svelte';
-  import { cardStyle, divLink } from "$lib/stores"
-
+  import { cardStyle, divLink } from "$lib/stores";
+  
   import NavButton from '$lib/components/NavButton.svelte';
 </script>
 
@@ -65,6 +65,14 @@
             cardStyle={$cardStyle}
             divLink={$divLink}
         />
+    </Entry>
+    <Entry 
+        href="https://wavemap.us/map?prem=0&live=0"
+        text="WaveModel"
+        cardStyle={$cardStyle}
+        divLink={$divLink}
+    >
+        A political map that shows election predictions and results.  <a href="https://www.youtube.com/@owenunfiltered" target="_blank">Owen Morgan</a> has used it when he wants to talk about politics. 
     </Entry>
   </Details>
 </Section>
